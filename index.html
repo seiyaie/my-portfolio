@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Seiya Imoto's Portfolio - topページ</title>
+        <meta name="description" content="ページの説明" />
+        <meta name="format-detection" content="telephone=no" />
+
+        <!-- favicon/webclipicon -->
+        <link rel="icon" href="img/favicon.ico" />
+        <link rel="icon" href="img/favicon-source.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="img/webclip.png" />
+
+        <!-- ogp -->
+        <meta property="og:site_name" content="サイト名" />
+        <meta property="og:url" content="URL" />
+        <meta property="og:type" content="website or article" />
+        <meta property="og:title" content="Seiya Imoto's Portfolio - topページ" />
+        <meta property="og:description" content="ページの説明" />
+        <meta property="og:image" content="URL" />
+        <meta property="og:locale" content="ja_JP" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:description" content="Seiya Imoto's Portfolio - topページ" />
+        <meta name="twitter:image:src" content="URL" />
+
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet" />
+
+        <!-- css -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+
+        <!-- js -->
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js" defer></script>
+        <script src="js/main.js" type="module"></script>
+    </head>
+    <body>
+        <!-- header -->
+        <header class="header">
+            <div class="header-logo-wrapper">
+                <a href="index.html" class="header-logo" aria-label="topページに戻る">
+                    <img src="img/logo.svg" width="25" height="100" alt="" />
+                </a>
+            </div>
+            <nav class="header-nav">
+                <ul class="header-nav-list">
+                    <li class="header-nav-item">
+                        <a href="index.html" class="header-nav-link">about</a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a href="index.html" class="header-nav-link">works</a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a href="index.html" class="header-nav-link">vision</a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a href="index.html" class="header-nav-link">skills</a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a href="index.html" class="header-nav-link">contact</a>
+                    </li>
+                    <li class="header-nav-item">
+                        <button class="header-light-mode-button" aria-label="light modeに切り替える">
+                            <img src="img/light-mode.svg" width="40" height="40" alt="" />
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- the end of header -->
+
+        <!-- text slider -->
+        <div class="c-text-slider">
+            <div class="p-keyword-slider__splide js-keyword-carousel-rtl splide">
+                <div class="splide__track p-keyword-slider__track">
+                    <ul class="splide__list c-text-slider-list">
+                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- the end of text slider -->
+
+        <!-- top kv -->
+        <div class="top-kv js-top-kv">
+            <div class="top-kv-selected-work js-top-kv-selected-work">
+                <img src="img/portfolio-travel-gallery-l.png" width="1000" height="562" alt="" decoding="async" />
+            </div>
+
+            <div class="top-kv-slider js-top-kv-slider">
+                <div class="top-kv-slider-list-container js-top-kv-slider-list-container">
+                    <ul class="top-kv-slider-list">
+                        <li class="top-kv-slider-toggle">
+                            <button class="top-kv-toggle-btn js-top-kv-toggle-btn" aria-label="スライダーリスト開閉ボタン">
+                                <span class="top-kv-toggle-btn-bg">
+                                    <img src="img/slider-toggle-panel.svg" width="25" height="85" alt="" decoding="async" />
+                                </span>
+                                <span class="top-kv-toggle-btn-arrow js-top-kv-btn-arrow">
+                                    <img src="img/slider-arrow-left.svg" width="15" height="16" alt="" decoding="async" />
+                                </span>
+                            </button>
+                        </li>
+                        <li class="top-kv-slider-item">
+                            <img src="img/portfolio-travel-gallery-s.png" width="300" height="300" alt="" decoding="async" />
+                        </li>
+                        <li class="top-kv-slider-item">
+                            <img src="img/portfolio-travel-gallery-s.png" width="300" height="300" alt="" decoding="async" />
+                        </li>
+                        <li class="top-kv-slider-item">
+                            <img src="img/portfolio-travel-gallery-s.png" width="300" height="300" alt="" decoding="async" />
+                        </li>
+                        <li class="top-kv-slider-item">
+                            <img src="img/portfolio-travel-gallery-s.png" width="300" height="300" alt="" decoding="async" />
+                        </li>
+                        <li class="top-kv-slider-item">
+                            <img src="img/portfolio-travel-gallery-s.png" width="300" height="300" alt="" decoding="async" />
+                        </li>
+                        <li class="top-kv-slider-item">
+                            <img src="img/portfolio-travel-gallery-s.png" width="300" height="300" alt="" decoding="async" />
+                        </li>
+                        <li class="top-kv-slider-item">
+                            <img src="img/portfolio-travel-gallery-s.png" width="300" height="300" alt="" decoding="async" />
+                        </li>
+                        <li class="top-kv-slider-item">
+                            <img src="img/portfolio-travel-gallery-s.png" width="300" height="300" alt="" decoding="async" />
+                        </li>
+                        <li class="top-kv-slider-item">
+                            <img src="img/portfolio-travel-gallery-s.png" width="300" height="300" alt="" decoding="async" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- the end of top kv -->
+
+        <!-- text slider -->
+        <div class="c-text-slider">
+            <div class="p-keyword-slider__splide js-keyword-carousel-ltr splide">
+                <div class="splide__track p-keyword-slider__track">
+                    <ul class="splide__list c-text-slider-list">
+                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- the end of text slider -->
+    </body>
+</html>

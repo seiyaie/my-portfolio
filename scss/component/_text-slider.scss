@@ -1,0 +1,45 @@
+@use "../global" as g;
+
+/*!
+component > text-slider
+------------------------------
+*/
+
+.c-text-slider {
+    border-top: 1px solid var(--color-border-white);
+    border-bottom: 1px solid var(--color-border-white);
+    @include g.mq() {
+        border-top: 2px solid var(--color-border-white);
+        border-bottom: 2px solid var(--color-border-white);
+    }
+}
+
+.c-text-slider-list {
+    gap: 80px;
+}
+
+.c-text-slider-item {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: var(--font-family-accent);
+    line-height: 1;
+    padding-block: 8px;
+    @include g.mq() {
+        font-size: 40px;
+        padding-block: 16px;
+    }
+
+    // color: var(--color-font-white);
+}
+
+.p-keyword-slider__splide {
+}
+
+.p-keyword-slider__track {
+}
+
+.p-keyword-slider__list {
+}
+
+.p-keyword-slider__slide {
+}
