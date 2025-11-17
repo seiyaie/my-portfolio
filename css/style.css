@@ -264,6 +264,13 @@ component > title
   padding-bottom: 12px;
   padding-left: 12px;
 }
+@media screen and (min-width: 768px) {
+  .c-title {
+    font-size: 48px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+  }
+}
 
 .c-title-wrapper {
   width: 100%;
@@ -277,6 +284,13 @@ component > title
   height: 80px;
   border-left: 1px solid var(--color-background-white);
   border-right: 1px solid var(--color-background-white);
+}
+@media screen and (min-width: 768px) {
+  .c-title-inner {
+    height: 140px;
+    border-left: 2px solid var(--color-background-white);
+    border-right: 2px solid var(--color-background-white);
+  }
 }
 
 /*!

@@ -11,6 +11,11 @@ component > title
     line-height: 1;
     padding-bottom: 12px;
     padding-left: 12px;
+    @include g.mq() {
+        font-size: 48px;
+        padding-bottom: 24px;
+        padding-left: 24px;
+    }
 }
 
 .c-title-wrapper {
@@ -25,4 +30,9 @@ component > title
     height: 80px;
     border-left: 1px solid var(--color-background-white);
     border-right: 1px solid var(--color-background-white);
+    @include g.mq() {
+        height: 140px;
+        border-left: 2px solid var(--color-background-white);
+        border-right: 2px solid var(--color-background-white);
+    }
 }
