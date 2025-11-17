@@ -256,6 +256,29 @@ component > button
 component > title
 ------------------------------
 */
+.c-title {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: var(--font-family-accent);
+  line-height: 1;
+  padding-bottom: 12px;
+  padding-left: 12px;
+}
+
+.c-title-wrapper {
+  width: 100%;
+}
+
+.c-title-inner {
+  display: flex;
+  align-items: flex-end;
+  margin-inline: auto;
+  width: 90%;
+  height: 80px;
+  border-left: 1px solid var(--color-background-white);
+  border-right: 1px solid var(--color-background-white);
+}
+
 /*!
 component > text-slider
 ------------------------------
