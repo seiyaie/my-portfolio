@@ -1,0 +1,13 @@
+@use "../global" as g;
+
+/*!
+layout > container
+------------------------------
+*/
+
+.l-section-inner {
+    margin-block: 40px;
+    @include g.mq() {
+        margin-block: 80px;
+    }
+}
