@@ -1,0 +1,91 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-about
+------------------------------
+*/
+
+.top-about {
+    width: 100%;
+    border-bottom: 1px solid var(--color-border-white);
+    @include g.mq() {
+        border-bottom: 2px solid var(--color-border-white);
+    }
+}
+
+.top-about-inner {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-inline: auto;
+    border: 1px solid var(--color-border-white);
+    max-width: 1080px;
+    @include g.mq() {
+        flex-direction: row;
+        align-items: center;
+        border: 2px solid var(--color-border-white);
+    }
+}
+
+.top-about-image-wrapper {
+    border-bottom: 1px solid var(--color-border-white);
+    padding-block: 24px;
+    @include g.mq() {
+        border-bottom: none;
+        padding-block: 0;
+        padding-inline: 32px;
+        display: grid;
+        place-items: center;
+    }
+}
+
+.top-about-image {
+    display: block;
+    margin-inline: auto;
+    width: 180px;
+    height: 180px;
+    background-color: var(--color-background-black);
+    border: 1px solid var(--color-border-white);
+    @include g.mq() {
+        width: 240px;
+        height: 240px;
+    }
+}
+
+.top-about-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.top-about-profile {
+    padding: 32px;
+    @include g.mq() {
+        border-left: 2px solid var(--color-border-white);
+        padding: 120px;
+    }
+}
+
+.top-about-profile-name {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: var(--font-family-accent);
+    @include g.mq() {
+        font-size: 32px;
+    }
+}
+
+.top-about-profile-text {
+    font-size: 16px;
+    margin-top: 24px;
+    @include g.mq() {
+        font-size: 18px;
+        margin-top: 32px;
+    }
+}
+
+.top-about-profile-text span {
+    display: block;
+    &:last-child {
+        margin-top: 16px;
+    }
+}
