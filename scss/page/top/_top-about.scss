@@ -7,9 +7,9 @@ page > top > top-about
 
 .top-about {
     width: 100%;
-    border-bottom: 1px solid var(--color-border-white);
+    border-bottom: 1px solid var(--line-color);
     @include g.mq() {
-        border-bottom: 2px solid var(--color-border-white);
+        border-bottom: 2px solid var(--line-color);
     }
 }
 
@@ -18,17 +18,17 @@ page > top > top-about
     flex-direction: column;
     width: 90%;
     margin-inline: auto;
-    border: 1px solid var(--color-border-white);
+    border: 1px solid var(--line-color);
     max-width: 1080px;
     @include g.mq() {
         flex-direction: row;
         align-items: center;
-        border: 2px solid var(--color-border-white);
+        border: 2px solid var(--line-color);
     }
 }
 
 .top-about-image-wrapper {
-    border-bottom: 1px solid var(--color-border-white);
+    border-bottom: 1px solid var(--line-color);
     padding-block: 24px;
     @include g.mq() {
         border-bottom: none;
@@ -44,8 +44,8 @@ page > top > top-about
     margin-inline: auto;
     width: 180px;
     height: 180px;
-    background-color: var(--color-background-black);
-    border: 1px solid var(--color-border-white);
+    background-color: var(--bg-color);
+    border: 1px solid var(--line-color);
     @include g.mq() {
         width: 240px;
         height: 240px;
@@ -60,7 +60,7 @@ page > top > top-about
 .top-about-profile {
     padding: 32px;
     @include g.mq() {
-        border-left: 2px solid var(--color-border-white);
+        border-left: 2px solid var(--line-color);
         padding: 120px;
     }
 }

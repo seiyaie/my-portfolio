@@ -3,12 +3,28 @@ global > color
 ------------------------------
 */
 :root {
-    // font color
-    --color-font-black: #000000;
-    --color-font-white: #ffffff;
-    // background color
-    --color-background-black: #000000;
-    --color-background-white: #ffffff;
-    // border color
-    --color-border-white: #ffffff;
+    // // font color
+    // --color-font-black: #000000;
+    // --color-font-white: #ffffff;
+    // // background color
+    // --color-background-black: #000000;
+    // --color-background-white: #ffffff;
+    // // border color
+    // --line-color: #ffffff;
+    color-scheme: light dark;
+    --bg-color: light-dark(#ffffff, #000000);
+    --text-color: light-dark(#000000, #ffffff);
+    --line-color: light-dark(#000000, #ffffff);
+}
+
+[data-theme="light"] {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --line-color: #000000;
+}
+
+[data-theme="dark"] {
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --line-color: #ffffff;
 }

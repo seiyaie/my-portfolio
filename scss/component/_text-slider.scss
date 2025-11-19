@@ -6,11 +6,11 @@ component > text-slider
 */
 
 .c-text-slider {
-    border-top: 1px solid var(--color-border-white);
-    border-bottom: 1px solid var(--color-border-white);
+    border-top: 1px solid var(--line-color);
+    border-bottom: 1px solid var(--line-color);
     @include g.mq() {
-        border-top: 2px solid var(--color-border-white);
-        border-bottom: 2px solid var(--color-border-white);
+        border-top: 2px solid var(--line-color);
+        border-bottom: 2px solid var(--line-color);
     }
 }
 
@@ -28,8 +28,6 @@ component > text-slider
         font-size: 40px;
         padding-block: 16px;
     }
-
-    // color: var(--color-font-white);
 }
 
 .p-keyword-slider__splide {

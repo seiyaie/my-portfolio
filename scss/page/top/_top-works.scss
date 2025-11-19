@@ -1,0 +1,91 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-works
+------------------------------
+*/
+
+.top-works {
+    width: 100%;
+    border-bottom: 1px solid var(--line-color);
+    @include g.mq() {
+        border-bottom: 2px solid var(--line-color);
+    }
+}
+
+.top-works-inner {
+    width: 90%;
+    margin-inline: auto;
+}
+
+.top-works-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+    align-items: center;
+    @include g.mq() {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include g.mq(lg) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.top-works-item {
+    border: 1px solid var(--line-color);
+}
+
+.top-works-item-link {
+    display: block;
+    padding: 16px;
+}
+
+.top-works-item-thumbnail {
+    aspect-ratio: 16/9;
+    border: 1px solid var(--line-color);
+}
+
+.top-works-item-thumbnail img {
+    width: 100%;
+    height: 100%;
+}
+
+.top-works-item-desc {
+}
+
+.top-works-item-date {
+    font-size: 12px;
+    margin-top: 16px;
+    letter-spacing: 0.2em;
+}
+
+.top-works-item-title {
+    font-size: 16px;
+    font-family: var(--font-family-accent);
+    letter-spacing: 0.2em;
+}
+
+.top-works-tags {
+    display: flex;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.top-works-tag {
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    padding: 4px 8px;
+    border: 1px solid var(--line-color);
+}
+
+.top-works-button {
+    width: 80%;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.top-works-button span {
+    &:first-child {
+        margin-right: 8px;
+    }
+}
