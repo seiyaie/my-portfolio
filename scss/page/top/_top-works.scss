@@ -82,6 +82,10 @@ page > top > top-works
     width: 80%;
     margin-inline: auto;
     text-align: center;
+    margin-top: 32px;
+    @include g.mq() {
+        margin-top: 0;
+    }
 }
 
 .top-works-button span {
