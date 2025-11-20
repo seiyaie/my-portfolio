@@ -231,6 +231,7 @@ foundation > base
 body {
   line-height: 1.8;
   font-size: 16px;
+  letter-spacing: 0.08em;
   color: var(--text-color);
   background-color: var(--bg-color);
   font-family: var(--font-family-base);
@@ -303,6 +304,11 @@ component > title
 .c-title-wrapper {
   width: 100%;
   border-bottom: 1px solid var(--line-color);
+}
+@media screen and (min-width: 768px) {
+  .c-title-wrapper {
+    border-bottom: 2px solid var(--line-color);
+  }
 }
 
 .c-title-inner {
@@ -815,6 +821,100 @@ page > top > top-works
 
 .top-works-button span:first-child {
   margin-right: 8px;
+}
+
+/*!
+page > top > top-vision
+------------------------------
+*/
+.top-vision {
+  border-bottom: 1px solid var(--line-color);
+}
+@media screen and (min-width: 768px) {
+  .top-vision {
+    border-bottom: 2px solid var(--line-color);
+  }
+}
+
+.top-vision-inner {
+  width: 90%;
+  margin-inline: auto;
+}
+
+.top-vision-coder {
+  border: 1px solid var(--line-color);
+}
+
+.top-vision-coder-title,
+.top-vision-growth-title {
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 0.2em;
+  border-bottom: 1px solid var(--line-color);
+  padding: 8px 16px;
+}
+
+.top-vision-coder-text,
+.top-vision-growth-text {
+  padding: 16px;
+}
+
+.top-vision-growth {
+  border: 1px solid var(--line-color);
+  margin-top: 40px;
+}
+
+.top-vision-growth-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px 16px;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .top-vision-growth-list {
+    flex-direction: row;
+    padding: 40px 24px;
+  }
+}
+
+.top-vision-growth-item {
+  position: relative;
+  border: 1px solid var(--line-color);
+}
+.top-vision-growth-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 22px;
+  bottom: -31px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--line-color);
+  -webkit-mask-image: url("../img/top-vision-arrow.svg");
+          mask-image: url("../img/top-vision-arrow.svg");
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+@media screen and (min-width: 768px) {
+  .top-vision-growth-item:not(:last-child)::after {
+    top: 50%;
+    right: -31px;
+    bottom: auto;
+    left: auto;
+    transform: translateY(-50%) rotate(-90deg);
+  }
+}
+
+.top-vision-growth-label {
+  padding: 8px 16px;
+  display: block;
+  border-bottom: 1px solid var(--line-color);
+  border-right: 1px solid var(--line-color);
 }
 
 /*!
