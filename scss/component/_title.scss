@@ -21,6 +21,9 @@ component > title
 .c-title-wrapper {
     width: 100%;
     border-bottom: 1px solid var(--line-color);
+    @include g.mq() {
+        border-bottom: 2px solid var(--line-color);
+      }
 }
 
 .c-title-inner {
