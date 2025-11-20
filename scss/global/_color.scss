@@ -3,14 +3,6 @@ global > color
 ------------------------------
 */
 :root {
-    // // font color
-    // --color-font-black: #000000;
-    // --color-font-white: #ffffff;
-    // // background color
-    // --color-background-black: #000000;
-    // --color-background-white: #ffffff;
-    // // border color
-    // --line-color: #ffffff;
     color-scheme: light dark;
     --bg-color: light-dark(#ffffff, #000000);
     --text-color: light-dark(#000000, #ffffff);

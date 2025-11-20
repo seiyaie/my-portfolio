@@ -523,6 +523,7 @@ page > top > top-kv
 /* スライダーリストコンテナ */
 .top-kv-slider-list-container {
   height: auto;
+  background-color: var(--bg-color);
 }
 @media screen and (min-width: 768px) {
   .top-kv-slider-list-container {
@@ -530,7 +531,6 @@ page > top > top-kv
     top: 0;
     left: 0;
     height: 100%;
-    background-color: var(--c);
     width: -moz-max-content;
     width: max-content;
     padding: 4px;
