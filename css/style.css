@@ -5,21 +5,27 @@ global > color
 */
 :root {
   color-scheme: light dark;
-  --bg-color: light-dark(#ffffff, #000000);
+  --bg-color: light-dark(#fbfbfb, #000000);
   --text-color: light-dark(#000000, #ffffff);
   --line-color: light-dark(#000000, #ffffff);
+  --contact-bg-color: light-dark(#f2f2f2, #ffffff);
+  --contact-text-color: light-dark(#ffffff, #000000);
 }
 
 [data-theme=light] {
-  --bg-color: #ffffff;
+  --bg-color: #fbfbfb;
   --text-color: #000000;
   --line-color: #000000;
+  --contact-bg-color: #f2f2f2;
+  --contact-text-color: #000000;
 }
 
 [data-theme=dark] {
   --bg-color: #000000;
   --text-color: #ffffff;
   --line-color: #ffffff;
+  --contact-bg-color: #ffffff;
+  --contact-text-color: #000000;
 }
 
 /*!
@@ -234,7 +240,7 @@ body {
   letter-spacing: 0.08em;
   color: var(--text-color);
   background-color: var(--bg-color);
-  font-family: var(--font-family-base);
+  font-family: var(--font-family-jp);
 }
 @media screen and (min-width: 768px) {
   body {
@@ -267,9 +273,7 @@ component > button
 .c-button {
   border: 1px solid var(--line-color);
   font-size: 16px;
-  font-family: var(--font-family-accent);
   padding: 16px;
-  text-transform: uppercase;
   width: 100%;
   display: block;
 }
@@ -279,6 +283,13 @@ component > button
     font-size: 20px;
     padding: 24px;
   }
+}
+.c-button--jp {
+  font-family: var(--font-family-jp);
+}
+.c-button--en {
+  font-family: var(--font-family-accent);
+  text-transform: uppercase;
 }
 
 /*!
@@ -991,6 +1002,88 @@ page > top > top-skills
 }
 
 /*!
-page > about > about-kv
+page > top > top-about
 ------------------------------
-*//*# sourceMappingURL=style.css.map */
+*/
+.top-contact-inner {
+  width: 90%;
+  margin-inline: auto;
+  max-width: 1080px;
+}
+
+.top-contact-text span {
+  display: block;
+  font-weight: bold;
+}
+
+.top-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 40px;
+}
+@media screen and (min-width: 768px) {
+  .top-contact-form {
+    gap: 32px;
+    margin-top: 48px;
+  }
+}
+
+.top-contact-label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+}
+
+.top-input,
+.top-textarea {
+  background-color: var(--contact-bg-color);
+  border: 1px solid var(--line-color);
+  width: 100%;
+  max-width: 800px;
+  color: var(--contact-text-color);
+  padding: 8px;
+}
+
+.top-contact-label-required {
+  border: 1px solid var(--line-color);
+  padding: 4px 8px;
+}
+
+.top-textarea {
+  min-height: 240px;
+}
+
+.top-contact-privacy-title {
+  font-weight: 700;
+}
+
+.top-contact-privacy-text {
+  font-weight: 500;
+  margin-top: 16px;
+}
+
+.top-contact-privacy-link {
+  display: inline-block;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+@media (any-hover: hover) {
+  .top-contact-privacy-link:hover {
+    opacity: 0.7;
+  }
+}
+
+.top-contact-submit-button {
+  width: 100%;
+  border: 1px solid var(--line-color);
+  font-weight: bold;
+  padding: 8px 16px;
+  margin-top: 16px;
+}
+@media screen and (min-width: 768px) {
+  .top-contact-submit-button {
+    max-width: 400px;
+  }
+}/*# sourceMappingURL=style.css.map */

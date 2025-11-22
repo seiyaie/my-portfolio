@@ -10,7 +10,7 @@ body {
     letter-spacing: 0.08em;
     color: var(--text-color);
     background-color: var(--bg-color);
-    font-family: var(--font-family-base);
+    font-family: var(--font-family-jp);
     @include g.mq() {
         font-size: 18px;
     }

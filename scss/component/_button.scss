@@ -7,14 +7,22 @@ component > button
 .c-button {
     border: 1px solid var(--line-color);
     font-size: 16px;
-    font-family: var(--font-family-accent);
     padding: 16px;
-    text-transform: uppercase;
     width: 100%;
     display: block;
+
     @include g.mq() {
         border: 2px solid var(--line-color);
         font-size: 20px;
         padding: 24px;
+    }
+
+    &--jp {
+        font-family: var(--font-family-jp);
+    }
+
+    &--en {
+        font-family: var(--font-family-accent);
+        text-transform: uppercase;
     }
 }
