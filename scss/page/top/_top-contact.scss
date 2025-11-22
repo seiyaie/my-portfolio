@@ -65,23 +65,27 @@ page > top > top-about
 }
 
 .top-contact-privacy-title {
-  font-weight: 700;
+    font-weight: 700;
 }
 
 .top-contact-privacy-text {
-  font-weight: 500;
-  margin-top: 16px;
+    font-weight: 500;
+    margin-top: 16px;
+    max-width: 800px;
+}
+.top-contact-privacy-text span {
+  display: block;
 }
 
 .top-contact-privacy-link {
-  display: inline-block;
+    display: inline-block;
     text-decoration: underline;
     text-underline-offset: 4px;
 
     @media (any-hover: hover) {
-      &:hover{
-        opacity: 0.7;
-      }
+        &:hover {
+            opacity: 0.7;
+        }
     }
 }
 
@@ -90,10 +94,40 @@ page > top > top-about
     border: 1px solid var(--line-color);
     font-weight: bold;
     padding: 8px 16px;
-    margin-top: 16px;
+    // margin-top: 16px;
     @include g.mq() {
         max-width: 400px;
     }
+}
+
+.top-contact-privacy-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    margin-top: 32px;
+    line-height: 1;
+}
+
+.top-contact-privacy-checkbox {
+    appearance: none;
+    position: relative;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--line-color);
+}
+
+.top-contact-privacy-checkbox:checked::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 2px;
+    width: 12px;
+    height: 6px;
+    border-bottom: 2px solid var(--line-color);
+    border-left: 2px solid var(--line-color);
+    transform: rotate(-45deg);
 }
 
 .top-contact-modal {
