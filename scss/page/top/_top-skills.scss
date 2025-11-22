@@ -1,0 +1,67 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-skills
+------------------------------
+*/
+
+.top-skills {
+    border-bottom: 1px solid var(--line-color);
+    @include g.mq() {
+        border-bottom: 2px solid var(--line-color);
+    }
+}
+
+.top-skills-inner {
+    width: 90%;
+    max-width: 1400px;
+    margin-inline: auto;
+}
+
+.top-skills-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    @include g.mq() {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    @include g.mq(lg) {
+        gap: 40px;
+    }
+}
+
+.top-skills-item {
+    border: 1px solid var(--line-color);
+    position: relative;
+    padding-bottom: 100px;
+    @include g.mq() {
+        &:nth-child(4) {
+            grid-column: 1 / -1;
+            padding-bottom: 40px;
+            max-width: 900px;
+            justify-self: center;
+        }
+    }
+}
+
+.top-skills-item-title {
+    border-bottom: 1px solid var(--line-color);
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    padding: 8px 16px;
+}
+
+.top-skills-item-text {
+    font-size: 16px;
+    padding: 16px;
+}
+
+.top-skills-item-icon {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+}
