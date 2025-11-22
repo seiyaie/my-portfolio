@@ -347,5 +347,72 @@
             </div>
         </section>
         <!-- the end of top skills -->
+        <!-- contact -->
+        <section class="top-contact">
+            <div class="c-title-wrapper">
+                <div class="c-title-inner">
+                    <h2 class="c-title">contact</h2>
+                </div>
+            </div>
+            <div class="top-contact-inner l-section-inner">
+                <p class="top-contact-text">ポートフォリオをご覧いただきありがとうございます。 コーディングの依頼・ご相談などお気軽にお問い合わせください。</p>
+
+                <form name="contact" method="post" class="top-contact-form" netlify data-netlify="true">
+                    <!-- Netlifyが必要とする隠しフィールド -->
+                    <input type="hidden" name="form-name" value="contact" />
+
+                    <!-- スパム対策 (honeypot) -->
+                    <div style="display: none">
+                        <input type="text" name="bot-field" />
+                    </div>
+
+                    <!-- 会社名 -->
+                    <div class="top-contact-item">
+                        <label for="company" class="top-contact-label">
+                            <span class="top-contact-label-title">会社名</span>
+                        </label>
+                        <input type="text" id="company" class="top-input" name="company" autocomplete="organization" />
+                    </div>
+
+                    <!-- 名前 -->
+                    <div class="top-contact-item">
+                        <label for="name" class="top-contact-label">
+                            <span class="top-contact-label-title">お名前</span>
+                            <span class="top-contact-label-required">必須</span>
+                        </label>
+                        <input type="text" id="name" class="top-input" name="name" autocomplete="name" required />
+                    </div>
+
+                    <!-- メールアドレス -->
+                    <div class="top-contact-item">
+                        <label for="email" class="top-contact-label">
+                            <span class="top-contact-label-title">メールアドレス</span>
+                            <span class="top-contact-label-required">必須</span>
+                        </label>
+                        <input type="email" id="email" class="top-input" name="email" autocomplete="email" required />
+                    </div>
+
+                    <!-- 内容 -->
+                    <div class="top-contact-item">
+                        <label for="contact" class="top-contact-label">
+                            <span class="top-contact-label-title">お問い合わせ内容</span>
+                            <span class="top-contact-label-required">必須</span>
+                        </label>
+                        <textarea id="contact" class="top-textarea" name="contact" autocomplete="off" required></textarea>
+                    </div>
+
+                    <button type="submit" class="top-contact-btn">内容を送信する</button>
+                </form>
+            </div>
+
+            <dialog class="top-contact-modal js-top-contact-modal" aria-labelledby="top-contact-modal-title">
+                <form method="dialog" class="top-contact-modal-content">
+                    <h2 class="top-contact-modal-title" id="top-contact-modal-title">送信が完了しました</h2>
+                    <p class="top-contact-modal-text">お問い合わせありがとうございます。内容を確認してご返信いたします。</p>
+                    <button class="top-contact-modal-button">閉じる</button>
+                </form>
+            </dialog>
+        </section>
+        <!-- the end of contact -->
     </body>
 </html>
