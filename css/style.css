@@ -958,10 +958,12 @@ page > top > top-skills
   position: relative;
   padding-bottom: 100px;
 }
+.top-skills-item:nth-child(4) {
+  padding-bottom: 40px;
+}
 @media screen and (min-width: 768px) {
   .top-skills-item:nth-child(4) {
     grid-column: 1/-1;
-    padding-bottom: 40px;
     max-width: 900px;
     justify-self: center;
   }
