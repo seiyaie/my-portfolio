@@ -479,6 +479,58 @@ layout > header
 layout > footer
 ------------------------------
 */
+.footer {
+  padding-block: 32px;
+}
+
+.footer-inner {
+  width: 90%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .footer-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.footer-copyright {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: var(--font-family-accent);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1;
+}
+
+.footer-sns-list {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+@media screen and (min-width: 768px) {
+  .footer-sns-list {
+    margin-top: 0;
+  }
+}
+
+.footer-sns-item a {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+@media screen and (min-width: 768px) {
+  .footer-sns-item a {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 /*!
 page > top > top-common
 ------------------------------

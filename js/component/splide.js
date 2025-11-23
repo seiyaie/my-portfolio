@@ -25,5 +25,6 @@ export const textSlider = () => {
         } // 各カルーセルを初期化
         initSplide(".js-keyword-carousel-ltr", {}); // 左から右のスライダー
         initSplide(".js-keyword-carousel-rtl", { direction: "rtl" }); // 右から左のスライダー { autoScroll: { speed: -0.4}}でも可能
+        initSplide(".js-keyword-carousel-footer", {});
     });
 };
