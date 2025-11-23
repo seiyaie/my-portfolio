@@ -15,10 +15,10 @@ layout > header
 }
 
 .header-logo-wrapper {
-  width: 66px;
-  @include g.mq() {
-    width: 120px;
-  }
+    width: 66px;
+    @include g.mq() {
+        width: 120px;
+    }
     height: 100%;
     display: grid;
     place-items: center;
@@ -39,24 +39,41 @@ layout > header
 }
 
 .header-nav {
-  margin-right: 40px;
+padding-right: 16px;
+  @include g.mq() {
+    padding-right: 40px;
+  }
 }
 
 .header-nav-list {
-  display: none;
-  @include g.mq() {
+    // display: none;
+    // @include g.mq() {
     font-family: var(--font-family-accent);
     letter-spacing: 0.2em;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      text-transform: uppercase;
-      font-size: 14px;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-size: 14px;
+    // }
 }
 
 .header-nav-item {
-    margin-left: 16px;
+    &--sp {
+        display: inline-block;
+        width: 40px;
+        height: 30px;
+        @include g.mq() {
+            display: none;
+        }
+    }
+    &--pc {
+        display: none;
+        @include g.mq() {
+            display: inline-block;
+            margin-left: 16px;
+        }
+    }
 }
 
 .header-light-mode-button {

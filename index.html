@@ -50,30 +50,57 @@
             </h1>
             <nav class="header-nav">
                 <ul class="header-nav-list">
-                    <li class="header-nav-item">
+                    <li class="header-nav-item header-nav-item--pc">
                         <a href="index.html" class="header-nav-link">about</a>
                     </li>
-                    <li class="header-nav-item">
+                    <li class="header-nav-item header-nav-item--pc">
                         <a href="index.html" class="header-nav-link">works</a>
                     </li>
-                    <li class="header-nav-item">
+                    <li class="header-nav-item header-nav-item--pc">
                         <a href="index.html" class="header-nav-link">vision</a>
                     </li>
-                    <li class="header-nav-item">
+                    <li class="header-nav-item header-nav-item--pc">
                         <a href="index.html" class="header-nav-link">skills</a>
                     </li>
-                    <li class="header-nav-item">
+                    <li class="header-nav-item header-nav-item--pc">
                         <a href="index.html" class="header-nav-link">contact</a>
                     </li>
-                    <li class="header-nav-item">
+                    <li class="header-nav-item header-nav-item--pc">
                         <button class="header-theme-button js-theme-button" aria-label="ライトモードに切り替え">
                             <img src="img/light-mode.svg" width="60" height="60" alt="" class="js-theme-icon" />
+                        </button>
+                    </li>
+                    <li class="header-nav-item header-nav-item--sp hamburger-button">
+                        <button class="hamburger-open-button" aria-label="ハンバーガーメニューを開く">
+                            <img src="img/hamburger-open-button-white.svg" width="40" height="30" alt="" decoding="async" />
                         </button>
                     </li>
                 </ul>
             </nav>
         </header>
         <!-- the end of header -->
+
+        <!-- hamburger menu -->
+        <dialog class="c-hamburger-menu" aria-label="ハンバーガーメニュー">
+            <div class="c-hamburger-header">
+                <button class="c-hamburger-close-button" aria-label="ハンバーガーメニューを閉じる">
+                    <img src="img/hamburger-close-button-white.svg" width="40" height="30" alt="" decoding="async" />
+                </button>
+            </div>
+            <div class="c-hamburger-menu-inner">
+                <ul class="c-hamburger-menu-list">
+                    <li class="c-hamburger-menu-item">
+                        <button class="js-theme-button" aria-label="ライトモードに切り替え"><img src="img/light-mode.svg" width="60" height="60" alt="" decoding="async" class="js-theme-icon" /></button>
+                    </li>
+                    <li class="c-hamburger-menu-item"><a href="index.html">home</a></li>
+                    <li class="c-hamburger-menu-item"><a href="#about">about</a></li>
+                    <li class="c-hamburger-menu-item"><a href="works.html">works</a></li>
+                    <li class="c-hamburger-menu-item"><a href="#vision">vision</a></li>
+                    <li class="c-hamburger-menu-item"><a href="#skills">skills</a></li>
+                </ul>
+            </div>
+        </dialog>
+        <!-- the end of hamburger menu -->
 
         <!-- text slider -->
         <div class="c-text-slider">
@@ -158,7 +185,7 @@
         <!-- the end of text slider -->
 
         <!-- top about -->
-        <section class="top-about">
+        <section class="top-about" id="about">
             <div class="c-title-wrapper">
                 <div class="c-title-inner">
                     <h2 class="c-title">about</h2>
@@ -276,7 +303,7 @@
         <!-- the end of top works -->
 
         <!-- top vision -->
-        <section class="top-vision">
+        <section class="top-vision" id="vision">
             <div class="c-title-wrapper">
                 <div class="c-title-inner">
                     <h2 class="c-title">vision</h2>
@@ -309,7 +336,7 @@
         <!-- the end of top vision -->
 
         <!-- top skills -->
-        <section class="top-skills">
+        <section class="top-skills" id="skills">
             <div class="c-title-wrapper">
                 <div class="c-title-inner">
                     <h2 class="c-title">skills</h2>
@@ -348,7 +375,7 @@
         </section>
         <!-- the end of top skills -->
         <!-- contact -->
-        <section class="top-contact">
+        <section class="top-contact" id="contact">
             <div class="c-title-wrapper">
                 <div class="c-title-inner">
                     <h2 class="c-title">contact</h2>
