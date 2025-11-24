@@ -11,10 +11,10 @@ component > hamburger-menu.scss
     width: 100%;
     height: 100%;
     overflow: auto;
-    @include g.mq() {
+    &::backdrop {
         display: none;
     }
-    &::backdrop {
+    @include g.mq() {
         display: none;
     }
 }
