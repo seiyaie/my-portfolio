@@ -373,6 +373,107 @@ component > text-slider
 }
 
 /*!
+component > hamburger-menu.scss
+
+------------------------------
+*/
+.c-hamburger-menu {
+  background-color: var(--bg-color);
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+.c-hamburger-menu::backdrop {
+  display: none;
+}
+
+.c-hamburger-header {
+  width: 100%;
+  padding: 16px;
+  text-align: right;
+}
+
+.c-hamburger-button {
+  width: 50px;
+  height: 30px;
+}
+
+.c-hamburger-open-button {
+  width: 100%;
+  height: auto;
+}
+
+.c-hamburger-close-button {
+  width: 50px;
+  height: 37px;
+}
+.c-hamburger-close-button img {
+  width: 100%;
+  height: 100%;
+}
+
+.c-hamburger-menu-inner {
+  width: 100%;
+  margin-inline: auto;
+}
+
+.c-hamburger-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (any-hover: hover) {
+  .c-hamburger-menu-item button:hover {
+    opacity: 0.7;
+  }
+}
+
+.c-hamburger-menu-item a {
+  display: inline-block;
+}
+
+.c-hamburger-menu-item--link a {
+  position: relative;
+  font-size: 32px;
+  font-family: var(--font-family-accent);
+  text-transform: uppercase;
+  padding: 4px;
+}
+.c-hamburger-menu-item--link a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s ease;
+}
+@media (any-hover: hover) {
+  .c-hamburger-menu-item--link a:hover::after {
+    transform: translateX(-50%) scaleX(1);
+  }
+}
+
+.c-hamburger-menu-item--sns a {
+  width: 40px;
+  height: 40px;
+  margin-top: 16px;
+}
+@media (any-hover: hover) {
+  .c-hamburger-menu-item--sns a:hover {
+    opacity: 0.7;
+  }
+}
+
+/*!
 layout > container
 ------------------------------
 */
@@ -443,15 +544,6 @@ layout > header
   height: 100%;
 }
 
-.header-nav {
-  padding-right: 16px;
-}
-@media screen and (min-width: 768px) {
-  .header-nav {
-    padding-right: 40px;
-  }
-}
-
 .header-nav-list {
   font-family: var(--font-family-accent);
   letter-spacing: 0.2em;
@@ -460,12 +552,16 @@ layout > header
   justify-content: space-between;
   text-transform: uppercase;
   font-size: 14px;
+  padding-right: 16px;
+}
+@media screen and (min-width: 768px) {
+  .header-nav-list {
+    padding-right: 40px;
+  }
 }
 
 .header-nav-item--sp {
   display: inline-block;
-  width: 40px;
-  height: 30px;
 }
 @media screen and (min-width: 768px) {
   .header-nav-item--sp {

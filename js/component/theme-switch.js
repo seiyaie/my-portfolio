@@ -1,10 +1,12 @@
 export const initThemeSwitch = () => {
     // DOM取得
-    const themeButton = document.querySelector(".js-theme-button");
-    const themeIcon = document.querySelector(".js-theme-icon");
+    const themeButtons = document.querySelectorAll(".js-theme-button");
+    const themeIcons = document.querySelectorAll(".js-theme-icon");
     const logoImg = document.querySelector(".js-theme-logo");
     const panelImg = document.querySelector(".js-theme-panel");
     const arrowImg = document.querySelector(".js-theme-arrow");
+    const hamburgerOpenImg = document.querySelector(".js-theme-hamburger-open");
+    const hamburgerCloseImg = document.querySelector(".js-theme-hamburger-close");
 
     // 画像パス
     const ICON = {
@@ -25,6 +27,16 @@ export const initThemeSwitch = () => {
     const ARROW = {
         light: "img/slider-arrow-black.svg",
         dark: "img/slider-arrow-white.svg",
+    };
+
+    const HAMBURGER_OPEN = {
+        light: "img/hamburger-open-button-black.svg",
+        dark: "img/hamburger-open-button-white.svg",
+    };
+
+    const HAMBURGER_CLOSE = {
+        light: "img/hamburger-close-button-black.svg",
+        dark: "img/hamburger-close-button-white.svg",
     };
 
     // テーマ状態管理オブジェクト
@@ -48,25 +60,35 @@ export const initThemeSwitch = () => {
         themeStore.theme = theme; // setter呼び出し。updateThemeに渡されたthemeがsetterのvalueに入る。
         const isDark = theme === themeStore.DARK;
 
-        // themeボタンのアイコン切り替え
-        themeIcon.src = isDark ? ICON.light : ICON.dark;
+        // すべてのボタンのアイコンを更新
+        themeIcons.forEach((icon) => {
+            icon.src = isDark ? ICON.light : ICON.dark;
+        });
+
         // logo切り替え
         if (logoImg) logoImg.src = isDark ? LOGO.dark : LOGO.light;
         // kv sliderのtoggleボタンのpanel切り替え
         if (panelImg) panelImg.src = isDark ? PANEL.dark : PANEL.light;
         // kv sliderのtoggleボタンのarrow切り替え
         if (arrowImg) arrowImg.src = isDark ? ARROW.dark : ARROW.light;
+        if (hamburgerOpenImg) hamburgerOpenImg.src = isDark ? HAMBURGER_OPEN.dark : HAMBURGER_OPEN.light;
+        if (hamburgerCloseImg) hamburgerCloseImg.src = isDark ? HAMBURGER_CLOSE.dark : HAMBURGER_CLOSE.light;
 
-        themeButton.classList.toggle("is-dark", isDark);
-        themeButton.setAttribute("aria-pressed", isDark);
-        themeButton.setAttribute("aria-label", isDark ? "ライトモードに切り替え" : "ダークモードに切り替え");
+        // すべてのボタンの状態（aria とクラス）更新
+        themeButtons.forEach((btn) => {
+            btn.classList.toggle("is-dark", isDark);
+            btn.setAttribute("aria-pressed", isDark);
+            btn.setAttribute("aria-label", isDark ? "ライトモードに切り替え" : "ダークモードに切り替え");
+        });
     }
 
     updateTheme(themeStore.theme); // getter呼び出し。
 
-    themeButton.addEventListener("click", () => {
-        const currentTheme = themeStore.theme;
-        const newTheme = currentTheme === themeStore.DARK ? themeStore.LIGHT : themeStore.DARK;
-        updateTheme(newTheme);
+    // すべてのテーマボタンにイベントを付与
+    themeButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            const newTheme = themeStore.theme === themeStore.DARK ? themeStore.LIGHT : themeStore.DARK;
+            updateTheme(newTheme);
+        });
     });
 };

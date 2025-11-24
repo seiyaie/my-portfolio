@@ -39,15 +39,13 @@ layout > header
 }
 
 .header-nav {
-padding-right: 16px;
-  @include g.mq() {
-    padding-right: 40px;
-  }
+    // padding-right: 16px;
+    @include g.mq() {
+        // padding-right: 40px;
+    }
 }
 
 .header-nav-list {
-    // display: none;
-    // @include g.mq() {
     font-family: var(--font-family-accent);
     letter-spacing: 0.2em;
     display: flex;
@@ -55,14 +53,15 @@ padding-right: 16px;
     justify-content: space-between;
     text-transform: uppercase;
     font-size: 14px;
-    // }
+    padding-right: 16px;
+    @include g.mq() {
+      padding-right: 40px;
+  }
 }
 
 .header-nav-item {
     &--sp {
         display: inline-block;
-        width: 40px;
-        height: 30px;
         @include g.mq() {
             display: none;
         }
