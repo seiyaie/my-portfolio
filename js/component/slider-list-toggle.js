@@ -4,6 +4,8 @@ export const initSliderListToggle = () => {
     const slider = document.querySelector(".js-top-kv-slider");
     const sliderContainer = document.querySelector(".js-top-kv-slider-list-container");
 
+    if (!toggleBtn || !toggleBtnArrow || !slider || !sliderContainer) return;
+
     let isOpen = false;
 
     function calculateTranslate() {
