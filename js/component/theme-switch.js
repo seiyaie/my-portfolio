@@ -10,33 +10,33 @@ export const initThemeSwitch = () => {
 
     // 画像パス
     const ICON = {
-        light: "img/light-mode.svg",
-        dark: "img/dark-mode.svg",
+        light: "img/icons/system/light-mode.svg",
+        dark: "img/icons/system/dark-mode.svg",
     };
 
     const LOGO = {
-        light: "img/logo-black.svg",
-        dark: "img/logo-white.svg",
+        light: "img/logo/logo-black.svg",
+        dark: "img/logo/logo-white.svg",
     };
 
     const PANEL = {
-        light: "img/slider-toggle-panel-white.svg",
-        dark: "img/slider-toggle-panel-black.svg",
+        light: "img/icons/ui/slider-toggle-panel-white.svg",
+        dark: "img/icons/ui/slider-toggle-panel-black.svg",
     };
 
     const ARROW = {
-        light: "img/slider-arrow-black.svg",
-        dark: "img/slider-arrow-white.svg",
+        light: "img/icons/ui/slider-arrow-black.svg",
+        dark: "img/icons/uislider-arrow-white.svg",
     };
 
     const HAMBURGER_OPEN = {
-        light: "img/hamburger-open-button-black.svg",
-        dark: "img/hamburger-open-button-white.svg",
+        light: "img/icons/ui/hamburger-open-button-black.svg",
+        dark: "img/icons/ui/hamburger-open-button-white.svg",
     };
 
     const HAMBURGER_CLOSE = {
-        light: "img/hamburger-close-button-black.svg",
-        dark: "img/hamburger-close-button-white.svg",
+        light: "img/icons/ui/hamburger-close-button-black.svg",
+        dark: "img/icons/ui/hamburger-close-button-white.svg",
     };
 
     // テーマ状態管理オブジェクト
