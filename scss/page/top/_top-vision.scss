@@ -66,7 +66,7 @@ page > top > top-vision
         left: 50%;
         transform: translateX(-50%);
         background-color: var(--line-color);
-        mask-image: url("../img/top-vision-arrow.svg");
+        mask-image: url("../img/decorations/top-vision-arrow.svg");
         mask-size: contain;
         mask-repeat: no-repeat;
         @include g.mq() {
