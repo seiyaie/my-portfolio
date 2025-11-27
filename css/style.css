@@ -388,6 +388,11 @@ component > hamburger-menu.scss
 .c-hamburger-menu::backdrop {
   display: none;
 }
+@media screen and (min-width: 768px) {
+  .c-hamburger-menu {
+    display: none;
+  }
+}
 
 .c-hamburger-header {
   width: 100%;
@@ -1068,8 +1073,8 @@ page > top > top-vision
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--line-color);
-  -webkit-mask-image: url("../img/top-vision-arrow.svg");
-          mask-image: url("../img/top-vision-arrow.svg");
+  -webkit-mask-image: url("../img/decorations/top-vision-arrow.svg");
+          mask-image: url("../img/decorations/top-vision-arrow.svg");
   -webkit-mask-size: contain;
           mask-size: contain;
   -webkit-mask-repeat: no-repeat;

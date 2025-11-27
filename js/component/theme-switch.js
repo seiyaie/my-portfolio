@@ -26,7 +26,7 @@ export const initThemeSwitch = () => {
 
     const ARROW = {
         light: "img/icons/ui/slider-arrow-black.svg",
-        dark: "img/icons/uislider-arrow-white.svg",
+        dark: "img/icons/ui/slider-arrow-white.svg",
     };
 
     const HAMBURGER_OPEN = {
