@@ -1,0 +1,151 @@
+@use "../../global" as g;
+
+/*!
+page > works > works
+------------------------------
+*/
+
+.works {
+    padding-block: 40px;
+}
+
+.l-container {
+}
+
+.c-breadcrumb {
+    font-family: var(--font-family-en);
+    text-transform: uppercase;
+}
+
+.c-breadcrumb-list {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.c-breadcrumb-item:not(:first-child)::before {
+    content: ">";
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.works-title {
+    font-weight: bold;
+    font-size: 18px;
+    border-bottom: 1px solid var(--line-color);
+    margin-top: 40px;
+    padding-block-end: 4px;
+}
+
+.works-list {
+    padding-block: 64px;
+    &--personal {
+        border-bottom: 1px solid var(--line-color);
+    }
+}
+
+.works-list-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.works-list-title {
+    font-family: var(--font-family-accent);
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: 0.2em;
+    margin-bottom: 40px;
+    @include g.mq() {
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+.works-list-title span {
+    display: block;
+}
+
+.works-item {
+    width: 100%;
+}
+
+.works-item-link {
+    position: relative;
+    display: block;
+}
+
+.works-item-thumbnail {
+    width: 100%;
+    height: 100%;
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.works-item-label {
+    position: absolute;
+    background-color: var(--bg-color);
+    bottom: 16px;
+    right: 16px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 16px;
+    border: 1px solid var(--line-color);
+}
+
+.works-item-info {
+}
+
+.works-item-title {
+    font-family: var(--font-family-accent);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding-block: 16px;
+    background-image: linear-gradient(to right, var(--line-color), var(--line-color) 4px, transparent 4px, transparent 10px);
+    background-size: 10px 1px;
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    @include g.mq() {
+        font-size: 18px;
+    }
+}
+
+.works-item-meta {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.works-item-date {
+    display: block;
+    font-family: var(--font-family-en);
+    grid-column: 1 / -1;
+}
+.works-item-categories {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.works-item-category {
+    letter-spacing: 0;
+    &:not(:last-child)::after {
+        content: "/";
+        margin-inline: 4px;
+    }
+}
+
+.works-item-url {
+    font-weight: bold;
+    border: 1px solid var(--line-color);
+    padding: 8px 16px;
+    justify-self: end;
+}
