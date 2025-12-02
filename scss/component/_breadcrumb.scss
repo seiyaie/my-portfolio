@@ -1,0 +1,28 @@
+@use "../global" as g;
+
+/*!
+component > breadcrumb
+------------------------------
+*/
+
+
+.c-breadcrumb {
+  font-family: var(--font-family-en);
+  text-transform: uppercase;
+  font-weight: bold;
+  @include g.mq() {
+      font-size: 18px;
+  }
+}
+
+.c-breadcrumb-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.c-breadcrumb-item:not(:first-child)::before {
+  content: ">";
+  display: inline-block;
+  margin-right: 8px;
+}
