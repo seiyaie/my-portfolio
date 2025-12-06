@@ -18,6 +18,24 @@ component > title
     }
 }
 
+.c-title--works {
+    font-family: var(--font-family-accent);
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: 0.2em;
+    display: inline-block;
+    border-bottom: 1px solid var(--line-color);
+    padding-block-end: 4px;
+    @include g.mq() {
+        font-size: 40px;
+    }
+    span {
+        display: block;
+    }
+}
+
 .c-title-wrapper {
     width: 100%;
     border-bottom: 1px solid var(--line-color);
