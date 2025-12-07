@@ -1,0 +1,62 @@
+@use "../../global" as g;
+
+/*!
+page > works > works-detail
+------------------------------
+*/
+
+.works-detail {
+}
+
+.works-detail-inner {
+    width: 90%;
+    margin-inline: auto;
+    max-width: 1200px;
+}
+
+.works-detail-title-wrapper {
+    margin-top: 40px;
+}
+
+.works-detail-hero {
+    margin-top: 40px;
+}
+
+.works-detail-basic {
+    margin-top: 24px;
+}
+
+.works-detail-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.works-detail-info-column {
+    width: calc(100% / 3 - 24px);
+}
+
+.works-detail-info-title {
+    border-bottom: 1px dashed var(--line-color);
+    padding-block-end: 4px;
+}
+
+.works-detail-info-text {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.works-detail-section {
+    margin-top: 24px;
+}
+
+.works-detail-section-title {
+    border-bottom: 1px dashed var(--line-color);
+    padding-block-end: 4px;
+}
+
+.works-detail-section-text {
+    font-weight: bold;
+    margin-top: 8px;
+}

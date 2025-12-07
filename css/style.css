@@ -1554,10 +1554,10 @@ page > works > works
 }
 
 /*!
-page > works > work-detail
+page > works > works-detail
 ------------------------------
 */
-.work-detail-inner {
+.works-detail-inner {
   width: 90%;
   margin-inline: auto;
   max-width: 1200px;
@@ -1567,45 +1567,45 @@ page > works > work-detail
   margin-top: 40px;
 }
 
-.work-detail-hero {
+.works-detail-hero {
   margin-top: 40px;
 }
 
-.work-detail-basic {
+.works-detail-basic {
   margin-top: 24px;
 }
 
-.work-detail-info {
+.works-detail-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
 }
 
-.work-detail-info-column {
+.works-detail-info-column {
   width: calc(33.3333333333% - 24px);
 }
 
-.work-detail-info-title {
+.works-detail-info-title {
   border-bottom: 1px dashed var(--line-color);
   padding-block-end: 4px;
 }
 
-.work-detail-info-text {
+.works-detail-info-text {
   font-weight: bold;
   text-transform: uppercase;
 }
 
-.work-detail-section {
+.works-detail-section {
   margin-top: 24px;
 }
 
-.work-detail-section-title {
+.works-detail-section-title {
   border-bottom: 1px dashed var(--line-color);
   padding-block-end: 4px;
 }
 
-.work-detail-section-text {
+.works-detail-section-text {
   font-weight: bold;
   margin-top: 8px;
 }/*# sourceMappingURL=style.css.map */
