@@ -54,8 +54,6 @@ page > top > top-kv
 .top-kv-slider-list-container {
     height: auto;
     background-color: var(--bg-color);
-    // z-index: 10000;
-    // padding: 16px;
     @include g.mq() {
         position: absolute;
         top: 0;
@@ -77,14 +75,11 @@ page > top > top-kv
     flex-wrap: nowrap;
     width: auto;
     height: 100%;
-    // padding-block: 16px;
-    // padding-inline: 16px;
     padding: 16px;
     gap: 16px;
 
     @include g.mq() {
         gap: 0;
-        // width: auto;
         flex-wrap: wrap;
         flex-direction: column;
         max-height: calc(100vh - 120px - 152px);
@@ -97,13 +92,31 @@ page > top > top-kv
 
 .top-kv-slider-item {
     min-width: 88px;
-    // max-width: 100px;
     aspect-ratio: 1/1;
-    // padding: 8px;
     @include g.mq() {
         max-width: none;
         padding: 4px;
         height: calc(100% / 3);
+    }
+
+    &--button {
+        display: grid;
+        place-items: center;
+        a {
+            border: 1px solid var(--line-color);
+            font-size: 14px;
+            font-family: var(--font-family-accent);
+            text-transform: uppercase;
+            display: block;
+            width: 100%;
+            line-height: 1.4;
+            padding-block: 8px;
+            text-align: center;
+            @include g.mq() {
+                font-size: 16px;
+                padding-block: 16px;
+            }
+        }
     }
 }
 
@@ -124,20 +137,6 @@ page > top > top-kv
         left: -32px;
     }
 }
-
-// .top-kv-toggle-btn {
-//     display: none;
-//     @include g.mq() {
-//         display: block;
-//         flex: 0 0 auto;
-//         position: absolute;
-//         top: 0;
-//         width: auto;
-//         height: auto;
-//         left: -32px;
-//         z-index: 100;
-//     }
-// }
 
 .top-kv-toggle-btn-bg {
     display: block;

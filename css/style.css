@@ -811,6 +811,27 @@ page > top > top-kv
     height: 33.3333333333%;
   }
 }
+.top-kv-slider-item--button {
+  display: grid;
+  place-items: center;
+}
+.top-kv-slider-item--button a {
+  border: 1px solid var(--line-color);
+  font-size: 14px;
+  font-family: var(--font-family-accent);
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+  line-height: 1.4;
+  padding-block: 8px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .top-kv-slider-item--button a {
+    font-size: 16px;
+    padding-block: 16px;
+  }
+}
 
 .top-kv-slider-item img {
   border: 1px solid var(--line-color);
