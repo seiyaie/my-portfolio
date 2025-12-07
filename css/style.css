@@ -276,6 +276,7 @@ component > button
   padding: 16px;
   width: 100%;
   display: block;
+  text-indent: 0.08em;
 }
 @media screen and (min-width: 768px) {
   .c-button {
@@ -1056,6 +1057,7 @@ page > top > top-works
 .top-works-tag {
   font-size: 12px;
   letter-spacing: 0.2em;
+  text-indent: 0.2em;
   padding: 4px 8px;
   border: 1px solid var(--line-color);
 }

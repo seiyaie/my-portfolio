@@ -10,6 +10,7 @@ component > button
     padding: 16px;
     width: 100%;
     display: block;
+    text-indent: 0.08em;
 
     @include g.mq() {
         border: 2px solid var(--line-color);
