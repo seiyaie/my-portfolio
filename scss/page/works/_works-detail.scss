@@ -5,9 +5,6 @@ page > works > works-detail
 ------------------------------
 */
 
-.works-detail {
-}
-
 .works-detail-inner {
     width: 90%;
     margin-inline: auto;
@@ -16,6 +13,30 @@ page > works > works-detail
 
 .works-detail-title-wrapper {
     margin-top: 40px;
+    @include g.mq() {
+        margin-top: 64px;
+    }
+}
+
+.works-detail-title {
+    font-family: var(--font-family-accent);
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.4;
+    letter-spacing: 0.2em;
+    display: inline-block;
+    border-bottom: 1px solid var(--line-color);
+    padding-block-end: 4px;
+    @include g.mq() {
+        font-size: 32px;
+    }
+    @include g.mq(lg) {
+        font-size: 40px;
+    }
+    span {
+        display: block;
+    }
 }
 
 .works-detail-hero {
@@ -24,17 +45,26 @@ page > works > works-detail
 
 .works-detail-basic {
     margin-top: 24px;
+    @include g.mq() {
+        margin-top: 40px;
+    }
 }
 
 .works-detail-info {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
     width: 100%;
+    @include g.mq() {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
-.works-detail-info-column {
-    width: calc(100% / 3 - 24px);
+.works-detail-info-column:first-child {
+    grid-column: 1 / -1;
+    @include g.mq() {
+        grid-column: auto;
+    }
 }
 
 .works-detail-info-title {
@@ -43,12 +73,17 @@ page > works > works-detail
 }
 
 .works-detail-info-text {
+    padding-top: 4px;
+    line-height: 1.2;
     font-weight: bold;
     text-transform: uppercase;
 }
 
 .works-detail-section {
     margin-top: 24px;
+    @include g.mq() {
+        margin-top: 40px;
+    }
 }
 
 .works-detail-section-title {

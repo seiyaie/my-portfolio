@@ -317,7 +317,7 @@ component > title
   font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 1.2;
+  line-height: 1.4;
   letter-spacing: 0.2em;
   display: inline-block;
   border-bottom: 1px solid var(--line-color);
@@ -1566,6 +1566,36 @@ page > works > works-detail
 .works-detail-title-wrapper {
   margin-top: 40px;
 }
+@media screen and (min-width: 768px) {
+  .works-detail-title-wrapper {
+    margin-top: 64px;
+  }
+}
+
+.works-detail-title {
+  font-family: var(--font-family-accent);
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.4;
+  letter-spacing: 0.2em;
+  display: inline-block;
+  border-bottom: 1px solid var(--line-color);
+  padding-block-end: 4px;
+}
+@media screen and (min-width: 768px) {
+  .works-detail-title {
+    font-size: 32px;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .works-detail-title {
+    font-size: 40px;
+  }
+}
+.works-detail-title span {
+  display: block;
+}
 
 .works-detail-hero {
   margin-top: 40px;
@@ -1574,16 +1604,31 @@ page > works > works-detail
 .works-detail-basic {
   margin-top: 24px;
 }
-
-.works-detail-info {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
+@media screen and (min-width: 768px) {
+  .works-detail-basic {
+    margin-top: 40px;
+  }
 }
 
-.works-detail-info-column {
-  width: calc(33.3333333333% - 24px);
+.works-detail-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .works-detail-info {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.works-detail-info-column:first-child {
+  grid-column: 1/-1;
+}
+@media screen and (min-width: 768px) {
+  .works-detail-info-column:first-child {
+    grid-column: auto;
+  }
 }
 
 .works-detail-info-title {
@@ -1592,12 +1637,19 @@ page > works > works-detail
 }
 
 .works-detail-info-text {
+  padding-top: 4px;
+  line-height: 1.2;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 .works-detail-section {
   margin-top: 24px;
+}
+@media screen and (min-width: 768px) {
+  .works-detail-section {
+    margin-top: 40px;
+  }
 }
 
 .works-detail-section-title {
