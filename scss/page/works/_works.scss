@@ -6,10 +6,6 @@ page > works > works
 */
 
 .works {
-    padding-block: 40px;
-    @include g.mq() {
-        padding-block: 64px;
-    }
 }
 
 .works-inner {
@@ -24,13 +20,12 @@ page > works > works
     margin-top: 40px;
     padding-block-end: 4px;
     @include g.mq() {
-      font-size: 24px;
+        font-size: 24px;
         margin-top: 64px;
     }
 }
 
 .works-list {
-    // padding-block: 64px;
     &--personal {
         border-bottom: 1px solid var(--line-color);
     }
@@ -40,9 +35,12 @@ page > works > works
     display: flex;
     flex-direction: column;
     gap: 40px;
-    padding-top: 64px;
+    padding-top: 40px;
     @include g.mq() {
-      padding-top: 90px;
+        padding-top: 64px;
+    }
+    @include g.mq(lg) {
+        padding-top: 80px;
     }
 }
 

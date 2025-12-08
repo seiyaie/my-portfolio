@@ -549,11 +549,16 @@ layout > container
 ------------------------------
 */
 .l-section-inner {
-  margin-block: 40px;
+  padding-block: 40px;
 }
 @media screen and (min-width: 768px) {
   .l-section-inner {
-    margin-block: 80px;
+    padding-block: 64px;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .l-section-inner {
+    padding-block: 80px;
   }
 }
 
@@ -893,15 +898,18 @@ page > top > top-about
 }
 
 .top-about-inner {
-  display: flex;
-  flex-direction: column;
   width: 90%;
   margin-inline: auto;
-  border: 1px solid var(--line-color);
   max-width: 1080px;
 }
+
+.top-about-content {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line-color);
+}
 @media screen and (min-width: 768px) {
-  .top-about-inner {
+  .top-about-content {
     flex-direction: row;
     align-items: center;
     border: 2px solid var(--line-color);
@@ -1373,15 +1381,6 @@ page > top > top-about
 page > works > works
 ------------------------------
 */
-.works {
-  padding-block: 40px;
-}
-@media screen and (min-width: 768px) {
-  .works {
-    padding-block: 64px;
-  }
-}
-
 .works-inner {
   width: 90%;
   margin-inline: auto;
@@ -1409,11 +1408,16 @@ page > works > works
   display: flex;
   flex-direction: column;
   gap: 40px;
-  padding-top: 64px;
+  padding-top: 40px;
 }
 @media screen and (min-width: 768px) {
   .works-list-inner {
-    padding-top: 90px;
+    padding-top: 64px;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .works-list-inner {
+    padding-top: 80px;
   }
 }
 
@@ -1595,6 +1599,11 @@ page > works > works-detail
     margin-top: 64px;
   }
 }
+@media screen and (min-width: 768px) {
+  .works-detail-title-wrapper {
+    margin-top: 80px;
+  }
+}
 
 .works-detail-title {
   font-family: var(--font-family-accent);
@@ -1622,7 +1631,17 @@ page > works > works-detail
 }
 
 .works-detail-hero {
-  margin-top: 40px;
+  padding-top: 40px;
+}
+@media screen and (min-width: 768px) {
+  .works-detail-hero {
+    padding-top: 64px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .works-detail-hero {
+    padding-top: 80px;
+  }
 }
 
 .works-detail-basic {

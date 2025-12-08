@@ -6,8 +6,11 @@ layout > container
 */
 
 .l-section-inner {
-    margin-block: 40px;
+    padding-block: 40px;
     @include g.mq() {
-        margin-block: 80px;
+        padding-block: 64px;
+    }
+    @include g.mq(lg) {
+        padding-block: 80px;
     }
 }

@@ -16,6 +16,9 @@ page > works > works-detail
     @include g.mq() {
         margin-top: 64px;
     }
+    @include g.mq() {
+        margin-top: 80px;
+    }
 }
 
 .works-detail-title {
@@ -40,7 +43,13 @@ page > works > works-detail
 }
 
 .works-detail-hero {
-    margin-top: 40px;
+    padding-top: 40px;
+    @include g.mq() {
+        padding-top: 64px;
+    }
+    @include g.mq() {
+        padding-top: 80px;
+    }
 }
 
 .works-detail-basic {
