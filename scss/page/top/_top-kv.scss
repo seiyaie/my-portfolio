@@ -38,6 +38,57 @@ page > top > top-kv
     object-fit: cover;
 }
 
+.top-kv-scroll-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+}
+
+.top-kv-scroll-tracker {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.top-kv-scrollbar {
+    width: clamp(200px, 40vw, 600px);
+    height: 2px;
+    background-color: #808080;
+}
+
+.top-kv-scrollbar-thumb {
+    background-color: var(--line-color);
+    width: calc(100% / 8);
+    height: 100%;
+}
+
+.top-kv-selected-index {
+    color: var(--text-color);
+}
+
+.top-kv-scroll-control {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    @include g.mq() {
+        gap: 24px;
+    }
+}
+
+.top-kv-scroll-button {
+    width: 16px;
+    height: 16px;
+    @include g.mq() {
+        width: 20px;
+        height: 20px;
+    }
+}
+
 .top-kv-slider {
     position: relative;
     width: 100%;
