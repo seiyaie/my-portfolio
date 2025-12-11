@@ -56,19 +56,23 @@ page > top > top-kv
 }
 
 .top-kv-scrollbar {
+    position: relative;
     width: clamp(200px, 40vw, 600px);
     height: 2px;
     background-color: #808080;
 }
 
 .top-kv-scrollbar-thumb {
-    background-color: var(--line-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: white;
     width: calc(100% / 8);
     height: 100%;
 }
 
 .top-kv-selected-index {
-    color: var(--text-color);
+    color: white;
 }
 
 .top-kv-scroll-control {
