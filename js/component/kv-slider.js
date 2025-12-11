@@ -3,19 +3,24 @@ export const initKvSlider = () => {
     const sliderItems = document.querySelectorAll(".js-kv-slider-item--trigger");
     const nextButton = document.querySelector(".js-kv-scroll-button--next");
     const prevButton = document.querySelector(".js-kv-scroll-button--prev");
+    const thumb = document.querySelector(".js-scrollbar-thumb");
+    const indexText = document.querySelector(".js-scrollbar-index");
 
+    const total = sliderItems.length;
     let activeIndex = 0;
 
     const updateSelectedWork = (index) => {
+        activeIndex = index;
         const item = sliderItems[index];
 
-        const mainSrc = item.dataset.mainSrc;
-        const mainSrcset = item.dataset.mainSrcset;
-        const mainSizes = item.dataset.mainSizes;
+        selectedWork.src = item.dataset.mainSrc;
+        selectedWork.srcset = item.dataset.mainSrcset;
+        selectedWork.sizes = item.dataset.mainSizes;
 
-        selectedWork.src = mainSrc;
-        selectedWork.srcset = mainSrcset;
-        selectedWork.sizes = mainSizes;
+        const percentage = (100 / total) * index;
+        thumb.style.left = `${percentage}%`;
+
+        indexText.textContent = `${index + 1} / ${total}`;
     };
 
     sliderItems.forEach((item, index) => {

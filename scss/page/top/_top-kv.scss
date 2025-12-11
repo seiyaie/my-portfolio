@@ -30,6 +30,16 @@ page > top > top-kv
         max-width: 85vw;
         min-width: 70%;
     }
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.4) 90%
+        );
+    }
 }
 
 .top-kv-selected-work img {
@@ -119,7 +129,6 @@ page > top > top-kv
         border-top: none;
         border-left: 2px solid var(--line-color);
         z-index: 100;
-        // overflow: hidden;
     }
 }
 
@@ -180,6 +189,10 @@ page > top > top-kv
     width: 100%;
     height: 100%;
     display: block;
+}
+
+.top-kv-slider-item.is-active img {
+    border: 1px solid var(--line-color--accent);
 }
 
 .top-kv-slider-toggle {
