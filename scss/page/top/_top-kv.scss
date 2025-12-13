@@ -30,16 +30,21 @@ page > top > top-kv
         max-width: 85vw;
         min-width: 70%;
     }
-    &::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0) 0%,
-            rgba(0, 0, 0, 0.4) 90%
-        );
-    }
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     inset: 0;
+    //     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 90%);
+    // }
+}
+
+.top-kv-mask {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 90%);
+    transform: translateZ(0);
+    will-change: transform;
+    z-index: 1000;
 }
 
 .top-kv-selected-work img {
@@ -49,14 +54,19 @@ page > top > top-kv
 }
 
 .top-kv-scroll-panel {
+    position: absolute;
+    left: 16px;
+    bottom: 140px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
     width: 90%;
+    z-index: 100;
+    @include g.mq() {
+        width: 70%;
+        left: 40px;
+        bottom: 40px;
+    }
 }
 
 .top-kv-scroll-tracker {
@@ -184,15 +194,56 @@ page > top > top-kv
     }
 }
 
-.top-kv-slider-item img {
+.top-kv-slider-item--trigger {
+    position: relative;
+    @media (any-hover: hover) {
+        &:hover {
+            &::before {
+                content: "Click!";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-family: var(--font-family-accent);
+                font-weight: bold;
+                z-index: 1;
+                color: white;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-color: rgba(0, 0, 0, 0.4);
+            }
+        }
+    }
+}
+
+.top-kv-slider-item--trigger img {
     border: 1px solid var(--line-color);
     width: 100%;
     height: 100%;
     display: block;
 }
 
-.top-kv-slider-item.is-active img {
-    border: 1px solid var(--line-color--accent);
+.top-kv-slider-item--trigger.is-active {
+    &::before {
+        content: "Selected";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: var(--font-family-accent);
+        font-weight: bold;
+        z-index: 1;
+        color: #ffffff;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
 }
 
 .top-kv-slider-toggle {
