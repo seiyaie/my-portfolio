@@ -4,7 +4,7 @@
 <path d="M25 0H0V85H25V0Z" fill="white"/>
 </mask>
 <g mask="url(#mask0_258_296)">
-<path d="M0 0H25V85L0 52.2818V0Z" fill="#FBFBFB"/>
+<path d="M0 0H25V85L0 52.2818V0Z" fill="#D0BFC3"/>
 <path d="M25 0V85L0 52.2818V0H25ZM1.5625 51.7364L25 83.014V0H1.5625V51.7364Z" fill="black"/>
 </g>
 </g>
