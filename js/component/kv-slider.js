@@ -43,18 +43,28 @@ export const initKvSlider = () => {
                 clone.remove();
                 gsap.set(selectedWork, { clearProps: "all" });
                 isAnimating = false;
+
+                scrollActiveItem(item);
             },
         });
-        tl.to(thumb, {
-            left: `${percentage}%`,
-            duration: 0.6,
-            ease: "power2.inOut",
-        },0)
-            .to(clone, {
-                x: toX,
+        tl.to(
+            thumb,
+            {
+                left: `${percentage}%`,
                 duration: 0.6,
                 ease: "power2.inOut",
-            },0)
+            },
+            0
+        )
+            .to(
+                clone,
+                {
+                    x: toX,
+                    duration: 0.6,
+                    ease: "power2.inOut",
+                },
+                0
+            )
             .to(
                 selectedWork,
                 {
@@ -65,6 +75,17 @@ export const initKvSlider = () => {
                 },
                 0
             );
+    };
+
+    const scrollActiveItem = (item) => {
+        const isMobile = window.matchMedia("(max-width: 767px)").matches;
+        if (!isMobile) return;
+
+        item.closest(".top-kv-slider-item")?.scrollIntoView({
+            behavior: "smooth",
+            inline: "nearest",
+            block: "nearest",
+        });
     };
 
     sliderItems.forEach((item, index) => {
