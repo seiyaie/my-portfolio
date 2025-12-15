@@ -69,22 +69,21 @@ export const initKvSlider = () => {
 
     sliderItems.forEach((item, index) => {
         item.addEventListener("click", () => {
-            if (activeIndex === index) return;
+            if (isAnimating || activeIndex === index) return;
             const direction = index > activeIndex ? "next" : "prev";
-            activeIndex = index;
-            updateSelectedWork(activeIndex, direction);
+            updateSelectedWork(index, direction);
         });
     });
 
     nextButton.addEventListener("click", () => {
+        if (isAnimating) return;
         const nextIndex = (activeIndex + 1) % total;
         updateSelectedWork(nextIndex, "next");
-        activeIndex = nextIndex;
     });
 
     prevButton.addEventListener("click", () => {
+        if (isAnimating) return;
         const prevIndex = (activeIndex - 1 + total) % total;
         updateSelectedWork(prevIndex, "prev");
-        activeIndex = prevIndex;
     });
 };
