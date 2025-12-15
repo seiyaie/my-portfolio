@@ -24,9 +24,6 @@ export const initKvSlider = () => {
         const clone = selectedWork.cloneNode(true);
         clone.style.position = "absolute";
         clone.style.inset = 0;
-        // clone.style.width = "100%";
-        // clone.style.height = "100%";
-        // clone.style.zIndex = 2;
         selectedWork.parentNode.appendChild(clone);
 
         selectedWork.src = item.dataset.mainSrc;
@@ -35,11 +32,8 @@ export const initKvSlider = () => {
 
         const fromX = direction === "next" ? "100%" : "-100%";
         const toX = direction === "next" ? "-100%" : "100%";
-        // selectedWork.style.opacity = 0;
-        // selectedWork.style.transform = `translateX(${direction === "next" ? "100%" : "-100%"})`;
 
         const percentage = (100 / total) * index;
-        // thumb.style.left = `${percentage}%`;
         indexText.textContent = `${index + 1} / ${total}`;
 
         gsap.set(selectedWork, { x: fromX, opacity: 1, position: "absolute", inset: 0 });
@@ -75,28 +69,20 @@ export const initKvSlider = () => {
 
     sliderItems.forEach((item, index) => {
         item.addEventListener("click", () => {
+            if (activeIndex === index) return;
+            const direction = index > activeIndex ? "next" : "prev";
             activeIndex = index;
-            updateSelectedWork(activeIndex);
+            updateSelectedWork(activeIndex, direction);
         });
     });
 
     nextButton.addEventListener("click", () => {
-        // activeIndex++;
-        // if (activeIndex >= sliderItems.length) {
-        //     activeIndex = 0;
-        // }
-        // updateSelectedWork(activeIndex);
         const nextIndex = (activeIndex + 1) % total;
         updateSelectedWork(nextIndex, "next");
         activeIndex = nextIndex;
     });
 
     prevButton.addEventListener("click", () => {
-        // activeIndex--;
-        // if (activeIndex < 0) {
-        //     activeIndex = sliderItems.length - 1;
-        // }
-        // updateSelectedWork(activeIndex);
         const prevIndex = (activeIndex - 1 + total) % total;
         updateSelectedWork(prevIndex, "prev");
         activeIndex = prevIndex;
