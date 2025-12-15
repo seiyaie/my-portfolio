@@ -24,9 +24,9 @@ page > top > top-kv
     height: auto;
     position: relative;
     width: 100%;
+    aspect-ratio: 16 / 9;
     @include g.mq() {
         flex-shrink: 0;
-        aspect-ratio: 16 / 9;
         max-width: 85vw;
         min-width: 70%;
     }

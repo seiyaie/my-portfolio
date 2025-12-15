@@ -734,11 +734,11 @@ page > top > top-kv
   height: auto;
   position: relative;
   width: 100%;
+  aspect-ratio: 16/9;
 }
 @media screen and (min-width: 768px) {
   .top-kv-selected-work {
     flex-shrink: 0;
-    aspect-ratio: 16/9;
     max-width: 85vw;
     min-width: 70%;
   }
