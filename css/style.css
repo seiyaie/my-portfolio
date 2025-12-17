@@ -919,6 +919,12 @@ page > top > top-kv
 .top-kv-slider-item--trigger {
   position: relative;
   display: block;
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+  .top-kv-slider-item--trigger {
+    font-size: 16px;
+  }
 }
 @media (any-hover: hover) {
   .top-kv-slider-item--trigger:hover::before {

@@ -197,8 +197,11 @@ page > top > top-kv
 
 .top-kv-slider-item--trigger {
     position: relative;
-    // aspect-ratio: 1/1;
     display: block;
+    font-size: 14px;
+    @include g.mq() {
+        font-size: 16px;
+    }
     @media (any-hover: hover) {
         &:hover {
             &::before {
