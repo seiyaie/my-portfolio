@@ -43,19 +43,24 @@ export const initKvSlider = () => {
                 clone.remove();
                 gsap.set(selectedWork, { clearProps: "all" });
                 isAnimating = false;
-
-                scrollActiveItem(item);
             },
         });
-        tl.to(
-            thumb,
-            {
-                left: `${percentage}%`,
-                duration: 0.6,
-                ease: "power2.inOut",
+        tl.call(
+            () => {
+                scrollActiveItem(item);
             },
+            null,
             0
         )
+            .to(
+                thumb,
+                {
+                    left: `${percentage}%`,
+                    duration: 0.6,
+                    ease: "power2.inOut",
+                },
+                0
+            )
             .to(
                 clone,
                 {
