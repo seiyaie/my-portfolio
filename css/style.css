@@ -588,6 +588,7 @@ layout > header
 @media screen and (min-width: 768px) {
   .header-logo-wrapper {
     width: 120px;
+    border-right: 2px solid var(--line-color);
   }
 }
 
