@@ -149,8 +149,8 @@ page > top > top-kv
     flex-wrap: nowrap;
     width: auto;
     height: 100%;
-    padding: 16px;
-    gap: 16px;
+    padding: 8px;
+    gap: 8px;
 
     @include g.mq() {
         gap: 0;
@@ -166,6 +166,7 @@ page > top > top-kv
 
 .top-kv-slider-item {
     min-width: 88px;
+    min-height: 88px;
     aspect-ratio: 1/1;
     @include g.mq() {
         max-width: none;
@@ -196,6 +197,8 @@ page > top > top-kv
 
 .top-kv-slider-item--trigger {
     position: relative;
+    // aspect-ratio: 1/1;
+    display: block;
     @media (any-hover: hover) {
         &:hover {
             &::before {

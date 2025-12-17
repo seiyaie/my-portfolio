@@ -866,8 +866,8 @@ page > top > top-kv
   flex-wrap: nowrap;
   width: auto;
   height: 100%;
-  padding: 16px;
-  gap: 16px;
+  padding: 8px;
+  gap: 8px;
 }
 @media screen and (min-width: 768px) {
   .top-kv-slider-list {
@@ -884,6 +884,7 @@ page > top > top-kv
 /* スライダーアイテム */
 .top-kv-slider-item {
   min-width: 88px;
+  min-height: 88px;
   aspect-ratio: 1/1;
 }
 @media screen and (min-width: 768px) {
@@ -917,6 +918,7 @@ page > top > top-kv
 
 .top-kv-slider-item--trigger {
   position: relative;
+  display: block;
 }
 @media (any-hover: hover) {
   .top-kv-slider-item--trigger:hover::before {
