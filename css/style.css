@@ -1331,7 +1331,7 @@ page > top > top-skills
 
 .top-skills-inner {
   width: 90%;
-  max-width: 1400px;
+  max-width: var(--width-content-l);
   margin-inline: auto;
 }
 
