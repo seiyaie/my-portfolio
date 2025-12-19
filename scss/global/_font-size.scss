@@ -21,6 +21,8 @@ global > font-size
 }
 
 @include g.mq(lg) {
-    --font-size-heading: 40px;
-    --font-size-body-sm: 18px;
+    :root {
+        --font-size-heading: 40px;
+        --font-size-body-sm: 18px;
+    }
 }

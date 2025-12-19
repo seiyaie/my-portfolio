@@ -14,6 +14,7 @@ page > top > top-vision
 
 .top-vision-inner {
     width: 90%;
+    max-width: var(--width-content-l);
     margin-inline: auto;
 }
 
@@ -41,21 +42,22 @@ page > top > top-vision
 }
 
 .top-vision-growth-list {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 40px;
     padding: 40px 16px;
-    justify-content: center;
-    align-items: center;
     @include g.mq() {
-        flex-direction: row;
         padding: 40px 24px;
+    }
+    @include g.mq(lg) {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 .top-vision-growth-item {
     position: relative;
     border: 1px solid var(--line-color);
+    padding-bottom: 8px;
     &:not(:last-child)::after {
         content: "";
         position: absolute;
@@ -69,7 +71,7 @@ page > top > top-vision
         mask-image: url("../img/decorations/top-vision-arrow.svg");
         mask-size: contain;
         mask-repeat: no-repeat;
-        @include g.mq() {
+        @include g.mq(lg) {
             top: 50%;
             right: -31px;
             bottom: auto;
