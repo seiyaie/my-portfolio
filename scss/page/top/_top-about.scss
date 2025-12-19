@@ -69,19 +69,14 @@ page > top > top-about
 }
 
 .top-about-profile-name {
-    font-size: 18px;
+    font-size: var(--font-size-subheading);
     text-transform: uppercase;
     font-family: var(--font-family-accent);
-    @include g.mq() {
-        font-size: 32px;
-    }
 }
 
 .top-about-profile-text {
-    font-size: 16px;
     margin-top: 24px;
     @include g.mq() {
-        font-size: 18px;
         margin-top: 32px;
     }
 }

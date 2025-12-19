@@ -5,14 +5,13 @@ component > title
 ------------------------------
 */
 .c-title {
-    font-size: 20px;
+    font-size: var(--font-size-heading);
     text-transform: uppercase;
     font-family: var(--font-family-accent);
     line-height: 1;
     padding-bottom: 12px;
     padding-left: 12px;
     @include g.mq() {
-        font-size: 48px;
         padding-bottom: 24px;
         padding-left: 24px;
     }
@@ -20,7 +19,7 @@ component > title
 
 .c-title--works {
     font-family: var(--font-family-accent);
-    font-size: 20px;
+    font-size: var(--font-size-heading);
     font-weight: bold;
     text-transform: uppercase;
     line-height: 1.4;
@@ -28,9 +27,6 @@ component > title
     display: inline-block;
     border-bottom: 1px solid var(--line-color);
     padding-block-end: 4px;
-    @include g.mq() {
-        font-size: 40px;
-    }
     span {
         display: block;
     }
@@ -41,7 +37,7 @@ component > title
     border-bottom: 1px solid var(--line-color);
     @include g.mq() {
         border-bottom: 2px solid var(--line-color);
-      }
+    }
 }
 
 .c-title-inner {

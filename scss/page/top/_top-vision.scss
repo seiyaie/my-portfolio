@@ -24,7 +24,7 @@ page > top > top-vision
 .top-vision-coder-title,
 .top-vision-growth-title {
     font-weight: bold;
-    font-size: 20px;
+    font-size: var(--font-size-subheading);
     letter-spacing: 0.2em;
     border-bottom: 1px solid var(--line-color);
     padding: 8px 16px;

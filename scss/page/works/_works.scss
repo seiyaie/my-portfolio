@@ -46,7 +46,7 @@ page > works > works
 
 .works-list-title {
     font-family: var(--font-family-accent);
-    font-size: 20px;
+    font-size: var(--font-size-heading);
     font-weight: bold;
     text-transform: uppercase;
     line-height: 1.2;
@@ -54,9 +54,6 @@ page > works > works
     display: inline-block;
     border-bottom: 1px solid var(--line-color);
     padding-block-end: 4px;
-    @include g.mq() {
-        font-size: 40px;
-    }
 }
 
 .works-list-title span {
@@ -102,7 +99,7 @@ page > works > works
     background-color: var(--bg-color);
     bottom: 16px;
     right: 16px;
-    font-size: 14px;
+    font-size: var(--font-size-body-sm);
     font-weight: bold;
     padding: 8px 16px;
     border: 1px solid var(--line-color);
@@ -143,14 +140,8 @@ page > works > works
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
-    font-size: 14px;
+    font-size: var(--font-size-body-sm);
     margin-top: 8px;
-    @include g.mq() {
-        font-size: 16px;
-    }
-    @include g.mq(lg) {
-        font-size: 18px;
-    }
 }
 
 .works-item-date {
@@ -172,13 +163,7 @@ page > works > works
 }
 
 .works-item-url {
-    font-size: 14px;
+    font-size: var(--font-size-body-sm);
     font-weight: bold;
     justify-self: end;
-    @include g.mq() {
-        font-size: 16px;
-    }
-    @include g.mq(lg) {
-        font-size: 18px;
-    }
 }
