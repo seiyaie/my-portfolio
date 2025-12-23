@@ -33,7 +33,7 @@ global > content-width
 ------------------------------
 */
 :root {
-  --width-content-s: 920px;
+  --width-content-s: 760px;
   --width-content: 1080px;
   --width-content-l: 1400px;
 }
@@ -1696,12 +1696,6 @@ page > works > works
 page > works > works-detail
 ------------------------------
 */
-.works-detail-inner {
-  width: 90%;
-  margin-inline: auto;
-  max-width: 1200px;
-}
-
 .works-detail-title-wrapper {
   margin-top: 40px;
 }
@@ -1788,6 +1782,13 @@ page > works > works-detail
 .works-detail-info-title {
   border-bottom: 1px dashed var(--line-color);
   padding-block-end: 4px;
+  font-weight: bold;
+  font-size: 18px;
+}
+@media screen and (min-width: 768px) {
+  .works-detail-info-title {
+    font-size: 20px;
+  }
 }
 
 .works-detail-info-text {
@@ -1809,9 +1810,16 @@ page > works > works-detail
 .works-detail-section-title {
   border-bottom: 1px dashed var(--line-color);
   padding-block-end: 4px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+@media screen and (min-width: 768px) {
+  .works-detail-section-title {
+    font-size: 20px;
+  }
 }
 
-.works-detail-section-text {
-  font-weight: bold;
-  margin-top: 8px;
+.works-detail-section-text:not(:last-child) {
+  margin-bottom: 24px;
 }/*# sourceMappingURL=style.css.map */

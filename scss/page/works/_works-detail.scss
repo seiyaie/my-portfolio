@@ -5,12 +5,6 @@ page > works > works-detail
 ------------------------------
 */
 
-.works-detail-inner {
-    width: 90%;
-    margin-inline: auto;
-    max-width: 1200px;
-}
-
 .works-detail-title-wrapper {
     margin-top: 40px;
     @include g.mq() {
@@ -79,6 +73,11 @@ page > works > works-detail
 .works-detail-info-title {
     border-bottom: 1px dashed var(--line-color);
     padding-block-end: 4px;
+    font-weight: bold;
+    font-size: 18px;
+    @include g.mq() {
+        font-size: 20px;
+    }
 }
 
 .works-detail-info-text {
@@ -98,9 +97,16 @@ page > works > works-detail
 .works-detail-section-title {
     border-bottom: 1px dashed var(--line-color);
     padding-block-end: 4px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    font-size: 18px;
+    @include g.mq() {
+        font-size: 20px;
+    }
 }
 
 .works-detail-section-text {
-    font-weight: bold;
-    margin-top: 8px;
+    &:not(:last-child) {
+        margin-bottom: 24px;
+    }
 }
