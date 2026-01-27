@@ -17,6 +17,19 @@ utility > utility
     margin: -1px !important;
 }
 
+// 上下余白
+.u-ptb {
+    padding-block: 40px !important;
+
+    @include g.mq() {
+        padding-block: 64px !important;
+    }
+
+    @include g.mq(lg) {
+        padding-block: 94px !important;
+    }
+}
+
 
 // テキストホバーアニメーション
 .u-text-hover {
