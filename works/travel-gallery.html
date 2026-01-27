@@ -1,231 +1,320 @@
 <!DOCTYPE html>
 <html lang="ja" data-theme="dark">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <title>Seiya Imoto's Portfolio - worksページ</title>
-        <meta name="description" content="ページの説明" />
-        <meta name="format-detection" content="telephone=no" />
 
-        <!-- favicon/webclipicon -->
-        <link rel="icon" href="../img/favicon/favicon.ico" />
-        <link rel="icon" href="../img/favicon/favicon-source.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="../img/webclip.png" />
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Seiya Imoto's Portfolio - worksページ</title>
+    <meta name="description" content="ページの説明" />
+    <meta name="format-detection" content="telephone=no" />
 
-        <!-- ogp -->
-        <meta property="og:site_name" content="サイト名" />
-        <meta property="og:url" content="URL" />
-        <meta property="og:type" content="website or article" />
-        <meta property="og:title" content="Seiya Imoto's Portfolio - worksページ" />
-        <meta property="og:description" content="ページの説明" />
-        <meta property="og:image" content="URL" />
-        <meta property="og:locale" content="ja_JP" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:description" content="Seiya Imoto's Portfolio - worksページ" />
-        <meta name="twitter:image:src" content="URL" />
+    <!-- favicon/webclipicon -->
+    <link rel="icon" href="../img/favicon/favicon.ico" />
+    <link rel="icon" href="../img/favicon/favicon-source.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../img/webclip.png" />
 
-        <!-- font -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet" />
+    <!-- ogp -->
+    <meta property="og:site_name" content="サイト名" />
+    <meta property="og:url" content="URL" />
+    <meta property="og:type" content="website or article" />
+    <meta property="og:title" content="Seiya Imoto's Portfolio - worksページ" />
+    <meta property="og:description" content="ページの説明" />
+    <meta property="og:image" content="URL" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="Seiya Imoto's Portfolio - worksページ" />
+    <meta name="twitter:image:src" content="URL" />
 
-        <!-- css -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
-        <link rel="stylesheet" href="../css/style.css" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Michroma&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Zen+Kaku+Gothic+Antique&display=swap"
+        rel="stylesheet" />
 
-        <!-- js -->
-        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
-        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
-        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" defer></script>
-        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js" defer></script>
-        <script src="../js/main.js" type="module"></script>
-    </head>
-    <body>
-        <!-- header -->
-        <header class="header">
-            <div class="header-logo-wrapper">
-                <a href="../index.html" class="header-logo" aria-label="topページに戻る">
-                    <img src="../img/logo/logo-white.svg" width="25" height="100" alt="" class="js-theme-logo" />
-                </a>
-            </div>
-            <nav class="header-nav" aria-label="グローバルナビゲーション">
-                <ul class="header-nav-list">
-                    <li class="header-nav-item header-nav-item--pc">
-                        <a href="../index.html#about" class="header-nav-link">about</a>
-                    </li>
-                    <li class="header-nav-item header-nav-item--pc">
-                        <a href="index.html" class="header-nav-link">works</a>
-                    </li>
-                    <li class="header-nav-item header-nav-item--pc">
-                        <a href="../index.html#vision" class="header-nav-link">vision</a>
-                    </li>
-                    <li class="header-nav-item header-nav-item--pc">
-                        <a href="../index.html#skills" class="header-nav-link">skills</a>
-                    </li>
-                    <li class="header-nav-item header-nav-item--pc">
-                        <a href="../index.html#contact" class="header-nav-link">contact</a>
-                    </li>
-                    <li class="header-nav-item header-nav-item--pc">
-                        <button class="header-theme-button js-theme-button" aria-label="ライトモードに切り替え">
-                            <img src="../img/icons/system/light-mode.svg" width="60" height="60" alt="" class="js-theme-icon" />
-                        </button>
-                    </li>
-                    <li class="header-nav-item header-nav-item--sp c-hamburger-button">
-                        <button class="c-hamburger-open-button js-hamburger-open-button" aria-label="ハンバーガーメニューを開く">
-                            <img src="../img/icons/ui/hamburger-open-button-white.svg" width="40" height="30" alt="" decoding="async" class="js-theme-hamburger-open" />
-                        </button>
-                    </li>
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" defer></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"
+        defer></script>
+    <script src="../js/main.js" type="module"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header">
+        <div class="header-logo-wrapper">
+            <a href="../index.html" class="header-logo" aria-label="topページに戻る">
+                <img src="../img/logo/logo-white.svg" width="25" height="100" alt="" class="js-theme-logo" />
+            </a>
+        </div>
+        <nav class="header-nav" aria-label="グローバルナビゲーション">
+            <ul class="header-nav-list">
+                <li class="header-nav-item header-nav-item--pc">
+                    <a href="../index.html#about" class="header-nav-link u-text-hover">about</a>
+                </li>
+                <li class="header-nav-item header-nav-item--pc">
+                    <a href="index.html" class="header-nav-link u-text-hover">works</a>
+                </li>
+                <li class="header-nav-item header-nav-item--pc">
+                    <a href="../index.html#vision" class="header-nav-link u-text-hover">vision</a>
+                </li>
+                <li class="header-nav-item header-nav-item--pc">
+                    <a href="../index.html#skills" class="header-nav-link u-text-hover">skills</a>
+                </li>
+                <li class="header-nav-item header-nav-item--pc">
+                    <a href="../index.html#contact" class="header-nav-link u-text-hover">contact</a>
+                </li>
+                <li class="header-nav-item header-nav-item--pc">
+                    <button class="header-theme-button js-theme-button" aria-label="ライトモードに切り替え">
+                        <img src="../img/icons/system/light-mode.svg" width="60" height="60" alt=""
+                            class="js-theme-icon" />
+                    </button>
+                </li>
+                <li class="header-nav-item header-nav-item--sp c-hamburger-button">
+                    <button class="c-hamburger-open-button js-hamburger-open-button" aria-label="ハンバーガーメニューを開く">
+                        <img src="../img/icons/ui/hamburger-open-button-white.svg" width="40" height="30" alt=""
+                            decoding="async" class="js-theme-hamburger-open" />
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- the end of header -->
+
+    <!-- hamburger menu -->
+    <dialog class="c-hamburger-menu js-hamburger-menu" aria-label="ハンバーガーメニュー">
+        <div class="c-hamburger-header">
+            <button class="c-hamburger-close-button js-hamburger-close-button" aria-label="ハンバーガーメニューを閉じる">
+                <img src="../img/icons/ui/hamburger-close-button-white.svg" width="40" height="30" alt=""
+                    decoding="async" class="js-theme-hamburger-close" />
+            </button>
+        </div>
+        <div class="c-hamburger-menu-inner">
+            <ul class="c-hamburger-menu-list js-hamburger-menu-list">
+                <li class="c-hamburger-menu-item">
+                    <button class="js-theme-button" aria-label="ライトモードに切り替え">
+                        <img src="../img/icons/system/light-mode.svg" width="60" height="60" alt="" decoding="async"
+                            class="js-theme-icon" />
+                    </button>
+                </li>
+                <li
+                    class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
+                    <a href="../index.html" class="u-text-hover">home</a>
+                </li>
+                <li
+                    class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
+                    <a href="../index.html#about" class="u-text-hover">about</a>
+                </li>
+                <li
+                    class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
+                    <a href="index.html" class="u-text-hover">works</a>
+                </li>
+                <li
+                    class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
+                    <a href="../index.html#vision" class="u-text-hover">vision</a>
+                </li>
+                <li
+                    class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
+                    <a href="../index.html#skills" class="u-text-hover">skills</a>
+                </li>
+                <li class="c-hamburger-menu-item c-hamburger-menu-item--sns js-hamburger-menu-item">
+                    <a href="https://github.com/seiyaie" aria-label="githubへ移動"><img
+                            src="../img/icons/sns/github-white.svg" width="41" height="40" alt=""
+                            decoding="async" /></a>
+                </li>
+            </ul>
+        </div>
+    </dialog>
+    <!-- the end of hamburger menu -->
+
+    <!-- text slider -->
+    <div class="c-text-slider">
+        <div class="p-keyword-slider__splide js-keyword-carousel-works splide">
+            <div class="splide__track p-keyword-slider__track">
+                <ul class="splide__list c-text-slider-list">
+                    <li class="splide__slide c-text-slider-item">travel gallery</li>
+                    <li class="splide__slide c-text-slider-item">travel gallery</li>
+                    <li class="splide__slide c-text-slider-item">travel gallery</li>
+                    <li class="splide__slide c-text-slider-item">travel gallery</li>
+                    <li class="splide__slide c-text-slider-item">travel gallery</li>
+                    <li class="splide__slide c-text-slider-item">travel gallery</li>
+                    <li class="splide__slide c-text-slider-item">travel gallery</li>
+                    <li class="splide__slide c-text-slider-item">travel gallery</li>
+                    <li class="splide__slide c-text-slider-item">travel gallery</li>
                 </ul>
+            </div>
+        </div>
+    </div>
+    <!-- the end of text slider -->
+
+    <!-- works -->
+    <main class="works-detail l-section-inner">
+        <div class="l-container">
+            <!-- breadcrumb -->
+            <nav class="c-breadcrumb" aria-label="パンくずリスト">
+                <ol class="c-breadcrumb-list">
+                    <li class="c-breadcrumb-item"><a href="../index.html">home</a></li>
+                    <li class="c-breadcrumb-item"><a href="index.html">works</a></li>
+                    <li class="c-breadcrumb-item c-breadcrumb-item--current" aria-current="page">travel gallery</li>
+                </ol>
             </nav>
-        </header>
-        <!-- the end of header -->
+            <!-- the end of breadcrumb -->
 
-        <!-- hamburger menu -->
-        <dialog class="c-hamburger-menu js-hamburger-menu" aria-label="ハンバーガーメニュー">
-            <div class="c-hamburger-header">
-                <button class="c-hamburger-close-button js-hamburger-close-button" aria-label="ハンバーガーメニューを閉じる">
-                    <img src="../img/icons/ui/hamburger-close-button-white.svg" width="40" height="30" alt="" decoding="async" class="js-theme-hamburger-close" />
-                </button>
+            <div class="works-detail-title-wrapper">
+                <h1 class="works-detail-title">travel gallery</h1>
             </div>
-            <div class="c-hamburger-menu-inner">
-                <ul class="c-hamburger-menu-list js-hamburger-menu-list">
-                    <li class="c-hamburger-menu-item">
-                        <button class="js-theme-button" aria-label="ライトモードに切り替え"><img src="../img/icons/system/light-mode.svg" width="60" height="60" alt="" decoding="async" class="js-theme-icon" /></button>
-                    </li>
-                    <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link"><a href="../index.html">home</a></li>
-                    <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link"><a href="../index.html#about">about</a></li>
-                    <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link"><a href="index.html">works</a></li>
-                    <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link"><a href="../index.html#vision">vision</a></li>
-                    <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link"><a href="../index.html#skills">skills</a></li>
-                    <li class="c-hamburger-menu-item c-hamburger-menu-item--sns js-hamburger-menu-item">
-                        <a href="https://github.com/seiyaie" aria-label="githubへ移動"><img src="../img/icons/sns/github-white.svg" width="41" height="40" alt="" decoding="async" /></a>
-                    </li>
+
+            <!-- hero section -->
+            <div class="works-detail-hero">
+                <img src="../img/common/16-9/small/travel-gallery.jpg"
+                    srcset="../img/common/16-9/small/travel-gallery.jpg 308w, ../img/common/16-9/large/travel-gallery.jpg 1120w"
+                    sizes="(min-width: 768px) 1120px, 308px" width="2240" height="1260" alt="" decoding="async" />
+            </div>
+            <!-- the end of hero section -->
+        </div>
+
+        <div class="l-container-s">
+            <div class="works-detail-basic">
+                <dl class="works-detail-info">
+                    <div class="works-detail-info-column">
+                        <dt class="works-detail-info-title">作品名</dt>
+                        <dd class="works-detail-info-text">travel gallery</dd>
+                    </div>
+                    <div class="works-detail-info-column">
+                        <dt class="works-detail-info-title">制作月</dt>
+                        <dd class="works-detail-info-text">2025.10</dd>
+                    </div>
+                    <div class="works-detail-info-column">
+                        <dt class="works-detail-info-title">制作期間</dt>
+                        <dd class="works-detail-info-text">2ヶ月</dd>
+                    </div>
+                </dl>
+            </div>
+
+            <section class="works-detail-section">
+                <h2 class="works-detail-section-title">概要</h2>
+                <p class="works-detail-section-text">過去に訪れた国々で撮った写真をまとめたギャラリーサイトです。<br />情報設計、デザイン、コーディングを自ら行いました。</p>
+            </section>
+
+            <section class="works-detail-section">
+                <h2 class="works-detail-section-title">制作目的</h2>
+                <p class="works-detail-section-text">
+                    本作品はポートフォリオ用のオリジナル作品として制作しました。<br />単に写真を並べるギャラリーサイトではなく、閲覧者が写真の世界観に自然と入り込める体験を目的としています。</p>
+
+                <p class="works-detail-section-text">
+                    またGSAPを用いたアニメーション表現と、レイアウトや余白設計といったデザイン面の理解を深めることをテーマとし、技術的な習得と表現の両立を意識して制作しました。</p>
+
+                <p class="works-detail-section-text">
+                    自身の旅の記録を題材にすることで、作り手としての視点や価値観を作品に反映しつつ、<br />オリジナル性のあるアウトプットを目指しています。</p>
+            </section>
+
+            <section class="works-detail-section">
+                <h2 class="works-detail-section-title">設計</h2>
+                <p class="works-detail-section-text">
+                    本サイトでは、写真そのものに集中できる体験を軸に全体の構成を設計しました。<br>まずビジュアルによって世界観を提示し、その後に必要な情報が自然と理解できるよう、
+                    コンテンツの配置や閲覧の流れを整理しています。</p>
+
+                <p class="works-detail-section-text">
+                    各国ごとの下層ページは、レイアウトや操作方法を共通化し、表示する写真や背景のみが切り替わる構成としました。<br>国が変わっても操作に迷わず、写真鑑賞に意識を向け続けられるよう、体験の一貫性を重視しています。
+                </p>
+
+                <p class="works-detail-section-text">PC・スマートフォン・タブレットといったデバイスの違いによって体験に差が出ないように、
+                    マウス操作やhoverに依存しないインタラクションを前提に設計しました。<br>画面サイズが異なる環境でも、操作方法や情報の伝わり方が変わらないことを意識しています。</p>
+            </section>
+
+            <section class="works-detail-section">
+                <h2 class="works-detail-section-title">工夫した点</h2>
+
+                <p class="works-detail-section-text">
+                    操作全体を通して、ユーザーの動きを遮らない流れるような体験になるようにアニメーションを設計しました。<br />ページ遷移や表示の切り替え時にも動きを持たせることで、画面が唐突に切り替わる印象を抑えています。
+                </p>
+
+                <p class="works-detail-section-text">また、スクロールトリガーを用いて画像にアニメーションやラベル表示を加え、
+                    クリック可能な要素であることが直感的に伝わるよう工夫しました。<br />マウス操作をしないスマートフォンやタブレットからのアクセスでも、操作対象が分かる設計を意識しています。</p>
+
+                <p class="works-detail-section-text">
+                    デザイン面では、各ページの背景にその国を象徴する画像を使用し、スクロールに応じて背景が徐々に暗くなる演出を取り入れました。<br />ページ全体に一体感を持たせつつ、コンテンツが進むにつれてギャラリーの写真へ自然に視線が集中することを狙っています。
+                </p>
+
+                <p class="works-detail-section-text">
+                    ギャラリーのレイアウトは、1行につき1枚の画像を配置するグリッド構成とし、写真一枚一枚に視線が行くよう設計しました。<br />行ごとに画像の配置を左右交互に切り替えることで、単調にならないリズム感を持たせ、視覚的なアクセントを持たせています。
+                </p>
+
+                <p class="works-detail-section-text">
+                    特に力を入れた点として、ハンバーガーメニューの演出があります。<br />スクロール位置をトリガーとして背景が各国のサムネイル画像に切り替わる仕組みとし、ナビゲーション自体もギャラリー体験の一部として機能させることを目指しました。
+                </p>
+
+                <p class="works-detail-section-text">
+                    画像クリック時のライトボックス表示では、clip-path(polygon)とGSAPのタイムラインを組み合わせています。<br />開閉時にも一連の流れを感じられるアニメーションを実装しました。<br />単なる拡大表示ではなく、写真へと意識が自然に移る演出になるよう調整しています。
+                </p>
+            </section>
+
+            <section class="works-detail-section">
+                <h2 class="works-detail-section-title">技術選定の理由</h2>
+                <p class="works-detail-section-text">アニメーションにはGSAPを採用しました。CSSのみでは制御しづらい タイムライン管理やScrollTrigger連携をしています。
+                </p>
+                <p class="works-detail-section-text">また、JavaScriptはフレームワークを使わず、 素の構文で記述することで挙動の理解と保守性を優先しました。</p>
+            </section>
+
+            <section class="works-detail-section">
+                <h2 class="works-detail-section-title">使用言語 / 使用ツール</h2>
+                <p class="works-detail-section-text">HTML / CSS / JavaScript / GSAP / Cursor / Figma / Git / GitHub</p>
+            </section>
+
+            <section class="works-detail-section">
+                <h2 class="works-detail-section-title">URL</h2>
+                <p class="works-detail-section-text">https://itsseiya.com/travel-gallery/</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- the end of work detail -->
+
+    <!-- text slider -->
+    <div class="c-text-slider">
+        <div class="p-keyword-slider__splide js-keyword-carousel-works-bottom splide">
+            <div class="splide__track p-keyword-slider__track">
+                <ul class="splide__list c-text-slider-list">
+                    <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                    <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                    <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                    <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                    <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                    <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                    <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                    <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                    <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
                 </ul>
             </div>
-        </dialog>
-        <!-- the end of hamburger menu -->
-
-        <!-- text slider -->
-        <div class="c-text-slider">
-            <div class="p-keyword-slider__splide js-keyword-carousel-works splide">
-                <div class="splide__track p-keyword-slider__track">
-                    <ul class="splide__list c-text-slider-list">
-                        <li class="splide__slide c-text-slider-item">travel gallery</li>
-                        <li class="splide__slide c-text-slider-item">travel gallery</li>
-                        <li class="splide__slide c-text-slider-item">travel gallery</li>
-                        <li class="splide__slide c-text-slider-item">travel gallery</li>
-                        <li class="splide__slide c-text-slider-item">travel gallery</li>
-                        <li class="splide__slide c-text-slider-item">travel gallery</li>
-                        <li class="splide__slide c-text-slider-item">travel gallery</li>
-                        <li class="splide__slide c-text-slider-item">travel gallery</li>
-                        <li class="splide__slide c-text-slider-item">travel gallery</li>
-                    </ul>
-                </div>
-            </div>
         </div>
-        <!-- the end of text slider -->
-
-        <!-- works -->
-        <main class="works-detail l-section-inner">
-            <div class="works-detail-inner">
-                <!-- breadcrumb -->
-                <nav class="c-breadcrumb" aria-label="パンくずリスト">
-                    <ol class="c-breadcrumb-list">
-                        <li class="c-breadcrumb-item"><a href="../index.html">home</a></li>
-                        <li class="c-breadcrumb-item"><a href="index.html">works</a></li>
-                        <li class="c-breadcrumb-item c-breadcrumb-item--current" aria-current="page">travel gallery</li>
-                    </ol>
-                </nav>
-                <!-- the end of breadcrumb -->
-
-                <div class="works-detail-title-wrapper">
-                    <h1 class="works-detail-title">travel gallery</h1>
-                </div>
-
-                <!-- hero section -->
-                <div class="works-detail-hero">
-                    <img src="../img/common/16-9/small/travel-gallery.jpg" srcset="../img/common/16-9/small/travel-gallery.jpg 308w, ../img/common/16-9/large/travel-gallery.jpg 1120w" sizes="(min-width: 768px) 1120px, 308px" width="2240" height="1260" alt="" decoding="async" />
-                </div>
-                <!-- the end of hero section -->
-
-                <div class="works-detail-basic">
-                    <dl class="works-detail-info">
-                        <div class="works-detail-info-column">
-                            <dt class="works-detail-info-title">作品名</dt>
-                            <dd class="works-detail-info-text">travel gallery</dd>
-                        </div>
-                        <div class="works-detail-info-column">
-                            <dt class="works-detail-info-title">制作月</dt>
-                            <dd class="works-detail-info-text">2025.10</dd>
-                        </div>
-                        <div class="works-detail-info-column">
-                            <dt class="works-detail-info-title">制作期間</dt>
-                            <dd class="works-detail-info-text">2ヶ月</dd>
-                        </div>
-                    </dl>
-                </div>
-
-                <section class="works-detail-section">
-                    <h2 class="works-detail-section-title">概要</h2>
-                    <p class="works-detail-section-text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                </section>
-
-                <section class="works-detail-section">
-                    <h2 class="works-detail-section-title">工夫した点</h2>
-                    <p class="works-detail-section-text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                </section>
-
-                <section class="works-detail-section">
-                    <h2 class="works-detail-section-title">URL</h2>
-                    <p class="works-detail-section-text">https://itsseiya.com/travel-gallery/</p>
-                </section>
-
-                <section class="works-detail-section">
-                    <h2 class="works-detail-section-title">使用言語 / 使用ツール</h2>
-                    <p class="works-detail-section-text">HTML / CSS / JavaScript / GSAP / Cursor / Figma / Git / GitHub</p>
-                </section>
-            </div>
-        </main>
-
-        <!-- the end of work detail -->
-
-        <!-- text slider -->
-        <div class="c-text-slider">
-            <div class="p-keyword-slider__splide js-keyword-carousel-works-bottom splide">
-                <div class="splide__track p-keyword-slider__track">
-                    <ul class="splide__list c-text-slider-list">
-                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
-                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
-                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
-                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
-                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
-                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
-                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
-                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
-                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!-- the end of text slider -->
-        <!-- footer -->
-        <footer class="footer">
-            <div class="footer-inner">
-                <small class="footer-copyright"><span>©seiya</span><span>imoto's</span><span>portfolio</span></small>
-                <ul class="footer-sns-list">
-                    <li class="footer-sns-item">
-                        <a href="https://github.com/seiyaie" aria-label="githubへ移動">
-                            <img src="../img/icons/sns/github-white.svg" width="41" height="40" alt="" decoding="async" />
-                        </a>
-                    </li>
-                    <!-- <li class="footer-sns-item">
+    </div>
+    <!-- the end of text slider -->
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <small class="footer-copyright"><span>©seiya</span><span>imoto's</span><span>portfolio</span></small>
+            <ul class="footer-sns-list">
+                <li class="footer-sns-item">
+                    <a href="https://github.com/seiyaie" aria-label="githubへ移動">
+                        <img src="../img/icons/sns/github-white.svg" width="41" height="40" alt="" decoding="async" />
+                    </a>
+                </li>
+                <!-- <li class="footer-sns-item">
                         <a href="#">
                             <img src="img/sns/x.svg" width="39" height="40" alt="" decoding="async" />
                         </a>
                     </li> -->
-                </ul>
-            </div>
-        </footer>
-        <!-- the end of footer -->
-    </body>
+            </ul>
+        </div>
+    </footer>
+    <!-- the end of footer -->
+</body>
+
 </html>
