@@ -287,6 +287,20 @@ utility > utility
   margin: -1px !important;
 }
 
+.u-ptb {
+  padding-block: 40px !important;
+}
+@media screen and (min-width: 768px) {
+  .u-ptb {
+    padding-block: 64px !important;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .u-ptb {
+    padding-block: 94px !important;
+  }
+}
+
 .u-text-hover {
   background-image: linear-gradient(currentColor, currentColor);
   background-position: 50% 100%;
