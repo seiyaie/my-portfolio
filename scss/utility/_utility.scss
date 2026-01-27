@@ -16,3 +16,19 @@ utility > utility
     clip-path: inset(50%) !important;
     margin: -1px !important;
 }
+
+
+// テキストホバーアニメーション
+.u-text-hover {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 50% 100%;
+    background-size: 0 0.08em;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s;
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-size: 100% 0.08em;
+        }
+    }
+}
