@@ -569,24 +569,6 @@ layout > container
 }
 
 /*!
-layout > container
-------------------------------
-*/
-.l-section-inner {
-  padding-block: 40px;
-}
-@media screen and (min-width: 768px) {
-  .l-section-inner {
-    padding-block: 64px;
-  }
-}
-@media screen and (min-width: 1080px) {
-  .l-section-inner {
-    padding-block: 80px;
-  }
-}
-
-/*!
 layout > header
 ------------------------------
 */
@@ -663,6 +645,9 @@ layout > header
   .header-nav-item--pc {
     display: inline-block;
     margin-left: 16px;
+  }
+  .header-nav-item--pc a {
+    padding-bottom: 0.3em;
   }
 }
 

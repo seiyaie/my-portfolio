@@ -73,6 +73,9 @@ layout > header
         @include g.mq() {
             display: inline-block;
             margin-left: 16px;
+            a {
+                padding-bottom: 0.3em;
+            }
         }
     }
 }
