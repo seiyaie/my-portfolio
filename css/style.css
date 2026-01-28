@@ -616,7 +616,6 @@ layout > header
 .header-nav-list {
   font-family: var(--font-family-accent);
   font-weight: bold;
-  letter-spacing: 0.2em;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -627,6 +626,16 @@ layout > header
 @media screen and (min-width: 768px) {
   .header-nav-list {
     padding-right: 40px;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .header-nav-list {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header-nav-list {
+    font-size: 18px;
   }
 }
 
@@ -644,11 +653,16 @@ layout > header
 @media screen and (min-width: 768px) {
   .header-nav-item--pc {
     display: inline-block;
-    margin-left: 16px;
+    margin-left: 20px;
   }
-  .header-nav-item--pc a {
-    padding-bottom: 0.3em;
+}
+@media screen and (min-width: 1080px) {
+  .header-nav-item--pc {
+    margin-left: 40px;
   }
+}
+.header-nav-item--pc a {
+  padding-bottom: 0.3em;
 }
 
 .header-light-mode-button {
