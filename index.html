@@ -1,637 +1,561 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja" data-theme="dark">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Seiya Imoto's Portfolio - topページ</title>
+        <meta name="description" content="ページの説明" />
+        <meta name="format-detection" content="telephone=no" />
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Seiya Imoto's Portfolio - topページ</title>
-    <meta name="description" content="ページの説明" />
-    <meta name="format-detection" content="telephone=no" />
+        <!-- favicon/webclipicon -->
+        <link rel="icon" href="img/favicon/favicon.ico" />
+        <link rel="icon" href="img/favicon/favicon-source.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="img/favicon/webclip.png" />
 
-    <!-- favicon/webclipicon -->
-    <link rel="icon" href="img/favicon/favicon.ico" />
-    <link rel="icon" href="img/favicon/favicon-source.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="img/favicon/webclip.png" />
+        <!-- ogp -->
+        <meta property="og:site_name" content="サイト名" />
+        <meta property="og:url" content="URL" />
+        <meta property="og:type" content="website or article" />
+        <meta property="og:title" content="Seiya Imoto's Portfolio - topページ" />
+        <meta property="og:description" content="ページの説明" />
+        <meta property="og:image" content="URL" />
+        <meta property="og:locale" content="ja_JP" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:description" content="Seiya Imoto's Portfolio - topページ" />
+        <meta name="twitter:image:src" content="URL" />
 
-    <!-- ogp -->
-    <meta property="og:site_name" content="サイト名" />
-    <meta property="og:url" content="URL" />
-    <meta property="og:type" content="website or article" />
-    <meta property="og:title" content="Seiya Imoto's Portfolio - topページ" />
-    <meta property="og:description" content="ページの説明" />
-    <meta property="og:image" content="URL" />
-    <meta property="og:locale" content="ja_JP" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:description" content="Seiya Imoto's Portfolio - topページ" />
-    <meta name="twitter:image:src" content="URL" />
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet" />
 
-    <!-- font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Michroma&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Zen+Kaku+Gothic+Antique&display=swap"
-        rel="stylesheet" />
+        <!-- css -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
 
-    <!-- css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
+        <!-- js -->
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js" defer></script>
+        <script src="js/main.js" type="module"></script>
+    </head>
 
-    <!-- js -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" defer></script>
-    <script
-        src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"
-        defer></script>
-    <script src="js/main.js" type="module"></script>
-</head>
-
-<body>
-    <!-- header -->
-    <header class="header">
-        <h1 class="header-logo-wrapper">
-            <a href="index.html" class="header-logo" aria-label="topページに戻る">
-                <img src="img/logo/logo-white.svg" width="25" height="100" alt="" class="js-theme-logo" />
-            </a>
-        </h1>
-        <nav class="header-nav">
-            <ul class="header-nav-list">
-                <li class="header-nav-item header-nav-item--pc">
-                    <a href="index.html" class="header-nav-link u-text-hover">about</a>
-                </li>
-                <li class="header-nav-item header-nav-item--pc">
-                    <a href="works/" class="header-nav-link u-text-hover">works</a>
-                </li>
-                <li class="header-nav-item header-nav-item--pc">
-                    <a href="index.html" class="header-nav-link u-text-hover">vision</a>
-                </li>
-                <li class="header-nav-item header-nav-item--pc">
-                    <a href="index.html" class="header-nav-link u-text-hover">skills</a>
-                </li>
-                <li class="header-nav-item header-nav-item--pc">
-                    <a href="index.html" class="header-nav-link u-text-hover">contact</a>
-                </li>
-                <li class="header-nav-item header-nav-item--pc">
-                    <button class="header-theme-button js-theme-button" aria-label="ライトモードに切り替え">
-                        <img src="img/icons/system/light-mode.svg" width="60" height="60" alt=""
-                            class="js-theme-icon" />
-                    </button>
-                </li>
-                <li class="header-nav-item header-nav-item--sp c-hamburger-button">
-                    <button class="c-hamburger-open-button js-hamburger-open-button" aria-label="ハンバーガーメニューを開く">
-                        <img src="img/icons/ui/hamburger-open-button-white.svg" width="40" height="30" alt=""
-                            decoding="async" class="js-theme-hamburger-open" />
-                    </button>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <!-- the end of header -->
-
-    <!-- hamburger menu -->
-    <dialog class="c-hamburger-menu js-hamburger-menu" aria-label="ハンバーガーメニュー">
-        <div class="c-hamburger-header">
-            <button class="c-hamburger-close-button js-hamburger-close-button" aria-label="ハンバーガーメニューを閉じる">
-                <img src="img/icons/ui/hamburger-close-button-white.svg" width="40" height="30" alt="" decoding="async"
-                    class="js-theme-hamburger-close" />
-            </button>
-        </div>
-        <div class="c-hamburger-menu-inner">
-            <ul class="c-hamburger-menu-list js-hamburger-menu-list">
-                <li class="c-hamburger-menu-item">
-                    <button class="js-theme-button" aria-label="ライトモードに切り替え"><img src="img/icons/system/light-mode.svg"
-                            width="60" height="60" alt="" decoding="async" class="js-theme-icon" /></button>
-                </li>
-                <li
-                    class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
-                    <a href="index.html" class="u-text-hover">home</a>
-                </li>
-                <li
-                    class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
-                    <a href="#about" class="u-text-hover">about</a>
-                </li>
-                <li
-                    class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
-                    <a href="works/" class="u-text-hover">works</a>
-                </li>
-                <li
-                    class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
-                    <a href="#vision" class="u-text-hover">vision</a>
-                </li>
-                <li
-                    class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
-                    <a href="#skills" class="u-text-hover">skills</a>
-                </li>
-                <li class="c-hamburger-menu-item c-hamburger-menu-item--sns js-hamburger-menu-item">
-                    <a href="https://github.com/seiyaie" aria-label="githubへ移動"><img
-                            src="img/icons/sns/github-white.svg" width="41" height="40" alt="" decoding="async" /></a>
-                </li>
-            </ul>
-        </div>
-    </dialog>
-    <!-- the end of hamburger menu -->
-
-    <!-- text slider -->
-    <div class="c-text-slider">
-        <div class="p-keyword-slider__splide js-keyword-carousel-rtl splide">
-            <div class="splide__track p-keyword-slider__track">
-                <ul class="splide__list c-text-slider-list">
-                    <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
-                    <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
-                    <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
-                    <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+    <body>
+        <!-- header -->
+        <header class="header">
+            <h1 class="header-logo-wrapper">
+                <a href="index.html" class="header-logo" aria-label="topページに戻る">
+                    <img src="img/logo/logo-white.svg" width="25" height="100" alt="" class="js-theme-logo" />
+                </a>
+            </h1>
+            <nav class="header-nav">
+                <ul class="header-nav-list">
+                    <li class="header-nav-item header-nav-item--pc">
+                        <a href="index.html" class="header-nav-link u-text-hover">about</a>
+                    </li>
+                    <li class="header-nav-item header-nav-item--pc">
+                        <a href="works/" class="header-nav-link u-text-hover">works</a>
+                    </li>
+                    <li class="header-nav-item header-nav-item--pc">
+                        <a href="index.html" class="header-nav-link u-text-hover">vision</a>
+                    </li>
+                    <li class="header-nav-item header-nav-item--pc">
+                        <a href="index.html" class="header-nav-link u-text-hover">skills</a>
+                    </li>
+                    <li class="header-nav-item header-nav-item--pc">
+                        <a href="index.html" class="header-nav-link u-text-hover">contact</a>
+                    </li>
+                    <li class="header-nav-item header-nav-item--pc">
+                        <button class="header-theme-button js-theme-button" aria-label="ライトモードに切り替え">
+                            <img src="img/icons/system/light-mode.svg" width="60" height="60" alt="" class="js-theme-icon" />
+                        </button>
+                    </li>
+                    <li class="header-nav-item header-nav-item--sp c-hamburger-button">
+                        <button class="c-hamburger-open-button js-hamburger-open-button" aria-label="ハンバーガーメニューを開く">
+                            <img src="img/icons/ui/hamburger-open-button-white.svg" width="40" height="30" alt="" decoding="async" class="js-theme-hamburger-open" />
+                        </button>
+                    </li>
                 </ul>
-            </div>
-        </div>
-    </div>
-    <!-- the end of text slider -->
+            </nav>
+        </header>
+        <!-- the end of header -->
 
-    <!-- top kv -->
-    <div class="top-kv js-top-kv">
-        <div class="top-kv-selected-work js-top-kv-selected-work">
-            <img src="img/common/16-9/small/travel-gallery.jpg"
-                srcset="img/common/16-9/small/travel-gallery.jpg 308w, img/common/16-9/large/travel-gallery.jpg 1120w"
-                sizes="(min-width: 768px) 1120px, 308px" width="2240" height="1260" alt="" decoding="async" />
-            <div class="top-kv-mask"></div>
-        </div>
-
-        <div class="top-kv-scroll-panel">
-            <div class="top-kv-scroll-tracker">
-                <div class="top-kv-scrollbar">
-                    <div class="top-kv-scrollbar-thumb js-scrollbar-thumb"></div>
-                </div>
-                <div class="top-kv-selected-index js-scrollbar-index">1 / 8</div>
-            </div>
-            <div class="top-kv-scroll-control">
-                <button class="top-kv-scroll-button js-kv-scroll-button--prev" aria-label="前の画像に戻る">
-                    <img src="img/icons/ui/arrow-left.svg" width="24" height="25" alt="" decoding="async" />
-                </button>
-                <button class="top-kv-scroll-button js-kv-scroll-button--next" aria-label="前の画像に戻る">
-                    <img src="img/icons/ui/arrow-right.svg" width="24" height="25" alt="" decoding="async" />
+        <!-- hamburger menu -->
+        <dialog class="c-hamburger-menu js-hamburger-menu" aria-label="ハンバーガーメニュー">
+            <div class="c-hamburger-header">
+                <button class="c-hamburger-close-button js-hamburger-close-button" aria-label="ハンバーガーメニューを閉じる">
+                    <img src="img/icons/ui/hamburger-close-button-white.svg" width="40" height="30" alt="" decoding="async" class="js-theme-hamburger-close" />
                 </button>
             </div>
-        </div>
-
-        <div class="top-kv-slider js-top-kv-slider">
-            <div class="top-kv-slider-list-container js-top-kv-slider-list-container">
-                <ul class="top-kv-slider-list">
-                    <li class="top-kv-slider-toggle">
-                        <button class="top-kv-toggle-btn js-top-kv-toggle-btn" aria-label="スライダーリスト開閉ボタン">
-                            <span class="top-kv-toggle-btn-bg">
-                                <img src="img/icons/ui/slider-toggle-panel-black.svg" width="25" height="85" alt=""
-                                    decoding="async" class="js-theme-panel" />
-                            </span>
-                            <span class="top-kv-toggle-btn-arrow js-top-kv-btn-arrow">
-                                <img src="img/icons/ui/slider-arrow-white.svg" width="15" height="16" alt=""
-                                    decoding="async" class="js-theme-arrow" />
-                            </span>
-                        </button>
+            <div class="c-hamburger-menu-inner">
+                <ul class="c-hamburger-menu-list js-hamburger-menu-list">
+                    <li class="c-hamburger-menu-item">
+                        <button class="js-theme-button" aria-label="ライトモードに切り替え"><img src="img/icons/system/light-mode.svg" width="60" height="60" alt="" decoding="async" class="js-theme-icon" /></button>
                     </li>
-                    <!-- travel gallery -->
-                    <li class="top-kv-slider-item">
-                        <button class="top-kv-slider-item--trigger is-active js-kv-slider-item--trigger"
-                            aria-label="画像を選択" data-main-src="img/common/16-9/small/travel-gallery.jpg"
-                            data-main-srcset="img/common/16-9/small/travel-gallery.jpg 308w, img/common/16-9/large/travel-gallery.jpg 1120w"
-                            data-main-sizes="(min-width: 768px) 1120px, 308px">
-                            <img src="img/common/1-1/small/travel-gallery.jpg" width="300" height="300" alt=""
-                                decoding="async" />
-                        </button>
+                    <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
+                        <a href="index.html" class="u-text-hover">home</a>
                     </li>
-
-                    <!-- leaf design lab -->
-                    <li class="top-kv-slider-item">
-                        <button class="top-kv-slider-item--trigger js-kv-slider-item--trigger" aria-label="画像を選択"
-                            data-main-src="img/common/16-9/small/leaf-design-lab.jpg"
-                            data-main-srcset="img/common/16-9/small/leaf-design-lab.jpg 308w, img/common/16-9/large/leaf-design-lab.jpg 1120w"
-                            data-main-sizes="(min-width: 768px) 1120px, 308px">
-                            <img src="img/common/1-1/small/leaf-design-lab.jpg" width="300" height="300" alt=""
-                                decoding="async" />
-                        </button>
+                    <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
+                        <a href="#about" class="u-text-hover">about</a>
                     </li>
-
-                    <!-- photographer -->
-                    <li class="top-kv-slider-item">
-                        <button class="top-kv-slider-item--trigger js-kv-slider-item--trigger" aria-label="画像を選択"
-                            data-main-src="img/common/16-9/small/photographer.jpg"
-                            data-main-srcset="img/common/16-9/small/photographer.jpg 308w, img/common/16-9/large/photographer.jpg 1120w"
-                            data-main-sizes="(min-width: 768px) 1120px, 308px">
-                            <img src="img/common/1-1/small/photographer.jpg" width="300" height="300" alt=""
-                                decoding="async" />
-                        </button>
+                    <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
+                        <a href="works/" class="u-text-hover">works</a>
                     </li>
-
-                    <!-- matsuyama clinic -->
-                    <li class="top-kv-slider-item">
-                        <button class="top-kv-slider-item--trigger js-kv-slider-item--trigger" aria-label="画像を選択"
-                            data-main-src="img/common/16-9/small/matsuyama-clinic.jpg"
-                            data-main-srcset="img/common/16-9/small/matsuyama-clinic.jpg 308w, img/common/16-9/large/matsuyama-clinic.jpg 1120w"
-                            data-main-sizes="(min-width: 768px) 1120px, 308px">
-                            <img src="img/common/1-1/small/matsuyama-clinic.jpg" width="300" height="300" alt=""
-                                decoding="async" />
-                        </button>
+                    <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
+                        <a href="#vision" class="u-text-hover">vision</a>
                     </li>
-
-                    <!-- coco -->
-                    <li class="top-kv-slider-item">
-                        <button class="top-kv-slider-item--trigger js-kv-slider-item--trigger" aria-label="画像を選択"
-                            data-main-src="img/common/16-9/small/coco.jpg"
-                            data-main-srcset="img/common/16-9/small/coco.jpg 308w, img/common/16-9/large/coco.jpg 1120w"
-                            data-main-sizes="(min-width: 768px) 1120px, 308px">
-                            <img src="img/common/1-1/small/coco.jpg" width="300" height="300" alt="" decoding="async" />
-                        </button>
+                    <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
+                        <a href="#skills" class="u-text-hover">skills</a>
                     </li>
-
-                    <!-- migliore -->
-                    <li class="top-kv-slider-item">
-                        <button class="top-kv-slider-item--trigger js-kv-slider-item--trigger" aria-label="画像を選択"
-                            data-main-src="img/common/16-9/small/migliore.jpg"
-                            data-main-srcset="img/common/16-9/small/migliore.jpg 308w, img/common/16-9/large/migliore.jpg 1120w"
-                            data-main-sizes="(min-width: 768px) 1120px, 308px">
-                            <img src="img/common/1-1/small/migliore.jpg" width="300" height="300" alt=""
-                                decoding="async" />
-                        </button>
-                    </li>
-
-                    <!-- moshashugyo -->
-                    <li class="top-kv-slider-item">
-                        <button class="top-kv-slider-item--trigger js-kv-slider-item--trigger" aria-label="画像を選択"
-                            data-main-src="img/common/16-9/small/moshashugyo.jpg"
-                            data-main-srcset="img/common/16-9/small/moshashugyo.jpg 308w, img/common/16-9/large/moshashugyo.jpg 1120w"
-                            data-main-sizes="(min-width: 768px) 1120px, 308px">
-                            <img src="img/common/1-1/small/moshashugyo.jpg" width="300" height="300" alt=""
-                                decoding="async" />
-                        </button>
-                    </li>
-
-                    <!-- my portfolio -->
-                    <li class="top-kv-slider-item">
-                        <button class="top-kv-slider-item--trigger js-kv-slider-item--trigger" aria-label="画像を選択"
-                            data-main-src="img/common/16-9/small/my-portfolio.jpg"
-                            data-main-srcset="img/common/16-9/small/my-portfolio.jpg 308w, img/common/16-9/large/my-portfolio.jpg 1120w"
-                            data-main-sizes="(min-width: 768px) 1120px, 308px">
-                            <img src="img/common/1-1/small/my-portfolio.jpg" width="300" height="300" alt=""
-                                decoding="async" />
-                        </button>
-                    </li>
-
-                    <li class="top-kv-slider-item top-kv-slider-item--link">
-                        <a href="works/" class="">view more</a>
+                    <li class="c-hamburger-menu-item c-hamburger-menu-item--sns js-hamburger-menu-item">
+                        <a href="https://github.com/seiyaie" aria-label="githubへ移動"><img src="img/icons/sns/github-white.svg" width="41" height="40" alt="" decoding="async" /></a>
                     </li>
                 </ul>
             </div>
-        </div>
-    </div>
-    <!-- the end of top kv -->
-
-    <!-- text slider -->
-    <div class="c-text-slider">
-        <div class="p-keyword-slider__splide js-keyword-carousel-ltr splide">
-            <div class="splide__track p-keyword-slider__track">
-                <ul class="splide__list c-text-slider-list">
-                    <li class="splide__slide c-text-slider-item">scroll</li>
-                    <li class="splide__slide c-text-slider-item">scroll</li>
-                    <li class="splide__slide c-text-slider-item">scroll</li>
-                    <li class="splide__slide c-text-slider-item">scroll</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- the end of text slider -->
-
-    <!-- top about -->
-    <section class="top-about" id="about">
-        <!-- title -->
-        <div class="c-title-wrapper">
-            <div class="c-title-inner">
-                <h2 class="c-title">about</h2>
-            </div>
-        </div>
-        <div class="top-about-inner u-ptb">
-            <div class="top-about-content">
-                <div class="top-about-image-wrapper">
-                    <div class="top-about-image">
-                        <img src="img/logo/logo-white.svg" width="25" height="100" alt="" decoding="async" />
-                    </div>
-                </div>
-                <div class="top-about-profile">
-                    <h3 class="top-about-profile-name">seiya imoto</h3>
-                    <p class="top-about-profile-text">
-                        <span>静岡県富士市在住のWebコーダー志望、せいやです。2022年から2024年にかけてアイルランドに留学し、世界各国から集まる人たちと交流する中で、Web制作やプログラミングの可能性に惹かれるようになりました。帰国後はその思いを形にするため、2024年6月よりコーディングの学習をスタートし、挑戦を続けています。</span><span>趣味：
-                            英会話、スケートボード、海外旅行、コーディング、映画鑑賞</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- the end of top about -->
-
-    <!-- top works -->
-    <section class="top-works">
-        <div class="c-title-wrapper">
-            <div class="c-title-inner">
-                <h2 class="c-title">works</h2>
-            </div>
-        </div>
-        <div class="top-works-inner u-ptb">
-            <div class="top-works-list">
-                <!-- travel gallery -->
-                <article class="top-works-item">
-                    <a href="works/travel-gallery.html" class="top-works-item-link"
-                        aria-label="travel galleryの詳細ページに移動">
-                        <div class="top-works-item-thumbnail">
-                            <img src="img/common/16-9/small/travel-gallery.jpg" width="616" height="336" alt=""
-                                decoding="async" loading="lazy" />
-                        </div>
-                        <div class="top-works-item-desc">
-                            <time datetime="2025-09" class="top-works-item-date">2025.09</time>
-                            <h3 class="top-works-item-title">Travel Gallery</h3>
-                            <ul class="top-works-tags">
-                                <li class="top-works-tag">自主制作</li>
-                                <li class="top-works-tag">コーディング</li>
-                                <li class="top-works-tag">デザイン</li>
-                            </ul>
-                        </div>
-                    </a>
-                </article>
-                <!-- leaf design lab -->
-                <article class="top-works-item">
-                    <a href="works/leaf-design-lab.html" class="top-works-item-link"
-                        aria-label="leaf design labの詳細ページに移動">
-                        <div class="top-works-item-thumbnail">
-                            <img src="img/common/16-9/small/leaf-design-lab.jpg" width="616" height="336" alt=""
-                                decoding="async" loading="lazy" />
-                        </div>
-                        <div class="top-works-item-desc">
-                            <time datetime="2025-09" class="top-works-item-date">2025.09</time>
-                            <h3 class="top-works-item-title">Leaf Design Lab</h3>
-                            <ul class="top-works-tags">
-                                <li class="top-works-tag">自主制作</li>
-                                <li class="top-works-tag">コーディング</li>
-                                <li class="top-works-tag">デザイン</li>
-                            </ul>
-                        </div>
-                    </a>
-                </article>
-                <!-- photographer -->
-                <article class="top-works-item">
-                    <a href="works/photographer.html" class="top-works-item-link" aria-label="photographerの詳細ページに移動">
-                        <div class="top-works-item-thumbnail">
-                            <img src="img/common/16-9/small/photographer.jpg" width="616" height="336" alt=""
-                                decoding="async" loading="lazy" />
-                        </div>
-                        <div class="top-works-item-desc">
-                            <time datetime="2025-09" class="top-works-item-date">2025.09</time>
-                            <h3 class="top-works-item-title">Photographer</h3>
-                            <ul class="top-works-tags">
-                                <li class="top-works-tag">自主制作</li>
-                                <li class="top-works-tag">コーディング</li>
-                                <li class="top-works-tag">デザイン</li>
-                            </ul>
-                        </div>
-                    </a>
-                </article>
-                <!-- matsuyama clinic -->
-                <article class="top-works-item">
-                    <a href="works/matsuyama-clinic.html" class="top-works-item-link"
-                        aria-label="matsuyama clinicの詳細ページに移動">
-                        <div class="top-works-item-thumbnail">
-                            <img src="img/common/16-9/small/matsuyama-clinic.jpg" width="616" height="336" alt=""
-                                decoding="async" loading="lazy" />
-                        </div>
-                        <div class="top-works-item-desc">
-                            <time datetime="2025-09" class="top-works-item-date">2025.09</time>
-                            <h3 class="top-works-item-title">Matsuyama Clinic</h3>
-                            <ul class="top-works-tags">
-                                <li class="top-works-tag">自主制作</li>
-                                <li class="top-works-tag">コーディング</li>
-                                <li class="top-works-tag">デザイン</li>
-                            </ul>
-                        </div>
-                    </a>
-                </article>
-                <!-- my portfolio -->
-                <article class="top-works-item">
-                    <a href="works/my-portfolio.html" class="top-works-item-link" aria-label="my portfolioの詳細ページに移動">
-                        <div class="top-works-item-thumbnail">
-                            <img src="img/common/16-9/small/my-portfolio.jpg" width="616" height="336" alt=""
-                                decoding="async" loading="lazy" />
-                        </div>
-                        <div class="top-works-item-desc">
-                            <time datetime="2025-09" class="top-works-item-date">2025.09</time>
-                            <h3 class="top-works-item-title">My Portfolio</h3>
-                            <ul class="top-works-tags">
-                                <li class="top-works-tag">自主制作</li>
-                                <li class="top-works-tag">コーディング</li>
-                                <li class="top-works-tag">デザイン</li>
-                            </ul>
-                        </div>
-                    </a>
-                </article>
-                <div class="top-works-button">
-                    <a href="works/" class="c-button c-button--en"><span>view</span><span>more</span></a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- the end of top works -->
-
-    <!-- top vision -->
-    <section class="top-vision" id="vision">
-        <div class="c-title-wrapper">
-            <div class="c-title-inner">
-                <h2 class="c-title">vision</h2>
-            </div>
-        </div>
-        <div class="top-vision-inner u-ptb">
-            <div class="top-vision-coder">
-                <h3 class="top-vision-coder-title">目指すコーダー像</h3>
-                <p class="top-vision-coder-text">
-                    コーディングに加え、デザインやWordPressなどのスキルも磨き、幅広い制作に対応できる、コーダーを目指しています。ゆくゆくは、デザインから実装まで一貫して担える制作者として成長したいです。</p>
-            </div>
-            <div class="top-vision-growth">
-                <h3 class="top-vision-growth-title">入社後の成長目標</h3>
-                <ul class="top-vision-growth-list">
-                    <li class="top-vision-growth-item">
-                        <span class="top-vision-growth-label">３ヶ月後</span>
-                        <p class="top-vision-growth-text">
-                            制作フローやコーディングルールを理解し、WordPress業務を含めた日々の制作業務に慣れる。修正指示にも対応しながら、安定したコーディングができる状態を目指します。</p>
-                    </li>
-                    <li class="top-vision-growth-item">
-                        <span class="top-vision-growth-label">６ヶ月後</span>
-                        <p class="top-vision-growth-text">
-                            全体的な業務に慣れ、小規模なページや更新案件であれば1人で任せていただけるコーダになる。また並行してWEBデザインの学習にも力を入れていきます。</p>
-                    </li>
-                    <li class="top-vision-growth-item">
-                        <span class="top-vision-growth-label">1年後</span>
-                        <p class="top-vision-growth-text">
-                            デザイン意図を理解した実装ができ、難易度の高い案件にも対応できるWEBデザイナー兼コーダーとして成長する。また積極的に改善提案をするなど、能動的に制作に関わっていきます。</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <!-- the end of top vision -->
-
-    <!-- top skills -->
-    <section class="top-skills" id="skills">
-        <div class="c-title-wrapper">
-            <div class="c-title-inner">
-                <h2 class="c-title">skills</h2>
-            </div>
-        </div>
-        <div class="top-skills-inner u-ptb">
-            <ul class="top-skills-list">
-                <li class="top-skills-item">
-                    <h3 class="top-skills-item-title">コーディング</h3>
-                    <p class="top-skills-item-text">デザインカンプをもとに、HTML / CSS / JavaScript を使用して正確かつ再現度の高いコーディングが可能です。
-                        レスポンシブ対応やCSS設計を意識し、保守性・再利用性の高いコードを書くことを心がけています。</p>
-                    <div class="top-skills-item-icon">
-                        <img src="img/decorations/top-skills-coding.svg" width="100" height="88" alt="" decoding="async"
-                            aria-hidden="true" />
-                    </div>
-                </li>
-                <li class="top-skills-item">
-                    <h3 class="top-skills-item-title">アニメーション</h3>
-                    <p class="top-skills-item-text">JavaScriptライブラリの
-                        GSAPを使用し、スクロールアニメーションやインタラクティブな動きを実装できます。ユーザー体験を高めるために自然で洗練されたアニメーションを追求しています。</p>
-                    <div class="top-skills-item-icon">
-                        <img src="img/decorations/top-skills-animation.svg" width="100" height="80" alt=""
-                            decoding="async" aria-hidden="true" />
-                    </div>
-                </li>
-
-                <li class="top-skills-item">
-                    <h3 class="top-skills-item-title">デザインツール</h3>
-                    <p class="top-skills-item-text">
-                        Figmaを使用して、デザイン情報の確認、画像の書き出しなどの基本操作が可能です。自身のポートフォリオサイトは、Figmaで自らデザインしました。</p>
-                    <div class="top-skills-item-icon">
-                        <img src="img/decorations/top-skills-design.svg" width="100" height="99" alt="" decoding="async"
-                            aria-hidden="true" />
-                    </div>
-                </li>
-                <li class="top-skills-item">
-                    <h3 class="top-skills-item-title">今後の学習領域</h3>
-                    <p class="top-skills-item-text">現在Wordpressを学習しています。サイトの構築から運用まで対応できるよう、実践を意識した学習をすすめています。</p>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <!-- the end of top skills -->
-    <!-- contact -->
-    <section class="top-contact" id="contact">
-        <div class="c-title-wrapper">
-            <div class="c-title-inner">
-                <h2 class="c-title">contact</h2>
-            </div>
-        </div>
-        <div class="top-contact-inner u-ptb">
-            <p class="top-contact-text">
-                <span>ポートフォリオをご覧いただきありがとうございます。</span><span>コーディングの依頼・ご相談などお気軽にお問い合わせください。</span>
-            </p>
-
-            <form name="contact" method="post" class="top-contact-form" netlify data-netlify="true">
-                <!-- Netlifyが必要とする隠しフィールド -->
-                <input type="hidden" name="form-name" value="contact" />
-
-                <!-- スパム対策 (honeypot) -->
-                <div style="display: none">
-                    <input type="text" name="bot-field" />
-                </div>
-
-                <!-- 会社名 -->
-                <div class="top-contact-item">
-                    <label for="company" class="top-contact-label">
-                        <span class="top-contact-label-title">会社名</span>
-                    </label>
-                    <input type="text" id="company" class="top-input" name="company" autocomplete="organization" />
-                </div>
-
-                <!-- 名前 -->
-                <div class="top-contact-item">
-                    <label for="name" class="top-contact-label">
-                        <span class="top-contact-label-title">お名前</span>
-                        <span class="top-contact-label-required">必須</span>
-                    </label>
-                    <input type="text" id="name" class="top-input" name="name" autocomplete="name" required />
-                </div>
-
-                <!-- メールアドレス -->
-                <div class="top-contact-item">
-                    <label for="email" class="top-contact-label">
-                        <span class="top-contact-label-title">メールアドレス</span>
-                        <span class="top-contact-label-required">必須</span>
-                    </label>
-                    <input type="email" id="email" class="top-input" name="email" autocomplete="email" required />
-                </div>
-
-                <!-- 内容 -->
-                <div class="top-contact-item">
-                    <label for="contact" class="top-contact-label">
-                        <span class="top-contact-label-title">お問い合わせ内容</span>
-                        <span class="top-contact-label-required">必須</span>
-                    </label>
-                    <textarea id="contact" class="top-textarea" name="contact" autocomplete="off" required></textarea>
-                </div>
-                <div class="top-contact-privacy">
-                    <h3 class="top-contact-privacy-title">個人情報の取扱いについて</h3>
-                    <p class="top-contact-privacy-text">
-                        <span>ご入力いただいたお名前やメールアドレスなどの個人情報は、お問い合わせへのご返答のためにのみ利用し、その他の目的には使用いたしません。</span><span>また、いただいた個人情報は<a
-                                href="privacy.html" target="_blank"
-                                class="top-contact-privacy-link">プライバシーポリシー</a>に基づき、適切に管理いたします。</span>
-                    </p>
-                    <label class="top-contact-privacy-label">
-                        <input type="checkbox" name="agree" class="top-contact-privacy-checkbox" required />
-                        個人情報の取り扱いに同意する
-                    </label>
-                </div>
-                <button type="submit" class="top-contact-submit-button">内容を送信する</button>
-            </form>
-        </div>
-
-        <dialog class="top-contact-modal js-top-contact-modal" aria-labelledby="top-contact-modal-title">
-            <form method="dialog" class="top-contact-modal-content">
-                <h2 class="top-contact-modal-title" id="top-contact-modal-title">送信が完了しました</h2>
-                <p class="top-contact-modal-text">お問い合わせありがとうございます。内容を確認してご返信いたします。</p>
-                <button class="top-contact-modal-button">閉じる</button>
-            </form>
         </dialog>
-    </section>
-    <!-- the end of contact -->
+        <!-- the end of hamburger menu -->
 
-    <!-- text slider -->
-    <div class="c-text-slider">
-        <div class="p-keyword-slider__splide js-keyword-carousel-footer splide">
-            <div class="splide__track p-keyword-slider__track">
-                <ul class="splide__list c-text-slider-list">
-                    <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
-                    <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
-                    <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
-                    <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
-                </ul>
+        <!-- text slider -->
+        <div class="c-text-slider">
+            <div class="p-keyword-slider__splide js-keyword-carousel-rtl splide">
+                <div class="splide__track p-keyword-slider__track">
+                    <ul class="splide__list c-text-slider-list">
+                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- the end of text slider -->
+        <!-- the end of text slider -->
 
-    <!-- footer -->
-    <footer class="footer">
-        <div class="footer-inner">
-            <small class="footer-copyright"><span>©seiya</span><span>imoto's</span><span>portfolio</span></small>
-            <ul class="footer-sns-list">
-                <li class="footer-sns-item">
-                    <a href="https://github.com/seiyaie" aria-label="githubへ移動">
-                        <img src="img/icons/sns/github-white.svg" width="41" height="40" alt="" decoding="async" />
-                    </a>
-                </li>
-                <!-- <li class="footer-sns-item">
+        <!-- top kv -->
+        <div class="top-kv js-top-kv">
+            <div class="top-kv-selected-work js-top-kv-selected-work">
+                <img src="img/common/16-9/small/travel-gallery.jpg" srcset="img/common/16-9/small/travel-gallery.jpg 308w, img/common/16-9/large/travel-gallery.jpg 1120w" sizes="(min-width: 768px) 1120px, 308px" width="2240" height="1260" alt="" decoding="async" />
+                <div class="top-kv-mask"></div>
+            </div>
+
+            <div class="top-kv-scroll-panel">
+                <div class="top-kv-scroll-tracker">
+                    <div class="top-kv-scrollbar">
+                        <div class="top-kv-scrollbar-thumb js-scrollbar-thumb"></div>
+                    </div>
+                    <div class="top-kv-selected-index js-scrollbar-index">1 / 8</div>
+                </div>
+                <div class="top-kv-scroll-control">
+                    <button class="top-kv-scroll-button js-kv-scroll-button--prev" aria-label="前の画像に戻る">
+                        <img src="img/icons/ui/arrow-left.svg" width="24" height="25" alt="" decoding="async" />
+                    </button>
+                    <button class="top-kv-scroll-button js-kv-scroll-button--next" aria-label="前の画像に戻る">
+                        <img src="img/icons/ui/arrow-right.svg" width="24" height="25" alt="" decoding="async" />
+                    </button>
+                </div>
+            </div>
+
+            <div class="top-kv-slider js-top-kv-slider">
+                <div class="top-kv-slider-list-container js-top-kv-slider-list-container">
+                    <ul class="top-kv-slider-list">
+                        <li class="top-kv-slider-toggle">
+                            <button class="top-kv-toggle-btn js-top-kv-toggle-btn" aria-label="スライダーリスト開閉ボタン">
+                                <span class="top-kv-toggle-btn-bg">
+                                    <img src="img/icons/ui/slider-toggle-panel-black.svg" width="25" height="85" alt="" decoding="async" class="js-theme-panel" />
+                                </span>
+                                <span class="top-kv-toggle-btn-arrow js-top-kv-btn-arrow">
+                                    <img src="img/icons/ui/slider-arrow-white.svg" width="15" height="16" alt="" decoding="async" class="js-theme-arrow" />
+                                </span>
+                            </button>
+                        </li>
+                        <!-- travel gallery -->
+                        <li class="top-kv-slider-item">
+                            <button class="top-kv-slider-item--trigger is-active js-kv-slider-item--trigger" aria-label="画像を選択" data-main-src="img/common/16-9/small/travel-gallery.jpg" data-main-srcset="img/common/16-9/small/travel-gallery.jpg 308w, img/common/16-9/large/travel-gallery.jpg 1120w" data-main-sizes="(min-width: 768px) 1120px, 308px">
+                                <img src="img/common/1-1/small/travel-gallery.jpg" width="300" height="300" alt="" decoding="async" />
+                            </button>
+                        </li>
+
+                        <!-- leaf design lab -->
+                        <li class="top-kv-slider-item">
+                            <button class="top-kv-slider-item--trigger js-kv-slider-item--trigger" aria-label="画像を選択" data-main-src="img/common/16-9/small/leaf-design-lab.jpg" data-main-srcset="img/common/16-9/small/leaf-design-lab.jpg 308w, img/common/16-9/large/leaf-design-lab.jpg 1120w" data-main-sizes="(min-width: 768px) 1120px, 308px">
+                                <img src="img/common/1-1/small/leaf-design-lab.jpg" width="300" height="300" alt="" decoding="async" />
+                            </button>
+                        </li>
+
+                        <!-- photographer -->
+                        <li class="top-kv-slider-item">
+                            <button class="top-kv-slider-item--trigger js-kv-slider-item--trigger" aria-label="画像を選択" data-main-src="img/common/16-9/small/photographer.jpg" data-main-srcset="img/common/16-9/small/photographer.jpg 308w, img/common/16-9/large/photographer.jpg 1120w" data-main-sizes="(min-width: 768px) 1120px, 308px">
+                                <img src="img/common/1-1/small/photographer.jpg" width="300" height="300" alt="" decoding="async" />
+                            </button>
+                        </li>
+
+                        <!-- matsuyama clinic -->
+                        <li class="top-kv-slider-item">
+                            <button class="top-kv-slider-item--trigger js-kv-slider-item--trigger" aria-label="画像を選択" data-main-src="img/common/16-9/small/matsuyama-clinic.jpg" data-main-srcset="img/common/16-9/small/matsuyama-clinic.jpg 308w, img/common/16-9/large/matsuyama-clinic.jpg 1120w" data-main-sizes="(min-width: 768px) 1120px, 308px">
+                                <img src="img/common/1-1/small/matsuyama-clinic.jpg" width="300" height="300" alt="" decoding="async" />
+                            </button>
+                        </li>
+
+                        <!-- coco -->
+                        <li class="top-kv-slider-item">
+                            <button class="top-kv-slider-item--trigger js-kv-slider-item--trigger" aria-label="画像を選択" data-main-src="img/common/16-9/small/coco.jpg" data-main-srcset="img/common/16-9/small/coco.jpg 308w, img/common/16-9/large/coco.jpg 1120w" data-main-sizes="(min-width: 768px) 1120px, 308px">
+                                <img src="img/common/1-1/small/coco.jpg" width="300" height="300" alt="" decoding="async" />
+                            </button>
+                        </li>
+
+                        <!-- migliore -->
+                        <li class="top-kv-slider-item">
+                            <button class="top-kv-slider-item--trigger js-kv-slider-item--trigger" aria-label="画像を選択" data-main-src="img/common/16-9/small/migliore.jpg" data-main-srcset="img/common/16-9/small/migliore.jpg 308w, img/common/16-9/large/migliore.jpg 1120w" data-main-sizes="(min-width: 768px) 1120px, 308px">
+                                <img src="img/common/1-1/small/migliore.jpg" width="300" height="300" alt="" decoding="async" />
+                            </button>
+                        </li>
+
+                        <!-- moshashugyo -->
+                        <li class="top-kv-slider-item">
+                            <button class="top-kv-slider-item--trigger js-kv-slider-item--trigger" aria-label="画像を選択" data-main-src="img/common/16-9/small/moshashugyo.jpg" data-main-srcset="img/common/16-9/small/moshashugyo.jpg 308w, img/common/16-9/large/moshashugyo.jpg 1120w" data-main-sizes="(min-width: 768px) 1120px, 308px">
+                                <img src="img/common/1-1/small/moshashugyo.jpg" width="300" height="300" alt="" decoding="async" />
+                            </button>
+                        </li>
+
+                        <!-- my portfolio -->
+                        <li class="top-kv-slider-item">
+                            <button class="top-kv-slider-item--trigger js-kv-slider-item--trigger" aria-label="画像を選択" data-main-src="img/common/16-9/small/my-portfolio.jpg" data-main-srcset="img/common/16-9/small/my-portfolio.jpg 308w, img/common/16-9/large/my-portfolio.jpg 1120w" data-main-sizes="(min-width: 768px) 1120px, 308px">
+                                <img src="img/common/1-1/small/my-portfolio.jpg" width="300" height="300" alt="" decoding="async" />
+                            </button>
+                        </li>
+
+                        <li class="top-kv-slider-item top-kv-slider-item--link">
+                            <a href="works/" class="">view more</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- the end of top kv -->
+
+        <!-- text slider -->
+        <div class="c-text-slider">
+            <div class="p-keyword-slider__splide js-keyword-carousel-ltr splide">
+                <div class="splide__track p-keyword-slider__track">
+                    <ul class="splide__list c-text-slider-list">
+                        <li class="splide__slide c-text-slider-item">scroll</li>
+                        <li class="splide__slide c-text-slider-item">scroll</li>
+                        <li class="splide__slide c-text-slider-item">scroll</li>
+                        <li class="splide__slide c-text-slider-item">scroll</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- the end of text slider -->
+
+        <!-- top about -->
+        <section class="top-about" id="about">
+            <!-- title -->
+            <div class="c-title-wrapper">
+                <div class="c-title-inner">
+                    <h2 class="c-title">about</h2>
+                </div>
+            </div>
+            <div class="top-about-inner u-ptb">
+                <div class="top-about-content">
+                    <div class="top-about-image-wrapper">
+                        <div class="top-about-image">
+                            <img src="img/logo/logo-white.svg" width="25" height="100" alt="" decoding="async" />
+                        </div>
+                    </div>
+                    <div class="top-about-profile">
+                        <h3 class="top-about-profile-name">seiya imoto</h3>
+                        <p class="top-about-profile-text"><span>静岡県富士市在住のWebコーダー志望、せいやです。2022年から2024年にかけてアイルランドに留学し、世界各国から集まる人たちと交流する中で、Web制作やプログラミングの可能性に惹かれるようになりました。帰国後はその思いを形にするため、2024年6月よりコーディングの学習をスタートし、挑戦を続けています。</span><span>趣味： 英会話、スケートボード、海外旅行、コーディング、映画鑑賞</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- the end of top about -->
+
+        <!-- top works -->
+        <section class="top-works">
+            <div class="c-title-wrapper">
+                <div class="c-title-inner">
+                    <h2 class="c-title">works</h2>
+                </div>
+            </div>
+            <div class="top-works-inner u-ptb">
+                <div class="top-works-list">
+                    <!-- travel gallery -->
+                    <article class="top-works-item">
+                        <a href="works/travel-gallery.html" class="top-works-item-link" aria-label="travel galleryの詳細ページに移動">
+                            <div class="top-works-item-thumbnail">
+                                <img src="img/common/16-9/small/travel-gallery.jpg" width="616" height="336" alt="" decoding="async" loading="lazy" />
+                            </div>
+                            <div class="top-works-item-desc">
+                                <time datetime="2025-09" class="top-works-item-date">2025.09</time>
+                                <h3 class="top-works-item-title">Travel Gallery</h3>
+                                <ul class="top-works-tags">
+                                    <li class="top-works-tag">自主制作</li>
+                                    <li class="top-works-tag">コーディング</li>
+                                    <li class="top-works-tag">デザイン</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </article>
+                    <!-- leaf design lab -->
+                    <article class="top-works-item">
+                        <a href="works/leaf-design-lab.html" class="top-works-item-link" aria-label="leaf design labの詳細ページに移動">
+                            <div class="top-works-item-thumbnail">
+                                <img src="img/common/16-9/small/leaf-design-lab.jpg" width="616" height="336" alt="" decoding="async" loading="lazy" />
+                            </div>
+                            <div class="top-works-item-desc">
+                                <time datetime="2025-09" class="top-works-item-date">2025.09</time>
+                                <h3 class="top-works-item-title">Leaf Design Lab</h3>
+                                <ul class="top-works-tags">
+                                    <li class="top-works-tag">自主制作</li>
+                                    <li class="top-works-tag">コーディング</li>
+                                    <li class="top-works-tag">デザイン</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </article>
+                    <!-- photographer -->
+                    <article class="top-works-item">
+                        <a href="works/photographer.html" class="top-works-item-link" aria-label="photographerの詳細ページに移動">
+                            <div class="top-works-item-thumbnail">
+                                <img src="img/common/16-9/small/photographer.jpg" width="616" height="336" alt="" decoding="async" loading="lazy" />
+                            </div>
+                            <div class="top-works-item-desc">
+                                <time datetime="2025-09" class="top-works-item-date">2025.09</time>
+                                <h3 class="top-works-item-title">Photographer</h3>
+                                <ul class="top-works-tags">
+                                    <li class="top-works-tag">自主制作</li>
+                                    <li class="top-works-tag">コーディング</li>
+                                    <li class="top-works-tag">デザイン</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </article>
+                    <!-- matsuyama clinic -->
+                    <article class="top-works-item">
+                        <a href="works/matsuyama-clinic.html" class="top-works-item-link" aria-label="matsuyama clinicの詳細ページに移動">
+                            <div class="top-works-item-thumbnail">
+                                <img src="img/common/16-9/small/matsuyama-clinic.jpg" width="616" height="336" alt="" decoding="async" loading="lazy" />
+                            </div>
+                            <div class="top-works-item-desc">
+                                <time datetime="2025-09" class="top-works-item-date">2025.09</time>
+                                <h3 class="top-works-item-title">Matsuyama Clinic</h3>
+                                <ul class="top-works-tags">
+                                    <li class="top-works-tag">自主制作</li>
+                                    <li class="top-works-tag">コーディング</li>
+                                    <li class="top-works-tag">デザイン</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </article>
+                    <!-- my portfolio -->
+                    <article class="top-works-item">
+                        <a href="works/my-portfolio.html" class="top-works-item-link" aria-label="my portfolioの詳細ページに移動">
+                            <div class="top-works-item-thumbnail">
+                                <img src="img/common/16-9/small/my-portfolio.jpg" width="616" height="336" alt="" decoding="async" loading="lazy" />
+                            </div>
+                            <div class="top-works-item-desc">
+                                <time datetime="2025-09" class="top-works-item-date">2025.09</time>
+                                <h3 class="top-works-item-title">My Portfolio</h3>
+                                <ul class="top-works-tags">
+                                    <li class="top-works-tag">自主制作</li>
+                                    <li class="top-works-tag">コーディング</li>
+                                    <li class="top-works-tag">デザイン</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </article>
+                    <div class="top-works-button">
+                        <a href="works/" class="c-button c-button--en"><span>view</span><span>more</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- the end of top works -->
+
+        <!-- top vision -->
+        <section class="top-vision" id="vision">
+            <div class="c-title-wrapper">
+                <div class="c-title-inner">
+                    <h2 class="c-title">vision</h2>
+                </div>
+            </div>
+            <div class="top-vision-inner u-ptb">
+                <div class="top-vision-coder">
+                    <h3 class="top-vision-coder-title">目指すコーダー像</h3>
+                    <p class="top-vision-coder-text">コーディングに加え、デザインやWordPressなどのスキルも磨き、幅広い制作に対応できる、コーダーを目指しています。ゆくゆくは、デザインから実装まで一貫して担える制作者として成長したいです。</p>
+                </div>
+                <div class="top-vision-growth">
+                    <h3 class="top-vision-growth-title">入社後の成長目標</h3>
+                    <ul class="top-vision-growth-list">
+                        <li class="top-vision-growth-item">
+                            <span class="top-vision-growth-label">３ヶ月後</span>
+                            <p class="top-vision-growth-text">制作フローやコーディングルールを理解し、WordPress業務を含めた日々の制作業務に慣れる。修正指示にも対応しながら、安定したコーディングができる状態を目指します。</p>
+                        </li>
+                        <li class="top-vision-growth-item">
+                            <span class="top-vision-growth-label">６ヶ月後</span>
+                            <p class="top-vision-growth-text">全体的な業務に慣れ、小規模なページや更新案件であれば1人で任せていただけるコーダになる。また並行してWEBデザインの学習にも力を入れていきます。</p>
+                        </li>
+                        <li class="top-vision-growth-item">
+                            <span class="top-vision-growth-label">1年後</span>
+                            <p class="top-vision-growth-text">デザイン意図を理解した実装ができ、難易度の高い案件にも対応できるWEBデザイナー兼コーダーとして成長する。また積極的に改善提案をするなど、能動的に制作に関わっていきます。</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- the end of top vision -->
+
+        <!-- top skills -->
+        <section class="top-skills" id="skills">
+            <div class="c-title-wrapper">
+                <div class="c-title-inner">
+                    <h2 class="c-title">skills</h2>
+                </div>
+            </div>
+            <div class="top-skills-inner u-ptb">
+                <ul class="top-skills-list">
+                    <li class="top-skills-item">
+                        <h3 class="top-skills-item-title">コーディング</h3>
+                        <p class="top-skills-item-text">デザインカンプをもとに、HTML / CSS / JavaScript を使用して正確かつ再現度の高いコーディングが可能です。 レスポンシブ対応やCSS設計を意識し、保守性・再利用性の高いコードを書くことを心がけています。</p>
+                        <div class="top-skills-item-icon">
+                            <img src="img/decorations/top-skills-coding.svg" width="100" height="88" alt="" decoding="async" aria-hidden="true" />
+                        </div>
+                    </li>
+                    <li class="top-skills-item">
+                        <h3 class="top-skills-item-title">アニメーション</h3>
+                        <p class="top-skills-item-text">JavaScriptライブラリの GSAPを使用し、スクロールアニメーションやインタラクティブな動きを実装できます。ユーザー体験を高めるために自然で洗練されたアニメーションを追求しています。</p>
+                        <div class="top-skills-item-icon">
+                            <img src="img/decorations/top-skills-animation.svg" width="100" height="80" alt="" decoding="async" aria-hidden="true" />
+                        </div>
+                    </li>
+
+                    <li class="top-skills-item">
+                        <h3 class="top-skills-item-title">デザインツール</h3>
+                        <p class="top-skills-item-text">Figmaを使用して、デザイン情報の確認、画像の書き出しなどの基本操作が可能です。自身のポートフォリオサイトは、Figmaで自らデザインしました。</p>
+                        <div class="top-skills-item-icon">
+                            <img src="img/decorations/top-skills-design.svg" width="100" height="99" alt="" decoding="async" aria-hidden="true" />
+                        </div>
+                    </li>
+                    <li class="top-skills-item">
+                        <h3 class="top-skills-item-title">今後の学習領域</h3>
+                        <p class="top-skills-item-text">現在Wordpressを学習しています。サイトの構築から運用まで対応できるよう、実践を意識した学習をすすめています。</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- the end of top skills -->
+        <!-- contact -->
+        <section class="top-contact" id="contact">
+            <div class="c-title-wrapper">
+                <div class="c-title-inner">
+                    <h2 class="c-title">contact</h2>
+                </div>
+            </div>
+            <div class="top-contact-inner u-ptb">
+                <p class="top-contact-text"><span>ポートフォリオをご覧いただきありがとうございます。</span><span>コーディングの依頼・ご相談などお気軽にお問い合わせください。</span></p>
+
+                <form name="contact" method="post" class="top-contact-form" netlify data-netlify="true">
+                    <!-- Netlifyが必要とする隠しフィールド -->
+                    <input type="hidden" name="form-name" value="contact" />
+
+                    <!-- スパム対策 (honeypot) -->
+                    <div style="display: none">
+                        <input type="text" name="bot-field" />
+                    </div>
+
+                    <!-- 会社名 -->
+                    <div class="top-contact-item">
+                        <label for="company" class="top-contact-label">
+                            <span class="top-contact-label-title">会社名</span>
+                        </label>
+                        <input type="text" id="company" class="top-input" name="company" autocomplete="organization" />
+                    </div>
+
+                    <!-- 名前 -->
+                    <div class="top-contact-item">
+                        <label for="name" class="top-contact-label">
+                            <span class="top-contact-label-title">お名前</span>
+                            <span class="top-contact-label-required">必須</span>
+                        </label>
+                        <input type="text" id="name" class="top-input" name="name" autocomplete="name" required />
+                    </div>
+
+                    <!-- メールアドレス -->
+                    <div class="top-contact-item">
+                        <label for="email" class="top-contact-label">
+                            <span class="top-contact-label-title">メールアドレス</span>
+                            <span class="top-contact-label-required">必須</span>
+                        </label>
+                        <input type="email" id="email" class="top-input" name="email" autocomplete="email" required />
+                    </div>
+
+                    <!-- 内容 -->
+                    <div class="top-contact-item">
+                        <label for="contact" class="top-contact-label">
+                            <span class="top-contact-label-title">お問い合わせ内容</span>
+                            <span class="top-contact-label-required">必須</span>
+                        </label>
+                        <textarea id="contact" class="top-textarea" name="contact" autocomplete="off" required></textarea>
+                    </div>
+                    <div class="top-contact-privacy">
+                        <h3 class="top-contact-privacy-title">個人情報の取扱いについて</h3>
+                        <p class="top-contact-privacy-text">
+                            <span>ご入力いただいたお名前やメールアドレスなどの個人情報は、お問い合わせへのご返答のためにのみ利用し、その他の目的には使用いたしません。</span><span>また、いただいた個人情報は<a href="privacy.html" target="_blank" rel="noopener noreferrer" class="top-contact-privacy-link">プライバシーポリシー</a>に基づき、適切に管理いたします。</span>
+                        </p>
+                        <label class="top-contact-privacy-label">
+                            <input type="checkbox" name="agree" class="top-contact-privacy-checkbox" required />
+                            個人情報の取り扱いに同意する
+                        </label>
+                    </div>
+                    <button type="submit" class="top-contact-submit-button">内容を送信する</button>
+                </form>
+            </div>
+
+            <dialog class="top-contact-modal js-top-contact-modal" aria-labelledby="top-contact-modal-title">
+                <form method="dialog" class="top-contact-modal-content">
+                    <h2 class="top-contact-modal-title" id="top-contact-modal-title">送信が完了しました</h2>
+                    <p class="top-contact-modal-text">お問い合わせありがとうございます。内容を確認してご返信いたします。</p>
+                    <button class="top-contact-modal-button">閉じる</button>
+                </form>
+            </dialog>
+        </section>
+        <!-- the end of contact -->
+
+        <!-- text slider -->
+        <div class="c-text-slider">
+            <div class="p-keyword-slider__splide js-keyword-carousel-footer splide">
+                <div class="splide__track p-keyword-slider__track">
+                    <ul class="splide__list c-text-slider-list">
+                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- the end of text slider -->
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="footer-inner">
+                <small class="footer-copyright"><span>©seiya</span><span>imoto's</span><span>portfolio</span></small>
+                <ul class="footer-sns-list">
+                    <li class="footer-sns-item">
+                        <a href="https://github.com/seiyaie" aria-label="githubへ移動">
+                            <img src="img/icons/sns/github-white.svg" width="41" height="40" alt="" decoding="async" />
+                        </a>
+                    </li>
+                    <!-- <li class="footer-sns-item">
                         <a href="#">
                             <img src="img/sns/x.svg" width="39" height="40" alt="" decoding="async" />
                         </a>
                     </li> -->
-            </ul>
-        </div>
-    </footer>
-    <!-- the end of footer -->
-</body>
-
+                </ul>
+            </div>
+        </footer>
+        <!-- the end of footer -->
+    </body>
 </html>
