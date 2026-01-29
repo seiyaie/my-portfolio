@@ -7,6 +7,8 @@ export const initThemeSwitch = () => {
     const arrowImg = document.querySelector(".js-theme-arrow");
     const hamburgerOpenImg = document.querySelector(".js-theme-hamburger-open");
     const hamburgerCloseImg = document.querySelector(".js-theme-hamburger-close");
+    const xIconImgs = document.querySelectorAll(".js-theme-x");
+    const gitHubIconImgs = document.querySelectorAll(".js-theme-github");
 
     // 画像パス
     const ICON = {
@@ -38,6 +40,14 @@ export const initThemeSwitch = () => {
         light: "/img/icons/ui/hamburger-close-button-black.svg",
         dark: "/img/icons/ui/hamburger-close-button-white.svg",
     };
+    const X_ICON = {
+        light: "/img/icons/sns/x-black.svg",
+        dark: "/img/icons/sns/x-white.svg",
+    };
+    const GITHUB_ICON = {
+        light: "/img/icons/sns/github-black.svg",
+        dark: "/img/icons/sns/github-white.svg",
+    };
 
     // テーマ状態管理オブジェクト
     const themeStore = {
@@ -64,6 +74,15 @@ export const initThemeSwitch = () => {
         themeIcons.forEach((icon) => {
             icon.src = isDark ? ICON.light : ICON.dark;
         });
+
+        gitHubIconImgs.forEach((icon) => {
+            icon.src = isDark ? GITHUB_ICON.dark : GITHUB_ICON.light;
+        });
+
+        xIconImgs.forEach((icon) => {
+            icon.src = isDark ? X_ICON.dark : X_ICON.light;
+        });
+
 
         // logo切り替え
         if (logoImg) logoImg.src = isDark ? LOGO.dark : LOGO.light;
