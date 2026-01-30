@@ -49,6 +49,26 @@ export const initThemeSwitch = () => {
         dark: "/img/icons/sns/github-white.svg",
     };
 
+    const ASSETS = {
+        logo: LOGO,
+        panel: PANEL,
+        arrow: ARROW,
+        hamburgerOpen: HAMBURGER_OPEN,
+        hamburgerClose: HAMBURGER_CLOSE,
+        x: X_ICON,
+        github: GITHUB_ICON,
+    };
+
+    const ASSET_TARGETS = {
+        logo: logoImg,
+        panel: panelImg,
+        arrow: arrowImg,
+        hamburgerOpen: hamburgerOpenImg,
+        hamburgerClose: hamburgerCloseImg,
+        x: xIconImgs,
+        github: gitHubIconImgs,
+    };
+
     // テーマ状態管理オブジェクト
     const themeStore = {
         DARK: "dark",
@@ -66,34 +86,35 @@ export const initThemeSwitch = () => {
         },
     };
 
+    const setSrc = (target, src) => {
+        if (!target) return;
+        if (target instanceof NodeList || Array.isArray(target)) {
+            target.forEach((el) => {
+                if (el) el.src = src;
+            });
+            return;
+        }
+        target.src = src;
+    };
+
     function updateTheme(theme) {
         themeStore.theme = theme; // setter呼び出し。updateThemeに渡されたthemeがsetterのvalueに入る。
         const isDark = theme === themeStore.DARK;
 
-        // すべてのボタンのアイコンを更新
+        // テーマ切り替えボタンのアイコンを更新
         themeIcons.forEach((icon) => {
             icon.src = isDark ? ICON.light : ICON.dark;
         });
 
-        gitHubIconImgs.forEach((icon) => {
-            icon.src = isDark ? GITHUB_ICON.dark : GITHUB_ICON.light;
+        // ASSETS + TARGETS をループで反映
+        Object.keys(ASSETS).forEach((key) => {
+            const paths = ASSETS[key]; // { light, dark }
+            const target = ASSET_TARGETS[key]; // img or NodeList
+            const nextSrc = isDark ? paths.dark : paths.light;
+            setSrc(target, nextSrc);
         });
 
-        xIconImgs.forEach((icon) => {
-            icon.src = isDark ? X_ICON.dark : X_ICON.light;
-        });
-
-
-        // logo切り替え
-        if (logoImg) logoImg.src = isDark ? LOGO.dark : LOGO.light;
-        // kv sliderのtoggleボタンのpanel切り替え
-        if (panelImg) panelImg.src = isDark ? PANEL.dark : PANEL.light;
-        // kv sliderのtoggleボタンのarrow切り替え
-        if (arrowImg) arrowImg.src = isDark ? ARROW.dark : ARROW.light;
-        if (hamburgerOpenImg) hamburgerOpenImg.src = isDark ? HAMBURGER_OPEN.dark : HAMBURGER_OPEN.light;
-        if (hamburgerCloseImg) hamburgerCloseImg.src = isDark ? HAMBURGER_CLOSE.dark : HAMBURGER_CLOSE.light;
-
-        // すべてのボタンの状態（aria とクラス）更新
+        // テーマ切り替えボタンの状態（aria とクラス）更新
         themeButtons.forEach((btn) => {
             btn.classList.toggle("is-dark", isDark);
             btn.setAttribute("aria-pressed", isDark);
