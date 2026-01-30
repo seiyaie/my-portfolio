@@ -13,12 +13,6 @@ page > top > top-about
     }
 }
 
-.top-about-inner {
-    width: 90%;
-    margin-inline: auto;
-    max-width: 1080px;
-}
-
 .top-about-content {
     display: flex;
     flex-direction: column;
@@ -61,10 +55,13 @@ page > top > top-about
 }
 
 .top-about-profile {
-    padding: 32px;
+    padding: 32px 16px;
     @include g.mq() {
         border-left: 2px solid var(--line-color);
-        padding: 120px;
+        padding: 48px 24px;
+    }
+    @include g.mq(lg) {
+        padding: 64px 32px;
     }
 }
 
@@ -75,15 +72,16 @@ page > top > top-about
 }
 
 .top-about-profile-text {
-    margin-top: 24px;
+    margin-top: 16px;
+    line-height: 2;
     @include g.mq() {
-        margin-top: 32px;
+        margin-top: 24px;
     }
 }
 
 .top-about-profile-text span {
     display: block;
-    &:last-child {
+    &:not(:first-child) {
         margin-top: 16px;
     }
 }
@@ -93,16 +91,16 @@ page > top > top-about
     align-items: center;
     justify-content: flex-end;
     gap: 8px;
+    margin-top: 24px;
     @include g.mq() {
-        justify-content: flex-start;
-        gap: 16px;
+        margin-top: 40px;
+        gap: 20px;
     }
 }
 
 .top-about-profile-sns-item {
     width: 40px;
     aspect-ratio: 1/1;
-    margin-top: 24px;
     @include g.mq() {
         width: 48px;
     }
