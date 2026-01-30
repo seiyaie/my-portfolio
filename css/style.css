@@ -7,6 +7,7 @@ global > color
   color-scheme: light dark;
   --bg-color: light-dark(#d0bfc3, #000000);
   --text-color: light-dark(#000000, #ffffff);
+  --icon-color: light-dark(#000000, #ffffff);
   --line-color: light-dark(#000000, #ffffff);
   --contact-bg-color: light-dark(#f2f2f2, #ffffff);
   --contact-text-color: light-dark(#ffffff, #000000);
@@ -15,6 +16,7 @@ global > color
 [data-theme=light] {
   --bg-color: #d0bfc3;
   --text-color: #000000;
+  --icon-color: #000000;
   --line-color: #000000;
   --contact-bg-color: #f2f2f2;
   --contact-text-color: #000000;
@@ -23,6 +25,7 @@ global > color
 [data-theme=dark] {
   --bg-color: #000000;
   --text-color: #ffffff;
+  --icon-color: #ffffff;
   --line-color: #ffffff;
   --contact-bg-color: #ffffff;
   --contact-text-color: #000000;
@@ -1426,11 +1429,37 @@ page > top > top-skills
 }
 
 .top-skills-item-icon {
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
   width: 80px;
   height: 80px;
   position: absolute;
   right: 16px;
   bottom: 16px;
+  background-color: var(--icon-color);
+  opacity: 0.7;
+}
+
+.top-skills-item-icon--coding {
+  -webkit-mask-image: url("../img/decorations/top-skills-coding.svg");
+          mask-image: url("../img/decorations/top-skills-coding.svg");
+  --webkit-mask-image: url("../img/decorations/top-skills-coding.svg");
+}
+
+.top-skills-item-icon--animation {
+  -webkit-mask-image: url("../img/decorations/top-skills-animation.svg");
+          mask-image: url("../img/decorations/top-skills-animation.svg");
+  --webkit-mask-image: url("../img/decorations/top-skills-animation.svg");
+}
+
+.top-skills-item-icon--design {
+  -webkit-mask-image: url("../img/decorations/top-skills-design.svg");
+          mask-image: url("../img/decorations/top-skills-design.svg");
+  --webkit-mask-image: url("../img/decorations/top-skills-design.svg");
 }
 
 /*!

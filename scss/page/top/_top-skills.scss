@@ -59,9 +59,34 @@ page > top > top-skills
 }
 
 .top-skills-item-icon {
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+
     width: 80px;
     height: 80px;
     position: absolute;
     right: 16px;
     bottom: 16px;
+    background-color: var(--icon-color);
+    opacity: 0.7;
+}
+
+.top-skills-item-icon--coding {
+    mask-image: url("../img/decorations/top-skills-coding.svg");
+    --webkit-mask-image: url("../img/decorations/top-skills-coding.svg");
+}
+
+.top-skills-item-icon--animation {
+    mask-image: url("../img/decorations/top-skills-animation.svg");
+    --webkit-mask-image: url("../img/decorations/top-skills-animation.svg");
+}
+
+.top-skills-item-icon--design {
+    mask-image: url("../img/decorations/top-skills-design.svg");
+    --webkit-mask-image: url("../img/decorations/top-skills-design.svg");
 }
