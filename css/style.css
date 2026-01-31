@@ -22,30 +22,30 @@ global > color
 :root {
   color-scheme: light dark;
   --bg-color: light-dark(#f0eee9, #000000);
-  --text-color: light-dark(#000000, #ffffff);
+  --color-text: light-dark(#000000, #dddddd);
   --icon-color: light-dark(#000000, #ffffff);
-  --line-color-section: light-dark(#000000, #ffffff);
-  --line-color-ui: light-dark(#666666, #666666);
+  --line-color-section: light-dark(#222222, #cccccc);
+  --line-color-ui: light-dark(#555555, #888888);
   --contact-bg-color: light-dark(#f2f2f2, #ffffff);
   --contact-text-color: light-dark(#ffffff, #000000);
 }
 
 [data-theme=light] {
   --bg-color: #f0eee9;
-  --text-color: #000000;
+  --color-text: #000000;
   --icon-color: #000000;
-  --line-color-section: #000000;
-  --line-color-ui: #666666;
+  --line-color-section: #222222;
+  --line-color-ui: #555555;
   --contact-bg-color: #f2f2f2;
   --contact-text-color: #000000;
 }
 
 [data-theme=dark] {
   --bg-color: #000000;
-  --text-color: #ffffff;
+  --color-text-body: #dddddd;
   --icon-color: #ffffff;
-  --line-color-section: #ffffff;
-  --line-color-ui: #666666;
+  --line-color-section: #cccccc;
+  --line-color-ui: #888888;
   --contact-bg-color: #ffffff;
   --contact-text-color: #000000;
 }
@@ -299,7 +299,7 @@ body {
   line-height: 1.8;
   font-size: var(--font-size-body);
   letter-spacing: 0.08em;
-  color: var(--text-color);
+  color: var(--color-text-body);
   background-color: var(--bg-color);
   font-family: var(--font-family-jp);
 }
