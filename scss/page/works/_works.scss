@@ -75,12 +75,25 @@ page > works > works
         align-items: stretch;
         gap: 40px;
     }
+
+    @media (any-hover: hover) {
+        &:hover {
+            .works-item-thumbnail img {
+                scale: 1.05;
+            }
+            .works-item-button {
+                background-color: var(--color-button-bg-hover);
+                color: var(--color-button-text-hover);
+            }
+        }
+    }
 }
 
 .works-item-thumbnail {
     aspect-ratio: 16 / 9;
     width: 100%;
     border: var(--border-ui);
+    overflow: hidden;
     @include g.mq() {
         width: 50%;
         max-width: 480px;
@@ -90,6 +103,7 @@ page > works > works
         width: 100%;
         height: 100%;
         object-fit: cover;
+        transition: scale 0.3s;
     }
 }
 
@@ -177,6 +191,10 @@ page > works > works
     height: 100%;
     display: grid;
     place-items: center;
+    transition:
+        color 0.3s,
+        background-color 0.3s;
+
     @include g.mq() {
         grid-column: 1/2;
         grid-row: 3/4;

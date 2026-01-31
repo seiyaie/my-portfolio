@@ -38,6 +38,8 @@ global > color
   --color-line-ui: #555555;
   --color-contact-bg: #f2f2f2;
   --color-contact-text: #000000;
+  --color-button-bg-hover: #222222;
+  --color-button-text-hover: #dddddd;
 }
 
 [data-theme=dark] {
@@ -48,6 +50,8 @@ global > color
   --color-line-ui: #888888;
   --color-contact-bg: #ffffff;
   --color-contact-text: #000000;
+  --color-button-bg-hover: #dddddd;
+  --color-button-text-hover: #000000;
 }
 
 /*!
@@ -1654,11 +1658,21 @@ page > works > works
     gap: 40px;
   }
 }
+@media (any-hover: hover) {
+  .works-item-link:hover .works-item-thumbnail img {
+    scale: 1.05;
+  }
+  .works-item-link:hover .works-item-button {
+    background-color: var(--color-button-bg-hover);
+    color: var(--color-button-text-hover);
+  }
+}
 
 .works-item-thumbnail {
   aspect-ratio: 16/9;
   width: 100%;
   border: var(--border-ui);
+  overflow: hidden;
 }
 @media screen and (min-width: 768px) {
   .works-item-thumbnail {
@@ -1672,6 +1686,7 @@ page > works > works
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: scale 0.3s;
 }
 
 @media screen and (min-width: 768px) {
@@ -1767,6 +1782,7 @@ page > works > works
   height: 100%;
   display: grid;
   place-items: center;
+  transition: color 0.3s, background-color 0.3s;
 }
 @media screen and (min-width: 768px) {
   .works-item-button {
