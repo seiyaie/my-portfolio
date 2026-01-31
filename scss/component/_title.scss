@@ -34,8 +34,10 @@ component > title
 
 .c-title-wrapper {
     width: 100%;
+    border-top: 1px solid var(--line-color);
     border-bottom: 1px solid var(--line-color);
     @include g.mq() {
+        border-top: 2px solid var(--line-color);
         border-bottom: 2px solid var(--line-color);
     }
 }
