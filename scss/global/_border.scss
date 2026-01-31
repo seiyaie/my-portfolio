@@ -1,0 +1,16 @@
+@use "./breakpoints" as g;
+/*!
+global > border
+------------------------------
+*/
+
+:root {
+--border-size: 1px;
+--section-border: var(--border-size) solid var(--line-color);
+}
+
+@include g.mq() {
+    :root {
+      --border-size: 2px;
+    }
+}
