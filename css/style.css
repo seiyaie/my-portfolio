@@ -1229,6 +1229,9 @@ page > top > top-works
   padding: 16px;
 }
 @media (any-hover: hover) {
+  .top-works-item-link:hover .top-works-item-thumbnail img {
+    scale: 1.05;
+  }
   .top-works-item-link:hover .top-works-item-thumbnail::before {
     scale: 1;
   }
@@ -1241,6 +1244,7 @@ page > top > top-works
   position: relative;
   aspect-ratio: 16/9;
   border: var(--border-ui);
+  overflow: hidden;
 }
 .top-works-item-thumbnail::before {
   content: "Detail";
@@ -1273,6 +1277,7 @@ page > top > top-works
 .top-works-item-thumbnail img {
   width: 100%;
   height: 100%;
+  transition: scale 0.3s;
 }
 
 .top-works-item-date {
