@@ -1,0 +1,14 @@
+/*!
+global > header-height
+------------------------------
+*/
+
+:root {
+    --header-height: 60px;
+}
+
+@include g.mq() {
+    :root {
+        --header-height: 120px;
+    }
+}
