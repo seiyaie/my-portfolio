@@ -5,12 +5,16 @@ global > border
 */
 
 :root {
---border-size: 1px;
---section-border: var(--border-size) solid var(--line-color);
+    --border-size: 1px;
+    --border-section: var(--border-size) solid var(--line-color-section);
+
+    --border-ui: var(--border-size) solid var(--line-color-ui);
+
+    --border-dashed: var(--border-size) dashed var(--line-color-ui);
 }
 
 @include g.mq() {
     :root {
-      --border-size: 2px;
+        --border-size: 2px;
     }
 }
