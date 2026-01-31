@@ -30,11 +30,49 @@ page > top > top-works
 .top-works-item-link {
     display: block;
     padding: 16px;
+    @media (any-hover: hover) {
+        &:hover {
+            .top-works-item-thumbnail {
+                &::before {
+                    scale: 1;
+                }
+                &::after {
+                    background-color: rgba(0, 0, 0, 0.4);
+                }
+            }
+        }
+    }
 }
 
 .top-works-item-thumbnail {
+    position: relative;
     aspect-ratio: 16/9;
     border: var(--border-ui);
+    &::before {
+        content: "Detail";
+        display: grid;
+        place-items: center;
+        position: absolute;
+        inset: 0;
+        font-size: 40px;
+        font-family: var(--font-family-accent);
+        font-weight: bold;
+        color: white;
+        z-index: var(--z-index-default);
+        scale: 0;
+        transition: scale 0.3s;
+        @include g.mq(lg) {
+            font-size: 48px;
+        }
+    }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0);
+        transition: background-color 0.3s;
+    }
 }
 
 .top-works-item-thumbnail img {
