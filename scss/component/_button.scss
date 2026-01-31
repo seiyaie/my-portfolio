@@ -5,7 +5,7 @@ component > button
 ------------------------------
 */
 .c-button {
-    border: 1px solid var(--line-color);
+    border: var(--border-ui);
     font-size: 16px;
     padding: 16px;
     width: 100%;
@@ -13,7 +13,6 @@ component > button
     text-indent: 0.08em;
 
     @include g.mq() {
-        border: 2px solid var(--line-color);
         font-size: 20px;
         padding: 24px;
     }

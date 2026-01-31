@@ -25,7 +25,7 @@ component > title
     line-height: 1.4;
     letter-spacing: 0.2em;
     display: inline-block;
-    border-bottom: 1px solid var(--line-color);
+    border-bottom: var(--border-section);
     padding-block-end: 4px;
     span {
         display: block;
@@ -34,12 +34,8 @@ component > title
 
 .c-title-wrapper {
     width: 100%;
-    border-top: 1px solid var(--line-color);
-    border-bottom: 1px solid var(--line-color);
-    @include g.mq() {
-        border-top: 2px solid var(--line-color);
-        border-bottom: 2px solid var(--line-color);
-    }
+    border-top: var(--border-section);
+    border-bottom: var(--border-section);
 }
 
 .c-title-inner {
@@ -48,11 +44,9 @@ component > title
     margin-inline: auto;
     width: 90%;
     height: 80px;
-    border-left: 1px solid var(--line-color);
-    border-right: 1px solid var(--line-color);
+    border-left: var(--border-section);
+    border-right: var(--border-section);
     @include g.mq() {
         height: 140px;
-        border-left: 2px solid var(--line-color);
-        border-right: 2px solid var(--line-color);
     }
 }

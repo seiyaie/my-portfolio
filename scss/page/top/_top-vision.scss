@@ -5,13 +5,6 @@ page > top > top-vision
 ------------------------------
 */
 
-.top-vision {
-    border-bottom: 1px solid var(--line-color);
-    @include g.mq() {
-        border-bottom: 2px solid var(--line-color);
-    }
-}
-
 .top-vision-inner {
     width: 90%;
     max-width: var(--width-content-l);
@@ -19,7 +12,7 @@ page > top > top-vision
 }
 
 .top-vision-coder {
-    border: 1px solid var(--line-color);
+    border: var(--border-ui);
 }
 
 .top-vision-coder-title,
@@ -27,7 +20,7 @@ page > top > top-vision
     font-weight: bold;
     font-size: var(--font-size-subheading);
     letter-spacing: 0.2em;
-    border-bottom: 1px solid var(--line-color);
+    border-bottom: var(--border-ui);
     padding: 8px 16px;
 }
 
@@ -37,7 +30,7 @@ page > top > top-vision
 }
 
 .top-vision-growth {
-    border: 1px solid var(--line-color);
+    border: var(--border-ui);
     margin-top: 40px;
 }
 
@@ -56,7 +49,7 @@ page > top > top-vision
 
 .top-vision-growth-item {
     position: relative;
-    border: 1px solid var(--line-color);
+    border: var(--border-ui);
     padding-bottom: 8px;
     &:not(:last-child)::after {
         content: "";
@@ -84,5 +77,5 @@ page > top > top-vision
 .top-vision-growth-label {
     padding: 8px 16px;
     display: block;
-    border-bottom: 1px solid var(--line-color);
+    border-bottom: var(--border-ui);
 }

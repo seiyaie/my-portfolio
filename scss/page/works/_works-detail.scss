@@ -5,8 +5,13 @@ page > works > works-detail
 ------------------------------
 */
 
+.works-detail {
+    border-top: var(--border-section);
+    border-bottom: var(--border-section);
+}
+
 .works-detail-title-wrapper {
-    margin-top: 40px;
+    margin-bottom: 40px;
     @include g.mq() {
         margin-top: 64px;
     }
@@ -23,7 +28,7 @@ page > works > works-detail
     line-height: 1.4;
     letter-spacing: 0.2em;
     display: inline-block;
-    border-bottom: 1px solid var(--line-color);
+    border-bottom: var(--border-section);
     padding-block-end: 4px;
     @include g.mq() {
         font-size: 32px;
@@ -71,7 +76,7 @@ page > works > works-detail
 }
 
 .works-detail-info-title {
-    border-bottom: 1px dashed var(--line-color);
+    border-bottom: var(--border-dashed);
     padding-block-end: 4px;
     font-weight: bold;
     font-size: 18px;
@@ -95,7 +100,7 @@ page > works > works-detail
 }
 
 .works-detail-section-title {
-    border-bottom: 1px dashed var(--line-color);
+    border-bottom: var(--border-dashed);
     padding-block-end: 4px;
     font-weight: bold;
     margin-bottom: 16px;

@@ -5,50 +5,48 @@ layout > footer
 ------------------------------
 */
 .footer {
-  padding-block: 32px;
-
+    padding-block: 32px;
+    border-top: var(--border-section);
 }
 
 .footer-inner {
-  width: 90%;
-  margin-inline: auto;
-  display: flex;
-  flex-direction: column;
-  @include g.mq() {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
+    width: 90%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    @include g.mq() {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
 
 .footer-copyright {
-  font-size: 16px;
-  text-transform: uppercase;
-  font-family: var(--font-family-accent);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  line-height: 1;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: var(--font-family-accent);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1;
 }
 
 .footer-sns-list {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-top: 16px;
-  @include g.mq() {
-      margin-top: 0;
-  }
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 16px;
+    @include g.mq() {
+        margin-top: 0;
+    }
 }
 
 .footer-sns-item a {
-  width: 30px;
-  height: 30px;
-  display: inline-block;
-  @include g.mq() {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    @include g.mq() {
+        width: 40px;
+        height: 40px;
+    }
 }
-}
-
-

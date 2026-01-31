@@ -5,13 +5,6 @@ page > top > top-skills
 ------------------------------
 */
 
-.top-skills {
-    border-bottom: 1px solid var(--line-color);
-    @include g.mq() {
-        border-bottom: 2px solid var(--line-color);
-    }
-}
-
 .top-skills-inner {
     width: 90%;
     max-width: var(--width-content-l);
@@ -32,7 +25,7 @@ page > top > top-skills
 }
 
 .top-skills-item {
-    border: 1px solid var(--line-color);
+    border: var(--border-ui);
     position: relative;
     padding-bottom: 100px;
     &:nth-child(4) {
@@ -46,7 +39,7 @@ page > top > top-skills
 }
 
 .top-skills-item-title {
-    border-bottom: 1px solid var(--line-color);
+    border-bottom: var(--border-ui);
     font-size: var(--font-size-subheading);
     font-weight: bold;
     letter-spacing: 0.2em;

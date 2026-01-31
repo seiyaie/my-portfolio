@@ -13,13 +13,9 @@ layout > header
     top: 0;
     left: 0;
     width: 100%;
-    border-bottom: 1px solid var(--line-color);
+    border-bottom: var(--border-section);
     z-index: var(--z-index-header);
     background-color: var(--bg-color);
-
-    @include g.mq() {
-        border-bottom: 2px solid var(--line-color);
-    }
 }
 
 .header-logo-wrapper {
@@ -27,11 +23,10 @@ layout > header
     height: 100%;
     display: grid;
     place-items: center;
-    border-right: 1px solid var(--line-color);
+    border-right: var(--border-section);
 
     @include g.mq() {
         width: 120px;
-        border-right: 2px solid var(--line-color);
     }
 }
 

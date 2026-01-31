@@ -5,6 +5,7 @@ page > top > top-about
 ------------------------------
 */
 .top-contact {
+    
 }
 
 .top-contact-inner {
@@ -45,7 +46,6 @@ page > top > top-about
 .top-input,
 .top-textarea {
     background-color: var(--contact-bg-color);
-    border: 1px solid var(--line-color);
     width: 100%;
     max-width: 800px;
     color: var(--contact-text-color);
@@ -53,7 +53,7 @@ page > top > top-about
 }
 
 .top-contact-label-required {
-    border: 1px solid var(--line-color);
+    border: var(--border-ui);
     padding: 4px 8px;
 }
 
@@ -85,13 +85,14 @@ page > top > top-about
     @media (any-hover: hover) {
         &:hover {
             opacity: 0.7;
+            text-decoration: none;
         }
     }
 }
 
 .top-contact-submit-button {
     width: 100%;
-    border: 1px solid var(--line-color);
+    border: var(--border-ui);
     font-weight: bold;
     padding: 8px 16px;
     // margin-top: 16px;
@@ -115,7 +116,7 @@ page > top > top-about
     cursor: pointer;
     width: 18px;
     height: 18px;
-    border: 1px solid var(--line-color);
+    border: var(--border-ui);
 }
 
 .top-contact-privacy-checkbox:checked::after {
@@ -125,8 +126,8 @@ page > top > top-about
     left: 2px;
     width: 12px;
     height: 6px;
-    border-bottom: 2px solid var(--line-color);
-    border-left: 2px solid var(--line-color);
+    border-bottom: 2px solid var(--line-color-section);
+    border-left: 2px solid var(--line-color-section);
     transform: rotate(-45deg);
 }
 

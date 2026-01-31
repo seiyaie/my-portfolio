@@ -6,6 +6,8 @@ page > works > works
 */
 
 .works {
+    border-top: var(--border-section);
+    border-bottom: var(--border-section);
 }
 
 .works-inner {
@@ -16,7 +18,7 @@ page > works > works
 .works-title {
     font-weight: bold;
     font-size: 18px;
-    border-bottom: 1px solid var(--line-color);
+    border-bottom: var(--border-section);
     margin-top: 40px;
     padding-block-end: 4px;
     @include g.mq() {
@@ -27,7 +29,7 @@ page > works > works
 
 .works-list {
     &--personal {
-        border-bottom: 1px solid var(--line-color);
+        border-bottom: var(--border-section);
     }
 }
 
@@ -52,7 +54,7 @@ page > works > works
     line-height: 1.2;
     letter-spacing: 0.2em;
     display: inline-block;
-    border-bottom: 1px solid var(--line-color);
+    border-bottom: var(--border-section);
     padding-block-end: 4px;
 }
 
@@ -86,6 +88,7 @@ page > works > works
 .works-item-thumbnail {
     width: 100%;
     height: 100%;
+    border: var(--border-ui);
     img {
         display: block;
         width: 100%;
@@ -102,7 +105,7 @@ page > works > works
     font-size: var(--font-size-body-sm);
     font-weight: bold;
     padding: 8px 16px;
-    border: 1px solid var(--line-color);
+    border: var(--border-ui);
 }
 
 .works-item-info {
@@ -115,7 +118,7 @@ page > works > works
     text-transform: uppercase;
     font-size: 16px;
     padding-block: 16px;
-    background-image: linear-gradient(to right, var(--line-color), var(--line-color) 4px, transparent 4px, transparent 10px);
+    border-bottom: var(--border-dashed);
     background-size: 10px 1px;
     background-position: left bottom;
     background-repeat: repeat-x;
