@@ -5,7 +5,6 @@ page > top > top-about
 ------------------------------
 */
 .top-contact {
-    
 }
 
 .top-contact-inner {
@@ -45,10 +44,10 @@ page > top > top-about
 
 .top-input,
 .top-textarea {
-    background-color: var(--contact-bg-color);
+    background-color: var(--color-contact-bg);
     width: 100%;
     max-width: 800px;
-    color: var(--contact-text-color);
+    color: var(--color-contact-text);
     padding: 8px;
 }
 
@@ -74,7 +73,7 @@ page > top > top-about
     max-width: 800px;
 }
 .top-contact-privacy-text span {
-  display: block;
+    display: block;
 }
 
 .top-contact-privacy-link {
@@ -126,8 +125,8 @@ page > top > top-about
     left: 2px;
     width: 12px;
     height: 6px;
-    border-bottom: 2px solid var(--line-color-section);
-    border-left: 2px solid var(--line-color-section);
+    border-bottom: 2px solid var(--color-line-section);
+    border-left: 2px solid var(--color-line-section);
     transform: rotate(-45deg);
 }
 

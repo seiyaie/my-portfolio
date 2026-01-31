@@ -32,7 +32,7 @@ page > top > top-about
     margin-inline: auto;
     width: 180px;
     height: 180px;
-    background-color: var(--bg-color);
+    background-color: var(--color-bg);
     border: var(--border-ui);
     @include g.mq() {
         width: 240px;

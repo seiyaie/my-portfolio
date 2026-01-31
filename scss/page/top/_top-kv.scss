@@ -130,7 +130,7 @@ page > top > top-kv
 /* スライダーリストコンテナ */
 .top-kv-slider-list-container {
     height: auto;
-    background-color: var(--bg-color);
+    background-color: var(--color-bg);
     @include g.mq() {
         position: absolute;
         top: 0;

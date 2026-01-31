@@ -6,11 +6,11 @@ global > border
 
 :root {
     --border-size: 1px;
-    --border-section: var(--border-size) solid var(--line-color-section);
+    --border-section: var(--border-size) solid var(--color-line-section);
 
-    --border-ui: var(--border-size) solid var(--line-color-ui);
+    --border-ui: var(--border-size) solid var(--color-line-ui);
 
-    --border-dashed: var(--border-size) dashed var(--line-color-ui);
+    --border-dashed: var(--border-size) dashed var(--color-line-ui);
 }
 
 @include g.mq() {

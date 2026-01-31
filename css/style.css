@@ -5,9 +5,9 @@ global > border
 */
 :root {
   --border-size: 1px;
-  --border-section: var(--border-size) solid var(--line-color-section);
-  --border-ui: var(--border-size) solid var(--line-color-ui);
-  --border-dashed: var(--border-size) dashed var(--line-color-ui);
+  --border-section: var(--border-size) solid var(--color-line-section);
+  --border-ui: var(--border-size) solid var(--color-line-ui);
+  --border-dashed: var(--border-size) dashed var(--color-line-ui);
 }
 
 @media screen and (min-width: 768px) {
@@ -21,33 +21,33 @@ global > color
 */
 :root {
   color-scheme: light dark;
-  --bg-color: light-dark(#f0eee9, #000000);
+  --color-bg: light-dark(#f0eee9, #000000);
   --color-text: light-dark(#000000, #dddddd);
-  --icon-color: light-dark(#000000, #ffffff);
-  --line-color-section: light-dark(#222222, #cccccc);
-  --line-color-ui: light-dark(#555555, #888888);
-  --contact-bg-color: light-dark(#f2f2f2, #ffffff);
-  --contact-text-color: light-dark(#ffffff, #000000);
+  --color-icon: light-dark(#000000, #ffffff);
+  --color-line-section: light-dark(#222222, #cccccc);
+  --color-line-ui: light-dark(#555555, #888888);
+  --color-contact-bg: light-dark(#f2f2f2, #ffffff);
+  --color-contact-text: light-dark(#ffffff, #000000);
 }
 
 [data-theme=light] {
-  --bg-color: #f0eee9;
+  --color-bg: #f0eee9;
   --color-text: #000000;
-  --icon-color: #000000;
-  --line-color-section: #222222;
-  --line-color-ui: #555555;
-  --contact-bg-color: #f2f2f2;
-  --contact-text-color: #000000;
+  --color-icon: #000000;
+  --color-line-section: #222222;
+  --color-line-ui: #555555;
+  --color-contact-bg: #f2f2f2;
+  --color-contact-text: #000000;
 }
 
 [data-theme=dark] {
-  --bg-color: #000000;
+  --color-bg: #000000;
   --color-text-body: #dddddd;
-  --icon-color: #ffffff;
-  --line-color-section: #cccccc;
-  --line-color-ui: #888888;
-  --contact-bg-color: #ffffff;
-  --contact-text-color: #000000;
+  --color-icon: #ffffff;
+  --color-line-section: #cccccc;
+  --color-line-ui: #888888;
+  --color-contact-bg: #ffffff;
+  --color-contact-text: #000000;
 }
 
 /*!
@@ -300,7 +300,7 @@ body {
   font-size: var(--font-size-body);
   letter-spacing: 0.08em;
   color: var(--color-text-body);
-  background-color: var(--bg-color);
+  background-color: var(--color-bg);
   font-family: var(--font-family-jp);
 }
 
@@ -462,7 +462,7 @@ component > hamburger-menu.scss
 ------------------------------
 */
 .c-hamburger-menu {
-  background-color: var(--bg-color);
+  background-color: var(--color-bg);
   position: fixed;
   inset: 0;
   width: 100%;
@@ -619,7 +619,7 @@ layout > header
   width: 100%;
   border-bottom: var(--border-section);
   z-index: var(--z-index-header);
-  background-color: var(--bg-color);
+  background-color: var(--color-bg);
 }
 
 .header-logo-wrapper {
@@ -906,7 +906,7 @@ page > top > top-kv
 /* スライダーリストコンテナ */
 .top-kv-slider-list-container {
   height: auto;
-  background-color: var(--bg-color);
+  background-color: var(--color-bg);
 }
 @media screen and (min-width: 768px) {
   .top-kv-slider-list-container {
@@ -1106,7 +1106,7 @@ page > top > top-about
   margin-inline: auto;
   width: 180px;
   height: 180px;
-  background-color: var(--bg-color);
+  background-color: var(--color-bg);
   border: var(--border-ui);
 }
 @media screen and (min-width: 768px) {
@@ -1431,7 +1431,7 @@ page > top > top-skills
   position: absolute;
   right: 16px;
   bottom: 16px;
-  background-color: var(--icon-color);
+  background-color: var(--color-icon);
   opacity: 0.7;
 }
 
@@ -1490,10 +1490,10 @@ page > top > top-about
 
 .top-input,
 .top-textarea {
-  background-color: var(--contact-bg-color);
+  background-color: var(--color-contact-bg);
   width: 100%;
   max-width: 800px;
-  color: var(--contact-text-color);
+  color: var(--color-contact-text);
   padding: 8px;
 }
 
@@ -1572,8 +1572,8 @@ page > top > top-about
   left: 2px;
   width: 12px;
   height: 6px;
-  border-bottom: 2px solid var(--line-color-section);
-  border-left: 2px solid var(--line-color-section);
+  border-bottom: 2px solid var(--color-line-section);
+  border-left: 2px solid var(--color-line-section);
   transform: rotate(-45deg);
 }
 
@@ -1683,7 +1683,7 @@ page > works > works
 
 .works-item-label {
   position: absolute;
-  background-color: var(--bg-color);
+  background-color: var(--color-bg);
   bottom: 16px;
   right: 16px;
   font-size: var(--font-size-body-sm);
