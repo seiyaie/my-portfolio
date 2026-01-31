@@ -46,9 +46,14 @@ global > header-height
 ------------------------------
 */
 :root {
-  --header-height: ;
+  --header-height: 60px;
 }
 
+@media screen and (min-width: 768px) {
+  :root {
+    --header-height: 120px;
+  }
+}
 /*!
 global > font
 ------------------------------
@@ -576,6 +581,14 @@ layout > container
 }
 
 /*!
+layout > page
+------------------------------
+*/
+.l-page {
+  padding-top: var(--header-height);
+}
+
+/*!
 layout > header
 ------------------------------
 */
@@ -583,7 +596,7 @@ layout > header
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  height: var(--header-height);
   position: fixed;
   top: 0;
   left: 0;
@@ -594,7 +607,6 @@ layout > header
 }
 @media screen and (min-width: 768px) {
   .header {
-    height: 120px;
     border-bottom: 2px solid var(--line-color);
   }
 }
