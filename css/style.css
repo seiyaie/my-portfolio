@@ -42,6 +42,14 @@ global > content-width
 }
 
 /*!
+global > header-height
+------------------------------
+*/
+:root {
+  --header-height: ;
+}
+
+/*!
 global > font
 ------------------------------
 */
