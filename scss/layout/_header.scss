@@ -14,7 +14,7 @@ layout > header
     left: 0;
     width: 100%;
     border-bottom: 1px solid var(--line-color);
-    z-index: 10000;
+    z-index: var(--z-index-header);
     background-color: var(--bg-color);
 
     @include g.mq() {
