@@ -9,9 +9,17 @@ layout > header
     justify-content: space-between;
     align-items: center;
     height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid var(--line-color);
+    z-index: 10000;
+    background-color: var(--bg-color);
 
     @include g.mq() {
         height: 120px;
+        border-bottom: 2px solid var(--line-color);
     }
 }
 
@@ -44,7 +52,6 @@ layout > header
 }
 
 .header-nav {
-
     // padding-right: 16px;
     @include g.mq() {
         // padding-right: 40px;
