@@ -7,10 +7,11 @@ component > button
 .c-button {
     border: var(--border-ui);
     font-size: 16px;
-    padding: 16px;
-    width: 100%;
+    padding:  16px;
+    // width: 100%;
     display: block;
     text-indent: 0.08em;
+    text-align: center;
 
     @include g.mq() {
         font-size: 20px;
@@ -19,6 +20,7 @@ component > button
 
     &--jp {
         font-family: var(--font-family-jp);
+        font-weight: bold;
     }
 
     &--en {
