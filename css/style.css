@@ -409,17 +409,6 @@ component > title
 component > text-slider
 ------------------------------
 */
-.c-text-slider {
-  border-top: 1px solid var(--line-color);
-  border-bottom: 1px solid var(--line-color);
-}
-@media screen and (min-width: 768px) {
-  .c-text-slider {
-    border-top: 2px solid var(--line-color);
-    border-bottom: 2px solid var(--line-color);
-  }
-}
-
 .c-text-slider-list {
   gap: 80px;
 }

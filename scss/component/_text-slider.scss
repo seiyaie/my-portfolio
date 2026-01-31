@@ -5,15 +5,6 @@ component > text-slider
 ------------------------------
 */
 
-.c-text-slider {
-    border-top: 1px solid var(--line-color);
-    border-bottom: 1px solid var(--line-color);
-    @include g.mq() {
-        border-top: 2px solid var(--line-color);
-        border-bottom: 2px solid var(--line-color);
-    }
-}
-
 .c-text-slider-list {
     gap: 80px;
 }
@@ -28,16 +19,4 @@ component > text-slider
         font-size: 40px;
         padding-block: 16px;
     }
-}
-
-.p-keyword-slider__splide {
-}
-
-.p-keyword-slider__track {
-}
-
-.p-keyword-slider__list {
-}
-
-.p-keyword-slider__slide {
 }
