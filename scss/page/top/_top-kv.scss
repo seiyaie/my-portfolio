@@ -204,23 +204,34 @@ page > top > top-kv
     @include g.mq() {
         font-size: 16px;
     }
+    &::before {
+        content: "Click!";
+        display: grid;
+        place-items: center;
+        position: absolute;
+        inset: 0;
+        font-family: var(--font-family-accent);
+        font-weight: bold;
+        z-index: var(--z-index-default);
+        color: white;
+        scale: 0;
+        transition: scale 0.3s;
+    }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0);
+        transition: background-color 0.3s;
+    }
+
     @media (any-hover: hover) {
         &:hover {
             &::before {
-                content: "Click!";
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                font-family: var(--font-family-accent);
-                font-weight: bold;
-                z-index: var(--z-index-default);
-                color: white;
+                scale: 1;
             }
             &::after {
-                content: "";
-                position: absolute;
-                inset: 0;
                 background-color: rgba(0, 0, 0, 0.4);
             }
         }
@@ -237,17 +248,18 @@ page > top > top-kv
 .top-kv-slider-item--trigger.is-active {
     &::before {
         content: "Selected";
+        display: grid;
+        place-items: center;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         font-family: var(--font-family-accent);
         font-weight: bold;
         z-index: var(--z-index-default);
         color: #ffffff;
+        scale: 1;
     }
     &::after {
         content: "";
+        display: block;
         position: absolute;
         inset: 0;
         background-color: rgba(0, 0, 0, 0.4);
