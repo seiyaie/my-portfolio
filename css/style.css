@@ -1430,7 +1430,7 @@ page > top > top-vision
   bottom: -31px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--line-color);
+  background-color: var(--color-icon);
   -webkit-mask-image: url("../img/decorations/top-vision-arrow.svg");
           mask-image: url("../img/decorations/top-vision-arrow.svg");
   -webkit-mask-size: contain;
