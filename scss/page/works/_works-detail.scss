@@ -115,3 +115,30 @@ page > works > works-detail
         margin-bottom: 24px;
     }
 }
+
+.works-detail-section-text--url {
+    text-decoration: underline;
+    @media (any-hover: hover) {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.works-detail-url-tail {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.works-detail-url-icon {
+    display: inline-block;
+    width: 18px;
+    aspect-ratio: 1/1;
+    vertical-align: -0.2em;
+
+    mask-image: url("../img/icons/ui/link-open.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: var(--color-icon);
+}
