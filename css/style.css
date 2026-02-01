@@ -440,6 +440,18 @@ component > title
   }
 }
 
+.c-project-title {
+  font-family: var(--font-family-accent);
+  font-size: var(--font-size-heading);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  letter-spacing: 0.2em;
+  display: block;
+  border-bottom: var(--border-section);
+  padding-bottom: 8px;
+}
+
 /*!
 component > text-slider
 ------------------------------
@@ -1668,18 +1680,6 @@ page > works > works
   display: flex;
   flex-direction: column;
 }
-.works-list-title {
-  font-family: var(--font-family-accent);
-  font-size: var(--font-size-heading);
-  font-weight: bold;
-  text-transform: uppercase;
-  line-height: 1.2;
-  letter-spacing: 0.2em;
-  display: block;
-  border-bottom: var(--border-section);
-  padding-bottom: 8px;
-}
-
 .works-item {
   border-bottom: var(--border-ui);
   padding-block: 40px;
@@ -1852,18 +1852,6 @@ page > works > works-detail
   .works-detail-title-wrapper {
     margin-top: 64px;
   }
-}
-
-.works-detail-title {
-  font-family: var(--font-family-accent);
-  font-size: var(--font-size-heading);
-  font-weight: bold;
-  text-transform: uppercase;
-  line-height: 1.2;
-  letter-spacing: 0.2em;
-  display: block;
-  border-bottom: var(--border-section);
-  padding-bottom: 8px;
 }
 
 .works-detail-hero {

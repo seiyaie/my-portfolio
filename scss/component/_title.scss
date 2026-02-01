@@ -50,3 +50,15 @@ component > title
         height: 140px;
     }
 }
+
+.c-project-title {
+    font-family: var(--font-family-accent);
+    font-size: var(--font-size-heading);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: 0.2em;
+    display: block;
+    border-bottom: var(--border-section);
+    padding-bottom: 8px;
+}
