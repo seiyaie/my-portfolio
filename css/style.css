@@ -1659,9 +1659,7 @@ page > works > works
   }
 }
 
-.works-list--personal .works-item:last-child {
-  border-bottom: var(--border-section);
-}
+.works-list--personal .works-item:last-child,
 .works-list--school .works-item:last-child {
   border-bottom: var(--border-section);
 }
@@ -1686,7 +1684,6 @@ page > works > works
   border-bottom: var(--border-ui);
   padding-block: 40px;
 }
-
 @media screen and (min-width: 768px) {
   .works-item.is-reverse .works-item-link {
     flex-direction: row-reverse;

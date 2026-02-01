@@ -23,17 +23,9 @@ page > works > works
     }
 }
 
-.works-list {
-    &--personal {
-        .works-item:last-child {
-            border-bottom: var(--border-section);
-        }
-    }
-    &--school {
-        .works-item:last-child {
-            border-bottom: var(--border-section);
-        }
-    }
+.works-list--personal .works-item:last-child,
+.works-list--school .works-item:last-child {
+    border-bottom: var(--border-section);
 }
 
 .works-list-inner {
@@ -58,11 +50,11 @@ page > works > works
 .works-item {
     border-bottom: var(--border-ui);
     padding-block: 40px;
-}
 
-.works-item.is-reverse .works-item-link {
     @include g.mq() {
-        flex-direction: row-reverse;
+        &.is-reverse .works-item-link {
+            flex-direction: row-reverse;
+        }
     }
 }
 
