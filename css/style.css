@@ -1469,12 +1469,13 @@ page > top > top-skills
 }
 @media screen and (min-width: 768px) {
   .top-skills-list {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 }
 @media screen and (min-width: 1080px) {
   .top-skills-list {
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
   }
 }
@@ -1487,7 +1488,7 @@ page > top > top-skills
 .top-skills-item:nth-child(4) {
   padding-bottom: 40px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1080px) {
   .top-skills-item:nth-child(4) {
     grid-column: 1/-1;
     max-width: 900px;
