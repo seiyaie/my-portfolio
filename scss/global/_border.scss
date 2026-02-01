@@ -7,9 +7,7 @@ global > border
 :root {
     --border-size: 1px;
     --border-section: var(--border-size) solid var(--color-line-section);
-
     --border-ui: var(--border-size) solid var(--color-line-ui);
-
     --border-dashed: var(--border-size) dashed var(--color-line-ui);
 }
 

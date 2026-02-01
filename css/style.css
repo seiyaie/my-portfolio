@@ -1645,11 +1645,12 @@ page > works > works
 }
 
 .works-title {
+  display: inline-block;
   font-weight: bold;
   font-size: 18px;
   border-bottom: var(--border-section);
   margin-top: 40px;
-  padding-block-end: 4px;
+  padding-bottom: 4px;
 }
 @media screen and (min-width: 768px) {
   .works-title {
@@ -1658,23 +1659,17 @@ page > works > works
   }
 }
 
-.works-list--personal {
+.works-list--personal .works-item:last-child {
+  border-bottom: var(--border-section);
+}
+.works-list--school .works-item:last-child {
   border-bottom: var(--border-section);
 }
 
 .works-list-inner {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  padding-top: 40px;
 }
-@media screen and (min-width: 768px) {
-  .works-list-inner {
-    padding-top: 64px;
-    gap: 64px;
-  }
-}
-
 .works-list-title {
   font-family: var(--font-family-accent);
   font-size: var(--font-size-heading);
@@ -1682,17 +1677,18 @@ page > works > works
   text-transform: uppercase;
   line-height: 1.2;
   letter-spacing: 0.2em;
-  display: inline-block;
+  display: block;
   border-bottom: var(--border-section);
-  padding-bottom: 4px;
+  padding-bottom: 8px;
 }
 
-.works-list-title span {
-  display: block;
+.works-item {
+  border-bottom: var(--border-ui);
+  padding-block: 40px;
 }
 
 @media screen and (min-width: 768px) {
-  .works-item:nth-child(even) .works-item-link {
+  .works-item.is-reverse .works-item-link {
     flex-direction: row-reverse;
   }
 }

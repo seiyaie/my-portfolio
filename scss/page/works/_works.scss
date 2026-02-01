@@ -11,11 +11,12 @@ page > works > works
 }
 
 .works-title {
+    display: inline-block;
     font-weight: bold;
     font-size: 18px;
     border-bottom: var(--border-section);
     margin-top: 40px;
-    padding-block-end: 4px;
+    padding-bottom: 4px;
     @include g.mq() {
         font-size: 24px;
         margin-top: 64px;
@@ -24,18 +25,21 @@ page > works > works
 
 .works-list {
     &--personal {
-        border-bottom: var(--border-section);
+        .works-item:last-child {
+            border-bottom: var(--border-section);
+        }
+    }
+    &--school {
+        .works-item:last-child {
+            border-bottom: var(--border-section);
+        }
     }
 }
 
 .works-list-inner {
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    padding-top: 40px;
     @include g.mq() {
-        padding-top: 64px;
-        gap: 64px;
     }
 }
 
@@ -46,22 +50,19 @@ page > works > works
     text-transform: uppercase;
     line-height: 1.2;
     letter-spacing: 0.2em;
-    display: inline-block;
-    border-bottom: var(--border-section);
-    padding-bottom: 4px;
-}
-
-.works-list-title span {
     display: block;
+    border-bottom: var(--border-section);
+    padding-bottom: 8px;
 }
 
 .works-item {
+    border-bottom: var(--border-ui);
+    padding-block: 40px;
+}
+
+.works-item.is-reverse .works-item-link {
     @include g.mq() {
-        &:nth-child(even) {
-            .works-item-link {
-                flex-direction: row-reverse;
-            }
-        }
+        flex-direction: row-reverse;
     }
 }
 
@@ -191,9 +192,7 @@ page > works > works
     height: 100%;
     display: grid;
     place-items: center;
-    transition:
-        color 0.3s,
-        background-color 0.3s;
+    transition: color 0.3s, background-color 0.3s;
 
     @include g.mq() {
         grid-column: 1/2;
