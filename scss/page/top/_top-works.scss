@@ -85,9 +85,6 @@ page > top > top-works
     transition: scale 0.3s;
 }
 
-.top-works-item-desc {
-}
-
 .top-works-item-date {
     font-size: 12px;
     margin-top: 16px;
@@ -100,18 +97,20 @@ page > top > top-works
     letter-spacing: 0.2em;
 }
 
-.top-works-tags {
+.top-works-tag-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 8px;
     margin-top: 24px;
 }
 
 .top-works-tag {
     font-size: 12px;
-    letter-spacing: 0.2em;
-    text-indent: 0.2em;
+    letter-spacing: 0.08em;
+    text-indent: 0.08em;
     padding: 4px 8px;
     border: var(--border-ui);
+    white-space: nowrap;
 }
 
 .top-works-button {
