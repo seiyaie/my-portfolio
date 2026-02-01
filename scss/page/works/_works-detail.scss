@@ -11,34 +11,22 @@ page > works > works-detail
 }
 
 .works-detail-title-wrapper {
-    margin-bottom: 40px;
+    margin-top: 40px;
     @include g.mq() {
         margin-top: 64px;
-    }
-    @include g.mq() {
-        margin-top: 80px;
     }
 }
 
 .works-detail-title {
     font-family: var(--font-family-accent);
-    font-size: 20px;
+    font-size: var(--font-size-heading);
     font-weight: bold;
     text-transform: uppercase;
-    line-height: 1.4;
+    line-height: 1.2;
     letter-spacing: 0.2em;
-    display: inline-block;
+    display: block;
     border-bottom: var(--border-section);
-    padding-block-end: 4px;
-    @include g.mq() {
-        font-size: 32px;
-    }
-    @include g.mq(lg) {
-        font-size: 40px;
-    }
-    span {
-        display: block;
-    }
+    padding-bottom: 8px;
 }
 
 .works-detail-hero {

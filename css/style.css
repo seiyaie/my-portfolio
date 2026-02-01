@@ -1846,42 +1846,24 @@ page > works > works-detail
 }
 
 .works-detail-title-wrapper {
-  margin-bottom: 40px;
+  margin-top: 40px;
 }
 @media screen and (min-width: 768px) {
   .works-detail-title-wrapper {
     margin-top: 64px;
   }
 }
-@media screen and (min-width: 768px) {
-  .works-detail-title-wrapper {
-    margin-top: 80px;
-  }
-}
 
 .works-detail-title {
   font-family: var(--font-family-accent);
-  font-size: 20px;
+  font-size: var(--font-size-heading);
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 1.4;
+  line-height: 1.2;
   letter-spacing: 0.2em;
-  display: inline-block;
-  border-bottom: var(--border-section);
-  padding-block-end: 4px;
-}
-@media screen and (min-width: 768px) {
-  .works-detail-title {
-    font-size: 32px;
-  }
-}
-@media screen and (min-width: 1080px) {
-  .works-detail-title {
-    font-size: 40px;
-  }
-}
-.works-detail-title span {
   display: block;
+  border-bottom: var(--border-section);
+  padding-bottom: 8px;
 }
 
 .works-detail-hero {
