@@ -1,6 +1,6 @@
 export const initKvSlider = () => {
     const selectedWork = document.querySelector(".js-top-kv-selected-work img");
-    const sliderItems = document.querySelectorAll(".js-kv-slider-item--trigger");
+    const sliderItems = document.querySelectorAll(".js-kv-slider-item-trigger");
     const nextButton = document.querySelector(".js-kv-scroll-button--next");
     const prevButton = document.querySelector(".js-kv-scroll-button--prev");
     const thumb = document.querySelector(".js-scrollbar-thumb");

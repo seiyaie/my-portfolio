@@ -986,17 +986,17 @@ page > top > top-kv
   }
 }
 
-.top-kv-slider-item--trigger {
+.top-kv-slider-item-trigger {
   position: relative;
   display: block;
   font-size: 14px;
 }
 @media screen and (min-width: 768px) {
-  .top-kv-slider-item--trigger {
+  .top-kv-slider-item-trigger {
     font-size: 16px;
   }
 }
-.top-kv-slider-item--trigger::before {
+.top-kv-slider-item-trigger::before {
   content: "Click!";
   display: grid;
   place-items: center;
@@ -1009,7 +1009,7 @@ page > top > top-kv
   scale: 0;
   transition: scale 0.3s;
 }
-.top-kv-slider-item--trigger::after {
+.top-kv-slider-item-trigger::after {
   content: "";
   display: block;
   position: absolute;
@@ -1018,22 +1018,22 @@ page > top > top-kv
   transition: background-color 0.3s;
 }
 @media (any-hover: hover) {
-  .top-kv-slider-item--trigger:hover::before {
+  .top-kv-slider-item-trigger:hover::before {
     scale: 1;
   }
-  .top-kv-slider-item--trigger:hover::after {
+  .top-kv-slider-item-trigger:hover::after {
     background-color: rgba(0, 0, 0, 0.4);
   }
 }
 
-.top-kv-slider-item--trigger img {
+.top-kv-slider-item-trigger img {
   border: var(--border-ui);
   width: 100%;
   height: 100%;
   display: block;
 }
 
-.top-kv-slider-item--trigger.is-active::before {
+.top-kv-slider-item-trigger.is-active::before {
   content: "Selected";
   display: grid;
   place-items: center;
@@ -1044,7 +1044,7 @@ page > top > top-kv
   color: #ffffff;
   scale: 1;
 }
-.top-kv-slider-item--trigger.is-active::after {
+.top-kv-slider-item-trigger.is-active::after {
   content: "";
   display: block;
   position: absolute;
