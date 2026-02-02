@@ -1506,7 +1506,7 @@ page > top > top-skills
   right: 16px;
   bottom: 16px;
   background-color: var(--color-icon);
-  opacity: 0.7;
+  opacity: 0.4;
 }
 
 .top-skills-item-icon--coding {
