@@ -11,7 +11,7 @@ component > button
     display: block;
     text-indent: 0.08em;
     text-align: center;
-    text-shadow: 0 0 rgba(255, 255, 255, 0.44), 0 0 rgba(0, 0, 0, 0.38);
+    text-shadow: 0 0 var(--color-button-text-shadow);
     transition: text-shadow 0.3s;
     font-size: var(--font-size-button);
     line-height: 1;
@@ -19,7 +19,7 @@ component > button
 
     @media (any-hover: hover) {
         &:hover {
-            text-shadow: 3px 3px rgba(255, 255, 255, 0.44), -3px -3px rgba(0, 0, 0, 0.38);
+            text-shadow: 3px 3px var(--color-button-text-shadow);
             &::after {
                 translate: 6px 6px;
             }

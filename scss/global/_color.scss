@@ -11,7 +11,7 @@ global > color
     --color-line-ui: light-dark(#555555, #888888);
     --color-contact-bg: light-dark(#f2f2f2, #ffffff);
     --color-contact-text: light-dark(#ffffff, #000000);
-
+    --color-button-text-shadow: light-dark(rgba(0, 0, 0, 0.38), rgba(255, 255, 255, 0.44));
 }
 
 [data-theme="light"] {
@@ -22,8 +22,7 @@ global > color
     --color-line-ui: #555555;
     --color-contact-bg: #f2f2f2;
     --color-contact-text: #000000;
-    --color-button-bg-hover: #222222;
-    --color-button-text-hover: #dddddd;
+    --color-button-text-shadow: rgba(0, 0, 0, 0.38);
 }
 
 [data-theme="dark"] {
@@ -34,6 +33,5 @@ global > color
     --color-line-ui: #888888;
     --color-contact-bg: #ffffff;
     --color-contact-text: #000000;
-    --color-button-bg-hover: #dddddd;
-    --color-button-text-hover: #000000;
+    --color-button-text-shadow: rgba(255, 255, 255, 0.44);
 }
