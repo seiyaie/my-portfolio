@@ -18,7 +18,8 @@ page > works > works-detail
 }
 
 .works-detail-hero {
-    padding-top: 40px;
+    margin-top: 40px;
+    border: var(--border-ui);
 }
 
 .works-detail-button {
@@ -52,7 +53,8 @@ page > works > works-detail
 }
 
 .works-detail-info-title {
-    border-bottom: var(--border-dashed);
+    border-bottom: var(--border-ui);
+    // border-bottom: var(--border-dashed);
     padding-block-end: 4px;
     font-weight: bold;
     font-size: 18px;
@@ -88,7 +90,8 @@ page > works > works-detail
 }
 
 .works-detail-section-title {
-    border-bottom: var(--border-dashed);
+    border-bottom: var(--border-ui);
+    // border-bottom: var(--border-dashed);
     padding-block-end: 4px;
     font-weight: bold;
     margin-bottom: 16px;
