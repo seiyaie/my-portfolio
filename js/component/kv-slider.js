@@ -13,13 +13,8 @@ export const initKvSlider = () => {
     const updateSelectedWork = (index, direction) => {
         if (isAnimating) return;
         isAnimating = true;
-        activeIndex = index;
+        setActive(index);
         const item = sliderItems[index];
-
-        sliderItems.forEach((item) => {
-            item.classList.remove("is-active");
-        });
-        item.classList.add("is-active");
 
         const clone = selectedWork.cloneNode(true);
         clone.style.position = "absolute";
@@ -91,6 +86,12 @@ export const initKvSlider = () => {
             inline: "nearest",
             block: "nearest",
         });
+    };
+
+    const setActive = (newIndex) => {
+        sliderItems[activeIndex].classList.remove("is-active");
+        sliderItems[newIndex].classList.add("is-active");
+        activeIndex = newIndex;
     };
 
     sliderItems.forEach((item, index) => {
