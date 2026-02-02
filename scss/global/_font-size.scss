@@ -9,6 +9,7 @@ global > font-size
     --font-size-body-sm: 14px;
     --font-size-heading: 20px;
     --font-size-subheading: 18px;
+    --font-size-button: 18px;
 }
 
 @include g.mq() {
@@ -17,6 +18,7 @@ global > font-size
         --font-size-body-sm: 16px;
         --font-size-heading: 32px;
         --font-size-subheading: 20px;
+        --font-size-button: 20px;
     }
 }
 
