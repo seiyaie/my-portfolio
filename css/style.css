@@ -1472,9 +1472,6 @@ page > top > top-skills
   position: relative;
   padding-bottom: 100px;
 }
-.top-skills-item:nth-child(4) {
-  padding-bottom: 40px;
-}
 @media screen and (min-width: 1080px) {
   .top-skills-item:nth-child(4) {
     grid-column: 1/-1;
@@ -1528,6 +1525,12 @@ page > top > top-skills
   -webkit-mask-image: url("../img/decorations/top-skills-design.svg");
           mask-image: url("../img/decorations/top-skills-design.svg");
   --webkit-mask-image: url("../img/decorations/top-skills-design.svg");
+}
+
+.top-skills-item-icon--learn {
+  -webkit-mask-image: url("../img/decorations/top-skills-learn.svg");
+          mask-image: url("../img/decorations/top-skills-learn.svg");
+  --webkit-mask-image: url("../img/decorations/top-skills-learn.svg");
 }
 
 /*!
