@@ -388,9 +388,6 @@ component > button
     --btn-ty: 4px;
   }
 }
-.c-button--jp {
-  font-family: var(--font-family-jp);
-}
 .c-button--en {
   font-family: var(--font-family-accent);
   text-transform: uppercase;
