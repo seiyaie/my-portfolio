@@ -131,6 +131,7 @@ page > top > top-kv
 .top-kv-slider-list-container {
     height: auto;
     background-color: var(--color-bg);
+    padding: 8px;
     @include g.mq() {
         position: absolute;
         top: 0;
@@ -147,11 +148,12 @@ page > top > top-kv
 /* スライダーリスト */
 .top-kv-slider-list {
     overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     display: flex;
     flex-wrap: nowrap;
     width: auto;
     height: 100%;
-    padding: 8px;
     gap: 8px;
 
     @include g.mq() {
@@ -162,6 +164,10 @@ page > top > top-kv
         width: max-content;
         justify-content: center;
     }
+}
+
+.top-kv-slider-list::-webkit-scrollbar {
+    display: none;
 }
 
 /* スライダーアイテム */
