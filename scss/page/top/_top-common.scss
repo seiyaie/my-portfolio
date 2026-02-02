@@ -4,3 +4,35 @@
 page > top > top-common
 ------------------------------
 */
+
+.top-title {
+    font-size: var(--font-size-heading);
+    text-transform: uppercase;
+    font-family: var(--font-family-accent);
+    line-height: 1;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    @include g.mq() {
+        padding-bottom: 24px;
+        padding-left: 24px;
+    }
+}
+
+.top-title-wrapper {
+    width: 100%;
+    border-top: var(--border-section);
+    border-bottom: var(--border-section);
+}
+
+.top-title-inner {
+    display: flex;
+    align-items: flex-end;
+    margin-inline: auto;
+    width: 90%;
+    height: 80px;
+    border-left: var(--border-section);
+    border-right: var(--border-section);
+    @include g.mq() {
+        height: 140px;
+    }
+}
