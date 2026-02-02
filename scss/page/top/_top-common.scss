@@ -5,7 +5,7 @@ page > top > top-common
 ------------------------------
 */
 
-.top-title {
+.top-section-title {
     font-size: var(--font-size-heading);
     text-transform: uppercase;
     font-family: var(--font-family-accent);
@@ -18,13 +18,13 @@ page > top > top-common
     }
 }
 
-.top-title-wrapper {
+.top-section-title-wrapper {
     width: 100%;
     border-top: var(--border-section);
     border-bottom: var(--border-section);
 }
 
-.top-title-inner {
+.top-section-title-inner {
     display: flex;
     align-items: flex-end;
     margin-inline: auto;

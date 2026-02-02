@@ -758,7 +758,7 @@ layout > footer
 page > top > top-common
 ------------------------------
 */
-.top-title {
+.top-section-title {
   font-size: var(--font-size-heading);
   text-transform: uppercase;
   font-family: var(--font-family-accent);
@@ -767,19 +767,19 @@ page > top > top-common
   padding-left: 12px;
 }
 @media screen and (min-width: 768px) {
-  .top-title {
+  .top-section-title {
     padding-bottom: 24px;
     padding-left: 24px;
   }
 }
 
-.top-title-wrapper {
+.top-section-title-wrapper {
   width: 100%;
   border-top: var(--border-section);
   border-bottom: var(--border-section);
 }
 
-.top-title-inner {
+.top-section-title-inner {
   display: flex;
   align-items: flex-end;
   margin-inline: auto;
@@ -789,7 +789,7 @@ page > top > top-common
   border-right: var(--border-section);
 }
 @media screen and (min-width: 768px) {
-  .top-title-inner {
+  .top-section-title-inner {
     height: 140px;
   }
 }
