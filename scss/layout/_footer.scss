@@ -43,10 +43,17 @@ layout > footer
 
 .footer-sns-item a {
     width: 30px;
-    height: 30px;
+    aspect-ratio: 1/1;
     display: inline-block;
     @include g.mq() {
         width: 40px;
-        height: 40px;
+    }
+    @include g.mq(lg) {
+        width: 60px;
+    }
+    @media (any-hover: hover) {
+        &:hover {
+            opacity: 0.7;
+        }
     }
 }

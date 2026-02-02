@@ -770,13 +770,22 @@ layout > footer
 
 .footer-sns-item a {
   width: 30px;
-  height: 30px;
+  aspect-ratio: 1/1;
   display: inline-block;
 }
 @media screen and (min-width: 768px) {
   .footer-sns-item a {
     width: 40px;
-    height: 40px;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .footer-sns-item a {
+    width: 60px;
+  }
+}
+@media (any-hover: hover) {
+  .footer-sns-item a:hover {
+    opacity: 0.7;
   }
 }
 
