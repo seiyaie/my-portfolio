@@ -5,13 +5,17 @@ component > button
 ------------------------------
 */
 .c-button {
+    --btn-shadow-x: 0px;
+    --btn-shadow-y: 0px;
+    --btn-tx: 0px;
+    --btn-ty: 0px;
+    text-shadow: var(--btn-shadow-x) var(--btn-shadow-y) var(--color-button-text-shadow);
     position: relative;
     padding: 16px 24px;
     width: 100%;
     display: block;
     text-indent: 0.08em;
     text-align: center;
-    text-shadow: 0 0 var(--color-button-text-shadow);
     transition: text-shadow 0.3s;
     font-size: var(--font-size-button);
     line-height: 1;
@@ -19,10 +23,10 @@ component > button
 
     @media (any-hover: hover) {
         &:hover {
-            text-shadow: 3px 3px var(--color-button-text-shadow);
-            &::after {
-                translate: 6px 6px;
-            }
+            --btn-shadow-x: 3px;
+            --btn-shadow-y: 3px;
+            --btn-tx: 4px;
+            --btn-ty: 4px;
         }
     }
 
@@ -49,5 +53,6 @@ component > button
     }
     &::after {
         border: var(--border-ui);
+        translate: var(--btn-tx) var(--btn-ty);
     }
 }
