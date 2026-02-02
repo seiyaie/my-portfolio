@@ -17,7 +17,6 @@ component > button
     text-indent: 0.08em;
     text-align: center;
     transition: text-shadow 0.3s;
-    font-size: var(--font-size-button);
     line-height: 1;
     font-weight: bold;
 
@@ -30,11 +29,6 @@ component > button
         }
     }
 
-    &--en {
-        font-family: var(--font-family-accent);
-        text-transform: uppercase;
-    }
-
     &::before,
     &::after {
         content: "";
@@ -43,12 +37,27 @@ component > button
         inset: 0;
         transition: translate 0.3s;
     }
+
     &::before {
         border: var(--border-section);
         z-index: var(--z-index-default);
     }
+
     &::after {
         border: var(--border-ui);
         translate: var(--btn-tx) var(--btn-ty);
     }
+}
+
+.c-button--en {
+    font-family: var(--font-family-accent);
+    text-transform: uppercase;
+}
+
+.c-button--sm {
+    font-size: var(--font-size-button--sm);
+}
+
+.c-button--md {
+    font-size: var(--font-size-button--md);
 }

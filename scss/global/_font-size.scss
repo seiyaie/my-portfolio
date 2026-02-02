@@ -6,25 +6,27 @@ global > font-size
 
 :root {
     --font-size-body: 16px;
-    --font-size-body-sm: 14px;
+    --font-size-body--sm: 14px;
     --font-size-heading: 20px;
     --font-size-subheading: 18px;
-    --font-size-button: 18px;
+    --font-size-button--sm: 14px;
+    --font-size-button--md: 18px;
 }
 
 @include g.mq() {
     :root {
         --font-size-body: 18px;
-        --font-size-body-sm: 16px;
+        --font-size-body--sm: 16px;
         --font-size-heading: 32px;
         --font-size-subheading: 20px;
-        --font-size-button: 20px;
+        --font-size-button--sm: 16px;
+        --font-size-button--md: 20px;
     }
 }
 
 @include g.mq(lg) {
     :root {
         --font-size-heading: 40px;
-        --font-size-body-sm: 18px;
+        --font-size-body--sm: 18px;
     }
 }

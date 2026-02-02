@@ -92,25 +92,27 @@ global > font-size
 */
 :root {
   --font-size-body: 16px;
-  --font-size-body-sm: 14px;
+  --font-size-body--sm: 14px;
   --font-size-heading: 20px;
   --font-size-subheading: 18px;
-  --font-size-button: 18px;
+  --font-size-button--sm: 14px;
+  --font-size-button--md: 18px;
 }
 
 @media screen and (min-width: 768px) {
   :root {
     --font-size-body: 18px;
-    --font-size-body-sm: 16px;
+    --font-size-body--sm: 16px;
     --font-size-heading: 32px;
     --font-size-subheading: 20px;
-    --font-size-button: 20px;
+    --font-size-button--sm: 16px;
+    --font-size-button--md: 20px;
   }
 }
 @media screen and (min-width: 1080px) {
   :root {
     --font-size-heading: 40px;
-    --font-size-body-sm: 18px;
+    --font-size-body--sm: 18px;
   }
 }
 /*!
@@ -376,7 +378,6 @@ component > button
   text-indent: 0.08em;
   text-align: center;
   transition: text-shadow 0.3s;
-  font-size: var(--font-size-button);
   line-height: 1;
   font-weight: bold;
 }
@@ -387,10 +388,6 @@ component > button
     --btn-tx: 4px;
     --btn-ty: 4px;
   }
-}
-.c-button--en {
-  font-family: var(--font-family-accent);
-  text-transform: uppercase;
 }
 .c-button::before, .c-button::after {
   content: "";
@@ -406,6 +403,19 @@ component > button
 .c-button::after {
   border: var(--border-ui);
   translate: var(--btn-tx) var(--btn-ty);
+}
+
+.c-button--en {
+  font-family: var(--font-family-accent);
+  text-transform: uppercase;
+}
+
+.c-button--sm {
+  font-size: var(--font-size-button--sm);
+}
+
+.c-button--md {
+  font-size: var(--font-size-button--md);
 }
 
 /*!
@@ -1012,26 +1022,9 @@ page > top > top-kv
     height: 33.3333333333%;
   }
 }
-.top-kv-slider-item--link {
+.top-kv-slider-item--button {
   display: grid;
   place-items: center;
-}
-.top-kv-slider-item--link a {
-  border: var(--border-ui);
-  font-size: 14px;
-  font-family: var(--font-family-accent);
-  text-transform: uppercase;
-  display: block;
-  width: 100%;
-  line-height: 1.4;
-  padding-block: 8px;
-  text-align: center;
-}
-@media screen and (min-width: 768px) {
-  .top-kv-slider-item--link a {
-    font-size: 16px;
-    padding-block: 16px;
-  }
 }
 
 .top-kv-slider-item-trigger {
