@@ -190,7 +190,7 @@ page > top > top-kv
         font-size: 16px;
     }
     &::before {
-        content: "Click!";
+        content: "";
         display: grid;
         place-items: center;
         position: absolute;
@@ -214,6 +214,7 @@ page > top > top-kv
     @media (any-hover: hover) {
         &:hover {
             &::before {
+                content: "Click!";
                 scale: 1;
             }
             &::after {

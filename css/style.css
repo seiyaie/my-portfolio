@@ -1038,7 +1038,7 @@ page > top > top-kv
   }
 }
 .top-kv-slider-item-trigger::before {
-  content: "Click!";
+  content: "";
   display: grid;
   place-items: center;
   position: absolute;
@@ -1060,6 +1060,7 @@ page > top > top-kv
 }
 @media (any-hover: hover) {
   .top-kv-slider-item-trigger:hover::before {
+    content: "Click!";
     scale: 1;
   }
   .top-kv-slider-item-trigger:hover::after {
