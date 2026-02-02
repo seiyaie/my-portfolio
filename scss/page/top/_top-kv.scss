@@ -176,24 +176,9 @@ page > top > top-kv
         height: calc(100% / 3);
     }
 
-    &--link {
+    &--button {
         display: grid;
         place-items: center;
-        a {
-            border: var(--border-ui);
-            font-size: 14px;
-            font-family: var(--font-family-accent);
-            text-transform: uppercase;
-            display: block;
-            width: 100%;
-            line-height: 1.4;
-            padding-block: 8px;
-            text-align: center;
-            @include g.mq() {
-                font-size: 16px;
-                padding-block: 16px;
-            }
-        }
     }
 }
 
