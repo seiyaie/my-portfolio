@@ -96,6 +96,7 @@ global > font-size
   --font-size-body-sm: 14px;
   --font-size-heading: 20px;
   --font-size-subheading: 18px;
+  --font-size-button: 18px;
 }
 
 @media screen and (min-width: 768px) {
@@ -104,6 +105,7 @@ global > font-size
     --font-size-body-sm: 16px;
     --font-size-heading: 32px;
     --font-size-subheading: 20px;
+    --font-size-button: 20px;
   }
 }
 @media screen and (min-width: 1080px) {
@@ -363,26 +365,46 @@ component > button
 ------------------------------
 */
 .c-button {
-  border: var(--border-ui);
-  font-size: 16px;
-  padding: 16px;
+  position: relative;
+  padding: 16px 24px;
+  width: 100%;
   display: block;
   text-indent: 0.08em;
   text-align: center;
+  text-shadow: 0 0 rgba(255, 255, 255, 0.44), 0 0 rgba(0, 0, 0, 0.38);
+  transition: text-shadow 0.3s;
+  font-size: var(--font-size-button);
+  line-height: 1;
+  font-weight: bold;
 }
-@media screen and (min-width: 768px) {
-  .c-button {
-    font-size: 20px;
-    padding: 24px;
+@media (any-hover: hover) {
+  .c-button:hover {
+    text-shadow: 3px 3px rgba(255, 255, 255, 0.44), -3px -3px rgba(0, 0, 0, 0.38);
+  }
+  .c-button:hover::after {
+    translate: 6px 6px;
   }
 }
 .c-button--jp {
   font-family: var(--font-family-jp);
-  font-weight: bold;
 }
 .c-button--en {
   font-family: var(--font-family-accent);
   text-transform: uppercase;
+}
+.c-button::before, .c-button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  transition: translate 0.3s;
+}
+.c-button::before {
+  border: var(--border-section);
+  z-index: var(--z-index-default);
+}
+.c-button::after {
+  border: var(--border-ui);
 }
 
 /*!
@@ -1853,6 +1875,12 @@ page > works > works-detail
   padding-top: 40px;
 }
 
+.works-detail-button {
+  margin-top: 16px;
+  max-width: 400px;
+  margin-inline: auto;
+}
+
 .works-detail-basic {
   margin-top: 24px;
 }
@@ -1904,10 +1932,18 @@ page > works > works-detail
 
 .works-detail-section {
   margin-top: 24px;
+  max-width: 900px;
+  margin-inline: auto;
 }
 @media screen and (min-width: 768px) {
   .works-detail-section {
     margin-top: 40px;
+  }
+}
+
+@media (any-hover: hover) {
+  .works-detail-section-url:hover .works-detail-section-text--url {
+    text-decoration: none;
   }
 }
 
@@ -1931,11 +1967,6 @@ page > works > works-detail
 .works-detail-section-text--url {
   text-decoration: underline;
 }
-@media (any-hover: hover) {
-  .works-detail-section-text--url:hover {
-    text-decoration: none;
-  }
-}
 
 .works-detail-url-tail {
   display: inline-block;
@@ -1956,4 +1987,24 @@ page > works > works-detail
   -webkit-mask-position: center;
           mask-position: center;
   background-color: var(--color-icon);
+}
+
+.works-detail-section-url {
+  display: grid;
+  place-items: center;
+  gap: 16px;
+  font-size: 18px;
+}
+@media screen and (min-width: 768px) {
+  .works-detail-section-url {
+    font-size: 20px;
+  }
+}
+
+.url-button {
+  font-weight: bold;
+  line-height: 1;
+  padding: 8px 16px;
+  border: 1px solid var(--color-line-ui);
+  border-radius: 4px;
 }/*# sourceMappingURL=style.css.map */
