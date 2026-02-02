@@ -30,7 +30,6 @@ page > top > top-skills
     position: relative;
     padding-bottom: 100px;
     &:nth-child(4) {
-        padding-bottom: 40px;
         @include g.mq(lg) {
             grid-column: 1 / -1;
             max-width: 900px;
@@ -83,4 +82,9 @@ page > top > top-skills
 .top-skills-item-icon--design {
     mask-image: url("../img/decorations/top-skills-design.svg");
     --webkit-mask-image: url("../img/decorations/top-skills-design.svg");
+}
+
+.top-skills-item-icon--learn {
+    mask-image: url("../img/decorations/top-skills-learn.svg");
+    --webkit-mask-image: url("../img/decorations/top-skills-learn.svg");
 }
