@@ -49,9 +49,11 @@ page > works > works
             .works-item-thumbnail img {
                 scale: 1.05;
             }
-            .works-item-button {
-                background-color: var(--color-button-bg-hover);
-                color: var(--color-button-text-hover);
+            .c-button {
+                --btn-shadow-x: 3px;
+                --btn-shadow-y: 3px;
+                --btn-tx: 4px;
+                --btn-ty: 4px;
             }
         }
     }
@@ -149,17 +151,11 @@ page > works > works
 }
 
 .works-item-button {
-    display: block;
-    font-weight: bold;
-    padding: 8px 16px;
-    border: var(--border-ui);
-    text-align: center;
     grid-column: 2/3;
     grid-row: 1/3;
     height: 100%;
     display: grid;
     place-items: center;
-    transition: color 0.3s, background-color 0.3s;
 
     @include g.mq() {
         grid-column: 1/2;
