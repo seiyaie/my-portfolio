@@ -13,9 +13,12 @@ export const initTitleReveal = () => {
             stagger: 0.1,
             duration: 1,
             ease: "power4.inOut",
+            onComplete: () => {
+                split.revert();
+            },
             scrollTrigger: {
                 trigger: title,
-                start: "top 90%",
+                start: "top 95%",
                 toggleActions: "play none none none",
                 markers: true,
             },
