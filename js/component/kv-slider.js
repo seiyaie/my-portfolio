@@ -6,6 +6,8 @@ export const initKvSlider = () => {
     const thumb = document.querySelector(".js-scrollbar-thumb");
     const indexText = document.querySelector(".js-scrollbar-index");
 
+    if (!selectedWork || !sliderItems.length || !nextButton || !prevButton || !thumb || !indexText) return;
+
     const total = sliderItems.length;
     let activeIndex = 0;
     let isAnimating = false;
