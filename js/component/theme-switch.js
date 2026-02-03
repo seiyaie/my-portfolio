@@ -3,7 +3,6 @@ export const initThemeSwitch = () => {
     const themeButtons = document.querySelectorAll(".js-theme-button");
     const themeIcons = document.querySelectorAll(".js-theme-icon");
     const logoImg = document.querySelector(".js-theme-logo");
-    const panelImg = document.querySelector(".js-theme-panel");
     const arrowImg = document.querySelector(".js-theme-arrow");
     const hamburgerOpenImg = document.querySelector(".js-theme-hamburger-open");
     const hamburgerCloseImg = document.querySelector(".js-theme-hamburger-close");
@@ -19,11 +18,6 @@ export const initThemeSwitch = () => {
     const LOGO = {
         light: "/img/logo/logo-black.svg",
         dark: "/img/logo/logo-white.svg",
-    };
-
-    const PANEL = {
-        light: "/img/icons/ui/slider-toggle-panel-white.svg",
-        dark: "/img/icons/ui/slider-toggle-panel-black.svg",
     };
 
     const ARROW = {
@@ -51,7 +45,6 @@ export const initThemeSwitch = () => {
 
     const ASSETS = {
         logo: LOGO,
-        panel: PANEL,
         arrow: ARROW,
         hamburgerOpen: HAMBURGER_OPEN,
         hamburgerClose: HAMBURGER_CLOSE,
@@ -61,7 +54,6 @@ export const initThemeSwitch = () => {
 
     const ASSET_TARGETS = {
         logo: logoImg,
-        panel: panelImg,
         arrow: arrowImg,
         hamburgerOpen: hamburgerOpenImg,
         hamburgerClose: hamburgerCloseImg,

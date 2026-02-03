@@ -258,15 +258,35 @@ page > top > top-kv
     }
 }
 
-.top-kv-slider-toggle {
+.top-kv-toggle-btn {
     display: none;
     @include g.mq() {
         display: block;
-        flex: 0 0 auto;
+        background: transparent;
         position: absolute;
         top: 0;
         left: -32px;
+        width: 32px;
+        height: 109px;
     }
+    @include g.mq(xl) {
+        left: -38px;
+        width: 38px;
+        height: 129px;
+    }
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.kv-toggle-panel--fill {
+    fill: var(--color-bg);
+}
+
+.kv-toggle-panel--stroke {
+    fill: var(--color-line-ui);
 }
 
 .top-kv-toggle-btn-bg {
@@ -286,6 +306,11 @@ page > top > top-kv
     left: 12px;
     width: 15px;
     height: auto;
+    @include g.mq(xl) {
+        top: 30px;
+        left: 15px;
+        width: 18px;
+    }
     img {
         width: 100%;
         height: 100%;

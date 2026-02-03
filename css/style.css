@@ -44,7 +44,7 @@ global > color
 
 [data-theme=dark] {
   --color-bg: #000000;
-  --color-text-body: #dddddd;
+  --color-text: #dddddd;
   --color-icon: #ffffff;
   --color-line-section: #cccccc;
   --color-line-ui: #888888;
@@ -303,13 +303,29 @@ iframe {
 foundation > base
 ------------------------------
 */
+:root {
+  --theme-duration: 0.5s;
+  --theme-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+html,
+body {
+  transition: background-color var(--theme-duration) var(--theme-ease), color var(--theme-duration) var(--theme-ease);
+}
+
 body {
   line-height: 1.8;
   font-size: var(--font-size-body);
   letter-spacing: 0.08em;
-  color: var(--color-text-body);
+  color: var(--color-text);
   background-color: var(--color-bg);
   font-family: var(--font-family-jp);
+}
+
+*,
+*::before,
+*::after {
+  transition: border-color var(--theme-duration) var(--theme-ease), background-color var(--theme-duration) var(--theme-ease), color var(--theme-duration) var(--theme-ease), fill var(--theme-duration) var(--theme-ease), stroke var(--theme-duration) var(--theme-ease), box-shadow var(--theme-duration) var(--theme-ease);
 }
 
 /*!
@@ -1100,17 +1116,39 @@ page > top > top-kv
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.top-kv-slider-toggle {
+.top-kv-toggle-btn {
   display: none;
 }
 @media screen and (min-width: 768px) {
-  .top-kv-slider-toggle {
+  .top-kv-toggle-btn {
     display: block;
-    flex: 0 0 auto;
+    background: transparent;
     position: absolute;
     top: 0;
     left: -32px;
+    width: 32px;
+    height: 109px;
   }
+}
+@media screen and (min-width: 1200px) {
+  .top-kv-toggle-btn {
+    left: -38px;
+    width: 38px;
+    height: 129px;
+  }
+}
+.top-kv-toggle-btn svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.kv-toggle-panel--fill {
+  fill: var(--color-bg);
+}
+
+.kv-toggle-panel--stroke {
+  fill: var(--color-line-ui);
 }
 
 .top-kv-toggle-btn-bg {
@@ -1130,6 +1168,13 @@ page > top > top-kv
   left: 12px;
   width: 15px;
   height: auto;
+}
+@media screen and (min-width: 1200px) {
+  .top-kv-toggle-btn-arrow {
+    top: 30px;
+    left: 15px;
+    width: 18px;
+  }
 }
 .top-kv-toggle-btn-arrow img {
   width: 100%;
