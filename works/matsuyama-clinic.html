@@ -7,6 +7,17 @@
         <meta name="description" content="ページの説明" />
         <meta name="format-detection" content="telephone=no" />
 
+        <!-- CSS読み込み前にdata-themeを確定（FOUC対策） -->
+        <script>
+            (function () {
+                try {
+                    var theme = localStorage.getItem("theme");
+                    if (theme === "light" || theme === "dark") {
+                        document.documentElement.setAttribute("data-theme", theme);
+                    }
+                } catch (e) {}
+            })();
+        </script>
         <!-- favicon/webclipicon -->
         <link rel="icon" href="../img/favicon/favicon.ico" />
         <link rel="icon" href="../img/favicon/favicon-source.svg" type="image/svg+xml" />
@@ -192,8 +203,6 @@
                         </div>
                     </dl>
                 </div>
-
-                
 
                 <!-- 作品概要 -->
                 <section class="works-detail-section">
