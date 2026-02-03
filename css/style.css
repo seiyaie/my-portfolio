@@ -1283,16 +1283,21 @@ page > top > top-about
   }
 }
 
-.top-about-profile-sns-item {
+.top-about-profile-sns-item a {
   width: 40px;
   aspect-ratio: 1/1;
 }
 @media screen and (min-width: 768px) {
-  .top-about-profile-sns-item {
+  .top-about-profile-sns-item a {
     width: 48px;
   }
 }
-.top-about-profile-sns-item img {
+@media (any-hover: hover) {
+  .top-about-profile-sns-item a:hover {
+    opacity: 0.7;
+  }
+}
+.top-about-profile-sns-item a img {
   display: block;
   width: 100%;
   height: 100%;
