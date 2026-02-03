@@ -9,6 +9,7 @@ page > top > top-common
     font-size: var(--font-size-heading);
     text-transform: uppercase;
     font-family: var(--font-family-accent);
+    font-weight: bold;
     line-height: 1;
     padding-bottom: 12px;
     padding-left: 12px;
@@ -22,6 +23,7 @@ page > top > top-common
     width: 100%;
     border-top: var(--border-section);
     border-bottom: var(--border-section);
+    overflow: hidden;
 }
 
 .top-section-title-inner {
