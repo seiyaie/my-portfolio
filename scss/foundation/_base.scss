@@ -4,11 +4,27 @@
 foundation > base
 ------------------------------
 */
+:root {
+    --theme-duration: 0.5s;
+    --theme-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+html,
+body {
+    transition: background-color var(--theme-duration) var(--theme-ease), color var(--theme-duration) var(--theme-ease);
+}
+
 body {
     line-height: 1.8;
     font-size: var(--font-size-body);
     letter-spacing: 0.08em;
-    color: var(--color-text-body);
+    color: var(--color-text);
     background-color: var(--color-bg);
     font-family: var(--font-family-jp);
+}
+
+*,
+*::before,
+*::after {
+    transition: border-color var(--theme-duration) var(--theme-ease), background-color var(--theme-duration) var(--theme-ease), color var(--theme-duration) var(--theme-ease), fill var(--theme-duration) var(--theme-ease), stroke var(--theme-duration) var(--theme-ease), box-shadow var(--theme-duration) var(--theme-ease);
 }
