@@ -19,18 +19,15 @@ layout > header
 }
 
 .header-logo-wrapper {
-    width: 66px;
     height: 100%;
     display: grid;
     place-items: center;
     border-right: var(--border-section);
-    @include g.mq() {
-        width: 120px;
-    }
+    padding-inline: 16px;
 }
 
 .header-logo {
-    width: 50px;
+    width: 46px;
     height: auto;
     display: block;
 
@@ -44,12 +41,6 @@ layout > header
     }
 }
 
-.header-nav {
-    // padding-right: 16px;
-    @include g.mq() {
-        // padding-right: 40px;
-    }
-}
 
 .header-nav-list {
     font-family: var(--font-family-accent);
@@ -59,7 +50,6 @@ layout > header
     justify-content: space-between;
     text-transform: uppercase;
     font-size: 14px;
-    padding-right: 8px;
 
     @include g.mq() {
         padding-right: 24px;
