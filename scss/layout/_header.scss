@@ -32,6 +32,10 @@ layout > header
     display: block;
 
     @include g.mq() {
+        width: 60px;
+    }
+
+    @include g.mq(lg) {
         width: 80px;
     }
 
@@ -40,7 +44,6 @@ layout > header
         height: 100%;
     }
 }
-
 
 .header-nav-list {
     font-family: var(--font-family-accent);

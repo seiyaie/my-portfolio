@@ -11,6 +11,12 @@ global > header-height
 
 @include g.mq() {
     :root {
+        --header-height: 90px;
+    }
+}
+
+@include g.mq(lg) {
+    :root {
         --header-height: 120px;
     }
 }

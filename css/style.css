@@ -73,6 +73,11 @@ global > header-height
 
 @media screen and (min-width: 768px) {
   :root {
+    --header-height: 90px;
+  }
+}
+@media screen and (min-width: 1080px) {
+  :root {
     --header-height: 120px;
   }
 }
@@ -554,6 +559,7 @@ component > hamburger-menu.scss
   gap: 24px;
   justify-content: center;
   align-items: center;
+  font-weight: bold;
 }
 
 .c-hamburger-menu-list--sns {
@@ -695,6 +701,11 @@ layout > header
   display: block;
 }
 @media screen and (min-width: 768px) {
+  .header-logo {
+    width: 60px;
+  }
+}
+@media screen and (min-width: 1080px) {
   .header-logo {
     width: 80px;
   }
