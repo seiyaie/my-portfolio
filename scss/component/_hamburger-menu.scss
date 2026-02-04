@@ -23,52 +23,30 @@ component > hamburger-menu.scss
 
 .c-hamburger-header {
     width: 100%;
-    padding-inline: 8px;
     height: var(--header-height);
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
 
-.c-hamburger-open-button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 7px;
-    justify-content: space-between;
-    padding-right: 4px;
-}
-
-.c-hamburger-open-button--stroke {
-    background-color: var(--color-icon);
-    height: 3px;
-    width: 52px;
-    display: block;
-
-}
-
-.c-hamburger-open-button--text {
-    font-family: var(--font-family-accent);
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 0;
-    line-height: 1;
-}
-
+.c-hamburger-open-button,
 .c-hamburger-close-button {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 7px;
-    justify-content: space-between;
-    padding-right: 4px;
+    padding-inline: 16px;
 }
 
+.c-hamburger-open-button--stroke,
 .c-hamburger-close-button--stroke {
     background-color: var(--color-icon);
     height: 3px;
     width: 52px;
     display: block;
+}
+
+.c-hamburger-close-button--stroke {
     &:nth-child(1) {
         transform: translateY(5px) rotate(-20deg);
     }
@@ -77,13 +55,23 @@ component > hamburger-menu.scss
     }
 }
 
+.c-hamburger-open-button--text,
 .c-hamburger-close-button--text {
     font-family: var(--font-family-accent);
-    font-size: 11px;
     font-weight: bold;
-    line-height: 1;
     letter-spacing: 0;
+    line-height: 1;
 }
+
+.c-hamburger-open-button--text {
+    font-size: 12px;
+}
+
+.c-hamburger-close-button--text {
+    font-size: 11px;
+}
+
+
 
 .c-hamburger-menu-inner {
     width: 100%;
