@@ -23,7 +23,7 @@ global > color
   color-scheme: light dark;
   --color-bg: light-dark(#f0eee9, #000000);
   --color-text: light-dark(#000000, #dddddd);
-  --color-icon: light-dark(#000000, #ffffff);
+  --color-icon: light-dark(#000000, #dddddd);
   --color-line-section: light-dark(#222222, #cccccc);
   --color-line-ui: light-dark(#555555, #888888);
   --color-contact-bg: light-dark(#f2f2f2, #ffffff);
@@ -45,7 +45,7 @@ global > color
 [data-theme=dark] {
   --color-bg: #000000;
   --color-text: #dddddd;
-  --color-icon: #ffffff;
+  --color-icon: #dddddd;
   --color-line-section: #cccccc;
   --color-line-ui: #888888;
   --color-contact-bg: #ffffff;
@@ -497,27 +497,65 @@ component > hamburger-menu.scss
 
 .c-hamburger-header {
   width: 100%;
-  padding: 16px;
-  text-align: right;
-}
-
-.c-hamburger-button {
-  width: 50px;
-  height: 30px;
+  padding-inline: 8px;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .c-hamburger-open-button {
-  width: 100%;
-  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  justify-content: space-between;
+  padding-right: 4px;
+}
+
+.c-hamburger-open-button--stroke {
+  background-color: var(--color-icon);
+  height: 3px;
+  width: 52px;
+  display: block;
+}
+
+.c-hamburger-open-button--text {
+  font-family: var(--font-family-accent);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 1;
 }
 
 .c-hamburger-close-button {
-  width: 50px;
-  height: 37px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  justify-content: space-between;
+  padding-right: 4px;
 }
-.c-hamburger-close-button img {
-  width: 100%;
-  height: 100%;
+
+.c-hamburger-close-button--stroke {
+  background-color: var(--color-icon);
+  height: 3px;
+  width: 52px;
+  display: block;
+}
+.c-hamburger-close-button--stroke:nth-child(1) {
+  transform: translateY(5px) rotate(-20deg);
+}
+.c-hamburger-close-button--stroke:nth-child(2) {
+  transform: translateY(-5px) rotate(20deg);
+}
+
+.c-hamburger-close-button--text {
+  font-family: var(--font-family-accent);
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0;
 }
 
 .c-hamburger-menu-inner {
@@ -672,13 +710,13 @@ layout > header
 }
 
 .header-logo {
-  width: 11px;
+  width: 50px;
   height: auto;
   display: block;
 }
 @media screen and (min-width: 768px) {
   .header-logo {
-    width: 20px;
+    width: 80px;
   }
 }
 .header-logo img {
@@ -694,11 +732,11 @@ layout > header
   justify-content: space-between;
   text-transform: uppercase;
   font-size: 14px;
-  padding-right: 16px;
+  padding-right: 8px;
 }
 @media screen and (min-width: 768px) {
   .header-nav-list {
-    padding-right: 40px;
+    padding-right: 24px;
   }
 }
 @media screen and (min-width: 1080px) {

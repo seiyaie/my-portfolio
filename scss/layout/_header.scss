@@ -24,19 +24,18 @@ layout > header
     display: grid;
     place-items: center;
     border-right: var(--border-section);
-
     @include g.mq() {
         width: 120px;
     }
 }
 
 .header-logo {
-    width: 11px;
+    width: 50px;
     height: auto;
     display: block;
 
     @include g.mq() {
-        width: 20px;
+        width: 80px;
     }
 
     img {
@@ -60,10 +59,10 @@ layout > header
     justify-content: space-between;
     text-transform: uppercase;
     font-size: 14px;
-    padding-right: 16px;
+    padding-right: 8px;
 
     @include g.mq() {
-        padding-right: 40px;
+        padding-right: 24px;
     }
 
     @include g.mq(lg) {

@@ -4,8 +4,6 @@ export const initThemeSwitch = () => {
     const themeIcons = document.querySelectorAll(".js-theme-icon");
     const logoImg = document.querySelector(".js-theme-logo");
     const arrowImg = document.querySelector(".js-theme-arrow");
-    const hamburgerOpenImg = document.querySelector(".js-theme-hamburger-open");
-    const hamburgerCloseImg = document.querySelector(".js-theme-hamburger-close");
     const xIconImgs = document.querySelectorAll(".js-theme-x");
     const gitHubIconImgs = document.querySelectorAll(".js-theme-github");
 
@@ -25,15 +23,6 @@ export const initThemeSwitch = () => {
         dark: "/img/icons/ui/slider-arrow-white.svg",
     };
 
-    const HAMBURGER_OPEN = {
-        light: "/img/icons/ui/hamburger-open-button-black.svg",
-        dark: "/img/icons/ui/hamburger-open-button-white.svg",
-    };
-
-    const HAMBURGER_CLOSE = {
-        light: "/img/icons/ui/hamburger-close-button-black.svg",
-        dark: "/img/icons/ui/hamburger-close-button-white.svg",
-    };
     const X_ICON = {
         light: "/img/icons/sns/x-black.svg",
         dark: "/img/icons/sns/x-white.svg",
@@ -46,8 +35,6 @@ export const initThemeSwitch = () => {
     const ASSETS = {
         logo: LOGO,
         arrow: ARROW,
-        hamburgerOpen: HAMBURGER_OPEN,
-        hamburgerClose: HAMBURGER_CLOSE,
         x: X_ICON,
         github: GITHUB_ICON,
     };
@@ -55,8 +42,6 @@ export const initThemeSwitch = () => {
     const ASSET_TARGETS = {
         logo: logoImg,
         arrow: arrowImg,
-        hamburgerOpen: hamburgerOpenImg,
-        hamburgerClose: hamburgerCloseImg,
         x: xIconImgs,
         github: gitHubIconImgs,
     };

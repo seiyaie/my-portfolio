@@ -6,7 +6,7 @@ global > color
     color-scheme: light dark;
     --color-bg: light-dark(#f0eee9, #000000);
     --color-text: light-dark(#000000, #dddddd);
-    --color-icon: light-dark(#000000, #ffffff);
+    --color-icon: light-dark(#000000, #dddddd);
     --color-line-section: light-dark(#222222, #cccccc);
     --color-line-ui: light-dark(#555555, #888888);
     --color-contact-bg: light-dark(#f2f2f2, #ffffff);
@@ -28,7 +28,7 @@ global > color
 [data-theme="dark"] {
     --color-bg: #000000;
     --color-text: #dddddd;
-    --color-icon: #ffffff;
+    --color-icon: #dddddd;
     --color-line-section: #cccccc;
     --color-line-ui: #888888;
     --color-contact-bg: #ffffff;
