@@ -24,10 +24,15 @@ global > color
   --color-bg: light-dark(#f0eee9, #000000);
   --color-text: light-dark(#000000, #dddddd);
   --color-icon: light-dark(#000000, #dddddd);
+  --color-icon-hover: light-dark(#dddddd, #000000);
   --color-line-section: light-dark(#222222, #cccccc);
   --color-line-ui: light-dark(#555555, #888888);
   --color-contact-bg: light-dark(#f2f2f2, #ffffff);
   --color-contact-text: light-dark(#ffffff, #000000);
+  --color-pager-bg-hover: light-dark(#000000, #dddddd);
+  --color-pager-bg-active: light-dark(#000000, #dddddd);
+  --color-pager-text-hover: light-dark(#dddddd, #000000);
+  --color-pager-text-active: light-dark(#dddddd, #000000);
   --color-button-text-shadow: light-dark(rgba(0, 0, 0, 0.38), rgba(255, 255, 255, 0.44));
 }
 
@@ -35,10 +40,15 @@ global > color
   --color-bg: #f0eee9;
   --color-text: #000000;
   --color-icon: #000000;
+  --color-icon-hover: #dddddd;
   --color-line-section: #222222;
   --color-line-ui: #555555;
   --color-contact-bg: #f2f2f2;
   --color-contact-text: #000000;
+  --color-pager-bg-hover: #000000;
+  --color-pager-bg-active: #000000;
+  --color-pager-text-hover: #dddddd;
+  --color-pager-text-active: #dddddd;
   --color-button-text-shadow: rgba(0, 0, 0, 0.38);
 }
 
@@ -46,10 +56,15 @@ global > color
   --color-bg: #000000;
   --color-text: #dddddd;
   --color-icon: #dddddd;
+  --color-icon-hover: #000000;
   --color-line-section: #cccccc;
   --color-line-ui: #888888;
   --color-contact-bg: #ffffff;
   --color-contact-text: #000000;
+  --color-pager-bg-hover: #dddddd;
+  --color-pager-bg-active: #dddddd;
+  --color-pager-text-hover: #000000;
+  --color-pager-text-active: #000000;
   --color-button-text-shadow: rgba(255, 255, 255, 0.44);
 }
 
@@ -351,6 +366,20 @@ utility > utility
   margin: -1px !important;
 }
 
+.u-pb {
+  padding-bottom: 40px !important;
+}
+@media screen and (min-width: 768px) {
+  .u-pb {
+    padding-bottom: 64px !important;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .u-pb {
+    padding-bottom: 94px !important;
+  }
+}
+
 .u-ptb {
   padding-block: 40px !important;
 }
@@ -645,6 +674,182 @@ component > page-label
     font-size: 24px;
     margin-top: 64px;
   }
+}
+
+/*!
+component > pagination
+------------------------------
+*/
+.c-pagination {
+  --pager-cell: 40px;
+  margin-top: 80px;
+}
+@media screen and (min-width: 768px) {
+  .c-pagination {
+    --pager-cell: 56px;
+  }
+}
+
+.c-pagination-nav {
+  border-top: var(--border-ui);
+  border-bottom: var(--border-ui);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.c-pagination-button {
+  padding-block: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1;
+  font-family: var(--font-family-accent);
+  font-weight: bold;
+  font-size: var(--font-size-body--sm);
+  text-shadow: 3px 3px var(--color-button-text-shadow);
+  transition: translate 0.3s;
+}
+@media screen and (min-width: 768px) {
+  .c-pagination-button {
+    padding-block: 16px;
+  }
+}
+.c-pagination-button::before {
+  content: "";
+  display: block;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+  width: 24px;
+  aspect-ratio: 1/1;
+  background-color: var(--color-icon);
+}
+
+.c-pagination-button.is-hidden {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .c-pagination-button.is-hidden {
+    display: inline-flex;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.c-pagination-button--prev span:last-child {
+  display: none;
+}
+@media screen and (min-width: 1080px) {
+  .c-pagination-button--prev span:last-child {
+    display: inline-block;
+  }
+}
+@media (any-hover: hover) {
+  .c-pagination-button--prev:hover {
+    translate: -16px;
+  }
+}
+
+@media (any-hover: hover) {
+  .c-pagination-button--next:hover {
+    translate: 16px;
+  }
+}
+.c-pagination-button--next span:last-child {
+  display: none;
+}
+@media screen and (min-width: 1080px) {
+  .c-pagination-button--next span:last-child {
+    display: inline-block;
+  }
+}
+
+.c-pagination-button--home {
+  padding-inline: 16px;
+}
+@media screen and (min-width: 768px) {
+  .c-pagination-button--home {
+    border-inline: var(--border-ui);
+  }
+}
+@media screen and (min-width: 768px) and (any-hover: hover) {
+  .c-pagination-button--home:hover {
+    background-color: var(--color-pager-bg-hover);
+  }
+  .c-pagination-button--home:hover::before {
+    background-color: var(--color-icon-hover);
+  }
+}
+@media screen and (min-width: 768px) {
+  .c-pagination-button--home span:last-child {
+    display: none;
+  }
+}
+
+.c-pagination-button--prev::before {
+  -webkit-mask-image: url("../img/icons/ui/arrow-prev.svg");
+          mask-image: url("../img/icons/ui/arrow-prev.svg");
+}
+
+.c-pagination-button--next::before {
+  -webkit-mask-image: url("../img/icons/ui/arrow-next.svg");
+          mask-image: url("../img/icons/ui/arrow-next.svg");
+  order: 2;
+}
+
+.c-pagination-button--home::before {
+  -webkit-mask-image: url("../img/icons/ui/works-pager.svg");
+          mask-image: url("../img/icons/ui/works-pager.svg");
+}
+
+.c-pagination-center {
+  display: flex;
+  align-items: center;
+}
+
+.c-pagination-list {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .c-pagination-list {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.c-pagination-item {
+  margin-left: calc(-1 * var(--border-size));
+}
+
+.c-pagination-link {
+  height: var(--pager-cell);
+  padding-inline: 16px;
+  font-weight: bold;
+  font-family: var(--font-family-accent);
+  font-size: var(--font-size-body--sm);
+  display: grid;
+  place-items: center;
+  border-inline: var(--border-ui);
+}
+@media (any-hover: hover) {
+  .c-pagination-link:not(.c-pagination-link--dots):hover {
+    background-color: var(--color-pager-bg-hover);
+    color: var(--color-pager-text-hover);
+  }
+}
+
+.c-pagination-link--dots {
+  pointer-events: none;
+}
+
+.c-pagination-item.is-active .c-pagination-link {
+  background-color: var(--color-pager-bg-active);
+  color: var(--color-pager-text-active);
 }
 
 /*!
