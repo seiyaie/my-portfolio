@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja" data-theme="dark">
+<html lang="ja" data-theme="dark" data-page="7">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -163,7 +163,7 @@
 
         <!-- works -->
         <main class="works-detail u-ptb">
-            <div class="l-container">
+            <div class="l-container u-pb">
                 <!-- breadcrumb -->
                 <nav class="c-breadcrumb" aria-label="パンくずリスト">
                     <ol class="c-breadcrumb-list">
@@ -226,6 +226,19 @@
                     <h2 class="works-detail-section-title">使用言語 / 使用ツール</h2>
                     <p class="works-detail-section-text">HTML / CSS / VS code / GitHub</p>
                 </section>
+            </div>
+
+            <!-- ページネーション -->
+            <div class="c-pagination l-container">
+                <nav class="c-pagination-nav" aria-label="ページネーション">
+                    <a href="" class="c-pagination-button c-pagination-button--prev js-pagination-button--prev"><span>prev</span><span>work</span></a>
+
+                    <div class="c-pagination-center">
+                        <a href="" class="c-pagination-button c-pagination-button--home js-pagination-button--home"><span>works</span></a>
+                        <ol class="c-pagination-list js-pagination-list" aria-busy="true"></ol>
+                    </div>
+                    <a href="" class="c-pagination-button c-pagination-button--next js-pagination-button--next"><span>next</span> <span>work</span></a>
+                </nav>
             </div>
         </main>
         <!-- the end of work detail -->
