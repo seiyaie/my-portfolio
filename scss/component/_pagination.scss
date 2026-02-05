@@ -68,7 +68,7 @@ component > pagination
     }
     @media (any-hover: hover) {
         &:hover {
-            translate: -16px;
+            translate: -16px 0;
         }
     }
 }
@@ -76,7 +76,7 @@ component > pagination
 .c-pagination-button--next {
     @media (any-hover: hover) {
         &:hover {
-            translate: 16px;
+            translate: 16px 0;
         }
     }
     span:last-child {
@@ -89,10 +89,16 @@ component > pagination
 
 .c-pagination-button--home {
     padding-inline: 16px;
+    @media (any-hover: hover) {
+        &:hover {
+            translate: 0 -4px;
+        }
+    }
     @include g.mq() {
         border-inline: var(--border-ui);
         @media (any-hover: hover) {
             &:hover {
+                translate: 0;
                 background-color: var(--color-pager-bg-hover);
                 &::before {
                     background-color: var(--color-icon-hover);

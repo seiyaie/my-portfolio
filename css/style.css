@@ -751,13 +751,13 @@ component > pagination
 }
 @media (any-hover: hover) {
   .c-pagination-button--prev:hover {
-    translate: -16px;
+    translate: -16px 0;
   }
 }
 
 @media (any-hover: hover) {
   .c-pagination-button--next:hover {
-    translate: 16px;
+    translate: 16px 0;
   }
 }
 .c-pagination-button--next span:last-child {
@@ -772,6 +772,11 @@ component > pagination
 .c-pagination-button--home {
   padding-inline: 16px;
 }
+@media (any-hover: hover) {
+  .c-pagination-button--home:hover {
+    translate: 0 -4px;
+  }
+}
 @media screen and (min-width: 768px) {
   .c-pagination-button--home {
     border-inline: var(--border-ui);
@@ -779,6 +784,7 @@ component > pagination
 }
 @media screen and (min-width: 768px) and (any-hover: hover) {
   .c-pagination-button--home:hover {
+    translate: 0;
     background-color: var(--color-pager-bg-hover);
   }
   .c-pagination-button--home:hover::before {
