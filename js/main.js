@@ -7,7 +7,16 @@ import { initKvSlider } from "./component/kv-slider.js";
 import { initTitleReveal } from "./component/reveal-title.js";
 import { initPagination } from "./component/pagination.js";
 
-const pages = ["travel-gallery.html", "leaf-design-lab.html", "my-portfolio.html", "photographer.html", "coco.html", "matsuyama-clinic.html", "moshashugyo-media.html", "migliore.html"];
+const pages = [
+    { href: "travel-gallery.html", title: "travel gallery" },
+    { href: "leaf-design-lab.html", title: "leaf-design-lab" },
+    { href: "my-portfolio.html", title: "my-portfolio" },
+    { href: "photographer.html", title: "photographer" },
+    { href: "coco.html", title: "coco" },
+    { href: "matsuyama-clinic.html", title: "matsuyama-clinic" },
+    { href: "moshashugyo-media.html", title: "moshashugyo-media" },
+    { href: "migliore.html", title: "migliore" },
+];
 
 initThemeSwitch();
 textSlider();

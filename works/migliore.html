@@ -231,13 +231,34 @@
             <!-- ページネーション -->
             <div class="c-pagination l-container">
                 <nav class="c-pagination-nav" aria-label="ページネーション">
-                    <a href="" class="c-pagination-button c-pagination-button--prev js-pagination-button--prev"><span>prev</span><span>work</span></a>
+                    <!-- prev button -->
+                    <a href="" class="c-pagination-button c-pagination-button--prev js-pagination-button--prev">
+                        <span class="c-pagination-label">
+                            <span class="c-pagination-icon c-pagination-icon--prev"></span>
+                            <span class="c-pagination-text">prev</span>
+                        </span>
+                        <span class="c-pagination-meta js-pagination-prev-title" aria-hidden="true"></span>
+                    </a>
 
                     <div class="c-pagination-center">
-                        <a href="" class="c-pagination-button c-pagination-button--home js-pagination-button--home"><span>works</span></a>
+                        <!-- works一覧に戻るボタン -->
+                        <a href="" class="c-pagination-button c-pagination-button--works js-pagination-button--works">
+                            <span class="c-pagination-label c-pagination-label--works">
+                                <span class="c-pagination-icon c-pagination-icon--works"></span>
+                                <span class="c-pagination-text c-pagination-text c-pagination-text--works">works</span>
+                            </span>
+                        </a>
+                        <!-- ページネーションリスト -->
                         <ol class="c-pagination-list js-pagination-list" aria-busy="true"></ol>
                     </div>
-                    <a href="" class="c-pagination-button c-pagination-button--next js-pagination-button--next"><span>next</span> <span>work</span></a>
+                    <!-- next button -->
+                    <a href="" class="c-pagination-button c-pagination-button--next js-pagination-button--next">
+                        <span class="c-pagination-label">
+                            <span class="c-pagination-text">next</span>
+                            <span class="c-pagination-icon c-pagination-icon--next"></span>
+                        </span>
+                        <span class="c-pagination-meta js-pagination-next-title" aria-hidden="true"></span>
+                    </a>
                 </nav>
             </div>
         </main>
