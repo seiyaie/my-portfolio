@@ -7,7 +7,6 @@ page > works > works-detail
 
 .works-detail {
     border-top: var(--border-section);
-    border-bottom: var(--border-section);
 }
 
 .works-detail-title-wrapper {
@@ -23,9 +22,25 @@ page > works > works-detail
 }
 
 .works-detail-button {
-    margin-top: 16px;
     max-width: 400px;
     margin-inline: auto;
+}
+
+.works-detail-button--url {
+    margin-top: 16px;
+    @include g.mq() {
+        margin-top: 24px;
+    }
+    @include g.mq(lg) {
+        margin-top: 40px;
+    }
+}
+
+.works-detail-button--back {
+    margin-top: 64px;
+    @include g.mq() {
+        margin-top: 80px;
+    }
 }
 
 .works-detail-basic {
@@ -54,7 +69,6 @@ page > works > works-detail
 
 .works-detail-info-title {
     border-bottom: var(--border-ui);
-    // border-bottom: var(--border-dashed);
     padding-block-end: 4px;
     font-weight: bold;
     font-size: 18px;
@@ -91,7 +105,6 @@ page > works > works-detail
 
 .works-detail-section-title {
     border-bottom: var(--border-ui);
-    // border-bottom: var(--border-dashed);
     padding-block-end: 4px;
     font-weight: bold;
     margin-bottom: 16px;
@@ -107,42 +120,5 @@ page > works > works-detail
     }
 }
 
-.works-detail-section-text--url {
-    text-decoration: underline;
-}
 
-.works-detail-url-tail {
-    display: inline-block;
-    white-space: nowrap;
-}
 
-.works-detail-url-icon {
-    display: inline-block;
-    width: 18px;
-    aspect-ratio: 1/1;
-    vertical-align: -0.2em;
-
-    mask-image: url("../img/icons/ui/link-open.svg");
-    mask-size: contain;
-    mask-repeat: no-repeat;
-    mask-position: center;
-    background-color: var(--color-icon);
-}
-
-.works-detail-section-url {
-    display: grid;
-    place-items: center;
-    gap: 16px;
-    font-size: 18px;
-    @include g.mq() {
-        font-size: 20px;
-    }
-}
-
-.url-button {
-    font-weight: bold;
-    line-height: 1;
-    padding: 8px 16px;
-    border: 1px solid var(--color-line-ui);
-    border-radius: 4px;
-}
