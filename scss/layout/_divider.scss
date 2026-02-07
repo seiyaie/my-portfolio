@@ -1,0 +1,19 @@
+@use "../global" as g;
+
+/*!
+layout > divider
+------------------------------
+*/
+
+.l-divider {
+    &--top {
+        border-top: var(--border-section);
+    }
+    &--bottom {
+        border-bottom: var(--border-section);
+    }
+    &--both {
+        border-top: var(--border-section);
+        border-bottom: var(--border-section);
+    }
+}
