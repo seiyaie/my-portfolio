@@ -23,12 +23,12 @@ const generatePageNumbers = (totalPages, currentPage) => {
     return pagination;
 };
 
-const setDisabled = (el, disabled, { hide = false } = {}) => {
+const updateButtonState = (el, isDisabled) => {
     if (!el) return;
 
-    if (hide) el.classList.toggle("is-hidden", disabled);
+    el.classList.toggle("is-hidden", isDisabled);
 
-    if (disabled) {
+    if (isDisabled) {
         el.setAttribute("aria-disabled", "true");
         el.removeAttribute("href");
         el.classList.add("is-disabled");
@@ -39,13 +39,13 @@ const setDisabled = (el, disabled, { hide = false } = {}) => {
 };
 
 export const initPagination = ({ pages, currentPage } = {}) => {
-    const nav = document.querySelector(".c-pagination-nav");
+    const nav = document.querySelector(".js-pagination-nav");
     if (!nav) return;
 
     if (!Array.isArray(pages) || pages.length === 0) return;
 
-    const prevLink = nav.querySelector(".js-pagination-button--prev");
-    const nextLink = nav.querySelector(".js-pagination-button--next");
+    const prevButton = nav.querySelector(".js-pagination-button--prev");
+    const nextButton = nav.querySelector(".js-pagination-button--next");
     const list = nav.querySelector(".js-pagination-list");
 
     const prevTitleEl = nav.querySelector(".js-pagination-prev-title");
@@ -54,12 +54,11 @@ export const initPagination = ({ pages, currentPage } = {}) => {
     if (!list) return;
 
     const totalPages = pages.length;
-    const safeCurrent = Math.min(Math.max(Number(currentPage), 1), totalPages);
+    const safeCurrent = Math.min(Math.max(Number(currentPage), 1), totalPages); // 1以上、totalPages以下の数値を代入
 
     list.innerHTML = "";
 
     const items = generatePageNumbers(totalPages, safeCurrent);
-
     items.forEach((item) => {
         const li = document.createElement("li");
         li.className = "c-pagination-item";
@@ -88,41 +87,44 @@ export const initPagination = ({ pages, currentPage } = {}) => {
             return;
         }
 
-        // 他ページはリンク
+        // ...と現在のページは以外はリンクとして生成
         const a = document.createElement("a");
         a.className = "c-pagination-link";
         a.textContent = String(item);
         a.href = getHref(page);
         if (title) a.setAttribute("aria-label", `${item}ページ目：${title}`);
-        a.setAttribute("aria-current", "page");
 
         li.appendChild(a);
         list.appendChild(li);
     });
 
-    // prev / next
-    const prevDisabled = safeCurrent <= 1;
-    const nextDisabled = safeCurrent >= totalPages;
+    // prevボタン / nextボタンの処理
+    const isPrevDisabled = safeCurrent <= 1;
+    const isNextDisabled = safeCurrent >= totalPages;
 
-    setDisabled(prevLink, prevDisabled, { hide: true });
-    setDisabled(nextLink, nextDisabled, { hide: true });
+    // prevButton, nextButtonの状態更新
+    updateButtonState(prevButton, isPrevDisabled);
+    updateButtonState(nextButton, isNextDisabled);
 
-    const prevPage = !prevDisabled ? pages[safeCurrent - 2] : null;
-    const nextPage = !nextDisabled ? pages[safeCurrent] : null;
+    const prevPage = !isPrevDisabled ? pages[safeCurrent - 2] : null; // 前のページを取得
+    const nextPage = !isNextDisabled ? pages[safeCurrent] : null; // 次のページを取得
 
-    if (prevLink && prevPage) prevLink.href = getHref(prevPage);
-    if (nextLink && nextPage) nextLink.href = getHref(nextPage);
+    if (prevButton && prevPage) prevButton.href = getHref(prevPage); // 前のページのhrefを指定
+    if (nextButton && nextPage) nextButton.href = getHref(nextPage); // 次のページのhrefを指定
 
-    // ボタン下に作品名を表示
+    // prev、nextボタン下に作品名を表示
     if (prevTitleEl) prevTitleEl.textContent = prevPage ? getTitle(prevPage) : "";
     if (nextTitleEl) nextTitleEl.textContent = nextPage ? getTitle(nextPage) : "";
 
-    if (prevLink) {
-        if (prevPage) prevLink.setAttribute("aria-label", `前の作品：${getTitle(prevPage) || "前のページ"}`);
-        else prevLink.removeAttribute("aria-label");
+    // prevButtonに対してaria-labelの指定
+    if (prevButton) {
+        if (prevPage) prevButton.setAttribute("aria-label", `前の作品：${getTitle(prevPage) || "前のページ"}`);
+        else prevButton.removeAttribute("aria-label");
     }
-    if (nextLink) {
-        if (nextPage) nextLink.setAttribute("aria-label", `次の作品：${getTitle(nextPage) || "次のページ"}`);
-        else nextLink.removeAttribute("aria-label");
+
+    // nextButtonに対してaria-labelの指定
+    if (nextButton) {
+        if (nextPage) nextButton.setAttribute("aria-label", `次の作品：${getTitle(nextPage) || "次のページ"}`);
+        else nextButton.removeAttribute("aria-label");
     }
 };
