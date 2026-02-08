@@ -2289,4 +2289,29 @@ page > works > works-detail
 
 .works-detail-section-text:not(:last-child) {
   margin-bottom: 24px;
+}
+
+.works-detail-points {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+@media screen and (min-width: 768px) {
+  .works-detail-points {
+    gap: 24px;
+  }
+}
+
+.works-detail-point-title {
+  font-weight: bold;
+}
+.works-detail-point-title::before {
+  content: "・";
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.works-detail-point-text {
+  padding-left: calc(1em + 4px);
+  padding-top: 8px;
 }/*# sourceMappingURL=style.css.map */

@@ -120,5 +120,28 @@ page > works > works-detail
     }
 }
 
+.works-detail-points {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    @include g.mq() {
+        gap: 24px;
+    }
+}
 
+.works-detail-point {
+}
 
+.works-detail-point-title {
+    font-weight: bold;
+    &::before {
+        content: "・";
+        display: inline-block;
+        margin-right: 4px;
+    }
+}
+
+.works-detail-point-text {
+    padding-left: calc(1em + 4px);
+    padding-top: 8px;
+}
