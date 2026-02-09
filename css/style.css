@@ -2314,4 +2314,13 @@ page > works > works-detail
 .works-detail-point-text {
   padding-left: calc(1em + 4px);
   padding-top: 8px;
+}
+
+.works-detail-link {
+  text-decoration: underline;
+}
+@media (any-hover: hover) {
+  .works-detail-link:hover {
+    text-decoration: none;
+  }
 }/*# sourceMappingURL=style.css.map */

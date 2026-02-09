@@ -129,9 +129,6 @@ page > works > works-detail
     }
 }
 
-.works-detail-point {
-}
-
 .works-detail-point-title {
     font-weight: bold;
     &::before {
@@ -144,4 +141,13 @@ page > works > works-detail
 .works-detail-point-text {
     padding-left: calc(1em + 4px);
     padding-top: 8px;
+}
+
+.works-detail-link {
+    text-decoration: underline;
+    @media (any-hover: hover) {
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }
