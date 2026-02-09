@@ -214,19 +214,58 @@
                 <!-- 作品概要 -->
                 <section class="works-detail-section">
                     <h2 class="works-detail-section-title">概要</h2>
-                    <p class="works-detail-section-text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                    <p class="works-detail-section-text">オンラインスクール<a href="https://hellomentor.jp/" class="works-detail-link" target="_blank" rel="noopener noreferrer" aria-label="Hello Mentorを別タブで開く">Hello Mentor</a>の課題として制作した、架空クリニック「MATSUYAMA CLINIC」のWebサイトです。</p>
+                    <p class="works-detail-section-text">スクール方針に沿い、サイズ指定は rem を中心に実装しています。</p>
+                </section>
+
+                <!-- 担当範囲 -->
+                <section class="works-detail-section">
+                    <h2 class="works-detail-section-title">担当範囲</h2>
+                    <p class="works-detail-section-text">デザインカンプをもとに、HTML / CSS のコーディング、JavaScript によるインタラクション実装（ハンバーガーメニュー、ヘッダー制御、アニメーション）を担当しました。</p>
+                </section>
+
+                <!-- 制作目的 -->
+                <section class="works-detail-section">
+                    <h2 class="works-detail-section-title">制作目的</h2>
+                    <p class="works-detail-section-text">本課題では、デザインカンプの再現に加えて、ユーザー体験を高めるためのインタラクションを自ら設計・実装することを目的に制作しました。 課題要件に含まれていないJavaScript実装にも挑戦し、実務に近い思考でのコーディングを意識しています。</p>
                 </section>
 
                 <!-- 工夫した点 -->
                 <section class="works-detail-section">
                     <h2 class="works-detail-section-title">工夫した点</h2>
-                    <p class="works-detail-section-text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                    <ul class="works-detail-points">
+                        <li class="works-detail-point">
+                            <h3 class="works-detail-point-title">dialog要素の表示方式の選定</h3>
+                            <p class="works-detail-point-text">ハンバーガーメニューの開閉操作をヘッダーの同一ボタンで行う設計のため、 モーダル表示ではなく通常表示となる dialog.show() を採用しました。 これにより、メニュー表示中でもヘッダー操作が可能となり、 レイヤー構造や操作性が破綻しないようにしています。</p>
+                        </li>
+
+                        <li class="works-detail-point">
+                            <h3 class="works-detail-point-title">背景スクロールの制御</h3>
+                            <p class="works-detail-point-text">メニュー表示中に背面コンテンツがスクロールしないよう、 body・html に対してスクロール制御を行いました。 特に iOS Safari で起きやすいスクロール問題にも配慮し、 モバイル環境でも安定した操作感になるよう実装しています。</p>
+                        </li>
+
+                        <li class="works-detail-point">
+                            <h3 class="works-detail-point-title">誤操作を防ぐUI制御</h3>
+                            <p class="works-detail-point-text">メニューの背景部分をクリックした際に閉じる挙動を実装しつつ、 ナビゲーションリンクやボタン操作時には意図せず閉じないよう判定処理を加えました。 ユーザーの誤操作を防ぎ、安心して操作できるUIを意識しています。</p>
+                        </li>
+
+                        <li class="works-detail-point">
+                            <h3 class="works-detail-point-title">Intersection Observerを用いたヘッダー制御</h3>
+                            <p class="works-detail-point-text">ファーストビューが画面外に出たタイミングでヘッダーを固定し、 視認性に応じてロゴの表示を切り替える実装を行いました。 また、メニュー表示中は監視処理を停止し、 状態が競合しないように制御しています。</p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="works-detail-section">
+                    <h2 class="works-detail-section-title">学び</h2>
+                    <p class="works-detail-section-text">dialog要素の扱い、モバイル環境でのスクロール制御、Intersection Observerを用いた実装を学びました。</p>
+                    <p class="works-detail-section-text">見た目の実装だけであれば動作するケースでも、モーダル表示中の操作制限や、iOS Safari 特有の挙動などを考慮しないと、実際のユーザー体験としては不十分になることを実感しました。</p>
                 </section>
 
                 <!-- 使用言語 / 使用ツール -->
                 <section class="works-detail-section">
                     <h2 class="works-detail-section-title">使用言語 / 使用ツール</h2>
-                    <p class="works-detail-section-text">HTML / CSS / JavaScript / GSAP / Cursor / Figma / Git / GitHub</p>
+                    <p class="works-detail-section-text">HTML / CSS / JavaScript / Web Animation API / Intersection Observer API / Vs Code / Figma</p>
                 </section>
 
                 <!-- works detail button -->
