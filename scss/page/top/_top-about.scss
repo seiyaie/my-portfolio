@@ -90,14 +90,20 @@ page > top > top-about
 }
 
 .top-about-profile-sns-item a {
-    width: 40px;
+    display: inline-block;
+    width: 45px;
     aspect-ratio: 1/1;
+    transition: opacity 0.3s, scale 0.3s;
     @include g.mq() {
-        width: 48px;
+        width: 50px;
+    }
+    @include g.mq(lg) {
+        width: 60px;
     }
     @media (any-hover: hover) {
         &:hover {
             opacity: 0.7;
+            scale: 1.2;
         }
     }
     img {

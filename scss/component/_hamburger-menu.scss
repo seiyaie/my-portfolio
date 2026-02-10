@@ -71,8 +71,6 @@ component > hamburger-menu.scss
     font-size: 11px;
 }
 
-
-
 .c-hamburger-menu-inner {
     width: 100%;
     margin-inline: auto;
@@ -115,11 +113,18 @@ component > hamburger-menu.scss
 
 .c-hamburger-menu-item--sns a {
     width: 60px;
-    height: 60px;
+    aspect-ratio: 1/1;
     margin-top: 16px;
+    transition: opacity 0.3s, scale 0.3s;
     @media (any-hover: hover) {
         &:hover {
             opacity: 0.7;
+            scale: 1.2;
         }
+    }
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
     }
 }
