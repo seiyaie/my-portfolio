@@ -2316,6 +2316,17 @@ page > works > works-detail
   padding-top: 8px;
 }
 
+.works-detail-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 0;
+}
+
+.works-detail-tech-item:not(:first-child)::before {
+  content: "/";
+  margin-inline: 0.5em;
+}
+
 .works-detail-link {
   text-decoration: underline;
 }
