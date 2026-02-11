@@ -1,13 +1,13 @@
 export const initKvSlider = () => {
     const selectedLink = document.querySelector(".js-top-kv-selected-link");
-    const selectedImg = selectedLink.querySelector("img");
+    const selectedImg = selectedLink?.querySelector("img");
     const sliderItems = document.querySelectorAll(".js-kv-slider-item-trigger");
     const nextButton = document.querySelector(".js-kv-scroll-button--next");
     const prevButton = document.querySelector(".js-kv-scroll-button--prev");
     const thumb = document.querySelector(".js-scrollbar-thumb");
     const indexText = document.querySelector(".js-scrollbar-index");
 
-    if (!selectedLink || !sliderItems.length || !nextButton || !prevButton || !thumb || !indexText) return;
+    if (!selectedLink || !selectedImg || !sliderItems.length || !nextButton || !prevButton || !thumb || !indexText) return;
 
     const total = sliderItems.length;
     let activeIndex = 0;
@@ -45,13 +45,9 @@ export const initKvSlider = () => {
                 isAnimating = false;
             },
         });
-        tl.call(
-            () => {
-                scrollActiveItem(item);
-            },
-            null,
-            0
-        )
+        tl.call(() => {
+            scrollActiveItem(item);
+        }, 0)
             .to(
                 thumb,
                 {
