@@ -1,31 +1,34 @@
 export const initKvSlider = () => {
-    const selectedWork = document.querySelector(".js-top-kv-selected-work img");
+    const selectedLink = document.querySelector(".js-top-kv-selected-link");
+    const selectedImg = selectedLink.querySelector("img");
     const sliderItems = document.querySelectorAll(".js-kv-slider-item-trigger");
     const nextButton = document.querySelector(".js-kv-scroll-button--next");
     const prevButton = document.querySelector(".js-kv-scroll-button--prev");
     const thumb = document.querySelector(".js-scrollbar-thumb");
     const indexText = document.querySelector(".js-scrollbar-index");
 
-    if (!selectedWork || !sliderItems.length || !nextButton || !prevButton || !thumb || !indexText) return;
+    if (!selectedLink || !sliderItems.length || !nextButton || !prevButton || !thumb || !indexText) return;
 
     const total = sliderItems.length;
     let activeIndex = 0;
     let isAnimating = false;
 
-    const updateSelectedWork = (index, direction) => {
+    const updateSelectedLink = (index, direction) => {
         if (isAnimating) return;
         isAnimating = true;
         setActive(index);
         const item = sliderItems[index];
 
-        const clone = selectedWork.cloneNode(true);
+        const clone = selectedLink.cloneNode(true);
         clone.style.position = "absolute";
         clone.style.inset = 0;
-        selectedWork.parentNode.appendChild(clone);
+        selectedLink.parentNode.appendChild(clone);
 
-        selectedWork.src = item.dataset.mainSrc;
-        selectedWork.srcset = item.dataset.mainSrcset;
-        selectedWork.sizes = item.dataset.mainSizes;
+        selectedImg.src = item.dataset.mainSrc;
+        selectedImg.srcset = item.dataset.mainSrcset;
+        selectedImg.sizes = item.dataset.mainSizes;
+
+        if (item.dataset.href) selectedLink.href = item.dataset.href;
 
         const fromX = direction === "next" ? "100%" : "-100%";
         const toX = direction === "next" ? "-100%" : "100%";
@@ -33,12 +36,12 @@ export const initKvSlider = () => {
         const percentage = (100 / total) * index;
         indexText.textContent = `${index + 1} / ${total}`;
 
-        gsap.set(selectedWork, { x: fromX, opacity: 1, position: "absolute", inset: 0 });
+        gsap.set(selectedLink, { x: fromX, opacity: 1, position: "absolute", inset: 0 });
 
         const tl = gsap.timeline({
             onComplete: () => {
                 clone.remove();
-                gsap.set(selectedWork, { clearProps: "all" });
+                gsap.set(selectedLink, { clearProps: "all" });
                 isAnimating = false;
             },
         });
@@ -68,7 +71,7 @@ export const initKvSlider = () => {
                 0
             )
             .to(
-                selectedWork,
+                selectedLink,
                 {
                     x: "0%",
                     opacity: 1,
@@ -100,19 +103,19 @@ export const initKvSlider = () => {
         item.addEventListener("click", () => {
             if (isAnimating || activeIndex === index) return;
             const direction = index > activeIndex ? "next" : "prev";
-            updateSelectedWork(index, direction);
+            updateSelectedLink(index, direction);
         });
     });
 
     nextButton.addEventListener("click", () => {
         if (isAnimating) return;
         const nextIndex = (activeIndex + 1) % total;
-        updateSelectedWork(nextIndex, "next");
+        updateSelectedLink(nextIndex, "next");
     });
 
     prevButton.addEventListener("click", () => {
         if (isAnimating) return;
         const prevIndex = (activeIndex - 1 + total) % total;
-        updateSelectedWork(prevIndex, "prev");
+        updateSelectedLink(prevIndex, "prev");
     });
 };
