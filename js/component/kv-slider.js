@@ -82,7 +82,7 @@ export const initKvSlider = () => {
         const isMobile = window.matchMedia("(max-width: 767px)").matches;
         if (!isMobile) return;
 
-        item.closest(".top-kv-slider-item")?.scrollIntoView({
+        item.closest(".js-top-kv-slider-item")?.scrollIntoView({
             behavior: "smooth",
             inline: "nearest",
             block: "nearest",
