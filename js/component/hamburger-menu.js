@@ -54,6 +54,7 @@ export const initHamburgerMenu = () => {
 
     // 背景クリックで閉じる
     menu.addEventListener("click", (e) => {
+
         if (!e.target.closest(".js-hamburger-menu-item")) {
             closeMenu();
         }
