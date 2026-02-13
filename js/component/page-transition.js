@@ -1,6 +1,6 @@
 // component/page-transition.js
 export const initPageTransition = () => {
-    const page = document.querySelector(".js-page");
+    const page = document.querySelector(".js-transition-root");
     if (!page) return;
 
     const D_ENTER = 0.7;

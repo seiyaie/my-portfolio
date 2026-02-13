@@ -1,0 +1,16 @@
+@use "../global" as g;
+
+/*!
+layout > transition-root
+------------------------------
+*/
+
+.js-transition-root {
+    opacity: 1;
+    visibility: visible;
+}
+
+.is-js .js-transition-root {
+    opacity: 0;
+    visibility: hidden;
+}

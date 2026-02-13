@@ -350,16 +350,6 @@ body {
   transition: border-color var(--theme-duration) var(--theme-ease), background-color var(--theme-duration) var(--theme-ease), color var(--theme-duration) var(--theme-ease), fill var(--theme-duration) var(--theme-ease), stroke var(--theme-duration) var(--theme-ease), box-shadow var(--theme-duration) var(--theme-ease);
 }
 
-.js-page {
-  opacity: 1;
-  visibility: visible;
-}
-
-.is-js .js-page {
-  opacity: 0;
-  visibility: hidden;
-}
-
 /*!
 utility > utility
 ------------------------------
@@ -677,25 +667,6 @@ component > breadcrumb
 }
 
 /*!
-component > page-label
-------------------------------
-*/
-.c-page-label {
-  display: inline-block;
-  font-weight: bold;
-  font-size: 18px;
-  border-bottom: var(--border-section);
-  padding-bottom: 4px;
-  margin-top: 40px;
-}
-@media screen and (min-width: 768px) {
-  .c-page-label {
-    font-size: 24px;
-    margin-top: 64px;
-  }
-}
-
-/*!
 component > pagination
 ------------------------------
 */
@@ -866,6 +837,20 @@ component > pagination
 
 .c-pagination-link--dots {
   pointer-events: none;
+}
+
+/*!
+layout > transition-root
+------------------------------
+*/
+.js-transition-root {
+  opacity: 1;
+  visibility: visible;
+}
+
+.is-js .js-transition-root {
+  opacity: 0;
+  visibility: hidden;
 }
 
 /*!
