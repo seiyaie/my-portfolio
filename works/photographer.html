@@ -7,6 +7,11 @@
         <meta name="description" content="ページの説明" />
         <meta name="format-detection" content="telephone=no" />
 
+        <!-- js実行可能確認 -->
+        <script>
+            document.documentElement.classList.add("is-js");
+        </script>
+
         <!-- CSS読み込み前にdata-themeを確定（FOUC対策） -->
         <script>
             (function () {
@@ -54,306 +59,308 @@
     </head>
 
     <body>
-        <!-- header -->
-        <header class="header">
-            <div class="header-logo-wrapper">
-                <a href="../index.html" class="header-logo" aria-label="topページに戻る">
-                    <img src="../img/logo/logo-white.svg" width="25" height="100" alt="" class="js-theme-logo" />
-                </a>
-            </div>
-            <nav class="header-nav" aria-label="グローバルナビゲーション">
-                <ul class="header-nav-list">
-                    <li class="header-nav-item header-nav-item--pc">
-                        <a href="../index.html#about" class="header-nav-link u-text-hover">about</a>
-                    </li>
-                    <li class="header-nav-item header-nav-item--pc">
-                        <a href="index.html" class="header-nav-link u-text-hover">works</a>
-                    </li>
-                    <li class="header-nav-item header-nav-item--pc">
-                        <a href="../index.html#vision" class="header-nav-link u-text-hover">vision</a>
-                    </li>
-                    <li class="header-nav-item header-nav-item--pc">
-                        <a href="../index.html#skills" class="header-nav-link u-text-hover">skills</a>
-                    </li>
-                    <li class="header-nav-item header-nav-item--pc">
-                        <a href="../index.html#contact" class="header-nav-link u-text-hover">contact</a>
-                    </li>
-                    <li class="header-nav-item header-nav-item--pc">
-                        <button class="header-theme-button js-theme-button" aria-label="ライトモードに切り替え">
-                            <img src="../img/icons/system/light-mode.svg" width="60" height="60" alt="" class="js-theme-icon" />
-                        </button>
-                    </li>
-                    <li class="header-nav-item header-nav-item--sp c-hamburger-button">
-                        <button class="c-hamburger-open-button js-hamburger-open-button" aria-label="ハンバーガーメニューを開く">
-                            <span class="c-hamburger-open-button--stroke"></span>
-                            <span class="c-hamburger-open-button--stroke"></span>
-                            <span class="c-hamburger-open-button--text">MENU</span>
-                        </button>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <!-- the end of header -->
+        <div class="js-page">
+            <!-- header -->
+            <header class="header">
+                <div class="header-logo-wrapper">
+                    <a href="../index.html" class="header-logo" aria-label="topページに戻る">
+                        <img src="../img/logo/logo-white.svg" width="25" height="100" alt="" class="js-theme-logo" />
+                    </a>
+                </div>
+                <nav class="header-nav" aria-label="グローバルナビゲーション">
+                    <ul class="header-nav-list">
+                        <li class="header-nav-item header-nav-item--pc">
+                            <a href="../index.html#about" class="header-nav-link u-text-hover">about</a>
+                        </li>
+                        <li class="header-nav-item header-nav-item--pc">
+                            <a href="index.html" class="header-nav-link u-text-hover">works</a>
+                        </li>
+                        <li class="header-nav-item header-nav-item--pc">
+                            <a href="../index.html#vision" class="header-nav-link u-text-hover">vision</a>
+                        </li>
+                        <li class="header-nav-item header-nav-item--pc">
+                            <a href="../index.html#skills" class="header-nav-link u-text-hover">skills</a>
+                        </li>
+                        <li class="header-nav-item header-nav-item--pc">
+                            <a href="../index.html#contact" class="header-nav-link u-text-hover">contact</a>
+                        </li>
+                        <li class="header-nav-item header-nav-item--pc">
+                            <button class="header-theme-button js-theme-button" aria-label="ライトモードに切り替え">
+                                <img src="../img/icons/system/light-mode.svg" width="60" height="60" alt="" class="js-theme-icon" />
+                            </button>
+                        </li>
+                        <li class="header-nav-item header-nav-item--sp c-hamburger-button">
+                            <button class="c-hamburger-open-button js-hamburger-open-button" aria-label="ハンバーガーメニューを開く">
+                                <span class="c-hamburger-open-button--stroke"></span>
+                                <span class="c-hamburger-open-button--stroke"></span>
+                                <span class="c-hamburger-open-button--text">MENU</span>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <!-- the end of header -->
 
-        <!-- hamburger menu -->
-        <dialog class="c-hamburger-menu js-hamburger-menu" aria-label="ハンバーガーメニュー">
-            <div class="c-hamburger-header">
-                <button class="c-hamburger-close-button js-hamburger-close-button" aria-label="ハンバーガーメニューを閉じる">
-                    <span class="c-hamburger-close-button--stroke"></span>
-                    <span class="c-hamburger-close-button--stroke"></span>
-                    <span class="c-hamburger-close-button--text">CLOSE</span>
-                </button>
-            </div>
-            <div class="c-hamburger-menu-inner">
-                <ul class="c-hamburger-menu-list js-hamburger-menu-list">
-                    <li class="c-hamburger-menu-item">
-                        <button class="js-theme-button" aria-label="ライトモードに切り替え"><img src="../img/icons/system/light-mode.svg" width="60" height="60" alt="" decoding="async" class="js-theme-icon" /></button>
-                    </li>
-                    <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
-                        <a href="../index.html" class="u-text-hover">home</a>
-                    </li>
-                    <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
-                        <a href="../index.html#about" class="u-text-hover">about</a>
-                    </li>
-                    <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
-                        <a href="index.html" class="u-text-hover">works</a>
-                    </li>
-                    <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
-                        <a href="../index.html#vision" class="u-text-hover">vision</a>
-                    </li>
-                    <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
-                        <a href="../index.html#skills" class="u-text-hover">skills</a>
-                    </li>
-                    <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
-                        <a href="../index.html#contact" class="u-text-hover">contact</a>
-                    </li>
-                </ul>
+            <!-- hamburger menu -->
+            <dialog class="c-hamburger-menu js-hamburger-menu" aria-label="ハンバーガーメニュー">
+                <div class="c-hamburger-header">
+                    <button class="c-hamburger-close-button js-hamburger-close-button" aria-label="ハンバーガーメニューを閉じる">
+                        <span class="c-hamburger-close-button--stroke"></span>
+                        <span class="c-hamburger-close-button--stroke"></span>
+                        <span class="c-hamburger-close-button--text">CLOSE</span>
+                    </button>
+                </div>
+                <div class="c-hamburger-menu-inner">
+                    <ul class="c-hamburger-menu-list js-hamburger-menu-list">
+                        <li class="c-hamburger-menu-item">
+                            <button class="js-theme-button" aria-label="ライトモードに切り替え"><img src="../img/icons/system/light-mode.svg" width="60" height="60" alt="" decoding="async" class="js-theme-icon" /></button>
+                        </li>
+                        <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
+                            <a href="../index.html" class="u-text-hover">home</a>
+                        </li>
+                        <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
+                            <a href="../index.html#about" class="u-text-hover">about</a>
+                        </li>
+                        <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
+                            <a href="index.html" class="u-text-hover">works</a>
+                        </li>
+                        <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
+                            <a href="../index.html#vision" class="u-text-hover">vision</a>
+                        </li>
+                        <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
+                            <a href="../index.html#skills" class="u-text-hover">skills</a>
+                        </li>
+                        <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
+                            <a href="../index.html#contact" class="u-text-hover">contact</a>
+                        </li>
+                    </ul>
 
-                <ul class="c-hamburger-menu-list c-hamburger-menu-list--sns js-hamburger-menu-list">
-                    <li class="c-hamburger-menu-item c-hamburger-menu-item--sns js-hamburger-menu-item">
-                        <a href="https://github.com/seiyaie" aria-label="githubを別タブで開く"><img src="../img/icons/sns/github-white.svg" width="60" height="60" alt="" decoding="async" class="js-theme-github" /></a>
-                    </li>
-                    <li class="c-hamburger-menu-item c-hamburger-menu-item--sns js-hamburger-menu-item">
-                        <a href="https://x.com/seiya_web" aria-label="xを別タブで開く"><img src="../img/icons/sns/x-white.svg" width="60" height="60" alt="" decoding="async" class="js-theme-x" /></a>
-                    </li>
-                </ul>
-            </div>
-        </dialog>
-        <!-- the end of hamburger menu -->
+                    <ul class="c-hamburger-menu-list c-hamburger-menu-list--sns js-hamburger-menu-list">
+                        <li class="c-hamburger-menu-item c-hamburger-menu-item--sns js-hamburger-menu-item">
+                            <a href="https://github.com/seiyaie" aria-label="githubを別タブで開く"><img src="../img/icons/sns/github-white.svg" width="60" height="60" alt="" decoding="async" class="js-theme-github" /></a>
+                        </li>
+                        <li class="c-hamburger-menu-item c-hamburger-menu-item--sns js-hamburger-menu-item">
+                            <a href="https://x.com/seiya_web" aria-label="xを別タブで開く"><img src="../img/icons/sns/x-white.svg" width="60" height="60" alt="" decoding="async" class="js-theme-x" /></a>
+                        </li>
+                    </ul>
+                </div>
+            </dialog>
+            <!-- the end of hamburger menu -->
 
-        <!-- text slider -->
-        <div class="l-page">
-            <div class="c-text-slider">
-                <div class="c-keyword-slider--splide js-keyword-carousel-works splide">
-                    <div class="splide__track c-keyword-slider--track">
-                        <ul class="splide__list c-text-slider-list">
-                            <li class="splide__slide c-text-slider-item">photographer</li>
-                            <li class="splide__slide c-text-slider-item">photographer</li>
-                            <li class="splide__slide c-text-slider-item">photographer</li>
-                            <li class="splide__slide c-text-slider-item">photographer</li>
-                            <li class="splide__slide c-text-slider-item">photographer</li>
-                            <li class="splide__slide c-text-slider-item">photographer</li>
-                            <li class="splide__slide c-text-slider-item">photographer</li>
-                            <li class="splide__slide c-text-slider-item">photographer</li>
-                            <li class="splide__slide c-text-slider-item">photographer</li>
-                        </ul>
+            <!-- text slider -->
+            <div class="l-page">
+                <div class="c-text-slider">
+                    <div class="c-keyword-slider--splide js-keyword-carousel-works splide">
+                        <div class="splide__track c-keyword-slider--track">
+                            <ul class="splide__list c-text-slider-list">
+                                <li class="splide__slide c-text-slider-item">photographer</li>
+                                <li class="splide__slide c-text-slider-item">photographer</li>
+                                <li class="splide__slide c-text-slider-item">photographer</li>
+                                <li class="splide__slide c-text-slider-item">photographer</li>
+                                <li class="splide__slide c-text-slider-item">photographer</li>
+                                <li class="splide__slide c-text-slider-item">photographer</li>
+                                <li class="splide__slide c-text-slider-item">photographer</li>
+                                <li class="splide__slide c-text-slider-item">photographer</li>
+                                <li class="splide__slide c-text-slider-item">photographer</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- the end of text slider -->
+            <!-- the end of text slider -->
 
-        <!-- works -->
-        <main class="works-detail u-ptb">
-            <div class="l-container">
-                <!-- breadcrumb -->
-                <nav class="c-breadcrumb" aria-label="パンくずリスト">
-                    <ol class="c-breadcrumb-list">
-                        <li class="c-breadcrumb-item"><a href="../index.html">home</a></li>
-                        <li class="c-breadcrumb-item"><a href="index.html">works</a></li>
-                        <li class="c-breadcrumb-item c-breadcrumb-item--current" aria-current="page">photographer</li>
-                    </ol>
-                </nav>
-                <!-- the end of breadcrumb -->
+            <!-- works -->
+            <main class="works-detail u-ptb">
+                <div class="l-container">
+                    <!-- breadcrumb -->
+                    <nav class="c-breadcrumb" aria-label="パンくずリスト">
+                        <ol class="c-breadcrumb-list">
+                            <li class="c-breadcrumb-item"><a href="../index.html">home</a></li>
+                            <li class="c-breadcrumb-item"><a href="index.html">works</a></li>
+                            <li class="c-breadcrumb-item c-breadcrumb-item--current" aria-current="page">photographer</li>
+                        </ol>
+                    </nav>
+                    <!-- the end of breadcrumb -->
 
-                <p class="c-page-label">制作物詳細</p>
+                    <p class="c-page-label">制作物詳細</p>
 
-                <div class="works-detail-title-wrapper">
-                    <h1 class="c-project-title js-split">photographer</h1>
-                </div>
+                    <div class="works-detail-title-wrapper">
+                        <h1 class="c-project-title js-split">photographer</h1>
+                    </div>
 
-                <!-- hero section -->
-                <div class="works-detail-hero">
-                    <img src="../img/common/16-9/small/photographer.jpg" srcset="../img/common/16-9/small/photographer.jpg 308w, ../img/common/16-9/large/photographer.jpg 1120w" sizes="(min-width: 768px) 1120px, 308px" width="2240" height="1260" alt="" decoding="async" />
-                </div>
-                <!-- the end of hero section -->
+                    <!-- hero section -->
+                    <div class="works-detail-hero">
+                        <img src="../img/common/16-9/small/photographer.jpg" srcset="../img/common/16-9/small/photographer.jpg 308w, ../img/common/16-9/large/photographer.jpg 1120w" sizes="(min-width: 768px) 1120px, 308px" width="2240" height="1260" alt="" decoding="async" />
+                    </div>
+                    <!-- the end of hero section -->
 
-                <!-- works detail button -->
-                <div class="works-detail-button works-detail-button--url">
-                    <a href="https://portfolio.itsseiya.com/photographer/" class="c-button c-button--md" target="_blank" rel="noopener noreferrer" aria-label="photographerを別タブで開く">WEBサイトを見る</a>
-                </div>
+                    <!-- works detail button -->
+                    <div class="works-detail-button works-detail-button--url">
+                        <a href="https://portfolio.itsseiya.com/photographer/" class="c-button c-button--md" target="_blank" rel="noopener noreferrer" aria-label="photographerを別タブで開く">WEBサイトを見る</a>
+                    </div>
 
-                <!-- 作品基本情報 -->
-                <div class="works-detail-basic">
-                    <dl class="works-detail-info">
-                        <div class="works-detail-info-column">
-                            <dt class="works-detail-info-title">作品名</dt>
-                            <dd class="works-detail-info-text">photographer</dd>
-                        </div>
-                        <div class="works-detail-info-column">
-                            <dt class="works-detail-info-title">制作月</dt>
-                            <dd class="works-detail-info-text">2025.12</dd>
-                        </div>
-                        <div class="works-detail-info-column">
-                            <dt class="works-detail-info-title">制作期間</dt>
-                            <dd class="works-detail-info-text">2ヶ月</dd>
-                        </div>
-                    </dl>
-                </div>
+                    <!-- 作品基本情報 -->
+                    <div class="works-detail-basic">
+                        <dl class="works-detail-info">
+                            <div class="works-detail-info-column">
+                                <dt class="works-detail-info-title">作品名</dt>
+                                <dd class="works-detail-info-text">photographer</dd>
+                            </div>
+                            <div class="works-detail-info-column">
+                                <dt class="works-detail-info-title">制作月</dt>
+                                <dd class="works-detail-info-text">2025.12</dd>
+                            </div>
+                            <div class="works-detail-info-column">
+                                <dt class="works-detail-info-title">制作期間</dt>
+                                <dd class="works-detail-info-text">2ヶ月</dd>
+                            </div>
+                        </dl>
+                    </div>
 
-                <!-- 作品概要 -->
-                <section class="works-detail-section">
-                    <h2 class="works-detail-section-title">概要</h2>
-                    <p class="works-detail-section-text">本作品は<a href="https://hellomentor.jp/" class="works-detail-link" target="_blank" rel="noopener noreferrer" aria-label="Hello Mentorを別タブで開く">Hello Mentor</a>というオンラインスクールの課題として制作した、架空フォトグラファーのポートフォリオサイトです。</p>
-                    <p class="works-detail-section-text">デザインカンプをもとにコーディングを行いました。HTML / CSSの実装は比較的スムーズに進みましたが、 JavaScriptによる実装に多くの時間を要した作品です。</p>
-                </section>
+                    <!-- 作品概要 -->
+                    <section class="works-detail-section">
+                        <h2 class="works-detail-section-title">概要</h2>
+                        <p class="works-detail-section-text">本作品は<a href="https://hellomentor.jp/" class="works-detail-link" target="_blank" rel="noopener noreferrer" aria-label="Hello Mentorを別タブで開く">Hello Mentor</a>というオンラインスクールの課題として制作した、架空フォトグラファーのポートフォリオサイトです。</p>
+                        <p class="works-detail-section-text">デザインカンプをもとにコーディングを行いました。HTML / CSSの実装は比較的スムーズに進みましたが、 JavaScriptによる実装に多くの時間を要した作品です。</p>
+                    </section>
 
-                <!-- 担当範囲 -->
-                <section class="works-detail-section">
-                    <h2 class="works-detail-section-title">担当範囲</h2>
-                    <p class="works-detail-section-text">デザインカンプをもとに、HTML/CSSコーディング、JavaScriptによるインタラクション設計・実装を担当しました。</p>
-                </section>
+                    <!-- 担当範囲 -->
+                    <section class="works-detail-section">
+                        <h2 class="works-detail-section-title">担当範囲</h2>
+                        <p class="works-detail-section-text">デザインカンプをもとに、HTML/CSSコーディング、JavaScriptによるインタラクション設計・実装を担当しました。</p>
+                    </section>
 
-                <!-- 制作目的 -->
-                <section class="works-detail-section">
-                    <h2 class="works-detail-section-title">制作目的</h2>
-                    <p class="works-detail-section-text">本課題では、デザインカンプの再現に加えて、ユーザー体験を高めるためのインタラクションを自ら設計・実装することを目的に制作しました。 課題要件に含まれていないJavaScript実装にも挑戦し、実務に近い思考でのコーディングを意識しています。</p>
-                </section>
+                    <!-- 制作目的 -->
+                    <section class="works-detail-section">
+                        <h2 class="works-detail-section-title">制作目的</h2>
+                        <p class="works-detail-section-text">本課題では、デザインカンプの再現に加えて、ユーザー体験を高めるためのインタラクションを自ら設計・実装することを目的に制作しました。 課題要件に含まれていないJavaScript実装にも挑戦し、実務に近い思考でのコーディングを意識しています。</p>
+                    </section>
 
-                <!-- 工夫した点 -->
-                <section class="works-detail-section">
-                    <h2 class="works-detail-section-title">工夫した点</h2>
-                    <ul class="works-detail-points">
-                        <li class="works-detail-point">
-                            <h3 class="works-detail-point-title">ライブラリ選定からの方針転換</h3>
-                            <p class="works-detail-point-text">当初はカルーセルにSplide、ライトボックスにGLightboxを使用する予定でしたが、 両者を連携させたUI構成が難しく、最終的にバニラJavaScriptでの実装へ方針転換しました。</p>
-                        </li>
-                        <li class="works-detail-point">
-                            <h3 class="works-detail-point-title">サムネイル連動ギャラリーの実装</h3>
-                            <p class="works-detail-point-text">Worksセクションでは、矢印ボタンでの画像切り替えに加え、 下部のサムネイルクリックでも表示が切り替わるギャラリーを実装しました。</p>
-                        </li>
-                        <li class="works-detail-point">
-                            <h3 class="works-detail-point-title">ライトボックスとの同期</h3>
-                            <p class="works-detail-point-text">選択中の画像からライトボックスを展開し、 ライトボックス内でも矢印・キーボード・スワイプ操作で画像切り替えができるようにしています。</p>
-                        </li>
-                        <li class="works-detail-point">
-                            <h3 class="works-detail-point-title">スマホファースト</h3>
-                            <p class="works-detail-point-text">スマートフォンではクリック可能な要素が分かりにくいと考え、 拡大表示できる画像には虫眼鏡アイコンを追加し、直感的に操作できるよう工夫しました。</p>
-                        </li>
-                        <li class="works-detail-point">
-                            <h3 class="works-detail-point-title">JavaScriptのモジュール分割</h3>
-                            <p class="works-detail-point-text">実装規模が大きくなったため、ES Modulesを用いて機能ごとにファイルを分割し、 可読性と保守性を意識した構成にしています。</p>
-                        </li>
-                    </ul>
-                </section>
-
-                <!-- 学び -->
-                <section class="works-detail-section">
-                    <h2 class="works-detail-section-title">学び</h2>
-                    <p class="works-detail-section-text">課題要件にない機能を実装したことで、ライブラリ選定や実装方針の判断力が身につきました。 また、複雑なUIをバニラJavaScriptで実装する中で、状態管理や処理の分離の重要性を強く実感しました。</p>
-                    <p class="works-detail-section-text">JavaScriptが大規模になるにつれて、ファイル構成や命名の整理が不可欠であることを学び、 以降の制作では設計を意識した実装を行うようになりました。</p>
-                </section>
-
-                <!-- 使用言語 / 使用ツール -->
-                <section class="works-detail-section">
-                    <h2 class="works-detail-section-title">使用言語 / 使用ツール</h2>
-                    <ul class="works-detail-tech-list">
-                        <li class="works-detail-tech-item">HTML</li>
-                        <li class="works-detail-tech-item">CSS</li>
-                        <li class="works-detail-tech-item">SCSS</li>
-                        <li class="works-detail-tech-item">Web Animations API</li>
-                        <li class="works-detail-tech-item">Cursor</li>
-                        <li class="works-detail-tech-item">Figma</li>
-                    </ul>
-                </section>
-
-                <!-- works detail button -->
-                <div class="works-detail-button works-detail-button--back">
-                    <a href="index.html" class="c-button c-button--md">制作物一覧に戻る</a>
-                </div>
-            </div>
-        </main>
-        <!-- the end of work detail -->
-
-        <!-- pagination -->
-        <div class="works-detail-pagination l-container u-pb">
-            <div class="c-pagination">
-                <nav class="c-pagination-nav js-pagination-nav" aria-label="ページネーション">
-                    <!-- prev button -->
-                    <a href="" class="c-pagination-button c-pagination-button--prev js-pagination-button--prev">
-                        <span class="c-pagination-label">
-                            <span class="c-pagination-icon c-pagination-icon--prev"></span>
-                            <span class="c-pagination-text">prev</span>
-                        </span>
-                        <span class="c-pagination-meta c-pagination-meta--prev js-pagination-prev-title" aria-hidden="true"></span>
-                    </a>
-
-                    <!-- ページネーションリスト -->
-                    <ol class="c-pagination-list js-pagination-list" aria-busy="true"></ol>
-
-                    <!-- next button -->
-                    <a href="" class="c-pagination-button c-pagination-button--next js-pagination-button--next">
-                        <span class="c-pagination-label">
-                            <span class="c-pagination-text">next</span>
-                            <span class="c-pagination-icon c-pagination-icon--next"></span>
-                        </span>
-                        <span class="c-pagination-meta c-pagination-meta--next js-pagination-next-title" aria-hidden="true"></span>
-                    </a>
-                </nav>
-            </div>
-        </div>
-        <!-- the end of pagination -->
-
-        <!-- text slider -->
-        <div class="l-divider l-divider--top">
-            <div class="c-text-slider">
-                <div class="c-keyword-slider--splide js-keyword-carousel-works-bottom splide">
-                    <div class="splide__track c-keyword-slider--track">
-                        <ul class="splide__list c-text-slider-list">
-                            <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
-                            <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
-                            <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
-                            <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
-                            <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
-                            <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
-                            <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
-                            <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
-                            <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                    <!-- 工夫した点 -->
+                    <section class="works-detail-section">
+                        <h2 class="works-detail-section-title">工夫した点</h2>
+                        <ul class="works-detail-points">
+                            <li class="works-detail-point">
+                                <h3 class="works-detail-point-title">ライブラリ選定からの方針転換</h3>
+                                <p class="works-detail-point-text">当初はカルーセルにSplide、ライトボックスにGLightboxを使用する予定でしたが、 両者を連携させたUI構成が難しく、最終的にバニラJavaScriptでの実装へ方針転換しました。</p>
+                            </li>
+                            <li class="works-detail-point">
+                                <h3 class="works-detail-point-title">サムネイル連動ギャラリーの実装</h3>
+                                <p class="works-detail-point-text">Worksセクションでは、矢印ボタンでの画像切り替えに加え、 下部のサムネイルクリックでも表示が切り替わるギャラリーを実装しました。</p>
+                            </li>
+                            <li class="works-detail-point">
+                                <h3 class="works-detail-point-title">ライトボックスとの同期</h3>
+                                <p class="works-detail-point-text">選択中の画像からライトボックスを展開し、 ライトボックス内でも矢印・キーボード・スワイプ操作で画像切り替えができるようにしています。</p>
+                            </li>
+                            <li class="works-detail-point">
+                                <h3 class="works-detail-point-title">スマホファースト</h3>
+                                <p class="works-detail-point-text">スマートフォンではクリック可能な要素が分かりにくいと考え、 拡大表示できる画像には虫眼鏡アイコンを追加し、直感的に操作できるよう工夫しました。</p>
+                            </li>
+                            <li class="works-detail-point">
+                                <h3 class="works-detail-point-title">JavaScriptのモジュール分割</h3>
+                                <p class="works-detail-point-text">実装規模が大きくなったため、ES Modulesを用いて機能ごとにファイルを分割し、 可読性と保守性を意識した構成にしています。</p>
+                            </li>
                         </ul>
+                    </section>
+
+                    <!-- 学び -->
+                    <section class="works-detail-section">
+                        <h2 class="works-detail-section-title">学び</h2>
+                        <p class="works-detail-section-text">課題要件にない機能を実装したことで、ライブラリ選定や実装方針の判断力が身につきました。 また、複雑なUIをバニラJavaScriptで実装する中で、状態管理や処理の分離の重要性を強く実感しました。</p>
+                        <p class="works-detail-section-text">JavaScriptが大規模になるにつれて、ファイル構成や命名の整理が不可欠であることを学び、 以降の制作では設計を意識した実装を行うようになりました。</p>
+                    </section>
+
+                    <!-- 使用言語 / 使用ツール -->
+                    <section class="works-detail-section">
+                        <h2 class="works-detail-section-title">使用言語 / 使用ツール</h2>
+                        <ul class="works-detail-tech-list">
+                            <li class="works-detail-tech-item">HTML</li>
+                            <li class="works-detail-tech-item">CSS</li>
+                            <li class="works-detail-tech-item">SCSS</li>
+                            <li class="works-detail-tech-item">Web Animations API</li>
+                            <li class="works-detail-tech-item">Cursor</li>
+                            <li class="works-detail-tech-item">Figma</li>
+                        </ul>
+                    </section>
+
+                    <!-- works detail button -->
+                    <div class="works-detail-button works-detail-button--back">
+                        <a href="index.html" class="c-button c-button--md">制作物一覧に戻る</a>
+                    </div>
+                </div>
+            </main>
+            <!-- the end of work detail -->
+
+            <!-- pagination -->
+            <div class="works-detail-pagination l-container u-pb">
+                <div class="c-pagination">
+                    <nav class="c-pagination-nav js-pagination-nav" aria-label="ページネーション">
+                        <!-- prev button -->
+                        <a href="" class="c-pagination-button c-pagination-button--prev js-pagination-button--prev">
+                            <span class="c-pagination-label">
+                                <span class="c-pagination-icon c-pagination-icon--prev"></span>
+                                <span class="c-pagination-text">prev</span>
+                            </span>
+                            <span class="c-pagination-meta c-pagination-meta--prev js-pagination-prev-title" aria-hidden="true"></span>
+                        </a>
+
+                        <!-- ページネーションリスト -->
+                        <ol class="c-pagination-list js-pagination-list" aria-busy="true"></ol>
+
+                        <!-- next button -->
+                        <a href="" class="c-pagination-button c-pagination-button--next js-pagination-button--next">
+                            <span class="c-pagination-label">
+                                <span class="c-pagination-text">next</span>
+                                <span class="c-pagination-icon c-pagination-icon--next"></span>
+                            </span>
+                            <span class="c-pagination-meta c-pagination-meta--next js-pagination-next-title" aria-hidden="true"></span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+            <!-- the end of pagination -->
+
+            <!-- text slider -->
+            <div class="l-divider l-divider--top">
+                <div class="c-text-slider">
+                    <div class="c-keyword-slider--splide js-keyword-carousel-works-bottom splide">
+                        <div class="splide__track c-keyword-slider--track">
+                            <ul class="splide__list c-text-slider-list">
+                                <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                                <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                                <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                                <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                                <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                                <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                                <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                                <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                                <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- the end of text slider -->
+            <!-- the end of text slider -->
 
-        <!-- footer -->
-        <footer class="footer">
-            <div class="footer-inner">
-                <small class="footer-copyright"><span>©seiya</span><span>imoto's</span><span>portfolio</span></small>
-                <ul class="footer-sns-list">
-                    <li class="footer-sns-item">
-                        <a href="https://github.com/seiyaie" aria-label="githubを別タブで開く">
-                            <img src="../img/icons/sns/github-white.svg" width="60" height="60" alt="" decoding="async" class="js-theme-github" />
-                        </a>
-                    </li>
-                    <li class="footer-sns-item">
-                        <a href="https://x.com/seiya_web" aria-label="xを別タブで開く">
-                            <img src="../img/icons/sns/x-white.svg" width="60" height="60" alt="" decoding="async" class="js-theme-x" />
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </footer>
-        <!-- the end of footer -->
+            <!-- footer -->
+            <footer class="footer">
+                <div class="footer-inner">
+                    <small class="footer-copyright"><span>©seiya</span><span>imoto's</span><span>portfolio</span></small>
+                    <ul class="footer-sns-list">
+                        <li class="footer-sns-item">
+                            <a href="https://github.com/seiyaie" aria-label="githubを別タブで開く">
+                                <img src="../img/icons/sns/github-white.svg" width="60" height="60" alt="" decoding="async" class="js-theme-github" />
+                            </a>
+                        </li>
+                        <li class="footer-sns-item">
+                            <a href="https://x.com/seiya_web" aria-label="xを別タブで開く">
+                                <img src="../img/icons/sns/x-white.svg" width="60" height="60" alt="" decoding="async" class="js-theme-x" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+            <!-- the end of footer -->
+        </div>
     </body>
 </html>

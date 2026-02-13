@@ -28,3 +28,13 @@ body {
 *::after {
     transition: border-color var(--theme-duration) var(--theme-ease), background-color var(--theme-duration) var(--theme-ease), color var(--theme-duration) var(--theme-ease), fill var(--theme-duration) var(--theme-ease), stroke var(--theme-duration) var(--theme-ease), box-shadow var(--theme-duration) var(--theme-ease);
 }
+
+.js-page {
+    opacity: 1;
+    visibility: visible;
+}
+
+.is-js .js-page {
+    opacity: 0;
+    visibility: hidden;
+}

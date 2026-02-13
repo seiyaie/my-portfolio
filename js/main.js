@@ -1,4 +1,7 @@
 // main.js
+
+
+import { initPageTransition } from "./component/page-transition.js";
 import { initThemeSwitch } from "./component/theme-switch.js";
 import { textSlider } from "./component/splide.js";
 import { initSliderListToggle } from "./component/slider-list-toggle.js";
@@ -11,6 +14,7 @@ import { initSmoothScroll } from "./component/smooth-scroll.js";
 
 const currentPage = Number(document.documentElement.dataset.page || 1);
 
+initPageTransition();
 initThemeSwitch();
 textSlider();
 initSliderListToggle();

@@ -7,6 +7,11 @@
         <meta name="description" content="ページの説明" />
         <meta name="format-detection" content="telephone=no" />
 
+        <!-- js実行可能確認 -->
+        <script>
+            document.documentElement.classList.add("is-js");
+        </script>
+
         <!-- CSS読み込み前にdata-themeを確定（FOUC対策） -->
         <script>
             (function () {
@@ -54,361 +59,363 @@
     </head>
 
     <body>
-        <!-- header -->
-        <header class="header">
-            <div class="header-logo-wrapper">
-                <a href="../index.html" class="header-logo" aria-label="topページに戻る">
-                    <img src="../img/logo/logo-white.svg" width="25" height="100" alt="" class="js-theme-logo" />
-                </a>
-            </div>
-            <nav class="header-nav" aria-label="グローバルナビゲーション">
-                <ul class="header-nav-list">
-                    <li class="header-nav-item header-nav-item--pc">
-                        <a href="../index.html#about" class="header-nav-link u-text-hover">about</a>
-                    </li>
-                    <li class="header-nav-item header-nav-item--pc">
-                        <a href="index.html" class="header-nav-link u-text-hover">works</a>
-                    </li>
-                    <li class="header-nav-item header-nav-item--pc">
-                        <a href="../index.html#vision" class="header-nav-link u-text-hover">vision</a>
-                    </li>
-                    <li class="header-nav-item header-nav-item--pc">
-                        <a href="../index.html#skills" class="header-nav-link u-text-hover">skills</a>
-                    </li>
-                    <li class="header-nav-item header-nav-item--pc">
-                        <a href="../index.html#contact" class="header-nav-link u-text-hover">contact</a>
-                    </li>
-                    <li class="header-nav-item header-nav-item--pc">
-                        <button class="header-theme-button js-theme-button" aria-label="ライトモードに切り替え">
-                            <img src="../img/icons/system/light-mode.svg" width="60" height="60" alt="" class="js-theme-icon" />
-                        </button>
-                    </li>
-                    <li class="header-nav-item header-nav-item--sp c-hamburger-button">
-                        <button class="c-hamburger-open-button js-hamburger-open-button" aria-label="ハンバーガーメニューを開く">
-                            <span class="c-hamburger-open-button--stroke"></span>
-                            <span class="c-hamburger-open-button--stroke"></span>
-                            <span class="c-hamburger-open-button--text">MENU</span>
-                        </button>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <!-- the end of header -->
+        <div class="js-page">
+            <!-- header -->
+            <header class="header">
+                <div class="header-logo-wrapper">
+                    <a href="../index.html" class="header-logo" aria-label="topページに戻る">
+                        <img src="../img/logo/logo-white.svg" width="25" height="100" alt="" class="js-theme-logo" />
+                    </a>
+                </div>
+                <nav class="header-nav" aria-label="グローバルナビゲーション">
+                    <ul class="header-nav-list">
+                        <li class="header-nav-item header-nav-item--pc">
+                            <a href="../index.html#about" class="header-nav-link u-text-hover">about</a>
+                        </li>
+                        <li class="header-nav-item header-nav-item--pc">
+                            <a href="index.html" class="header-nav-link u-text-hover">works</a>
+                        </li>
+                        <li class="header-nav-item header-nav-item--pc">
+                            <a href="../index.html#vision" class="header-nav-link u-text-hover">vision</a>
+                        </li>
+                        <li class="header-nav-item header-nav-item--pc">
+                            <a href="../index.html#skills" class="header-nav-link u-text-hover">skills</a>
+                        </li>
+                        <li class="header-nav-item header-nav-item--pc">
+                            <a href="../index.html#contact" class="header-nav-link u-text-hover">contact</a>
+                        </li>
+                        <li class="header-nav-item header-nav-item--pc">
+                            <button class="header-theme-button js-theme-button" aria-label="ライトモードに切り替え">
+                                <img src="../img/icons/system/light-mode.svg" width="60" height="60" alt="" class="js-theme-icon" />
+                            </button>
+                        </li>
+                        <li class="header-nav-item header-nav-item--sp c-hamburger-button">
+                            <button class="c-hamburger-open-button js-hamburger-open-button" aria-label="ハンバーガーメニューを開く">
+                                <span class="c-hamburger-open-button--stroke"></span>
+                                <span class="c-hamburger-open-button--stroke"></span>
+                                <span class="c-hamburger-open-button--text">MENU</span>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <!-- the end of header -->
 
-        <!-- hamburger menu -->
-        <dialog class="c-hamburger-menu js-hamburger-menu" aria-label="ハンバーガーメニュー">
-            <div class="c-hamburger-header">
-                <button class="c-hamburger-close-button js-hamburger-close-button" aria-label="ハンバーガーメニューを閉じる">
-                    <span class="c-hamburger-close-button--stroke"></span>
-                    <span class="c-hamburger-close-button--stroke"></span>
-                    <span class="c-hamburger-close-button--text">CLOSE</span>
-                </button>
-            </div>
-            <div class="c-hamburger-menu-inner">
-                <ul class="c-hamburger-menu-list js-hamburger-menu-list">
-                    <li class="c-hamburger-menu-item">
-                        <button class="js-theme-button" aria-label="ライトモードに切り替え"><img src="../img/icons/system/light-mode.svg" width="60" height="60" alt="" decoding="async" class="js-theme-icon" /></button>
-                    </li>
-                    <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
-                        <a href="../index.html" class="u-text-hover">home</a>
-                    </li>
-                    <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
-                        <a href="../index.html#about" class="u-text-hover">about</a>
-                    </li>
-                    <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
-                        <a href="index.html" class="u-text-hover">works</a>
-                    </li>
-                    <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
-                        <a href="../index.html#vision" class="u-text-hover">vision</a>
-                    </li>
-                    <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
-                        <a href="../index.html#skills" class="u-text-hover">skills</a>
-                    </li>
-                    <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
-                        <a href="../index.html#contact" class="u-text-hover">contact</a>
-                    </li>
-                </ul>
+            <!-- hamburger menu -->
+            <dialog class="c-hamburger-menu js-hamburger-menu" aria-label="ハンバーガーメニュー">
+                <div class="c-hamburger-header">
+                    <button class="c-hamburger-close-button js-hamburger-close-button" aria-label="ハンバーガーメニューを閉じる">
+                        <span class="c-hamburger-close-button--stroke"></span>
+                        <span class="c-hamburger-close-button--stroke"></span>
+                        <span class="c-hamburger-close-button--text">CLOSE</span>
+                    </button>
+                </div>
+                <div class="c-hamburger-menu-inner">
+                    <ul class="c-hamburger-menu-list js-hamburger-menu-list">
+                        <li class="c-hamburger-menu-item">
+                            <button class="js-theme-button" aria-label="ライトモードに切り替え"><img src="../img/icons/system/light-mode.svg" width="60" height="60" alt="" decoding="async" class="js-theme-icon" /></button>
+                        </li>
+                        <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
+                            <a href="../index.html" class="u-text-hover">home</a>
+                        </li>
+                        <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
+                            <a href="../index.html#about" class="u-text-hover">about</a>
+                        </li>
+                        <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
+                            <a href="index.html" class="u-text-hover">works</a>
+                        </li>
+                        <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
+                            <a href="../index.html#vision" class="u-text-hover">vision</a>
+                        </li>
+                        <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
+                            <a href="../index.html#skills" class="u-text-hover">skills</a>
+                        </li>
+                        <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
+                            <a href="../index.html#contact" class="u-text-hover">contact</a>
+                        </li>
+                    </ul>
 
-                <ul class="c-hamburger-menu-list c-hamburger-menu-list--sns js-hamburger-menu-list">
-                    <li class="c-hamburger-menu-item c-hamburger-menu-item--sns js-hamburger-menu-item">
-                        <a href="https://github.com/seiyaie" aria-label="githubを別タブで開く"><img src="../img/icons/sns/github-white.svg" width="60" height="60" alt="" decoding="async" class="js-theme-github" /></a>
-                    </li>
-                    <li class="c-hamburger-menu-item c-hamburger-menu-item--sns js-hamburger-menu-item">
-                        <a href="https://x.com/seiya_web" aria-label="xを別タブで開く"><img src="../img/icons/sns/x-white.svg" width="60" height="60" alt="" decoding="async" class="js-theme-x" /></a>
-                    </li>
-                </ul>
-            </div>
-        </dialog>
-        <!-- the end of hamburger menu -->
+                    <ul class="c-hamburger-menu-list c-hamburger-menu-list--sns js-hamburger-menu-list">
+                        <li class="c-hamburger-menu-item c-hamburger-menu-item--sns js-hamburger-menu-item">
+                            <a href="https://github.com/seiyaie" aria-label="githubを別タブで開く"><img src="../img/icons/sns/github-white.svg" width="60" height="60" alt="" decoding="async" class="js-theme-github" /></a>
+                        </li>
+                        <li class="c-hamburger-menu-item c-hamburger-menu-item--sns js-hamburger-menu-item">
+                            <a href="https://x.com/seiya_web" aria-label="xを別タブで開く"><img src="../img/icons/sns/x-white.svg" width="60" height="60" alt="" decoding="async" class="js-theme-x" /></a>
+                        </li>
+                    </ul>
+                </div>
+            </dialog>
+            <!-- the end of hamburger menu -->
 
-        <!-- text slider -->
-        <div class="l-page">
+            <!-- text slider -->
+            <div class="l-page">
+                <div class="c-text-slider">
+                    <div class="c-keyword-slider--splide js-keyword-carousel-works splide">
+                        <div class="splide__track c-keyword-slider--track">
+                            <ul class="splide__list c-text-slider-list">
+                                <li class="splide__slide c-text-slider-item">works</li>
+                                <li class="splide__slide c-text-slider-item">works</li>
+                                <li class="splide__slide c-text-slider-item">works</li>
+                                <li class="splide__slide c-text-slider-item">works</li>
+                                <li class="splide__slide c-text-slider-item">works</li>
+                                <li class="splide__slide c-text-slider-item">works</li>
+                                <li class="splide__slide c-text-slider-item">works</li>
+                                <li class="splide__slide c-text-slider-item">works</li>
+                                <li class="splide__slide c-text-slider-item">works</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- the end of text slider -->
+
+            <!-- works -->
+            <main class="works u-ptb">
+                <div class="l-container">
+                    <!-- breadcrumb -->
+                    <nav class="c-breadcrumb" aria-label="パンくずリスト">
+                        <ol class="c-breadcrumb-list">
+                            <li class="c-breadcrumb-item"><a href="../index.html">home</a></li>
+                            <li class="c-breadcrumb-item c-breadcrumb-item--current" aria-current="page">works</li>
+                        </ol>
+                    </nav>
+                    <!-- the end of breadcrumb -->
+
+                    <h1 class="c-page-label">制作物一覧</h1>
+
+                    <!-- personal projects -->
+                    <section class="works-list works-list--personal u-ptb">
+                        <h2 class="c-project-title js-split">personal projects</h2>
+                        <div class="works-list-inner">
+                            <!-- travel gallery -->
+                            <article class="works-item">
+                                <a href="travel-gallery.html" class="works-item-link" aria-label="travel galleryの詳細を見る">
+                                    <div class="works-item-thumbnail">
+                                        <img src="../img/common/16-9/small/travel-gallery.jpg" srcset="../img/common/16-9/small/travel-gallery.jpg 308w, ../img/common/16-9/large/travel-gallery.jpg 1120w" sizes="(min-width: 768px) 1120px, 308px" width="2240" height="1260" alt="" decoding="async" />
+                                    </div>
+                                    <div class="works-item-info">
+                                        <h3 class="works-item-title">travel gallery</h3>
+                                        <div class="works-item-meta">
+                                            <time datetime="2025-10" class="works-item-date">2025.10</time>
+                                            <ul class="works-item-categories">
+                                                <li class="works-item-category">自主制作</li>
+                                                <li class="works-item-category">コーディング</li>
+                                                <li class="works-item-category">デザイン</li>
+                                            </ul>
+                                            <div class="works-item-button">
+                                                <span class="c-button c-button--md">詳細を見る</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+                            <!-- leaf design lab -->
+                            <article class="works-item is-reverse">
+                                <a href="leaf-design-lab.html" class="works-item-link" aria-label="leaf design labの詳細を見る">
+                                    <div class="works-item-thumbnail">
+                                        <img src="../img/common/16-9/small/leaf-design-lab.jpg" srcset="../img/common/16-9/small/leaf-design-lab.jpg 308w, ../img/common/16-9/large/leaf-design-lab.jpg 1120w" sizes="(min-width: 768px) 1120px, 308px" width="2240" height="1260" alt="" decoding="async" />
+                                    </div>
+                                    <div class="works-item-info">
+                                        <h3 class="works-item-title">leaf design lab</h3>
+                                        <div class="works-item-meta">
+                                            <time datetime="2025-07" class="works-item-date">2025.07</time>
+                                            <ul class="works-item-categories">
+                                                <li class="works-item-category">自主制作</li>
+                                                <li class="works-item-category">コーディング</li>
+                                                <li class="works-item-category">デザイン</li>
+                                            </ul>
+                                            <div class="works-item-button">
+                                                <span class="c-button c-button--md">詳細を見る</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+                            <!-- my portfolio -->
+                            <article class="works-item">
+                                <a href="my-portfolio.html" class="works-item-link" aria-label="my portfolioの詳細を見る">
+                                    <div class="works-item-thumbnail">
+                                        <img src="../img/common/16-9/small/my-portfolio.jpg" srcset="../img/common/16-9/small/my-portfolio.jpg 308w, ../img/common/16-9/large/my-portfolio.jpg 1120w" sizes="(min-width: 768px) 1120px, 308px" width="2240" height="1260" alt="" decoding="async" />
+                                    </div>
+                                    <div class="works-item-info">
+                                        <h3 class="works-item-title">my portfolio</h3>
+                                        <div class="works-item-meta">
+                                            <time datetime="2025-12" class="works-item-date">2025.12</time>
+                                            <ul class="works-item-categories">
+                                                <li class="works-item-category">自主制作</li>
+                                                <li class="works-item-category">コーディング</li>
+                                                <li class="works-item-category">デザイン</li>
+                                            </ul>
+                                            <div class="works-item-button">
+                                                <span class="c-button c-button--md">詳細を見る</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                    </section>
+
+                    <!-- school project -->
+                    <section class="works-list works-list--school u-ptb">
+                        <h2 class="c-project-title js-split">school projects</h2>
+                        <div class="works-list-inner">
+                            <!-- photographer -->
+                            <article class="works-item is-reverse">
+                                <a href="photographer.html" class="works-item-link" aria-label="photographerの詳細を見る">
+                                    <div class="works-item-thumbnail">
+                                        <img src="../img/common/16-9/small/photographer.jpg" srcset="../img/common/16-9/small/photographer.jpg 308w, ../img/common/16-9/large/photographer.jpg 1120w" sizes="(min-width: 768px) 1120px, 308px" width="2240" height="1260" alt="" decoding="async" />
+                                    </div>
+                                    <div class="works-item-info">
+                                        <h3 class="works-item-title">photographer</h3>
+                                        <div class="works-item-meta">
+                                            <time datetime="2025-05" class="works-item-date">2025.05</time>
+                                            <ul class="works-item-categories">
+                                                <li class="works-item-category">Hello Mentor</li>
+                                                <li class="works-item-category">コーディング</li>
+                                            </ul>
+                                            <div class="works-item-button">
+                                                <span class="c-button c-button--md">詳細を見る</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+                            <!-- coco -->
+                            <article class="works-item">
+                                <a href="coco.html" class="works-item-link" aria-label="cocoの詳細を見る">
+                                    <div class="works-item-thumbnail">
+                                        <img src="../img/common/16-9/small/coco.jpg" srcset="../img/common/16-9/small/coco.jpg 308w, ../img/common/16-9/large/coco.jpg 1120w" sizes="(min-width: 768px) 1120px, 308px" width="2240" height="1260" alt="" decoding="async" />
+                                    </div>
+                                    <div class="works-item-info">
+                                        <h3 class="works-item-title">coco</h3>
+                                        <div class="works-item-meta">
+                                            <time datetime="2025-03" class="works-item-date">2025.03</time>
+                                            <ul class="works-item-categories">
+                                                <li class="works-item-category">Hello Mentor</li>
+                                                <li class="works-item-category">コーディング</li>
+                                            </ul>
+                                            <div class="works-item-button">
+                                                <span class="c-button c-button--md">詳細を見る</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+                            <!-- matsuyama clinic -->
+                            <article class="works-item is-reverse">
+                                <a href="matsuyama-clinic.html" class="works-item-link" aria-label="matsuyama clinicの詳細を見る">
+                                    <div class="works-item-thumbnail">
+                                        <img src="../img/common/16-9/small/matsuyama-clinic.jpg" srcset="../img/common/16-9/small/matsuyama-clinic.jpg 308w, ../img/common/16-9/large/matsuyama-clinic.jpg 1120w" sizes="(min-width: 768px) 1120px, 308px" width="2240" height="1260" alt="" decoding="async" />
+                                    </div>
+                                    <div class="works-item-info">
+                                        <h3 class="works-item-title">matsuyama clinic</h3>
+                                        <div class="works-item-meta">
+                                            <time datetime="2025-07" class="works-item-date">2025.07</time>
+                                            <ul class="works-item-categories">
+                                                <li class="works-item-category">Hello Mentor</li>
+                                                <li class="works-item-category">コーディング</li>
+                                            </ul>
+                                            <div class="works-item-button">
+                                                <span class="c-button c-button--md">詳細を見る</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+                            <!-- moshashugyo media -->
+                            <article class="works-item">
+                                <a href="moshashugyo-media.html" class="works-item-link" aria-label="moshashugyo mediaの詳細を見る">
+                                    <div class="works-item-thumbnail">
+                                        <img src="../img/common/16-9/small/moshashugyo.jpg" srcset="../img/common/16-9/small/moshashugyo.jpg 308w, ../img/common/16-9/large/moshashugyo.jpg 1120w" sizes="(min-width: 768px) 1120px, 308px" width="2240" height="1260" alt="" decoding="async" />
+                                    </div>
+
+                                    <div class="works-item-info">
+                                        <h3 class="works-item-title">moshashugyo media</h3>
+                                        <div class="works-item-meta">
+                                            <time datetime="2025-04" class="works-item-date">2025.04</time>
+                                            <ul class="works-item-categories">
+                                                <li class="works-item-category">Hello Mentor</li>
+                                                <li class="works-item-category">コーディング</li>
+                                            </ul>
+                                            <div class="works-item-button">
+                                                <span class="c-button c-button--md">詳細を見る</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+                            <!-- migliore -->
+                            <article class="works-item is-reverse">
+                                <a href="migliore.html" class="works-item-link" aria-label="miglioreの詳細を見る">
+                                    <div class="works-item-thumbnail">
+                                        <img src="../img/common/16-9/small/migliore.jpg" srcset="../img/common/16-9/small/migliore.jpg 308w, ../img/common/16-9/large/migliore.jpg 1120w" sizes="(min-width: 768px) 1120px, 308px" width="2240" height="1260" alt="" decoding="async" />
+                                    </div>
+                                    <div class="works-item-info">
+                                        <h3 class="works-item-title">migliore</h3>
+                                        <div class="works-item-meta">
+                                            <time datetime="2025-05" class="works-item-date">2025.05</time>
+                                            <ul class="works-item-categories">
+                                                <li class="works-item-category">Hello Mentor</li>
+                                                <li class="works-item-category">コーディング</li>
+                                            </ul>
+                                            <div class="works-item-button">
+                                                <span class="c-button c-button--md">詳細を見る</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                    </section>
+                </div>
+            </main>
+            <!-- the end of works -->
+
+            <!-- text slider -->
             <div class="c-text-slider">
-                <div class="c-keyword-slider--splide js-keyword-carousel-works splide">
+                <div class="c-keyword-slider--splide js-keyword-carousel-works-bottom splide">
                     <div class="splide__track c-keyword-slider--track">
                         <ul class="splide__list c-text-slider-list">
-                            <li class="splide__slide c-text-slider-item">works</li>
-                            <li class="splide__slide c-text-slider-item">works</li>
-                            <li class="splide__slide c-text-slider-item">works</li>
-                            <li class="splide__slide c-text-slider-item">works</li>
-                            <li class="splide__slide c-text-slider-item">works</li>
-                            <li class="splide__slide c-text-slider-item">works</li>
-                            <li class="splide__slide c-text-slider-item">works</li>
-                            <li class="splide__slide c-text-slider-item">works</li>
-                            <li class="splide__slide c-text-slider-item">works</li>
+                            <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                            <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                            <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                            <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                            <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                            <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                            <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                            <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                            <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- the end of text slider -->
-
-        <!-- works -->
-        <main class="works u-ptb">
-            <div class="l-container">
-                <!-- breadcrumb -->
-                <nav class="c-breadcrumb" aria-label="パンくずリスト">
-                    <ol class="c-breadcrumb-list">
-                        <li class="c-breadcrumb-item"><a href="../index.html">home</a></li>
-                        <li class="c-breadcrumb-item c-breadcrumb-item--current" aria-current="page">works</li>
-                    </ol>
-                </nav>
-                <!-- the end of breadcrumb -->
-
-                <h1 class="c-page-label">制作物一覧</h1>
-
-                <!-- personal projects -->
-                <section class="works-list works-list--personal u-ptb">
-                    <h2 class="c-project-title js-split">personal projects</h2>
-                    <div class="works-list-inner">
-                        <!-- travel gallery -->
-                        <article class="works-item">
-                            <a href="travel-gallery.html" class="works-item-link" aria-label="travel galleryの詳細を見る">
-                                <div class="works-item-thumbnail">
-                                    <img src="../img/common/16-9/small/travel-gallery.jpg" srcset="../img/common/16-9/small/travel-gallery.jpg 308w, ../img/common/16-9/large/travel-gallery.jpg 1120w" sizes="(min-width: 768px) 1120px, 308px" width="2240" height="1260" alt="" decoding="async" />
-                                </div>
-                                <div class="works-item-info">
-                                    <h3 class="works-item-title">travel gallery</h3>
-                                    <div class="works-item-meta">
-                                        <time datetime="2025-10" class="works-item-date">2025.10</time>
-                                        <ul class="works-item-categories">
-                                            <li class="works-item-category">自主制作</li>
-                                            <li class="works-item-category">コーディング</li>
-                                            <li class="works-item-category">デザイン</li>
-                                        </ul>
-                                        <div class="works-item-button">
-                                            <span class="c-button c-button--md">詳細を見る</span>
-                                        </div>
-                                    </div>
-                                </div>
+            <!-- the end of text slider -->
+            <!-- footer -->
+            <footer class="footer">
+                <div class="footer-inner">
+                    <small class="footer-copyright"><span>©seiya</span><span>imoto's</span><span>portfolio</span></small>
+                    <ul class="footer-sns-list">
+                        <li class="footer-sns-item">
+                            <a href="https://github.com/seiyaie" aria-label="githubを別タブで開く">
+                                <img src="../img/icons/sns/github-white.svg" width="60" height="60" alt="" decoding="async" class="js-theme-github" />
                             </a>
-                        </article>
-
-                        <!-- leaf design lab -->
-                        <article class="works-item is-reverse">
-                            <a href="leaf-design-lab.html" class="works-item-link" aria-label="leaf design labの詳細を見る">
-                                <div class="works-item-thumbnail">
-                                    <img src="../img/common/16-9/small/leaf-design-lab.jpg" srcset="../img/common/16-9/small/leaf-design-lab.jpg 308w, ../img/common/16-9/large/leaf-design-lab.jpg 1120w" sizes="(min-width: 768px) 1120px, 308px" width="2240" height="1260" alt="" decoding="async" />
-                                </div>
-                                <div class="works-item-info">
-                                    <h3 class="works-item-title">leaf design lab</h3>
-                                    <div class="works-item-meta">
-                                        <time datetime="2025-07" class="works-item-date">2025.07</time>
-                                        <ul class="works-item-categories">
-                                            <li class="works-item-category">自主制作</li>
-                                            <li class="works-item-category">コーディング</li>
-                                            <li class="works-item-category">デザイン</li>
-                                        </ul>
-                                        <div class="works-item-button">
-                                            <span class="c-button c-button--md">詳細を見る</span>
-                                        </div>
-                                    </div>
-                                </div>
+                        </li>
+                        <li class="footer-sns-item">
+                            <a href="https://x.com/seiya_web" aria-label="xを別タブで開く">
+                                <img src="../img/icons/sns/x-white.svg" width="60" height="60" alt="" decoding="async" class="js-theme-x" />
                             </a>
-                        </article>
-
-                        <!-- my portfolio -->
-                        <article class="works-item">
-                            <a href="my-portfolio.html" class="works-item-link" aria-label="my portfolioの詳細を見る">
-                                <div class="works-item-thumbnail">
-                                    <img src="../img/common/16-9/small/my-portfolio.jpg" srcset="../img/common/16-9/small/my-portfolio.jpg 308w, ../img/common/16-9/large/my-portfolio.jpg 1120w" sizes="(min-width: 768px) 1120px, 308px" width="2240" height="1260" alt="" decoding="async" />
-                                </div>
-                                <div class="works-item-info">
-                                    <h3 class="works-item-title">my portfolio</h3>
-                                    <div class="works-item-meta">
-                                        <time datetime="2025-12" class="works-item-date">2025.12</time>
-                                        <ul class="works-item-categories">
-                                            <li class="works-item-category">自主制作</li>
-                                            <li class="works-item-category">コーディング</li>
-                                            <li class="works-item-category">デザイン</li>
-                                        </ul>
-                                        <div class="works-item-button">
-                                            <span class="c-button c-button--md">詳細を見る</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-                    </div>
-                </section>
-
-                <!-- school project -->
-                <section class="works-list works-list--school u-ptb">
-                    <h2 class="c-project-title js-split">school projects</h2>
-                    <div class="works-list-inner">
-                        <!-- photographer -->
-                        <article class="works-item is-reverse">
-                            <a href="photographer.html" class="works-item-link" aria-label="photographerの詳細を見る">
-                                <div class="works-item-thumbnail">
-                                    <img src="../img/common/16-9/small/photographer.jpg" srcset="../img/common/16-9/small/photographer.jpg 308w, ../img/common/16-9/large/photographer.jpg 1120w" sizes="(min-width: 768px) 1120px, 308px" width="2240" height="1260" alt="" decoding="async" />
-                                </div>
-                                <div class="works-item-info">
-                                    <h3 class="works-item-title">photographer</h3>
-                                    <div class="works-item-meta">
-                                        <time datetime="2025-05" class="works-item-date">2025.05</time>
-                                        <ul class="works-item-categories">
-                                            <li class="works-item-category">Hello Mentor</li>
-                                            <li class="works-item-category">コーディング</li>
-                                        </ul>
-                                        <div class="works-item-button">
-                                            <span class="c-button c-button--md">詳細を見る</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-
-                        <!-- coco -->
-                        <article class="works-item">
-                            <a href="coco.html" class="works-item-link" aria-label="cocoの詳細を見る">
-                                <div class="works-item-thumbnail">
-                                    <img src="../img/common/16-9/small/coco.jpg" srcset="../img/common/16-9/small/coco.jpg 308w, ../img/common/16-9/large/coco.jpg 1120w" sizes="(min-width: 768px) 1120px, 308px" width="2240" height="1260" alt="" decoding="async" />
-                                </div>
-                                <div class="works-item-info">
-                                    <h3 class="works-item-title">coco</h3>
-                                    <div class="works-item-meta">
-                                        <time datetime="2025-03" class="works-item-date">2025.03</time>
-                                        <ul class="works-item-categories">
-                                            <li class="works-item-category">Hello Mentor</li>
-                                            <li class="works-item-category">コーディング</li>
-                                        </ul>
-                                        <div class="works-item-button">
-                                            <span class="c-button c-button--md">詳細を見る</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-
-                        <!-- matsuyama clinic -->
-                        <article class="works-item is-reverse">
-                            <a href="matsuyama-clinic.html" class="works-item-link" aria-label="matsuyama clinicの詳細を見る">
-                                <div class="works-item-thumbnail">
-                                    <img src="../img/common/16-9/small/matsuyama-clinic.jpg" srcset="../img/common/16-9/small/matsuyama-clinic.jpg 308w, ../img/common/16-9/large/matsuyama-clinic.jpg 1120w" sizes="(min-width: 768px) 1120px, 308px" width="2240" height="1260" alt="" decoding="async" />
-                                </div>
-                                <div class="works-item-info">
-                                    <h3 class="works-item-title">matsuyama clinic</h3>
-                                    <div class="works-item-meta">
-                                        <time datetime="2025-07" class="works-item-date">2025.07</time>
-                                        <ul class="works-item-categories">
-                                            <li class="works-item-category">Hello Mentor</li>
-                                            <li class="works-item-category">コーディング</li>
-                                        </ul>
-                                        <div class="works-item-button">
-                                            <span class="c-button c-button--md">詳細を見る</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-
-                        <!-- moshashugyo media -->
-                        <article class="works-item">
-                            <a href="moshashugyo-media.html" class="works-item-link" aria-label="moshashugyo mediaの詳細を見る">
-                                <div class="works-item-thumbnail">
-                                    <img src="../img/common/16-9/small/moshashugyo.jpg" srcset="../img/common/16-9/small/moshashugyo.jpg 308w, ../img/common/16-9/large/moshashugyo.jpg 1120w" sizes="(min-width: 768px) 1120px, 308px" width="2240" height="1260" alt="" decoding="async" />
-                                </div>
-
-                                <div class="works-item-info">
-                                    <h3 class="works-item-title">moshashugyo media</h3>
-                                    <div class="works-item-meta">
-                                        <time datetime="2025-04" class="works-item-date">2025.04</time>
-                                        <ul class="works-item-categories">
-                                            <li class="works-item-category">Hello Mentor</li>
-                                            <li class="works-item-category">コーディング</li>
-                                        </ul>
-                                        <div class="works-item-button">
-                                            <span class="c-button c-button--md">詳細を見る</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-
-                        <!-- migliore -->
-                        <article class="works-item is-reverse">
-                            <a href="migliore.html" class="works-item-link" aria-label="miglioreの詳細を見る">
-                                <div class="works-item-thumbnail">
-                                    <img src="../img/common/16-9/small/migliore.jpg" srcset="../img/common/16-9/small/migliore.jpg 308w, ../img/common/16-9/large/migliore.jpg 1120w" sizes="(min-width: 768px) 1120px, 308px" width="2240" height="1260" alt="" decoding="async" />
-                                </div>
-                                <div class="works-item-info">
-                                    <h3 class="works-item-title">migliore</h3>
-                                    <div class="works-item-meta">
-                                        <time datetime="2025-05" class="works-item-date">2025.05</time>
-                                        <ul class="works-item-categories">
-                                            <li class="works-item-category">Hello Mentor</li>
-                                            <li class="works-item-category">コーディング</li>
-                                        </ul>
-                                        <div class="works-item-button">
-                                            <span class="c-button c-button--md">詳細を見る</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-                    </div>
-                </section>
-            </div>
-        </main>
-        <!-- the end of works -->
-
-        <!-- text slider -->
-        <div class="c-text-slider">
-            <div class="c-keyword-slider--splide js-keyword-carousel-works-bottom splide">
-                <div class="splide__track c-keyword-slider--track">
-                    <ul class="splide__list c-text-slider-list">
-                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
-                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
-                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
-                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
-                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
-                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
-                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
-                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
-                        <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                        </li>
                     </ul>
                 </div>
-            </div>
+            </footer>
+            <!-- the end of footer -->
         </div>
-        <!-- the end of text slider -->
-        <!-- footer -->
-        <footer class="footer">
-            <div class="footer-inner">
-                <small class="footer-copyright"><span>©seiya</span><span>imoto's</span><span>portfolio</span></small>
-                <ul class="footer-sns-list">
-                    <li class="footer-sns-item">
-                        <a href="https://github.com/seiyaie" aria-label="githubを別タブで開く">
-                            <img src="../img/icons/sns/github-white.svg" width="60" height="60" alt="" decoding="async" class="js-theme-github" />
-                        </a>
-                    </li>
-                    <li class="footer-sns-item">
-                        <a href="https://x.com/seiya_web" aria-label="xを別タブで開く">
-                            <img src="../img/icons/sns/x-white.svg" width="60" height="60" alt="" decoding="async" class="js-theme-x" />
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </footer>
-        <!-- the end of footer -->
     </body>
 </html>
