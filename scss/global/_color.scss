@@ -17,6 +17,7 @@ global > color
     --color-pager-text-hover: light-dark(#dddddd, #000000);
     --color-pager-text-active: light-dark(#dddddd, #000000);
     --color-button-text-shadow: light-dark(rgba(0, 0, 0, 0.38), rgba(255, 255, 255, 0.44));
+    --color-error-text: light-dark(#b00020, #ff4d4f);
 }
 
 [data-theme="light"] {
@@ -33,6 +34,7 @@ global > color
     --color-pager-text-hover: #dddddd;
     --color-pager-text-active: #dddddd;
     --color-button-text-shadow: rgba(0, 0, 0, 0.38);
+    --color-error-text: #b71c1c;
 }
 
 [data-theme="dark"] {
@@ -49,4 +51,5 @@ global > color
     --color-pager-text-hover: #000000;
     --color-pager-text-active: #000000;
     --color-button-text-shadow: rgba(255, 255, 255, 0.44);
+    --color-error-text: #ff4d4f;
 }

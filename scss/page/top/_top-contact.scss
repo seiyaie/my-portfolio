@@ -4,14 +4,6 @@
 page > top > top-about
 ------------------------------
 */
-.top-contact {
-}
-
-.top-contact-inner {
-    width: 90%;
-    margin-inline: auto;
-    max-width: 1080px;
-}
 
 .top-contact-text span {
     display: block;
@@ -21,25 +13,15 @@ page > top > top-about
 .top-contact-form {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 32px;
     margin-top: 40px;
     @include g.mq() {
-        gap: 32px;
+        gap: 40px;
         margin-top: 48px;
     }
 }
 
 .top-contact-item {
-}
-
-.top-contact-label {
-    display: block;
-    margin-bottom: 12px;
-    font-weight: bold;
-    letter-spacing: 0.2em;
-}
-
-.top-contact-label-title {
 }
 
 .top-input,
@@ -51,13 +33,29 @@ page > top > top-about
     padding: 8px;
 }
 
+.top-contact-label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.top-contact-label-title {
+    margin-right: 8px;
+}
+
 .top-contact-label-required {
     border: var(--border-ui);
-    padding: 4px 8px;
+    padding: 4px;
+    text-indent: 0.2em;
 }
 
 .top-textarea {
     min-height: 240px;
+}
+
+.top-contact-error {
+    color: var(--color-error-text);
+    padding: 8px;
 }
 
 .top-contact-privacy {
@@ -90,11 +88,7 @@ page > top > top-about
 }
 
 .top-contact-submit-button {
-    width: 100%;
-    border: var(--border-ui);
-    font-weight: bold;
-    padding: 8px 16px;
-    // margin-top: 16px;
+    max-width: 300px;
     @include g.mq() {
         max-width: 400px;
     }
@@ -116,24 +110,29 @@ page > top > top-about
     width: 18px;
     height: 18px;
     border: var(--border-ui);
+    @include g.mq() {
+        width: 20px;
+        height: 20px;
+    }
 }
 
 .top-contact-privacy-checkbox:checked::after {
     content: "";
     position: absolute;
-    top: 4px;
+    top: 3px;
     left: 2px;
     width: 12px;
     height: 6px;
     border-bottom: 2px solid var(--color-line-section);
     border-left: 2px solid var(--color-line-section);
     transform: rotate(-45deg);
+    @include g.mq() {
+        top: 3px;
+        left: 2px;
+    }
 }
 
 .top-contact-modal {
-}
-
-.js-top-contact-modal {
 }
 
 .top-contact-modal-content {

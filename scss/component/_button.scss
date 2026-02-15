@@ -21,7 +21,7 @@ component > button
     font-weight: bold;
 
     @media (any-hover: hover) {
-        &:hover {
+        &:not(:disabled):hover {
             --btn-shadow-x: 3px;
             --btn-shadow-y: 3px;
             --btn-tx: 4px;
@@ -46,6 +46,11 @@ component > button
     &::after {
         border: var(--border-ui);
         translate: var(--btn-tx) var(--btn-ty);
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        pointer-events: none;
     }
 }
 

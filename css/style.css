@@ -34,6 +34,7 @@ global > color
   --color-pager-text-hover: light-dark(#dddddd, #000000);
   --color-pager-text-active: light-dark(#dddddd, #000000);
   --color-button-text-shadow: light-dark(rgba(0, 0, 0, 0.38), rgba(255, 255, 255, 0.44));
+  --color-error-text: light-dark(#b00020, #ff4d4f);
 }
 
 [data-theme=light] {
@@ -50,6 +51,7 @@ global > color
   --color-pager-text-hover: #dddddd;
   --color-pager-text-active: #dddddd;
   --color-button-text-shadow: rgba(0, 0, 0, 0.38);
+  --color-error-text: #b71c1c;
 }
 
 [data-theme=dark] {
@@ -66,6 +68,7 @@ global > color
   --color-pager-text-hover: #000000;
   --color-pager-text-active: #000000;
   --color-button-text-shadow: rgba(255, 255, 255, 0.44);
+  --color-error-text: #ff4d4f;
 }
 
 /*!
@@ -434,7 +437,7 @@ component > button
   font-weight: bold;
 }
 @media (any-hover: hover) {
-  .c-button:hover {
+  .c-button:not(:disabled):hover {
     --btn-shadow-x: 3px;
     --btn-shadow-y: 3px;
     --btn-tx: 4px;
@@ -455,6 +458,10 @@ component > button
 .c-button::after {
   border: var(--border-ui);
   translate: var(--btn-tx) var(--btn-ty);
+}
+.c-button:disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .c-button--en {
@@ -1907,12 +1914,6 @@ page > top > top-skills
 page > top > top-about
 ------------------------------
 */
-.top-contact-inner {
-  width: 90%;
-  margin-inline: auto;
-  max-width: 1080px;
-}
-
 .top-contact-text span {
   display: block;
   font-weight: bold;
@@ -1921,21 +1922,14 @@ page > top > top-about
 .top-contact-form {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 32px;
   margin-top: 40px;
 }
 @media screen and (min-width: 768px) {
   .top-contact-form {
-    gap: 32px;
+    gap: 40px;
     margin-top: 48px;
   }
-}
-
-.top-contact-label {
-  display: block;
-  margin-bottom: 12px;
-  font-weight: bold;
-  letter-spacing: 0.2em;
 }
 
 .top-input,
@@ -1947,13 +1941,29 @@ page > top > top-about
   padding: 8px;
 }
 
+.top-contact-label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.top-contact-label-title {
+  margin-right: 8px;
+}
+
 .top-contact-label-required {
   border: var(--border-ui);
-  padding: 4px 8px;
+  padding: 4px;
+  text-indent: 0.2em;
 }
 
 .top-textarea {
   min-height: 240px;
+}
+
+.top-contact-error {
+  color: var(--color-error-text);
+  padding: 8px;
 }
 
 .top-contact-privacy-title {
@@ -1983,10 +1993,7 @@ page > top > top-about
 }
 
 .top-contact-submit-button {
-  width: 100%;
-  border: var(--border-ui);
-  font-weight: bold;
-  padding: 8px 16px;
+  max-width: 300px;
 }
 @media screen and (min-width: 768px) {
   .top-contact-submit-button {
@@ -2014,17 +2021,29 @@ page > top > top-about
   height: 18px;
   border: var(--border-ui);
 }
+@media screen and (min-width: 768px) {
+  .top-contact-privacy-checkbox {
+    width: 20px;
+    height: 20px;
+  }
+}
 
 .top-contact-privacy-checkbox:checked::after {
   content: "";
   position: absolute;
-  top: 4px;
+  top: 3px;
   left: 2px;
   width: 12px;
   height: 6px;
   border-bottom: 2px solid var(--color-line-section);
   border-left: 2px solid var(--color-line-section);
   transform: rotate(-45deg);
+}
+@media screen and (min-width: 768px) {
+  .top-contact-privacy-checkbox:checked::after {
+    top: 3px;
+    left: 2px;
+  }
 }
 
 /*!
