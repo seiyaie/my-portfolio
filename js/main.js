@@ -11,6 +11,7 @@ import { initTitleReveal } from "./component/reveal-title.js";
 import { initPagination } from "./component/pagination.js";
 import { WORKS_PAGES } from "./data/pages.js";
 import { initSmoothScroll } from "./component/smooth-scroll.js";
+import { initFormValidation } from "./component/form-validation.js";
 
 const currentPage = Number(document.documentElement.dataset.page || 1);
 
@@ -22,6 +23,7 @@ initHamburgerMenu();
 initKvSlider();
 initTitleReveal();
 initSmoothScroll();
+initFormValidation();
 initPagination({
     pages: WORKS_PAGES,
     currentPage,

@@ -21,7 +21,8 @@ page > top > top-about
     }
 }
 
-.top-contact-item {
+.top-contact-item.is-error .top-contact-error {
+    display: none;
 }
 
 .top-input,

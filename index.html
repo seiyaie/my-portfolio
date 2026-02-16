@@ -503,54 +503,57 @@
                     <!-- フォーム -->
                     <form name="contact" method="post" class="top-contact-form js-form" novalidate>
                         <!-- 会社名 -->
-                        <div class="top-contact-item">
+                        <div class="top-contact-item js-form-item">
                             <label for="company" class="top-contact-label">
                                 <span class="top-contact-label-title">会社名</span>
                             </label>
-                            <input type="text" id="company" class="top-input" name="company" autocomplete="organization" placeholder="会社名をご入力ください" />
+                            <input type="text" id="company" class="top-input js-field" name="company" autocomplete="organization" placeholder="会社名をご入力ください" />
                         </div>
 
                         <!-- 名前 -->
-                        <div class="top-contact-item">
+                        <div class="top-contact-item js-form-item">
                             <label for="name" class="top-contact-label">
                                 <span class="top-contact-label-title">お名前</span>
                                 <span class="top-contact-label-required">必須</span>
                             </label>
-                            <input type="text" id="name" class="top-input" name="name" autocomplete="name" placeholder="お名前をご入力ください" required />
-                            <p class="top-contact-error js-top-contact-error">お名前をご入力ください</p>
+                            <input type="text" id="name" class="top-input js-field" name="name" autocomplete="name" placeholder="お名前をご入力ください" aria-describedby="error-name" required />
+                            <p id="error-name" class="top-contact-error js-form-error" aria-live="polite"></p>
                         </div>
 
                         <!-- メールアドレス -->
-                        <div class="top-contact-item">
+                        <div class="top-contact-item js-form-item">
                             <label for="email" class="top-contact-label">
                                 <span class="top-contact-label-title">メールアドレス</span>
                                 <span class="top-contact-label-required">必須</span>
                             </label>
-                            <input type="email" id="email" class="top-input" name="email" autocomplete="email" placeholder="メールアドレスをご入力ください" required />
-                            <p class="top-contact-error js-top-contact-error">メールアドレスをご入力ください</p>
+                            <input type="email" id="email" class="top-input js-field" name="email" autocomplete="email" placeholder="メールアドレスをご入力ください" aria-describedby="error-email" required />
+                            <p id="error-email" class="top-contact-error js-form-error" aria-live="polite"></p>
                         </div>
 
                         <!-- 内容 -->
-                        <div class="top-contact-item">
+                        <div class="top-contact-item js-form-item">
                             <label for="message" class="top-contact-label">
                                 <span class="top-contact-label-title">お問い合わせ内容</span>
                                 <span class="top-contact-label-required">必須</span>
                             </label>
-                            <textarea class="top-textarea" id="message" name="message" autocomplete="off" placeholder="お問い合わせ内容をご入力ください" required></textarea>
-                            <p class="top-contact-error js-top-contact-error">お問い合わせ内容をご入力ください</p>
+                            <textarea class="top-textarea js-field" id="message" name="message" minlength="10" autocomplete="off" placeholder="お問い合わせ内容をご入力ください" aria-describedby="error-message" required></textarea>
+                            <p id="error-message" class="top-contact-error js-form-error" aria-live="polite"></p>
                         </div>
                         <div class="top-contact-privacy">
                             <h3 class="top-contact-privacy-title">個人情報の取扱いについて</h3>
                             <p class="top-contact-privacy-text">
                                 <span>ご入力いただいたお名前やメールアドレスなどの個人情報は、お問い合わせへのご返答のためにのみ利用し、その他の目的には使用いたしません。</span><span>また、いただいた個人情報は<a href="privacy.html" target="_blank" rel="noopener noreferrer" aria-label="別タブで開く" class="top-contact-privacy-link">プライバシーポリシー</a>に基づき、適切に管理いたします。</span>
                             </p>
-                            <label class="top-contact-privacy-label">
-                                <input type="checkbox" name="agree" class="top-contact-privacy-checkbox" required />
-                                個人情報の取り扱いに同意する
-                            </label>
+                            <div class="top-contact-item js-form-item">
+                                <label class="top-contact-privacy-label">
+                                    <input type="checkbox" name="agree" class="top-contact-privacy-checkbox js-field" aria-describedby="error-agree" required />
+                                    個人情報の取り扱いに同意する
+                                </label>
+                                <p id="error-agree" class="top-contact-error js-form-error" aria-live="polite"></p>
+                            </div>
                         </div>
-                        <div class="top-contact-submit-button js-top-contact-submit-button">
-                            <button type="submit" class="c-button" disabled>内容を送信する</button>
+                        <div class="top-contact-submit-button">
+                            <button type="submit" class="c-button js-form-button" disabled>内容を送信する</button>
                         </div>
                     </form>
                 </div>
