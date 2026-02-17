@@ -2141,6 +2141,23 @@ page > top > top-about
 }
 
 /*!
+page > thanks > thanks
+------------------------------
+*/
+.thanks {
+  border-top: var(--border-section);
+  border-bottom: var(--border-section);
+  min-height: calc(100vh - var(--header-height));
+  display: grid;
+  place-items: center;
+}
+
+.thanks-button {
+  max-width: 400px;
+  margin-inline: auto;
+}
+
+/*!
 page > works > works
 ------------------------------
 */
