@@ -1936,10 +1936,6 @@ page > top > top-about
   }
 }
 
-.top-contact-item.is-error .top-contact-error {
-  display: none;
-}
-
 .top-input,
 .top-textarea {
   background-color: var(--color-contact-bg);
@@ -1970,8 +1966,13 @@ page > top > top-about
 }
 
 .top-contact-error {
+  display: none;
   color: var(--color-error-text);
   padding: 8px;
+}
+
+.top-contact-item.is-error .top-contact-error {
+  display: block;
 }
 
 .top-contact-privacy-title {
