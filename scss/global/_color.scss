@@ -18,6 +18,7 @@ global > color
     --color-pager-text-active: light-dark(#dddddd, #000000);
     --color-button-text-shadow: light-dark(rgba(0, 0, 0, 0.38), rgba(255, 255, 255, 0.44));
     --color-error-text: light-dark(#b00020, #ff4d4f);
+    --color-bg-contact-modal: light-dark(#000000, #dddddd);
 }
 
 [data-theme="light"] {
@@ -35,6 +36,8 @@ global > color
     --color-pager-text-active: #dddddd;
     --color-button-text-shadow: rgba(0, 0, 0, 0.38);
     --color-error-text: #b71c1c;
+    --color-bg-contact-modal: #000000;
+    --color-text-contact-modal: #dddddd;
 }
 
 [data-theme="dark"] {
@@ -52,4 +55,6 @@ global > color
     --color-pager-text-active: #000000;
     --color-button-text-shadow: rgba(255, 255, 255, 0.44);
     --color-error-text: #ff4d4f;
+    --color-bg-contact-modal: #dddddd;
+    --color-text-contact-modal: #000000;
 }

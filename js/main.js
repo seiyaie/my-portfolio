@@ -12,6 +12,7 @@ import { initPagination } from "./component/pagination.js";
 import { WORKS_PAGES } from "./data/pages.js";
 import { initSmoothScroll } from "./component/smooth-scroll.js";
 import { initFormValidation } from "./component/form-validation.js";
+import { initContactModal } from "../component/contact-modal.js";
 
 const currentPage = Number(document.documentElement.dataset.page || 1);
 
@@ -24,6 +25,7 @@ initKvSlider();
 initTitleReveal();
 initSmoothScroll();
 initFormValidation();
+initContactModal();
 initPagination({
     pages: WORKS_PAGES,
     currentPage,

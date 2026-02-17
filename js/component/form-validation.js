@@ -35,6 +35,8 @@ export const initFormValidation = () => {
     const setError = (field, message = "") => {
         const item = field.closest(".js-form-item");
         const errorEl = getErrorElement(field);
+
+        console.log(field.name, { item, errorEl, message }); 
         if (!item || !errorEl) return;
 
         const hasMessage = Boolean(message);

@@ -503,11 +503,11 @@
                     <!-- フォーム -->
                     <form name="contact" method="post" class="top-contact-form js-form" novalidate>
                         <!-- 会社名 -->
-                        <div class="top-contact-item js-form-item">
+                        <div class="top-contact-item">
                             <label for="company" class="top-contact-label">
                                 <span class="top-contact-label-title">会社名</span>
                             </label>
-                            <input type="text" id="company" class="top-input js-field" name="company" autocomplete="organization" placeholder="会社名をご入力ください" />
+                            <input type="text" id="company" class="top-input" name="company" autocomplete="organization" placeholder="会社名をご入力ください" />
                         </div>
 
                         <!-- 名前 -->
@@ -542,7 +542,7 @@
                         <div class="top-contact-privacy">
                             <h3 class="top-contact-privacy-title">個人情報の取扱いについて</h3>
                             <p class="top-contact-privacy-text">
-                                <span>ご入力いただいたお名前やメールアドレスなどの個人情報は、お問い合わせへのご返答のためにのみ利用し、その他の目的には使用いたしません。</span><span>また、いただいた個人情報は<a href="privacy.html" target="_blank" rel="noopener noreferrer" aria-label="別タブで開く" class="top-contact-privacy-link">プライバシーポリシー</a>に基づき、適切に管理いたします。</span>
+                                <span>ご入力いただいたお名前やメールアドレスなどの個人情報は、お問い合わせへのご返答のためにのみ利用し、その他の目的には使用いたしません。</span><span>また、いただいた個人情報は<button class="top-contact-privacy-button js-contact-privacy-button">プライバシーポリシー</button>に基づき、適切に管理いたします。</span>
                             </p>
                             <div class="top-contact-item js-form-item">
                                 <label class="top-contact-privacy-label">
@@ -553,17 +553,40 @@
                             </div>
                         </div>
                         <div class="top-contact-submit-button">
-                            <button type="submit" class="c-button js-form-button" disabled>内容を送信する</button>
+                            <button type="submit" class="c-button js-form-button">内容を送信する</button>
                         </div>
                     </form>
                 </div>
 
-                <dialog class="top-contact-modal js-top-contact-modal" aria-labelledby="top-contact-modal-title">
-                    <form method="dialog" class="top-contact-modal-content">
-                        <h2 class="top-contact-modal-title" id="top-contact-modal-title">送信が完了しました</h2>
-                        <p class="top-contact-modal-text">お問い合わせありがとうございます。内容を確認してご返信いたします。</p>
-                        <button class="top-contact-modal-button">閉じる</button>
-                    </form>
+                <!-- プライバシーポリシーモーダル -->
+                <dialog class="top-contact-modal js-contact-modal--privacy" aria-labelledby="privacy-modal-title">
+                    <div class="top-contact-modal-overlay js-contact-modal-overlay"></div>
+                    <div class="top-contact-modal-inner">
+                        <form method="dialog" class="top-contact-modal-content js-contact-modal-content">
+                            <h2 class="top-contact-modal-title" id="privacy-modal-title">プライバシーポリシー</h2>
+                            <div class="top-contact-modal-body">
+                                <p class="top-contact-modal-text">当サイトでは、お問い合わせフォームのご利用にあたり、お名前やメールアドレス等の個人情報をご入力いただく場合があります。</p>
+                                <p class="top-contact-modal-text">取得した個人情報は、お問い合わせへの回答および必要な連絡のためにのみ利用し、それ以外の目的では利用いたしません。</p>
+                                <p class="top-contact-modal-text">取得した個人情報は適切に管理し、法令に基づく場合を除き、第三者に開示・提供することはありません。</p>
+                                <p class="top-contact-modal-text">ご本人からの個人情報の開示・訂正・削除等のご希望があった場合には、ご本人であることを確認した上で対応いたします。</p>
+                            </div>
+                            <button type="button" class="top-contact-modal-button js-contact-privacy-close-button" aria-label="プライバシーポリシーを閉じる"></button>
+                        </form>
+                    </div>
+                </dialog>
+
+                <!-- 送信完了モーダル -->
+                <dialog class="top-contact-modal js-contact-modal--success" aria-labelledby="success-modal-title">
+                    <div class="top-contact-modal-overlay js-contact-modal-overlay"></div>
+                    <div class="top-contact-modal-inner">
+                        <form method="dialog" class="top-contact-modal-content js-contact-modal-content">
+                            <h2 class="top-contact-modal-title" id="success-modal-title">送信が完了しました</h2>
+                            <div class="top-contact-modal-body">
+                                <p class="top-contact-modal-text">お問い合わせありがとうございます。いただいた内容を確認し、ご返信いたします。</p>
+                            </div>
+                            <button type="button" class="top-contact-modal-button js-contact-success-close-button" aria-label="送信完了メッセージを閉じる"></button>
+                        </form>
+                    </div>
                 </dialog>
             </section>
             <!-- the end of contact -->
