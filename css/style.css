@@ -121,6 +121,7 @@ global > font-size
 :root {
   --font-size-body: 16px;
   --font-size-body--sm: 14px;
+  --font-size-body--lg: 18px;
   --font-size-heading: 20px;
   --font-size-subheading: 18px;
   --font-size-button--sm: 14px;
@@ -131,6 +132,7 @@ global > font-size
   :root {
     --font-size-body: 18px;
     --font-size-body--sm: 16px;
+    --font-size-body--lg: 20px;
     --font-size-heading: 32px;
     --font-size-subheading: 20px;
     --font-size-button--sm: 16px;
@@ -507,7 +509,7 @@ component > text-slider
 }
 
 .c-text-slider-item {
-  font-size: 20px;
+  font-size: 24px;
   text-transform: uppercase;
   font-family: var(--font-family-accent);
   line-height: 1;
@@ -2144,17 +2146,48 @@ page > top > top-about
 page > thanks > thanks
 ------------------------------
 */
-.thanks {
-  border-top: var(--border-section);
-  border-bottom: var(--border-section);
-  min-height: calc(100vh - var(--header-height));
+.thanks-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.thanks-main {
   display: grid;
   place-items: center;
+  text-align: center;
+  border-top: var(--border-section);
+  border-bottom: var(--border-section);
+  flex: 1;
+  min-height: 500px;
+}
+@media screen and (min-width: 768px) {
+  .thanks-main {
+    min-height: 600px;
+  }
+}
+
+.thanks-title {
+  display: inline-flex;
+  font-size: var(--font-size-heading);
+  font-weight: bold;
+  border-bottom: var(--border-ui);
+}
+
+.thanks-text {
+  font-size: var(--font-size-body--lg);
+  margin-top: 24px;
+}
+@media screen and (min-width: 768px) {
+  .thanks-text {
+    margin-top: 40px;
+  }
 }
 
 .thanks-button {
-  max-width: 400px;
+  max-width: 370px;
   margin-inline: auto;
+  margin-top: 40px;
 }
 
 /*!
