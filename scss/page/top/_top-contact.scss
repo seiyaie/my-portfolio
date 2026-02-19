@@ -24,10 +24,24 @@ page > top > top-about
 .top-input,
 .top-textarea {
     background-color: var(--color-contact-bg);
+    box-shadow: 0 0 0 1px var(--color-line-ui);
     width: 100%;
     max-width: 800px;
     color: var(--color-contact-text);
     padding: 8px;
+    outline: none;
+    @include g.mq() {
+        box-shadow: 0 0 0 2px var(--color-line-ui);
+    }
+}
+
+.top-input:focus,
+.top-textarea:focus {
+    box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-line-ui);
+}
+
+.top-textarea {
+    min-height: 240px;
 }
 
 .top-contact-label {
@@ -46,10 +60,6 @@ page > top > top-about
     text-indent: 0.2em;
 }
 
-.top-textarea {
-    min-height: 240px;
-}
-
 .top-contact-error {
     display: none;
     color: var(--color-error-text);
@@ -58,9 +68,6 @@ page > top > top-about
 
 .top-contact-item.is-error .top-contact-error {
     display: block;
-}
-
-.top-contact-privacy {
 }
 
 .top-contact-privacy-title {
@@ -179,9 +186,6 @@ page > top > top-about
     flex-direction: column;
     flex-wrap: wrap;
     gap: 8px;
-}
-
-.top-contact-modal-text {
 }
 
 .top-contact-modal-button {

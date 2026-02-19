@@ -27,15 +27,16 @@ global > color
   --color-icon-hover: light-dark(#dddddd, #000000);
   --color-line-section: light-dark(#222222, #cccccc);
   --color-line-ui: light-dark(#555555, #888888);
-  --color-contact-bg: light-dark(#f2f2f2, #ffffff);
+  --color-contact-bg: light-dark(#faf9f6, #ffffff);
   --color-contact-text: light-dark(#ffffff, #000000);
+  --color-bg-contact-modal: light-dark(#000000, #dddddd);
+  --color-text-contact-modal: light-dark(#dddddd, #000000);
+  --color-error-text: light-dark(#b00020, #ff4d4f);
   --color-pager-bg-hover: light-dark(#000000, #dddddd);
   --color-pager-bg-active: light-dark(#000000, #dddddd);
   --color-pager-text-hover: light-dark(#dddddd, #000000);
   --color-pager-text-active: light-dark(#dddddd, #000000);
   --color-button-text-shadow: light-dark(rgba(0, 0, 0, 0.38), rgba(255, 255, 255, 0.44));
-  --color-error-text: light-dark(#b00020, #ff4d4f);
-  --color-bg-contact-modal: light-dark(#000000, #dddddd);
 }
 
 [data-theme=light] {
@@ -45,16 +46,16 @@ global > color
   --color-icon-hover: #dddddd;
   --color-line-section: #222222;
   --color-line-ui: #555555;
-  --color-contact-bg: #f2f2f2;
+  --color-contact-bg: #faf9f6;
   --color-contact-text: #000000;
+  --color-bg-contact-modal: #000000;
+  --color-text-contact-modal: #dddddd;
+  --color-error-text: #b71c1c;
   --color-pager-bg-hover: #000000;
   --color-pager-bg-active: #000000;
   --color-pager-text-hover: #dddddd;
   --color-pager-text-active: #dddddd;
   --color-button-text-shadow: rgba(0, 0, 0, 0.38);
-  --color-error-text: #b71c1c;
-  --color-bg-contact-modal: #000000;
-  --color-text-contact-modal: #dddddd;
 }
 
 [data-theme=dark] {
@@ -66,14 +67,14 @@ global > color
   --color-line-ui: #888888;
   --color-contact-bg: #ffffff;
   --color-contact-text: #000000;
+  --color-bg-contact-modal: #dddddd;
+  --color-text-contact-modal: #000000;
+  --color-error-text: #ff4d4f;
   --color-pager-bg-hover: #dddddd;
   --color-pager-bg-active: #dddddd;
   --color-pager-text-hover: #000000;
   --color-pager-text-active: #000000;
   --color-button-text-shadow: rgba(255, 255, 255, 0.44);
-  --color-error-text: #ff4d4f;
-  --color-bg-contact-modal: #dddddd;
-  --color-text-contact-modal: #000000;
 }
 
 /*!
@@ -1941,10 +1942,27 @@ page > top > top-about
 .top-input,
 .top-textarea {
   background-color: var(--color-contact-bg);
+  box-shadow: 0 0 0 1px var(--color-line-ui);
   width: 100%;
   max-width: 800px;
   color: var(--color-contact-text);
   padding: 8px;
+  outline: none;
+}
+@media screen and (min-width: 768px) {
+  .top-input,
+  .top-textarea {
+    box-shadow: 0 0 0 2px var(--color-line-ui);
+  }
+}
+
+.top-input:focus,
+.top-textarea:focus {
+  box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-line-ui);
+}
+
+.top-textarea {
+  min-height: 240px;
 }
 
 .top-contact-label {
@@ -1961,10 +1979,6 @@ page > top > top-about
   border: var(--border-ui);
   padding: 4px;
   text-indent: 0.2em;
-}
-
-.top-textarea {
-  min-height: 240px;
 }
 
 .top-contact-error {
