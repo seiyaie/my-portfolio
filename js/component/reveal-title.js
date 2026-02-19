@@ -9,7 +9,7 @@ export const initTitleReveal = () => {
         });
 
         gsap.from(split.chars, {
-            yPercent: 200,
+            yPercent: 150,
             stagger: 0.1,
             duration: 1,
             ease: "power4.inOut",
