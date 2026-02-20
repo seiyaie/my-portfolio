@@ -1850,7 +1850,6 @@ page > top > top-skills
 }
 
 .top-skills-item-text {
-  font-size: 16px;
   padding: 16px;
 }
 
@@ -2481,6 +2480,9 @@ page > works > works-detail
   }
 }
 
+.works-detail-section-text {
+  line-height: 2;
+}
 .works-detail-section-text:not(:last-child) {
   margin-bottom: 24px;
 }

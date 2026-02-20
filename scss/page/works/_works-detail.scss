@@ -115,6 +115,7 @@ page > works > works-detail
 }
 
 .works-detail-section-text {
+    line-height: 2;
     &:not(:last-child) {
         margin-bottom: 24px;
     }
