@@ -86,13 +86,12 @@ page > top > top-works
 }
 
 .top-works-item-date {
-    font-size: 12px;
+    font-size: var(--font-size-meta);
     margin-top: 16px;
     letter-spacing: 0.2em;
 }
 
 .top-works-item-title {
-    font-size: 16px;
     font-family: var(--font-family-accent);
     letter-spacing: 0.2em;
 }
@@ -101,7 +100,7 @@ page > top > top-works
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-top: 24px;
+    margin-top: 16px;
 }
 
 .top-works-tag {

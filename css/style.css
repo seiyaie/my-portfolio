@@ -121,30 +121,33 @@ global > font-size
 */
 :root {
   --font-size-body: 16px;
-  --font-size-body--sm: 14px;
-  --font-size-body--lg: 18px;
+  --font-size-body-sm: 14px;
+  --font-size-body-lg: 18px;
   --font-size-heading: 20px;
   --font-size-subheading: 18px;
-  --font-size-button--sm: 14px;
-  --font-size-button--md: 18px;
+  --font-size-button-sm: 14px;
+  --font-size-button-md: 18px;
+  --font-size-meta: 12px;
 }
 
 @media screen and (min-width: 768px) {
   :root {
     --font-size-body: 18px;
-    --font-size-body--sm: 16px;
-    --font-size-body--lg: 20px;
+    --font-size-body-sm: 16px;
+    --font-size-body-lg: 20px;
     --font-size-heading: 32px;
     --font-size-subheading: 20px;
-    --font-size-button--sm: 16px;
-    --font-size-button--md: 20px;
+    --font-size-button-sm: 16px;
+    --font-size-button-md: 20px;
+    --font-size-meta: 14px;
   }
 }
 @media screen and (min-width: 1080px) {
   :root {
     --font-size-heading: 40px;
-    --font-size-body--sm: 18px;
-    --font-size-button--sm: 18px;
+    --font-size-body-sm: 18px;
+    --font-size-button-sm: 18px;
+    --font-size-meta: 16px;
   }
 }
 /*!
@@ -477,11 +480,11 @@ component > button
 }
 
 .c-button--sm {
-  font-size: var(--font-size-button--sm);
+  font-size: var(--font-size-button-sm);
 }
 
 .c-button--md {
-  font-size: var(--font-size-button--md);
+  font-size: var(--font-size-button-md);
 }
 
 /*!
@@ -658,11 +661,6 @@ component > breadcrumb
   text-transform: uppercase;
   font-weight: bold;
 }
-@media screen and (min-width: 768px) {
-  .c-breadcrumb {
-    font-size: 18px;
-  }
-}
 
 .c-breadcrumb-list {
   display: flex;
@@ -791,18 +789,8 @@ component > pagination
 
 .c-pagination-meta {
   font-family: var(--font-family-accent);
-  font-size: 12px;
+  font-size: var(--font-size-meta);
   opacity: 0.7;
-}
-@media screen and (min-width: 768px) {
-  .c-pagination-meta {
-    font-size: 14px;
-  }
-}
-@media screen and (min-width: 1080px) {
-  .c-pagination-meta {
-    font-size: 16px;
-  }
 }
 
 .c-pagination-meta--prev {
@@ -957,21 +945,11 @@ layout > header
   align-items: center;
   justify-content: space-between;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: var(--font-size-body-sm);
 }
 @media screen and (min-width: 768px) {
   .header-nav-list {
     padding-right: 24px;
-  }
-}
-@media screen and (min-width: 1080px) {
-  .header-nav-list {
-    font-size: 16px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .header-nav-list {
-    font-size: 18px;
   }
 }
 
@@ -1692,13 +1670,12 @@ page > top > top-works
 }
 
 .top-works-item-date {
-  font-size: 12px;
+  font-size: var(--font-size-meta);
   margin-top: 16px;
   letter-spacing: 0.2em;
 }
 
 .top-works-item-title {
-  font-size: 16px;
   font-family: var(--font-family-accent);
   letter-spacing: 0.2em;
 }
@@ -1707,7 +1684,7 @@ page > top > top-works
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 24px;
+  margin-top: 16px;
 }
 
 .top-works-tag {
@@ -2190,7 +2167,7 @@ page > thanks > thanks
 }
 
 .thanks-text {
-  font-size: var(--font-size-body--lg);
+  font-size: var(--font-size-body-lg);
   margin-top: 24px;
 }
 @media screen and (min-width: 768px) {

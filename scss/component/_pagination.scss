@@ -101,14 +101,8 @@ component > pagination
 
 .c-pagination-meta {
     font-family: var(--font-family-accent);
-    font-size: 12px;
+    font-size: var(--font-size-meta);
     opacity: 0.7;
-    @include g.mq() {
-        font-size: 14px;
-    }
-    @include g.mq(lg) {
-        font-size: 16px;
-    }
 }
 
 .c-pagination-meta--prev {

@@ -31,7 +31,7 @@ page > thanks > thanks
 }
 
 .thanks-text {
-  font-size: var(--font-size-body--lg);
+    font-size: var(--font-size-body-lg);
     margin-top: 24px;
     @include g.mq() {
         margin-top: 40px;

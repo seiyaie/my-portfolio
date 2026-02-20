@@ -9,9 +9,6 @@ component > breadcrumb
     font-family: var(--font-family-en);
     text-transform: uppercase;
     font-weight: bold;
-    @include g.mq() {
-        font-size: 18px;
-    }
 }
 
 .c-breadcrumb-list {
