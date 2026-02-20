@@ -509,7 +509,6 @@ component > text-slider
 ------------------------------
 */
 .c-text-slider-list {
-  display: flex;
   gap: 80px;
 }
 
@@ -1013,7 +1012,6 @@ layout > footer
 }
 
 .footer-copyright {
-  font-size: 16px;
   text-transform: uppercase;
   font-family: var(--font-family-accent);
   display: flex;
