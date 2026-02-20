@@ -509,6 +509,7 @@ component > text-slider
 ------------------------------
 */
 .c-text-slider-list {
+  display: flex;
   gap: 80px;
 }
 
@@ -1870,27 +1871,23 @@ page > top > top-skills
 }
 
 .top-skills-item-icon--coding {
+  mask-image: url("../img/decorations/top-skills-coding.svg");
   -webkit-mask-image: url("../img/decorations/top-skills-coding.svg");
-          mask-image: url("../img/decorations/top-skills-coding.svg");
-  --webkit-mask-image: url("../img/decorations/top-skills-coding.svg");
 }
 
 .top-skills-item-icon--animation {
+  mask-image: url("../img/decorations/top-skills-animation.svg");
   -webkit-mask-image: url("../img/decorations/top-skills-animation.svg");
-          mask-image: url("../img/decorations/top-skills-animation.svg");
-  --webkit-mask-image: url("../img/decorations/top-skills-animation.svg");
 }
 
 .top-skills-item-icon--design {
+  mask-image: url("../img/decorations/top-skills-design.svg");
   -webkit-mask-image: url("../img/decorations/top-skills-design.svg");
-          mask-image: url("../img/decorations/top-skills-design.svg");
-  --webkit-mask-image: url("../img/decorations/top-skills-design.svg");
 }
 
 .top-skills-item-icon--learn {
+  mask-image: url("../img/decorations/top-skills-learn.svg");
   -webkit-mask-image: url("../img/decorations/top-skills-learn.svg");
-          mask-image: url("../img/decorations/top-skills-learn.svg");
-  --webkit-mask-image: url("../img/decorations/top-skills-learn.svg");
 }
 
 /*!
