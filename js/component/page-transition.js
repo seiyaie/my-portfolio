@@ -6,20 +6,10 @@ export const initPageTransition = () => {
     const D_ENTER = 0.7;
     const D_LEAVE = 0.6;
 
-    const setIdle = () => {
-        gsap.set(page, { autoAlpha: 1 });
-    };
+    const setIdle = () => gsap.set(page, { autoAlpha: 1 });
 
     const playEnter = () => {
-        gsap.fromTo(
-            page,
-            { autoAlpha: 0 },
-            {
-                autoAlpha: 1,
-                duration: D_ENTER,
-                ease: "power3.out",
-            }
-        );
+        gsap.fromTo(page, { autoAlpha: 0 }, { autoAlpha: 1, duration: D_ENTER, ease: "power3.out" });
     };
 
     const playLeave = (href) => {
@@ -35,10 +25,9 @@ export const initPageTransition = () => {
     playEnter();
 
     window.addEventListener("pageshow", (e) => {
-        if (e.persisted) {
-            setIdle();
-            playEnter();
-        }
+        if (!e.persisted) return;
+        setIdle();
+        playEnter();
     });
 
     document.addEventListener("click", (e) => {

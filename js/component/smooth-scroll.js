@@ -1,8 +1,7 @@
 // component/smooth-scroll.js
 
 export const initSmoothScroll = () => {
-
-  // headerの高さ取得
+    // headerの高さ取得
     const getScrollOffset = () => parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--header-height")) || 0;
 
     // ターゲットの位置取得
@@ -17,6 +16,23 @@ export const initSmoothScroll = () => {
         });
     };
 
+    // ✅ 外から呼べる：hash(#about) へスムーススクロール
+    const scrollToHash = (hash, { updateHistory = true } = {}) => {
+        if (!hash || hash === "#") {
+            scrollToPosition(0);
+            if (updateHistory) history.pushState(null, "", "#");
+            return;
+        }
+
+        const target = document.querySelector(hash);
+        if (!target) return;
+
+        scrollToPosition(getTargetPosition(target));
+        if (updateHistory) history.pushState(null, "", hash);
+    };
+
+    // ✅ 公開（hamburger から呼ぶ）
+    window.__scrollToHash = scrollToHash;
 
     // --------------------------
     // 同ページ内スクロール

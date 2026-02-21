@@ -1,3 +1,4 @@
+// component/hamburger-menu.js
 export const initHamburgerMenu = () => {
     const menu = document.querySelector(".js-hamburger-menu");
     const openButton = document.querySelector(".js-hamburger-open-button");
@@ -6,67 +7,132 @@ export const initHamburgerMenu = () => {
 
     if (!menu || !openButton || !closeButton || links.length === 0) return;
 
-    // 状態管理
+    const FROM_HAMBURGER_KEY = "nav_from_hamburger";
+    const HAMBURGER_HASH_KEY = "nav_hash_after_hamburger";
+
     let isAnimating = false;
 
-    // GSAP timeline
     const tl = gsap.timeline({
         paused: true,
         defaults: { ease: "power3.out" },
-        onStart: () => {
-            isAnimating = true;
-        },
-        onComplete: () => {
-            isAnimating = false;
-        },
-        onReverseComplete: () => {
-            isAnimating = false;
-            menu.close();
-        },
+        onStart: () => (isAnimating = true),
+        onComplete: () => (isAnimating = false),
     });
 
     tl.from(menu, { opacity: 0, duration: 0.3 }).from(".js-hamburger-menu-list", { opacity: 0, y: 24, duration: 0.3 });
 
-    // メニュー開く関数
     const openMenu = () => {
         if (isAnimating || menu.open) return;
         menu.showModal();
         tl.play(0);
     };
 
-    // メニュー閉じる関数
     const closeMenu = () => {
-        if (isAnimating || !menu.open) return;
-        tl.reverse();
+        if (isAnimating || !menu.open) return Promise.resolve();
+
+        return new Promise((resolve) => {
+            tl.eventCallback("onReverseComplete", () => {
+                menu.close();
+                resolve();
+                tl.eventCallback("onReverseComplete", null);
+            });
+            tl.reverse();
+        });
     };
 
+    const isSamePage = (url) => url.pathname === window.location.pathname && url.search === window.location.search;
+
+    const scrollToHash = (hash) => {
+        if (!hash) return;
+
+        // smooth scroll実行
+        if (window.__scrollToHash) {
+            window.__scrollToHash(hash);
+            return;
+        }
+
+        // 保険
+        history.pushState(null, "", hash);
+        document.querySelector(hash)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
+
+    const setHamburgerNavFlag = (hash) => {
+        sessionStorage.setItem(FROM_HAMBURGER_KEY, "1");
+        if (hash) sessionStorage.setItem(HAMBURGER_HASH_KEY, hash);
+        else sessionStorage.removeItem(HAMBURGER_HASH_KEY);
+    };
+
+    // --------------------------
+    // button / close triggers
+    // --------------------------
     openButton.addEventListener("click", openMenu);
     closeButton.addEventListener("click", closeMenu);
 
-    // escキーで閉じる
     document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") {
-            if (!menu.open) return;
-            e.preventDefault();
-            closeMenu();
-        }
+        if (e.key !== "Escape" || !menu.open) return;
+        e.preventDefault();
+        closeMenu();
     });
 
-    // 背景クリックで閉じる
     menu.addEventListener("click", (e) => {
-
-        if (!e.target.closest(".js-hamburger-menu-item")) {
-            closeMenu();
-        }
+        if (!e.target.closest(".js-hamburger-menu-item")) closeMenu();
     });
 
-    // 同一ページ内のリンクをクリックしたらメニューを閉じる
+    // arrived from hamburger
+    const fromHamburger = sessionStorage.getItem(FROM_HAMBURGER_KEY) === "1";
+    if (fromHamburger) {
+        sessionStorage.removeItem(FROM_HAMBURGER_KEY);
+
+        const pendingHash = sessionStorage.getItem(HAMBURGER_HASH_KEY);
+        sessionStorage.removeItem(HAMBURGER_HASH_KEY);
+
+        // 「開いた状態」を一瞬で作ってから、次フレームで閉じる
+        menu.showModal();
+        tl.progress(1);
+
+        requestAnimationFrame(async () => {
+            await closeMenu();
+            scrollToHash(pendingHash);
+        });
+    }
+
+    // --------------------------
+    // link handling
+    // --------------------------
     links.forEach((link) => {
-        link.addEventListener("click", () => {
+        link.addEventListener("click", async (e) => {
             const href = link.getAttribute("href");
-            if (href && href.startsWith("#")) {
-                menu.close();
+            if (!href) return;
+
+            e.preventDefault();
+            e.stopPropagation();
+
+            const url = new URL(href, window.location.href);
+
+            // 外部は普通に遷移
+            if (url.origin !== window.location.origin) {
+                window.location.href = href;
+                return;
             }
+
+            // hashあり
+            if (url.hash) {
+                // 同一ページhash
+                if (isSamePage(url)) {
+                    await closeMenu();
+                    scrollToHash(url.hash);
+                    return;
+                }
+
+                // 別ページ + hash
+                setHamburgerNavFlag(url.hash);
+                window.location.href = url.origin + url.pathname + url.search;
+                return;
+            }
+
+            // hashなし内部リンク
+            setHamburgerNavFlag();
+            window.location.href = url.href;
         });
     });
 };
