@@ -10,6 +10,21 @@ page > works > works
     border-bottom: var(--border-section);
 }
 
+.works-title {
+    border-bottom: var(--border-ui);
+    display: inline-block;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 40px;
+    @include g.mq() {
+        font-size: 24px;
+        margin-top: 64px;
+    }
+    @include g.mq() {
+        margin-top: 96px;
+    }
+}
+
 .works-list--personal .works-item:last-child,
 .works-list--school .works-item:last-child {
     border-bottom: var(--border-section);
