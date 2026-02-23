@@ -1163,47 +1163,70 @@ page > top > top-kv
 
 .top-kv-selected-button {
   position: absolute;
-  left: 16px;
-  bottom: 70px;
   background-color: var(--color-bg);
   z-index: var(--z-index-overlay-content);
+  right: 16px;
+  bottom: 50px;
+}
+@media screen and (min-width: 500px) {
+  .top-kv-selected-button {
+    bottom: 70px;
+  }
 }
 @media screen and (min-width: 768px) {
   .top-kv-selected-button {
-    bottom: 90px;
+    right: auto;
     left: 40px;
+    bottom: 90px;
   }
 }
 
 .top-kv-scroll-panel {
   position: absolute;
-  left: 16px;
-  bottom: 140px;
+  bottom: 120px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  left: 16px;
   width: 90%;
   z-index: var(--z-index-kv-slider);
 }
+@media screen and (min-width: 500px) {
+  .top-kv-scroll-panel {
+    bottom: 140px;
+  }
+}
 @media screen and (min-width: 768px) {
   .top-kv-scroll-panel {
-    width: 70%;
+    justify-content: space-between;
+    width: 75%;
     left: 40px;
     bottom: 40px;
   }
 }
 
 .top-kv-scroll-tracker {
+  width: 100%;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 32px;
+}
+@media screen and (min-width: 768px) {
+  .top-kv-scroll-tracker {
+    width: auto;
+  }
 }
 
 .top-kv-scrollbar {
   position: relative;
-  width: clamp(200px, 40vw, 600px);
+  flex: 1;
   height: 2px;
   background-color: #808080;
+}
+@media screen and (min-width: 768px) {
+  .top-kv-scrollbar {
+    width: clamp(200px, 40vw, 600px);
+  }
 }
 
 .top-kv-scrollbar-thumb {
@@ -1220,24 +1243,23 @@ page > top > top-kv
 }
 
 .top-kv-scroll-control {
-  display: flex;
-  align-items: center;
-  gap: 16px;
+  display: none;
 }
 @media screen and (min-width: 768px) {
   .top-kv-scroll-control {
+    display: flex;
+    align-items: center;
     gap: 24px;
   }
 }
 
 .top-kv-scroll-button {
+  aspect-ratio: 1/1;
   width: 16px;
-  height: 16px;
 }
 @media screen and (min-width: 768px) {
   .top-kv-scroll-button {
     width: 20px;
-    height: 20px;
   }
 }
 

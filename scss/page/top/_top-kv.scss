@@ -32,12 +32,6 @@ page > top > top-kv
         max-width: 85vw;
         min-width: 70%;
     }
-    // &::before {
-    //     content: "";
-    //     position: absolute;
-    //     inset: 0;
-    //     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 90%);
-    // }
 }
 
 .top-kv-selected-link {
@@ -64,43 +58,58 @@ page > top > top-kv
 
 .top-kv-selected-button {
     position: absolute;
-    left: 16px;
-    bottom: 70px;
     background-color: var(--color-bg);
     z-index: var(--z-index-overlay-content);
+    right: 16px;
+    bottom: 50px;
+    @include g.mq(sm) {
+        bottom: 70px;
+    }
     @include g.mq() {
-        bottom: 90px;
+        right: auto;
         left: 40px;
+        bottom: 90px;
     }
 }
 
 .top-kv-scroll-panel {
     position: absolute;
-    left: 16px;
-    bottom: 140px;
+    bottom: 120px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    left: 16px;
     width: 90%;
     z-index: var(--z-index-kv-slider);
+    @include g.mq(sm) {
+        bottom: 140px;
+    }
     @include g.mq() {
-        width: 70%;
+        justify-content: space-between;
+        width: 75%;
         left: 40px;
         bottom: 40px;
     }
 }
 
 .top-kv-scroll-tracker {
+    width: 100%;
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 32px;
+    @include g.mq() {
+        width: auto;
+    }
 }
 
 .top-kv-scrollbar {
     position: relative;
-    width: clamp(200px, 40vw, 600px);
+    flex: 1;
     height: 2px;
     background-color: #808080;
+    @include g.mq() {
+        width: clamp(200px, 40vw, 600px);
+    }
 }
 
 .top-kv-scrollbar-thumb {
@@ -117,20 +126,20 @@ page > top > top-kv
 }
 
 .top-kv-scroll-control {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+    display: none;
     @include g.mq() {
+        display: flex;
+        align-items: center;
         gap: 24px;
     }
 }
 
 .top-kv-scroll-button {
+    aspect-ratio: 1/1;
     width: 16px;
-    height: 16px;
+
     @include g.mq() {
         width: 20px;
-        height: 20px;
     }
 }
 
