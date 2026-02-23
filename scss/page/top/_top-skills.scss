@@ -28,7 +28,10 @@ page > top > top-skills
 .top-skills-item {
     border: var(--border-ui);
     position: relative;
-    padding-bottom: 100px;
+    padding-bottom: 70px;
+    @include g.mq() {
+        padding-bottom: 100px;
+    }
     &:nth-child(4) {
         @include g.mq(lg) {
             grid-column: 1 / -1;
@@ -59,13 +62,16 @@ page > top > top-skills
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center;
 
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    aspect-ratio: 1/1;
     position: absolute;
     right: 16px;
     bottom: 16px;
     background-color: var(--color-icon);
     opacity: 0.4;
+    @include g.mq() {
+        width: 80px;
+    }
 }
 
 .top-skills-item-icon--coding {
