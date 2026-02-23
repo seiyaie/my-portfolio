@@ -9,20 +9,27 @@ component > breadcrumb
     font-family: var(--font-family-en);
     text-transform: uppercase;
     font-weight: bold;
+    font-size: var(--font-size-body-sm);
 }
 
 .c-breadcrumb-list {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 8px;
+}
+
+.c-breadcrumb-item {
+    display: inline-flex;
+    align-items: center;
 }
 
 .c-breadcrumb-item--current {
     text-decoration: underline;
 }
 
-.c-breadcrumb-item:not(:first-child)::before {
+.c-breadcrumb-item:not(:last-child)::after {
     content: ">";
     display: inline-block;
-    margin-right: 8px;
+    margin-left: 8px;
 }
