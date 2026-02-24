@@ -585,6 +585,7 @@ component > hamburger-menu.scss
 .c-hamburger-open-button--text,
 .c-hamburger-close-button--text {
   font-family: var(--font-family-accent);
+  color: var(--color-text);
   font-weight: bold;
   letter-spacing: 0;
   line-height: 1;
@@ -626,6 +627,7 @@ component > hamburger-menu.scss
 }
 
 .c-hamburger-menu-item a {
+  color: var(--color-text);
   display: inline-block;
 }
 
