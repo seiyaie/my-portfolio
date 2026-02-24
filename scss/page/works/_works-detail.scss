@@ -124,24 +124,35 @@ page > works > works-detail
 .works-detail-points {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 24px;
     @include g.mq() {
-        gap: 24px;
+        gap: 32px;
+    }
+}
+
+.works-detail-point {
+    &:not(:last-child) {
+        border-bottom: var(--border-dashed);
+        padding-bottom: 24px;
+        @include g.mq() {
+            padding-bottom: 32px;
+        }
     }
 }
 
 .works-detail-point-title {
+    display: grid;
+    grid-template-columns: auto 1fr;
     font-weight: bold;
+    gap: 4px;
     &::before {
         content: "・";
-        display: inline-block;
-        margin-right: 4px;
     }
 }
 
 .works-detail-point-text {
     padding-left: calc(1em + 4px);
-    padding-top: 8px;
+    padding-top: 16px;
 }
 
 .works-detail-tech-list {
