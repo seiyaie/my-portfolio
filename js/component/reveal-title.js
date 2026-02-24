@@ -1,3 +1,4 @@
+// component/reveal-title.js
 gsap.registerPlugin(SplitText);
 
 export const initTitleReveal = () => {
@@ -5,17 +6,19 @@ export const initTitleReveal = () => {
 
     titles.forEach((title) => {
         const split = new SplitText(title, {
-            type: "chars",
+            type: "words,chars",
+            wordsClass: "c-split-text-word",
+            charsClass: "c-split-text-char",
         });
 
+        const titleH = title.getBoundingClientRect().height;
+        const yOffset = Math.ceil(titleH * 1.2);
+
         gsap.from(split.chars, {
-            yPercent: 150,
-            stagger: 0.1,
+            y: yOffset,
             duration: 1,
             ease: "power4.inOut",
-            onComplete: () => {
-                split.revert();
-            },
+            stagger: 0.06,
             scrollTrigger: {
                 trigger: title,
                 start: "top 95%",

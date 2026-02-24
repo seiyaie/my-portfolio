@@ -497,7 +497,7 @@ component > title
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1.2;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.12em;
   display: block;
   border-bottom: var(--border-section);
   padding-bottom: 8px;
@@ -850,6 +850,16 @@ component > pagination
 
 .c-pagination-link--dots {
   pointer-events: none;
+}
+
+/*!
+component > split-text
+------------------------------
+*/
+.c-split-text-word {
+  white-space: nowrap;
+  display: inline-block;
+  max-width: 100%;
 }
 
 /*!
