@@ -1127,9 +1127,9 @@ page > top > top-kv
 @media screen and (min-width: 768px) {
   .top-kv {
     display: flex;
-    height: calc(100vh - 120px - 152px);
+    height: calc(100vh - var(--header-height) - 152px);
     max-height: 47.8125vw;
-    min-height: 224px;
+    min-height: 380px;
   }
 }
 
@@ -1147,6 +1147,11 @@ page > top > top-kv
     max-width: 85vw;
     min-width: 70%;
   }
+}
+
+.top-kv-selected-stage {
+  width: 100%;
+  height: 100%;
 }
 
 .top-kv-selected-link {
@@ -1172,7 +1177,7 @@ page > top > top-kv
      object-fit: cover;
 }
 
-.top-kv-selected-button {
+.top-kv-cta-button {
   position: absolute;
   background-color: var(--color-bg);
   z-index: var(--z-index-overlay-content);
@@ -1180,12 +1185,12 @@ page > top > top-kv
   bottom: 50px;
 }
 @media screen and (min-width: 500px) {
-  .top-kv-selected-button {
+  .top-kv-cta-button {
     bottom: 70px;
   }
 }
 @media screen and (min-width: 768px) {
-  .top-kv-selected-button {
+  .top-kv-cta-button {
     right: auto;
     left: 40px;
     bottom: 90px;
@@ -1194,7 +1199,7 @@ page > top > top-kv
 
 .top-kv-scroll-panel {
   position: absolute;
-  bottom: 120px;
+  bottom: 16px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -1204,13 +1209,12 @@ page > top > top-kv
 }
 @media screen and (min-width: 500px) {
   .top-kv-scroll-panel {
-    bottom: 140px;
+    bottom: 20px;
   }
 }
 @media screen and (min-width: 768px) {
   .top-kv-scroll-panel {
     justify-content: space-between;
-    width: 75%;
     left: 40px;
     bottom: 40px;
   }
@@ -1277,13 +1281,14 @@ page > top > top-kv
 .top-kv-slider {
   position: relative;
   width: 100%;
-  height: auto;
+  height: 100%;
   border-top: var(--border-ui);
 }
 @media screen and (min-width: 768px) {
   .top-kv-slider {
     overflow: visible;
     border-top: none;
+    align-self: stretch;
   }
 }
 
@@ -1324,7 +1329,7 @@ page > top > top-kv
     gap: 0;
     flex-wrap: wrap;
     flex-direction: column;
-    max-height: calc(100vh - 120px - 152px);
+    max-height: 100%;
     width: -moz-max-content;
     width: max-content;
     justify-content: center;
@@ -1420,11 +1425,11 @@ page > top > top-kv
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.top-kv-toggle-btn {
+.top-kv-toggle-button {
   display: none;
 }
 @media screen and (min-width: 768px) {
-  .top-kv-toggle-btn {
+  .top-kv-toggle-button {
     display: block;
     background: transparent;
     position: absolute;
@@ -1435,13 +1440,13 @@ page > top > top-kv
   }
 }
 @media screen and (min-width: 1200px) {
-  .top-kv-toggle-btn {
+  .top-kv-toggle-button {
     left: -38px;
     width: 38px;
     height: 129px;
   }
 }
-.top-kv-toggle-btn svg {
+.top-kv-toggle-button svg {
   display: block;
   width: 100%;
   height: 100%;
@@ -1455,17 +1460,17 @@ page > top > top-kv
   fill: var(--color-line-ui);
 }
 
-.top-kv-toggle-btn-bg {
+.top-kv-toggle-button-bg {
   display: block;
   width: 32px;
   height: auto;
 }
-.top-kv-toggle-btn-bg img {
+.top-kv-toggle-button-bg img {
   width: 100%;
   height: 100%;
 }
 
-.top-kv-toggle-btn-arrow {
+.top-kv-toggle-button-arrow {
   display: block;
   position: absolute;
   top: 25px;
@@ -1474,13 +1479,13 @@ page > top > top-kv
   height: auto;
 }
 @media screen and (min-width: 1200px) {
-  .top-kv-toggle-btn-arrow {
+  .top-kv-toggle-button-arrow {
     top: 30px;
     left: 15px;
     width: 18px;
   }
 }
-.top-kv-toggle-btn-arrow img {
+.top-kv-toggle-button-arrow img {
   width: 100%;
   height: 100%;
 }

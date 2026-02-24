@@ -2,12 +2,13 @@ export const initKvSlider = () => {
     const selectedLink = document.querySelector(".js-top-kv-selected-link");
     const selectedImg = selectedLink?.querySelector("img");
     const sliderItems = document.querySelectorAll(".js-kv-slider-item-trigger");
+    const ctaButton = document.querySelector(".js-kv-cta-button a");
     const nextButton = document.querySelector(".js-kv-scroll-button--next");
     const prevButton = document.querySelector(".js-kv-scroll-button--prev");
     const thumb = document.querySelector(".js-scrollbar-thumb");
     const indexText = document.querySelector(".js-scrollbar-index");
 
-    if (!selectedLink || !selectedImg || !sliderItems.length || !nextButton || !prevButton || !thumb || !indexText) return;
+    if (!selectedLink || !selectedImg || !sliderItems.length || !ctaButton || !nextButton || !prevButton || !thumb || !indexText) return;
 
     const total = sliderItems.length;
     let activeIndex = 0;
@@ -28,7 +29,10 @@ export const initKvSlider = () => {
         selectedImg.srcset = item.dataset.mainSrcset;
         selectedImg.sizes = item.dataset.mainSizes;
 
-        if (item.dataset.href) selectedLink.href = item.dataset.href;
+        if (item.dataset.href) {
+            selectedLink.href = item.dataset.href;
+            ctaButton.href = item.dataset.href;
+        }
 
         const fromX = direction === "next" ? "100%" : "-100%";
         const toX = direction === "next" ? "-100%" : "100%";

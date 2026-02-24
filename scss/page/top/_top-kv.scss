@@ -14,9 +14,9 @@ page > top > top-kv
 
     @include g.mq() {
         display: flex;
-        height: calc(100vh - 120px - 152px);
+        height: calc(100vh - var(--header-height) - 152px);
         max-height: calc(0.5625 * 85vw);
-        min-height: calc(420px - 120px - 76px);
+        min-height: 380px;
     }
 }
 
@@ -32,6 +32,11 @@ page > top > top-kv
         max-width: 85vw;
         min-width: 70%;
     }
+}
+
+.top-kv-selected-stage {
+    width: 100%;
+    height: 100%;
 }
 
 .top-kv-selected-link {
@@ -56,7 +61,7 @@ page > top > top-kv
     object-fit: cover;
 }
 
-.top-kv-selected-button {
+.top-kv-cta-button {
     position: absolute;
     background-color: var(--color-bg);
     z-index: var(--z-index-overlay-content);
@@ -74,7 +79,7 @@ page > top > top-kv
 
 .top-kv-scroll-panel {
     position: absolute;
-    bottom: 120px;
+    bottom: 16px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -82,11 +87,11 @@ page > top > top-kv
     width: 90%;
     z-index: var(--z-index-kv-slider);
     @include g.mq(sm) {
-        bottom: 140px;
+        bottom: 20px;
     }
+
     @include g.mq() {
         justify-content: space-between;
-        width: 75%;
         left: 40px;
         bottom: 40px;
     }
@@ -146,12 +151,13 @@ page > top > top-kv
 .top-kv-slider {
     position: relative;
     width: 100%;
-    height: auto;
+    height: 100%;
     border-top: var(--border-ui);
 
     @include g.mq() {
         overflow: visible;
         border-top: none;
+        align-self: stretch;
     }
 }
 
@@ -188,7 +194,7 @@ page > top > top-kv
         gap: 0;
         flex-wrap: wrap;
         flex-direction: column;
-        max-height: calc(100vh - 120px - 152px);
+        max-height: 100%;
         width: max-content;
         justify-content: center;
     }
@@ -286,7 +292,7 @@ page > top > top-kv
     }
 }
 
-.top-kv-toggle-btn {
+.top-kv-toggle-button {
     display: none;
     @include g.mq() {
         display: block;
@@ -317,7 +323,7 @@ page > top > top-kv
     fill: var(--color-line-ui);
 }
 
-.top-kv-toggle-btn-bg {
+.top-kv-toggle-button-bg {
     display: block;
     width: 32px;
     height: auto;
@@ -327,7 +333,7 @@ page > top > top-kv
     }
 }
 
-.top-kv-toggle-btn-arrow {
+.top-kv-toggle-button-arrow {
     display: block;
     position: absolute;
     top: 25px;

@@ -1,6 +1,6 @@
 export const initSliderListToggle = () => {
-    const toggleBtn = document.querySelector(".js-top-kv-toggle-btn");
-    const toggleBtnArrow = document.querySelector(".js-top-kv-btn-arrow");
+    const toggleBtn = document.querySelector(".js-top-kv-toggle-button");
+    const toggleBtnArrow = document.querySelector(".js-top-kv-button-arrow");
     const slider = document.querySelector(".js-top-kv-slider");
     const sliderContainer = document.querySelector(".js-top-kv-slider-list-container");
 
