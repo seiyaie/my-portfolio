@@ -437,7 +437,7 @@ component > button
   --btn-ty: 0px;
   text-shadow: var(--btn-shadow-x) var(--btn-shadow-y) var(--color-button-text-shadow);
   position: relative;
-  padding: 16px 24px;
+  padding: 16px;
   width: 100%;
   display: block;
   text-indent: 0.08em;
