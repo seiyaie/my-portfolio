@@ -167,11 +167,6 @@ global > z-index
 foundation > reset
 ------------------------------
 */
-html {
-  color: #000;
-  background: #fff;
-}
-
 body,
 div,
 dl,
@@ -344,9 +339,9 @@ foundation > base
   --theme-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-html,
-body {
-  transition: background-color var(--theme-duration) var(--theme-ease), color var(--theme-duration) var(--theme-ease);
+html {
+  background-color: var(--color-bg);
+  transition: background-color var(--theme-duration) var(--theme-ease);
 }
 
 body {
@@ -356,6 +351,7 @@ body {
   color: var(--color-text);
   background-color: var(--color-bg);
   font-family: var(--font-family-jp);
+  transition: background-color var(--theme-duration) var(--theme-ease), color var(--theme-duration) var(--theme-ease);
 }
 
 *,
