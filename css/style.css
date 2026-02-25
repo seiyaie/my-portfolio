@@ -2282,6 +2282,11 @@ page > works > works
   flex-direction: column;
   gap: 8px;
 }
+@media screen and (min-width: 500px) {
+  .works-item-link {
+    gap: 16px;
+  }
+}
 @media screen and (min-width: 768px) {
   .works-item-link {
     flex-direction: row;
@@ -2326,7 +2331,6 @@ page > works > works
 @media screen and (min-width: 768px) {
   .works-item-info {
     flex: 1;
-    margin-top: 0;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -2346,9 +2350,13 @@ page > works > works
   background-position: left bottom;
   background-repeat: repeat-x;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 500px) {
   .works-item-title {
     padding-bottom: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .works-item-title {
     font-size: 20px;
   }
 }
@@ -2366,11 +2374,16 @@ page > works > works
 
 .works-item-meta {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr;
   gap: 4px;
   font-size: var(--font-size-body-sm);
   margin-top: 16px;
   align-items: center;
+}
+@media screen and (min-width: 500px) {
+  .works-item-meta {
+    grid-template-columns: 1fr auto;
+  }
 }
 @media screen and (min-width: 768px) {
   .works-item-meta {
@@ -2383,15 +2396,18 @@ page > works > works
 .works-item-date {
   display: block;
   font-family: var(--font-family-en);
-  grid-column: 1/2;
+}
+@media screen and (min-width: 500px) {
+  .works-item-date {
+    grid-column: 1/2;
+  }
 }
 
 .works-item-categories {
   display: flex;
   flex-wrap: wrap;
-  grid-column: 1/2;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 500px) {
   .works-item-categories {
     grid-column: 1/2;
   }
@@ -2406,11 +2422,15 @@ page > works > works
 }
 
 .works-item-button {
-  grid-column: 2/3;
-  grid-row: 1/3;
   height: 100%;
-  display: grid;
-  place-items: center;
+  margin-top: 16px;
+}
+@media screen and (min-width: 500px) {
+  .works-item-button {
+    margin-top: 0;
+    grid-column: 2/3;
+    grid-row: 1/3;
+  }
 }
 @media screen and (min-width: 768px) {
   .works-item-button {
