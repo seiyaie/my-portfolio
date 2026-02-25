@@ -82,9 +82,9 @@ global > content-width
 ------------------------------
 */
 :root {
-  --width-content-s: 760px;
+  --width-content-sm: 760px;
   --width-content: 1080px;
-  --width-content-l: 1400px;
+  --width-content-lg: 1400px;
 }
 
 /*!
@@ -876,13 +876,18 @@ layout > transition-root
 layout > container
 ------------------------------
 */
-.l-container-s {
-  width: min(90%, var(--width-content-s));
+.l-container-sm {
+  width: min(90%, var(--width-content-sm));
   margin-inline: auto;
 }
 
 .l-container {
   width: min(90%, var(--width-content));
+  margin-inline: auto;
+}
+
+.l-container-lg {
+  width: min(90%, var(--width-content-lg));
   margin-inline: auto;
 }
 
