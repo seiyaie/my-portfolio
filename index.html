@@ -166,109 +166,114 @@
             <!-- the end of text slider -->
 
             <!-- top kv -->
-            <div class="top-kv js-top-kv">
-                <div class="top-kv-selected-work js-top-kv-selected-work">
-                    <div class="top-kv-selected-stage">
-                        <a href="works/travel-gallery.html" class="top-kv-selected-link js-top-kv-selected-link" aria-label="作品詳細へ">
-                            <img src="img/common/16-9/small/travel-gallery.jpg" srcset="img/common/16-9/small/travel-gallery.jpg 308w, img/common/16-9/large/travel-gallery.jpg 1120w" sizes="(min-width: 768px) 1120px, 308px" width="2240" height="1260" alt="" decoding="async" />
-                            <div class="top-kv-mask" aria-hidden="true"></div>
-                        </a>
-                    </div>
-                    <div class="top-kv-cta-button js-kv-cta-button">
-                        <a href="works/travel-gallery.html" class="c-button c-button--sm">詳細を見る</a>
-                    </div>
+            <div class="top-kv js-kv">
+                <div class="top-kv-slider">
+                    <!-- スライダーメイン -->
+                    <div class="top-kv-slider-main">
+                        <div class="top-kv-slider-stage">
+                            <a href="works/travel-gallery.html" class="top-kv-slider-link js-kv-slider-link" aria-label="作品詳細へ">
+                                <img src="img/common/16-9/small/travel-gallery.jpg" srcset="img/common/16-9/small/travel-gallery.jpg 308w, img/common/16-9/large/travel-gallery.jpg 1120w" sizes="(min-width: 768px) 1120px, 308px" width="2240" height="1260" alt="" decoding="async" />
+                                <div class="top-kv-slider-mask" aria-hidden="true"></div>
+                            </a>
+                        </div>
+                        <div class="top-kv-slider-cta-button js-kv-slider-cta-button">
+                            <a href="works/travel-gallery.html" class="c-button c-button--sm">詳細を見る</a>
+                        </div>
 
-                    <div class="top-kv-scroll-panel">
-                        <div class="top-kv-scroll-tracker">
-                            <div class="top-kv-scrollbar">
-                                <div class="top-kv-scrollbar-thumb js-scrollbar-thumb"></div>
+                        <div class="top-kv-slider-controls">
+                            <div class="top-kv-slider-progress">
+                                <div class="top-kv-slider-progress-bar">
+                                    <div class="top-kv-slider-progress-bar-thumb js-kv-slider-progress-bar-thumb"></div>
+                                </div>
+                                <div class="top-kv-slider-progress-index js-kv-slider-progress-index">1 / 8</div>
                             </div>
-                            <div class="top-kv-selected-index js-scrollbar-index">1 / 8</div>
-                        </div>
-                        <div class="top-kv-scroll-control">
-                            <button class="top-kv-scroll-button js-kv-scroll-button--prev" aria-label="前の画像に戻る">
-                                <img src="img/icons/ui/arrow-left.svg" width="24" height="25" alt="" decoding="async" />
-                            </button>
-                            <button class="top-kv-scroll-button js-kv-scroll-button--next" aria-label="前の画像に戻る">
-                                <img src="img/icons/ui/arrow-right.svg" width="24" height="25" alt="" decoding="async" />
-                            </button>
+                            <div class="top-kv-slider-nav">
+                                <button class="top-kv-slider-nav-button js-kv-slider-nav-button--prev" aria-label="前の画像に戻る">
+                                    <img src="img/icons/ui/arrow-left.svg" width="24" height="25" alt="" decoding="async" />
+                                </button>
+                                <button class="top-kv-slider-nav-button js-kv-slider-nav-button--next" aria-label="前の画像に戻る">
+                                    <img src="img/icons/ui/arrow-right.svg" width="24" height="25" alt="" decoding="async" />
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="top-kv-slider js-top-kv-slider">
-                    <div class="top-kv-slider-list-container js-top-kv-slider-list-container">
-                        <!-- トグルボタン -->
-                        <button class="top-kv-toggle-button js-top-kv-toggle-button" aria-label="スライダーリスト開閉ボタン">
-                            <svg class="kv-toggle-panel" width="25" height="85" viewBox="0 0 25 85" aria-hidden="true">
-                                <path class="kv-toggle-panel--fill" d="M0 0H25V85L0 52.2818V0Z" />
-                                <path class="kv-toggle-panel--stroke" d="M25 0V85L0 52.2818V0H25ZM1.5625 51.7364L25 83.014V0H1.5625V51.7364Z" />
-                            </svg>
-                            <span class="top-kv-toggle-button-arrow js-top-kv-button-arrow">
-                                <img src="img/icons/ui/slider-arrow-white.svg" width="15" height="16" alt="" decoding="async" class="js-theme-arrow" />
-                            </span>
-                        </button>
-                        <!-- スライダーリスト -->
-                        <ul class="top-kv-slider-list">
-                            <li class="top-kv-slider-item js-top-kv-slider-item">
-                                <button class="top-kv-slider-item-trigger is-active js-kv-slider-item-trigger" aria-label="画像を選択" data-main-src="img/common/16-9/small/travel-gallery.jpg" data-main-srcset="img/common/16-9/small/travel-gallery.jpg 308w, img/common/16-9/large/travel-gallery.jpg 1120w" data-main-sizes="(min-width: 768px) 1120px, 308px" data-href="works/travel-gallery.html">
-                                    <img src="img/common/1-1/small/travel-gallery.jpg" width="300" height="300" alt="" decoding="async" />
-                                </button>
-                            </li>
+                    <!-- スライダーサムネイル -->
+                    <div class="top-kv-slider-thumbnails js-kv-slider-thumbnails">
+                        <div class="top-kv-slider-thumbnails-inner js-kv-slider-thumbnails-inner">
+                            <!-- トグルボタン -->
+                            <button class="top-kv-slider-toggle js-kv-slider-toggle" aria-label="スライダーリスト開閉ボタン">
+                                <svg class="top-kv-toggle-panel" width="25" height="85" viewBox="0 0 25 85" aria-hidden="true">
+                                    <path class="top-kv-toggle-panel--fill" d="M0 0H25V85L0 52.2818V0Z" />
+                                    <path class="top-kv-toggle-panel--stroke" d="M25 0V85L0 52.2818V0H25ZM1.5625 51.7364L25 83.014V0H1.5625V51.7364Z" />
+                                </svg>
+                                <span class="top-kv-slider-toggle-arrow js-kv-toggle-arrow">
+                                    <img src="img/icons/ui/slider-arrow-white.svg" width="15" height="16" alt="" decoding="async" class="js-theme-arrow" />
+                                </span>
+                            </button>
 
-                            <!-- leaf design lab -->
-                            <li class="top-kv-slider-item js-top-kv-slider-item">
-                                <button class="top-kv-slider-item-trigger js-kv-slider-item-trigger" aria-label="画像を選択" data-main-src="img/common/16-9/small/leaf-design-lab.jpg" data-main-srcset="img/common/16-9/small/leaf-design-lab.jpg 308w, img/common/16-9/large/leaf-design-lab.jpg 1120w" data-main-sizes="(min-width: 768px) 1120px, 308px" data-href="works/leaf-design-lab.html">
-                                    <img src="img/common/1-1/small/leaf-design-lab.jpg" width="300" height="300" alt="" decoding="async" />
-                                </button>
-                            </li>
+                            <!-- スライダーリスト -->
+                            <ul class="top-kv-slider-list">
+                                <li class="top-kv-slider-item">
+                                    <button class="top-kv-slider-item-trigger is-active js-kv-slider-item-trigger" aria-label="画像を選択" data-main-src="img/common/16-9/small/travel-gallery.jpg" data-main-srcset="img/common/16-9/small/travel-gallery.jpg 308w, img/common/16-9/large/travel-gallery.jpg 1120w" data-main-sizes="(min-width: 768px) 1120px, 308px" data-href="works/travel-gallery.html">
+                                        <img src="img/common/1-1/small/travel-gallery.jpg" width="300" height="300" alt="" decoding="async" />
+                                    </button>
+                                </li>
 
-                            <!-- photographer -->
-                            <li class="top-kv-slider-item js-top-kv-slider-item">
-                                <button class="top-kv-slider-item-trigger js-kv-slider-item-trigger" aria-label="画像を選択" data-main-src="img/common/16-9/small/photographer.jpg" data-main-srcset="img/common/16-9/small/photographer.jpg 308w, img/common/16-9/large/photographer.jpg 1120w" data-main-sizes="(min-width: 768px) 1120px, 308px" data-href="works/photographer.html">
-                                    <img src="img/common/1-1/small/photographer.jpg" width="300" height="300" alt="" decoding="async" />
-                                </button>
-                            </li>
+                                <!-- leaf design lab -->
+                                <li class="top-kv-slider-item">
+                                    <button class="top-kv-slider-item-trigger js-kv-slider-item-trigger" aria-label="画像を選択" data-main-src="img/common/16-9/small/leaf-design-lab.jpg" data-main-srcset="img/common/16-9/small/leaf-design-lab.jpg 308w, img/common/16-9/large/leaf-design-lab.jpg 1120w" data-main-sizes="(min-width: 768px) 1120px, 308px" data-href="works/leaf-design-lab.html">
+                                        <img src="img/common/1-1/small/leaf-design-lab.jpg" width="300" height="300" alt="" decoding="async" />
+                                    </button>
+                                </li>
 
-                            <!-- matsuyama clinic -->
-                            <li class="top-kv-slider-item js-top-kv-slider-item">
-                                <button class="top-kv-slider-item-trigger js-kv-slider-item-trigger" aria-label="画像を選択" data-main-src="img/common/16-9/small/matsuyama-clinic.jpg" data-main-srcset="img/common/16-9/small/matsuyama-clinic.jpg 308w, img/common/16-9/large/matsuyama-clinic.jpg 1120w" data-main-sizes="(min-width: 768px) 1120px, 308px" data-href="works/matsuyama-clinic.html">
-                                    <img src="img/common/1-1/small/matsuyama-clinic.jpg" width="300" height="300" alt="" decoding="async" />
-                                </button>
-                            </li>
+                                <!-- photographer -->
+                                <li class="top-kv-slider-item">
+                                    <button class="top-kv-slider-item-trigger js-kv-slider-item-trigger" aria-label="画像を選択" data-main-src="img/common/16-9/small/photographer.jpg" data-main-srcset="img/common/16-9/small/photographer.jpg 308w, img/common/16-9/large/photographer.jpg 1120w" data-main-sizes="(min-width: 768px) 1120px, 308px" data-href="works/photographer.html">
+                                        <img src="img/common/1-1/small/photographer.jpg" width="300" height="300" alt="" decoding="async" />
+                                    </button>
+                                </li>
 
-                            <!-- coco -->
-                            <li class="top-kv-slider-item js-top-kv-slider-item">
-                                <button class="top-kv-slider-item-trigger js-kv-slider-item-trigger" aria-label="画像を選択" data-main-src="img/common/16-9/small/coco.jpg" data-main-srcset="img/common/16-9/small/coco.jpg 308w, img/common/16-9/large/coco.jpg 1120w" data-main-sizes="(min-width: 768px) 1120px, 308px" data-href="works/coco.html">
-                                    <img src="img/common/1-1/small/coco.jpg" width="300" height="300" alt="" decoding="async" />
-                                </button>
-                            </li>
+                                <!-- matsuyama clinic -->
+                                <li class="top-kv-slider-item">
+                                    <button class="top-kv-slider-item-trigger js-kv-slider-item-trigger" aria-label="画像を選択" data-main-src="img/common/16-9/small/matsuyama-clinic.jpg" data-main-srcset="img/common/16-9/small/matsuyama-clinic.jpg 308w, img/common/16-9/large/matsuyama-clinic.jpg 1120w" data-main-sizes="(min-width: 768px) 1120px, 308px" data-href="works/matsuyama-clinic.html">
+                                        <img src="img/common/1-1/small/matsuyama-clinic.jpg" width="300" height="300" alt="" decoding="async" />
+                                    </button>
+                                </li>
 
-                            <!-- migliore -->
-                            <li class="top-kv-slider-item js-top-kv-slider-item">
-                                <button class="top-kv-slider-item-trigger js-kv-slider-item-trigger" aria-label="画像を選択" data-main-src="img/common/16-9/small/migliore.jpg" data-main-srcset="img/common/16-9/small/migliore.jpg 308w, img/common/16-9/large/migliore.jpg 1120w" data-main-sizes="(min-width: 768px) 1120px, 308px" data-href="works/migliore.html">
-                                    <img src="img/common/1-1/small/migliore.jpg" width="300" height="300" alt="" decoding="async" />
-                                </button>
-                            </li>
+                                <!-- coco -->
+                                <li class="top-kv-slider-item">
+                                    <button class="top-kv-slider-item-trigger js-kv-slider-item-trigger" aria-label="画像を選択" data-main-src="img/common/16-9/small/coco.jpg" data-main-srcset="img/common/16-9/small/coco.jpg 308w, img/common/16-9/large/coco.jpg 1120w" data-main-sizes="(min-width: 768px) 1120px, 308px" data-href="works/coco.html">
+                                        <img src="img/common/1-1/small/coco.jpg" width="300" height="300" alt="" decoding="async" />
+                                    </button>
+                                </li>
 
-                            <!-- moshashugyo -->
-                            <li class="top-kv-slider-item js-top-kv-slider-item">
-                                <button class="top-kv-slider-item-trigger js-kv-slider-item-trigger" aria-label="画像を選択" data-main-src="img/common/16-9/small/moshashugyo.jpg" data-main-srcset="img/common/16-9/small/moshashugyo.jpg 308w, img/common/16-9/large/moshashugyo.jpg 1120w" data-main-sizes="(min-width: 768px) 1120px, 308px" data-href="works/moshashugyo-media.html">
-                                    <img src="img/common/1-1/small/moshashugyo.jpg" width="300" height="300" alt="" decoding="async" />
-                                </button>
-                            </li>
+                                <!-- migliore -->
+                                <li class="top-kv-slider-item">
+                                    <button class="top-kv-slider-item-trigger js-kv-slider-item-trigger" aria-label="画像を選択" data-main-src="img/common/16-9/small/migliore.jpg" data-main-srcset="img/common/16-9/small/migliore.jpg 308w, img/common/16-9/large/migliore.jpg 1120w" data-main-sizes="(min-width: 768px) 1120px, 308px" data-href="works/migliore.html">
+                                        <img src="img/common/1-1/small/migliore.jpg" width="300" height="300" alt="" decoding="async" />
+                                    </button>
+                                </li>
 
-                            <!-- my portfolio -->
-                            <li class="top-kv-slider-item js-top-kv-slider-item">
-                                <button class="top-kv-slider-item-trigger js-kv-slider-item-trigger" aria-label="画像を選択" data-main-src="img/common/16-9/small/my-portfolio.png" data-main-srcset="img/common/16-9/small/my-portfolio.png 308w, img/common/16-9/large/my-portfolio.png 1120w" data-main-sizes="(min-width: 768px) 1120px, 308px" data-href="works/my-portfolio.html" data-title="my portfolio">
-                                    <img src="img/common/1-1/small/my-portfolio.png" width="300" height="300" alt="" decoding="async" />
-                                </button>
-                            </li>
+                                <!-- moshashugyo -->
+                                <li class="top-kv-slider-item">
+                                    <button class="top-kv-slider-item-trigger js-kv-slider-item-trigger" aria-label="画像を選択" data-main-src="img/common/16-9/small/moshashugyo.jpg" data-main-srcset="img/common/16-9/small/moshashugyo.jpg 308w, img/common/16-9/large/moshashugyo.jpg 1120w" data-main-sizes="(min-width: 768px) 1120px, 308px" data-href="works/moshashugyo-media.html">
+                                        <img src="img/common/1-1/small/moshashugyo.jpg" width="300" height="300" alt="" decoding="async" />
+                                    </button>
+                                </li>
 
-                            <li class="top-kv-slider-item top-kv-slider-item--button">
-                                <a href="works/" class="c-button c-button--sm c-button--en">view more</a>
-                            </li>
-                        </ul>
+                                <!-- my portfolio -->
+                                <li class="top-kv-slider-item">
+                                    <button class="top-kv-slider-item-trigger js-kv-slider-item-trigger" aria-label="画像を選択" data-main-src="img/common/16-9/small/my-portfolio.png" data-main-srcset="img/common/16-9/small/my-portfolio.png 308w, img/common/16-9/large/my-portfolio.png 1120w" data-main-sizes="(min-width: 768px) 1120px, 308px" data-href="works/my-portfolio.html" data-title="my portfolio">
+                                        <img src="img/common/1-1/small/my-portfolio.png" width="300" height="300" alt="" decoding="async" />
+                                    </button>
+                                </li>
+
+                                <li class="top-kv-slider-item top-kv-slider-item--button">
+                                    <a href="works/" class="c-button c-button--sm c-button--en">view more</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

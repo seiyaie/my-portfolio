@@ -5,7 +5,7 @@ page > top > top-kv
 ------------------------------
 */
 
-.top-kv {
+.top-kv-slider {
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -21,7 +21,7 @@ page > top > top-kv
 }
 
 /* メインの大画像エリア */
-.top-kv-selected-work {
+.top-kv-slider-main {
     z-index: var(--z-index-default);
     height: auto;
     position: relative;
@@ -34,19 +34,19 @@ page > top > top-kv
     }
 }
 
-.top-kv-selected-stage {
+.top-kv-slider-stage {
     width: 100%;
     height: 100%;
 }
 
-.top-kv-selected-link {
+.top-kv-slider-link {
     display: block;
     width: 100%;
     height: 100%;
     position: relative;
 }
 
-.top-kv-mask {
+.top-kv-slider-mask {
     position: absolute;
     inset: 0;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 90%);
@@ -55,13 +55,13 @@ page > top > top-kv
     z-index: var(--z-index-overlay);
 }
 
-.top-kv-selected-work img {
+.top-kv-slider-main img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.top-kv-cta-button {
+.top-kv-slider-cta-button {
     position: absolute;
     background-color: var(--color-bg);
     z-index: var(--z-index-overlay-content);
@@ -77,7 +77,7 @@ page > top > top-kv
     }
 }
 
-.top-kv-scroll-panel {
+.top-kv-slider-controls {
     position: absolute;
     bottom: 16px;
     display: flex;
@@ -97,7 +97,7 @@ page > top > top-kv
     }
 }
 
-.top-kv-scroll-tracker {
+.top-kv-slider-progress {
     width: 100%;
     display: flex;
     align-items: center;
@@ -107,7 +107,7 @@ page > top > top-kv
     }
 }
 
-.top-kv-scrollbar {
+.top-kv-slider-progress-bar {
     position: relative;
     flex: 1;
     height: 2px;
@@ -117,7 +117,7 @@ page > top > top-kv
     }
 }
 
-.top-kv-scrollbar-thumb {
+.top-kv-slider-progress-bar-thumb {
     position: absolute;
     left: 0;
     top: 0;
@@ -126,11 +126,11 @@ page > top > top-kv
     height: 100%;
 }
 
-.top-kv-selected-index {
+.top-kv-slider-progress-index {
     color: white;
 }
 
-.top-kv-scroll-control {
+.top-kv-slider-nav {
     display: none;
     @include g.mq() {
         display: flex;
@@ -139,7 +139,7 @@ page > top > top-kv
     }
 }
 
-.top-kv-scroll-button {
+.top-kv-slider-nav-button {
     aspect-ratio: 1/1;
     width: 16px;
 
@@ -148,7 +148,7 @@ page > top > top-kv
     }
 }
 
-.top-kv-slider {
+.top-kv-slider-thumbnails {
     position: relative;
     width: 100%;
     height: 100%;
@@ -161,8 +161,8 @@ page > top > top-kv
     }
 }
 
-/* スライダーリストコンテナ */
-.top-kv-slider-list-container {
+
+.top-kv-slider-thumbnails-inner {
     height: auto;
     background-color: var(--color-bg);
     padding: 8px;
@@ -292,7 +292,7 @@ page > top > top-kv
     }
 }
 
-.top-kv-toggle-button {
+.top-kv-slider-toggle {
     display: none;
     @include g.mq() {
         display: block;
@@ -315,15 +315,15 @@ page > top > top-kv
     }
 }
 
-.kv-toggle-panel--fill {
+.top-kv-toggle-panel--fill {
     fill: var(--color-bg);
 }
 
-.kv-toggle-panel--stroke {
+.top-kv-toggle-panel--stroke {
     fill: var(--color-line-ui);
 }
 
-.top-kv-toggle-button-bg {
+.top-kv-slider-toggle-bg {
     display: block;
     width: 32px;
     height: auto;
@@ -333,7 +333,7 @@ page > top > top-kv
     }
 }
 
-.top-kv-toggle-button-arrow {
+.top-kv-slider-toggle-arrow {
     display: block;
     position: absolute;
     top: 25px;

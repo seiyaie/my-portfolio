@@ -3,7 +3,7 @@
 import { initPageTransition } from "./component/page-transition.js";
 import { initThemeSwitch } from "./component/theme-switch.js";
 import { initTextSlider } from "./component/text-slider.js";
-import { initSliderListToggle } from "./component/slider-list-toggle.js";
+import { initKvSliderListToggle } from "./component/kv-slider-list-toggle.js";
 import { initHamburgerMenu } from "./component/hamburger-menu.js";
 import { initKvSlider } from "./component/kv-slider.js";
 import { initTitleReveal } from "./component/reveal-title.js";
@@ -18,7 +18,7 @@ const currentPage = Number(document.documentElement.dataset.page || 1);
 initPageTransition();
 initThemeSwitch();
 initTextSlider();
-initSliderListToggle();
+initKvSliderListToggle();
 initHamburgerMenu();
 initKvSlider();
 initTitleReveal();

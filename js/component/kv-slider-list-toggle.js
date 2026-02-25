@@ -1,8 +1,9 @@
-export const initSliderListToggle = () => {
-    const toggleBtn = document.querySelector(".js-top-kv-toggle-button");
-    const toggleBtnArrow = document.querySelector(".js-top-kv-button-arrow");
-    const slider = document.querySelector(".js-top-kv-slider");
-    const sliderContainer = document.querySelector(".js-top-kv-slider-list-container");
+// component/kv-slider-list-toggle.js
+export const initKvSliderListToggle = () => {
+    const toggleBtn = document.querySelector(".js-kv-slider-toggle");
+    const toggleBtnArrow = document.querySelector(".js-kv-toggle-arrow");
+    const slider = document.querySelector(".js-kv-slider-thumbnails");
+    const sliderContainer = document.querySelector(".js-kv-slider-thumbnails-inner");
 
     if (!toggleBtn || !toggleBtnArrow || !slider || !sliderContainer) return;
 

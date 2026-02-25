@@ -1,12 +1,12 @@
 export const initKvSlider = () => {
-    const selectedLink = document.querySelector(".js-top-kv-selected-link");
+    const selectedLink = document.querySelector(".js-kv-slider-link");
     const selectedImg = selectedLink?.querySelector("img");
     const sliderItems = document.querySelectorAll(".js-kv-slider-item-trigger");
-    const ctaButton = document.querySelector(".js-kv-cta-button a");
-    const nextButton = document.querySelector(".js-kv-scroll-button--next");
-    const prevButton = document.querySelector(".js-kv-scroll-button--prev");
-    const thumb = document.querySelector(".js-scrollbar-thumb");
-    const indexText = document.querySelector(".js-scrollbar-index");
+    const ctaButton = document.querySelector(".js-kv-slider-cta-button a");
+    const nextButton = document.querySelector(".js-kv-slider-nav-button--next");
+    const prevButton = document.querySelector(".js-kv-slider-nav-button--prev");
+    const thumb = document.querySelector(".js-kv-slider-progress-bar-thumb");
+    const indexText = document.querySelector(".js-kv-slider-progress-index");
 
     if (!selectedLink || !selectedImg || !sliderItems.length || !ctaButton || !nextButton || !prevButton || !thumb || !indexText) return;
 
@@ -86,7 +86,7 @@ export const initKvSlider = () => {
         const isMobile = window.matchMedia("(max-width: 767px)").matches;
         if (!isMobile) return;
 
-        item.closest(".js-top-kv-slider-item")?.scrollIntoView({
+        item.closest(".js-kv-slider-item")?.scrollIntoView({
             behavior: "smooth",
             inline: "nearest",
             block: "nearest",
