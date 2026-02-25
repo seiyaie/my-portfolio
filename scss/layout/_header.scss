@@ -13,6 +13,7 @@ layout > header
     top: 0;
     left: 0;
     width: 100%;
+    border-top: var(--border-section);
     border-bottom: var(--border-section);
     z-index: var(--z-index-header);
     background-color: var(--color-bg);
