@@ -2594,10 +2594,9 @@ page > works > works-detail
 .works-detail-tech-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 0;
 }
 
-.works-detail-tech-item:not(:first-child)::before {
+.works-detail-tech-item:not(:last-child)::after {
   content: "/";
   margin-inline: 0.5em;
 }
