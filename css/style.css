@@ -862,12 +862,12 @@ component > split-text
 layout > transition-root
 ------------------------------
 */
-.js-transition-root {
+.l-transition-root {
   opacity: 1;
   visibility: visible;
 }
 
-.is-js .js-transition-root {
+.is-js .l-transition-root {
   opacity: 0;
   visibility: hidden;
 }
