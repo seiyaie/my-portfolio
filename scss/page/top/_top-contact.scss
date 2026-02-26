@@ -86,7 +86,7 @@ page > top > top-about
 .top-contact-privacy-button {
     display: inline-block;
     text-decoration: underline;
-    text-underline-offset: 4px;
+    text-underline-offset: 0.2em;
 
     @media (any-hover: hover) {
         &:hover {

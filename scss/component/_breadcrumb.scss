@@ -26,6 +26,7 @@ component > breadcrumb
 
 .c-breadcrumb-item--current {
     text-decoration: underline;
+    text-underline-offset: 0.2em;
 }
 
 .c-breadcrumb-item:not(:last-child)::after {

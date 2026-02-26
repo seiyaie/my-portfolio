@@ -677,6 +677,7 @@ component > breadcrumb
 
 .c-breadcrumb-item--current {
   text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 
 .c-breadcrumb-item:not(:last-child)::after {
@@ -2032,7 +2033,7 @@ page > top > top-about
 .top-contact-privacy-button {
   display: inline-block;
   text-decoration: underline;
-  text-underline-offset: 4px;
+  text-underline-offset: 0.2em;
 }
 @media (any-hover: hover) {
   .top-contact-privacy-button:hover {
@@ -2621,6 +2622,7 @@ page > works > works-detail
 
 .works-detail-link {
   text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 @media (any-hover: hover) {
   .works-detail-link:hover {
