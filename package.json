@@ -1,27 +1,29 @@
 {
-  "name": "my-portfolio",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/seiyaie/my-portfolio.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/seiyaie/my-portfolio/issues"
-  },
-  "homepage": "https://github.com/seiyaie/my-portfolio#readme",
-  "dependencies": {
-    "stylelint": "^17.4.0",
-    "stylelint-config-recess-order": "^7.6.1",
-    "stylelint-config-recommended-scss": "^17.0.0",
-    "stylelint-scss": "^7.0.0"
-  }
+    "name": "my-portfolio",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint:css": "stylelint \"scss/**/*.scss\"",
+        "fix:css": "stylelint --fix \"scss/**/*.scss\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/seiyaie/my-portfolio.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "bugs": {
+        "url": "https://github.com/seiyaie/my-portfolio/issues"
+    },
+    "homepage": "https://github.com/seiyaie/my-portfolio#readme",
+    "dependencies": {
+        "stylelint": "^17.4.0",
+        "stylelint-config-recess-order": "^7.6.1",
+        "stylelint-config-recommended-scss": "^17.0.0",
+        "stylelint-scss": "^7.0.0"
+    }
 }
