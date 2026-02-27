@@ -50,19 +50,19 @@ page > top > top-works
 .top-works-item-thumbnail {
     position: relative;
     aspect-ratio: 16/9;
-    border: var(--border-ui);
     overflow: hidden;
+    border: var(--border-ui);
     &::before {
-        content: "Detail";
-        display: grid;
-        place-items: center;
         position: absolute;
         inset: 0;
-        font-size: 40px;
+        z-index: var(--z-index-default);
+        display: grid;
+        place-items: center;
         font-family: var(--font-family-accent);
+        font-size: 40px;
         font-weight: bold;
         color: white;
-        z-index: var(--z-index-default);
+        content: "Detail";
         scale: 0;
         transition: scale 0.3s;
         @include g.mq(lg) {
@@ -70,10 +70,10 @@ page > top > top-works
         }
     }
     &::after {
-        content: "";
-        display: block;
         position: absolute;
         inset: 0;
+        display: block;
+        content: "";
         background-color: rgba(0, 0, 0, 0);
         transition: background-color 0.3s;
     }
@@ -86,8 +86,8 @@ page > top > top-works
 }
 
 .top-works-item-date {
-    font-size: var(--font-size-meta);
     margin-top: 16px;
+    font-size: var(--font-size-meta);
     letter-spacing: 0.2em;
 }
 
@@ -104,19 +104,19 @@ page > top > top-works
 }
 
 .top-works-tag {
-    font-size: 12px;
-    letter-spacing: 0.08em;
-    text-indent: 0.08em;
     padding: 4px 8px;
-    border: var(--border-ui);
+    font-size: 12px;
+    text-indent: 0.08em;
+    letter-spacing: 0.08em;
     white-space: nowrap;
+    border: var(--border-ui);
 }
 
 .top-works-button {
     width: 80%;
     margin-inline: auto;
-    text-align: center;
     margin-top: 32px;
+    text-align: center;
     @include g.mq() {
         margin-top: 0;
     }

@@ -6,13 +6,13 @@ page > top > top-common
 */
 
 .top-section-title {
-    font-size: var(--font-size-heading);
-    text-transform: uppercase;
-    font-family: var(--font-family-accent);
-    font-weight: bold;
-    line-height: 1;
     padding-bottom: 12px;
     padding-left: 12px;
+    font-family: var(--font-family-accent);
+    font-size: var(--font-size-heading);
+    font-weight: bold;
+    line-height: 1;
+    text-transform: uppercase;
     @include g.mq() {
         padding-bottom: 24px;
         padding-left: 24px;
@@ -21,19 +21,19 @@ page > top > top-common
 
 .top-section-title-frame {
     width: 100%;
+    overflow: hidden;
     border-top: var(--border-section);
     border-bottom: var(--border-section);
-    overflow: hidden;
 }
 
 .top-section-title-inner {
     display: flex;
     align-items: flex-end;
-    margin-inline: auto;
     width: 90%;
     height: 80px;
-    border-left: var(--border-section);
+    margin-inline: auto;
     border-right: var(--border-section);
+    border-left: var(--border-section);
     @include g.mq() {
         height: 140px;
     }

@@ -16,22 +16,22 @@ page > top > top-about
 }
 
 .top-about-image-wrapper {
-    border-bottom: var(--border-ui);
     padding-block: 24px;
+    border-bottom: var(--border-ui);
     @include g.mq() {
-        border-bottom: none;
-        padding-block: 0;
-        padding-inline: 32px;
         display: grid;
         place-items: center;
+        padding-block: 0;
+        padding-inline: 32px;
+        border-bottom: none;
     }
 }
 
 .top-about-image {
     display: block;
-    margin-inline: auto;
     width: 180px;
     height: 180px;
+    margin-inline: auto;
     background-color: var(--color-bg);
     border: var(--border-ui);
     @include g.mq() {
@@ -48,8 +48,8 @@ page > top > top-about
 .top-about-profile {
     padding: 32px 16px;
     @include g.mq() {
-        border-left: var(--border-ui);
         padding: 48px 24px;
+        border-left: var(--border-ui);
     }
     @include g.mq(lg) {
         padding: 64px 32px;
@@ -57,9 +57,9 @@ page > top > top-about
 }
 
 .top-about-profile-name {
+    font-family: var(--font-family-accent);
     font-size: var(--font-size-subheading);
     text-transform: uppercase;
-    font-family: var(--font-family-accent);
 }
 
 .top-about-profile-text {
@@ -79,13 +79,13 @@ page > top > top-about
 
 .top-about-profile-sns-list {
     display: flex;
+    gap: 8px;
     align-items: center;
     justify-content: flex-end;
-    gap: 8px;
     margin-top: 24px;
     @include g.mq() {
-        margin-top: 40px;
         gap: 20px;
+        margin-top: 40px;
     }
 }
 

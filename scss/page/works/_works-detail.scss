@@ -68,10 +68,10 @@ page > works > works-detail
 }
 
 .works-detail-info-title {
-    border-bottom: var(--border-ui);
     padding-block-end: 4px;
-    font-weight: bold;
     font-size: 18px;
+    font-weight: bold;
+    border-bottom: var(--border-ui);
     @include g.mq() {
         font-size: 20px;
     }
@@ -79,15 +79,15 @@ page > works > works-detail
 
 .works-detail-info-text {
     padding-top: 4px;
-    line-height: 1.2;
     font-weight: bold;
+    line-height: 1.2;
     text-transform: uppercase;
 }
 
 .works-detail-section {
-    margin-top: 24px;
     max-width: 900px;
     margin-inline: auto;
+    margin-top: 24px;
     @include g.mq() {
         margin-top: 40px;
     }
@@ -104,11 +104,11 @@ page > works > works-detail
 }
 
 .works-detail-section-title {
-    border-bottom: var(--border-ui);
     padding-block-end: 4px;
-    font-weight: bold;
     margin-bottom: 16px;
     font-size: 18px;
+    font-weight: bold;
+    border-bottom: var(--border-ui);
     @include g.mq() {
         font-size: 20px;
     }
@@ -132,8 +132,8 @@ page > works > works-detail
 
 .works-detail-point {
     &:not(:last-child) {
-        border-bottom: var(--border-dashed);
         padding-bottom: 24px;
+        border-bottom: var(--border-dashed);
         @include g.mq() {
             padding-bottom: 32px;
         }
@@ -143,16 +143,16 @@ page > works > works-detail
 .works-detail-point-title {
     display: grid;
     grid-template-columns: auto 1fr;
-    font-weight: bold;
     gap: 4px;
+    font-weight: bold;
     &::before {
         content: "・";
     }
 }
 
 .works-detail-point-text {
-    padding-left: calc(1em + 4px);
     padding-top: 16px;
+    padding-left: calc(1em + 4px);
 }
 
 .works-detail-tech-list {
@@ -162,8 +162,8 @@ page > works > works-detail
 
 .works-detail-tech-item {
     &:not(:last-child)::after {
-        content: "/";
         margin-inline: 0.5em;
+        content: "/";
     }
 }
 

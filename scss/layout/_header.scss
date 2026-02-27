@@ -5,32 +5,32 @@ layout > header
 ------------------------------
 */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: var(--header-height);
     position: fixed;
     top: 0;
     left: 0;
+    z-index: var(--z-index-header);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
+    height: var(--header-height);
+    background-color: var(--color-bg);
     border-top: var(--border-section);
     border-bottom: var(--border-section);
-    z-index: var(--z-index-header);
-    background-color: var(--color-bg);
 }
 
 .header-logo-wrapper {
-    height: 100%;
     display: grid;
     place-items: center;
-    border-right: var(--border-section);
+    height: 100%;
     padding-inline: 16px;
+    border-right: var(--border-section);
 }
 
 .header-logo {
+    display: block;
     width: 50px;
     height: auto;
-    display: block;
 
     @include g.mq() {
         width: 60px;
@@ -47,13 +47,13 @@ layout > header
 }
 
 .header-nav-list {
-    font-family: var(--font-family-accent);
-    font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    text-transform: uppercase;
+    font-family: var(--font-family-accent);
     font-size: var(--font-size-body-sm);
+    font-weight: bold;
+    text-transform: uppercase;
     @include g.mq() {
         padding-right: 24px;
     }

@@ -15,22 +15,22 @@ page > top > top-kv
     @include g.mq() {
         display: flex;
         height: calc(100vh - var(--header-height) - 152px);
-        max-height: calc(0.5625 * 85vw);
         min-height: 380px;
+        max-height: calc(0.5625 * 85vw);
     }
 }
 
 /* メインの大画像エリア */
 .top-kv-slider-main {
-    z-index: var(--z-index-default);
-    height: auto;
     position: relative;
+    z-index: var(--z-index-default);
     width: 100%;
+    height: auto;
     aspect-ratio: 16 / 9;
     @include g.mq() {
         flex-shrink: 0;
-        max-width: 85vw;
         min-width: 70%;
+        max-width: 85vw;
     }
 }
 
@@ -40,19 +40,19 @@ page > top > top-kv
 }
 
 .top-kv-slider-link {
+    position: relative;
     display: block;
     width: 100%;
     height: 100%;
-    position: relative;
 }
 
 .top-kv-slider-mask {
     position: absolute;
     inset: 0;
+    z-index: var(--z-index-overlay);
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 90%);
     transform: translateZ(0);
     will-change: transform;
-    z-index: var(--z-index-overlay);
 }
 
 .top-kv-slider-main img {
@@ -63,45 +63,45 @@ page > top > top-kv
 
 .top-kv-slider-cta-button {
     position: absolute;
-    background-color: var(--color-bg);
-    z-index: var(--z-index-overlay-content);
     right: 16px;
     bottom: 50px;
+    z-index: var(--z-index-overlay-content);
+    background-color: var(--color-bg);
     @include g.mq(sm) {
         bottom: 70px;
     }
     @include g.mq() {
         right: auto;
-        left: 40px;
         bottom: 90px;
+        left: 40px;
     }
 }
 
 .top-kv-slider-controls {
     position: absolute;
     bottom: 16px;
+    left: 16px;
+    z-index: var(--z-index-kv-slider);
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    left: 16px;
     width: 90%;
-    z-index: var(--z-index-kv-slider);
     @include g.mq(sm) {
         bottom: 20px;
     }
 
     @include g.mq() {
-        justify-content: space-between;
-        left: 40px;
         bottom: 40px;
+        left: 40px;
+        justify-content: space-between;
     }
 }
 
 .top-kv-slider-progress {
-    width: 100%;
     display: flex;
-    align-items: center;
     gap: 32px;
+    align-items: center;
+    width: 100%;
     @include g.mq() {
         width: auto;
     }
@@ -119,11 +119,11 @@ page > top > top-kv
 
 .top-kv-slider-progress-bar-thumb {
     position: absolute;
-    left: 0;
     top: 0;
-    background-color: white;
+    left: 0;
     width: calc(100% / 8);
     height: 100%;
+    background-color: white;
 }
 
 .top-kv-slider-progress-index {
@@ -134,14 +134,14 @@ page > top > top-kv
     display: none;
     @include g.mq() {
         display: flex;
-        align-items: center;
         gap: 24px;
+        align-items: center;
     }
 }
 
 .top-kv-slider-nav-button {
-    aspect-ratio: 1/1;
     width: 16px;
+    aspect-ratio: 1/1;
 
     @include g.mq() {
         width: 20px;
@@ -155,48 +155,48 @@ page > top > top-kv
     border-top: var(--border-ui);
 
     @include g.mq() {
+        align-self: stretch;
         overflow: visible;
         border-top: none;
-        align-self: stretch;
     }
 }
 
 
 .top-kv-slider-thumbnails-inner {
     height: auto;
-    background-color: var(--color-bg);
     padding: 8px;
+    background-color: var(--color-bg);
     @include g.mq() {
         position: absolute;
         top: 0;
         left: 0;
-        height: 100%;
+        z-index: var(--z-index-kv-slider);
         width: max-content;
+        height: 100%;
         padding: 4px;
         border-top: none;
         border-left: var(--border-ui);
-        z-index: var(--z-index-kv-slider);
     }
 }
 
 /* スライダーリスト */
 .top-kv-slider-list {
-    overflow-x: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
     display: flex;
     flex-wrap: nowrap;
+    gap: 8px;
     width: auto;
     height: 100%;
-    gap: 8px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 
     @include g.mq() {
-        gap: 0;
-        flex-wrap: wrap;
         flex-direction: column;
-        max-height: 100%;
-        width: max-content;
+        flex-wrap: wrap;
+        gap: 0;
         justify-content: center;
+        width: max-content;
+        max-height: 100%;
     }
 }
 
@@ -212,8 +212,8 @@ page > top > top-kv
     aspect-ratio: 1/1;
     @include g.mq() {
         max-width: none;
-        padding: 4px;
         height: calc(100% / 3);
+        padding: 4px;
     }
 
     &--button {
@@ -230,23 +230,23 @@ page > top > top-kv
         font-size: 16px;
     }
     &::before {
-        content: "";
-        display: grid;
-        place-items: center;
         position: absolute;
         inset: 0;
+        z-index: var(--z-index-default);
+        display: grid;
+        place-items: center;
         font-family: var(--font-family-accent);
         font-weight: bold;
-        z-index: var(--z-index-default);
         color: white;
+        content: "";
         scale: 0;
         transition: scale 0.3s;
     }
     &::after {
-        content: "";
-        display: block;
         position: absolute;
         inset: 0;
+        display: block;
+        content: "";
         background-color: rgba(0, 0, 0, 0);
         transition: background-color 0.3s;
     }
@@ -265,29 +265,29 @@ page > top > top-kv
 }
 
 .top-kv-slider-item-trigger img {
-    border: var(--border-ui);
+    display: block;
     width: 100%;
     height: 100%;
-    display: block;
+    border: var(--border-ui);
 }
 
 .top-kv-slider-item-trigger.is-active {
     &::before {
-        content: "Selected";
+        position: absolute;
+        z-index: var(--z-index-default);
         display: grid;
         place-items: center;
-        position: absolute;
         font-family: var(--font-family-accent);
         font-weight: bold;
-        z-index: var(--z-index-default);
         color: #ffffff;
+        content: "Selected";
         scale: 1;
     }
     &::after {
-        content: "";
-        display: block;
         position: absolute;
         inset: 0;
+        display: block;
+        content: "";
         background-color: rgba(0, 0, 0, 0.4);
     }
 }
@@ -295,13 +295,13 @@ page > top > top-kv
 .top-kv-slider-toggle {
     display: none;
     @include g.mq() {
-        display: block;
-        background: transparent;
         position: absolute;
         top: 0;
         left: -32px;
+        display: block;
         width: 32px;
         height: 109px;
+        background: transparent;
     }
     @include g.mq(xl) {
         left: -38px;
@@ -334,10 +334,10 @@ page > top > top-kv
 }
 
 .top-kv-slider-toggle-arrow {
-    display: block;
     position: absolute;
     top: 25px;
     left: 12px;
+    display: block;
     width: 15px;
     height: auto;
     @include g.mq(xl) {

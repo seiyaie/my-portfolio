@@ -26,27 +26,27 @@ page > top > top-skills
 }
 
 .top-skills-item {
-    border: var(--border-ui);
     position: relative;
     padding-bottom: 70px;
+    border: var(--border-ui);
     @include g.mq() {
         padding-bottom: 100px;
     }
     &:nth-child(4) {
         @include g.mq(lg) {
             grid-column: 1 / -1;
-            max-width: 900px;
             justify-self: center;
+            max-width: 900px;
         }
     }
 }
 
 .top-skills-item-title {
-    border-bottom: var(--border-ui);
+    padding: 8px 16px;
     font-size: var(--font-size-subheading);
     font-weight: bold;
     letter-spacing: 0.2em;
-    padding: 8px 16px;
+    border-bottom: var(--border-ui);
 }
 
 .top-skills-item-text {
@@ -54,42 +54,42 @@ page > top > top-skills
 }
 
 .top-skills-item-icon {
-    mask-size: contain;
-    mask-repeat: no-repeat;
-    mask-position: center;
-
-    -webkit-mask-size: contain;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-
-    width: 60px;
-    aspect-ratio: 1/1;
     position: absolute;
     right: 16px;
     bottom: 16px;
+
+    width: 60px;
+    aspect-ratio: 1/1;
     background-color: var(--color-icon);
     opacity: 0.4;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+
+    -webkit-mask-size: contain;
+    mask-size: contain;
     @include g.mq() {
         width: 80px;
     }
 }
 
 .top-skills-item-icon--coding {
-    mask-image: url("../img/decorations/top-skills-coding.svg");
     -webkit-mask-image: url("../img/decorations/top-skills-coding.svg");
+    mask-image: url("../img/decorations/top-skills-coding.svg");
 }
 
 .top-skills-item-icon--animation {
-    mask-image: url("../img/decorations/top-skills-animation.svg");
     -webkit-mask-image: url("../img/decorations/top-skills-animation.svg");
+    mask-image: url("../img/decorations/top-skills-animation.svg");
 }
 
 .top-skills-item-icon--design {
-    mask-image: url("../img/decorations/top-skills-design.svg");
     -webkit-mask-image: url("../img/decorations/top-skills-design.svg");
+    mask-image: url("../img/decorations/top-skills-design.svg");
 }
 
 .top-skills-item-icon--learn {
-    mask-image: url("../img/decorations/top-skills-learn.svg");
     -webkit-mask-image: url("../img/decorations/top-skills-learn.svg");
+    mask-image: url("../img/decorations/top-skills-learn.svg");
 }

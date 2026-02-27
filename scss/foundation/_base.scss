@@ -15,12 +15,12 @@ html {
 }
 
 body {
-    line-height: 1.8;
-    font-size: var(--font-size-body);
-    letter-spacing: 0.08em;
-    color: var(--color-text);
-    background-color: var(--color-bg);
     font-family: var(--font-family-jp);
+    font-size: var(--font-size-body);
+    line-height: 1.8;
+    color: var(--color-text);
+    letter-spacing: 0.08em;
+    background-color: var(--color-bg);
     transition: background-color var(--theme-duration) var(--theme-ease), color var(--theme-duration) var(--theme-ease);
 }
 

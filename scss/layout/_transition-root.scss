@@ -6,11 +6,11 @@ layout > transition-root
 */
 
 .l-transition-root {
-    opacity: 1;
     visibility: visible;
+    opacity: 1;
 }
 
 .is-js .l-transition-root {
-    opacity: 0;
     visibility: hidden;
+    opacity: 0;
 }

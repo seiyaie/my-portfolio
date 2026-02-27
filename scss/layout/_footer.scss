@@ -10,10 +10,10 @@ layout > footer
 }
 
 .footer-inner {
-    width: 90%;
-    margin-inline: auto;
     display: flex;
     flex-direction: column;
+    width: 90%;
+    margin-inline: auto;
     @include g.mq() {
         flex-direction: row;
         align-items: center;
@@ -22,18 +22,18 @@ layout > footer
 }
 
 .footer-copyright {
-    text-transform: uppercase;
-    font-family: var(--font-family-accent);
     display: flex;
-    align-items: center;
     gap: 8px;
+    align-items: center;
+    font-family: var(--font-family-accent);
     line-height: 1;
+    text-transform: uppercase;
 }
 
 .footer-sns-list {
     display: flex;
-    align-items: center;
     gap: 16px;
+    align-items: center;
     margin-top: 16px;
     @include g.mq() {
         margin-top: 0;

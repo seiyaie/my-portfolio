@@ -16,25 +16,25 @@ component > pagination
 }
 
 .c-pagination-nav {
-    border-top: var(--border-ui);
-    border-bottom: var(--border-ui);
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    border-top: var(--border-ui);
+    border-bottom: var(--border-ui);
     @include g.mq(lg) {
         grid-template-columns: 1fr auto 1fr;
     }
 }
 
 .c-pagination-button {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: var(--pager-cell);
+    padding-block: 8px;
     font-family: var(--font-family-accent);
     font-weight: bold;
-    display: inline-flex;
-    justify-content: space-between;
-    flex-direction: column;
-    min-height: var(--pager-cell);
     line-height: 1;
-    padding-block: 8px;
 }
 
 .c-pagination-button--prev {
@@ -73,12 +73,12 @@ component > pagination
 
 .c-pagination-icon {
     display: inline-block;
-    mask-size: contain;
-    mask-repeat: no-repeat;
-    mask-position: center;
-    background-color: var(--color-icon);
     width: 18px;
     aspect-ratio: 1/1;
+    background-color: var(--color-icon);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
 
     @include g.mq() {
         width: 24px;
@@ -127,8 +127,8 @@ component > pagination
 }
 
 .c-pagination-item.is-active .c-pagination-link {
-    background-color: var(--color-pager-bg-active);
     color: var(--color-pager-text-active);
+    background-color: var(--color-pager-bg-active);
 }
 
 .c-pagination-link {
@@ -142,8 +142,8 @@ component > pagination
 
     @media (any-hover: hover) {
         &:not(.c-pagination-link--dots):hover {
-            background-color: var(--color-pager-bg-hover);
             color: var(--color-pager-text-hover);
+            background-color: var(--color-pager-bg-hover);
         }
     }
 }

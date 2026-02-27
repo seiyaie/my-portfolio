@@ -7,16 +7,16 @@ component > breadcrumb
 
 .c-breadcrumb {
     font-family: var(--font-family-en);
-    text-transform: uppercase;
-    font-weight: bold;
     font-size: var(--font-size-body-sm);
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .c-breadcrumb-list {
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
     gap: 8px;
+    align-items: center;
 }
 
 .c-breadcrumb-item {
@@ -30,7 +30,7 @@ component > breadcrumb
 }
 
 .c-breadcrumb-item:not(:last-child)::after {
-    content: ">";
     display: inline-block;
     margin-left: 8px;
+    content: ">";
 }

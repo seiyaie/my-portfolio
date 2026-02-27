@@ -9,16 +9,16 @@ component > button
     --btn-shadow-y: 0px;
     --btn-tx: 0px;
     --btn-ty: 0px;
-    text-shadow: var(--btn-shadow-x) var(--btn-shadow-y) var(--color-button-text-shadow);
     position: relative;
-    padding: 16px;
-    width: 100%;
     display: block;
-    text-indent: 0.08em;
-    text-align: center;
-    transition: text-shadow 0.3s;
-    line-height: 1;
+    width: 100%;
+    padding: 16px;
     font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    text-indent: 0.08em;
+    text-shadow: var(--btn-shadow-x) var(--btn-shadow-y) var(--color-button-text-shadow);
+    transition: text-shadow 0.3s;
 
     @media (any-hover: hover) {
         &:not(:disabled):hover {
@@ -31,16 +31,16 @@ component > button
 
     &::before,
     &::after {
-        content: "";
-        display: block;
         position: absolute;
         inset: 0;
+        display: block;
+        content: "";
         transition: translate 0.3s;
     }
 
     &::before {
-        border: var(--border-section);
         z-index: var(--z-index-default);
+        border: var(--border-section);
     }
 
     &::after {
@@ -49,8 +49,8 @@ component > button
     }
 
     &:disabled {
-        opacity: 0.5;
         pointer-events: none;
+        opacity: 0.5;
     }
 }
 

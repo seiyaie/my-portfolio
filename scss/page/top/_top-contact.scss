@@ -23,13 +23,13 @@ page > top > top-about
 
 .top-input,
 .top-textarea {
-    background-color: var(--color-contact-bg);
-    box-shadow: 0 0 0 1px var(--color-line-ui);
     width: 100%;
     max-width: 800px;
-    color: var(--color-contact-text);
     padding: 8px;
+    color: var(--color-contact-text);
     outline: none;
+    background-color: var(--color-contact-bg);
+    box-shadow: 0 0 0 1px var(--color-line-ui);
     @include g.mq() {
         box-shadow: 0 0 0 2px var(--color-line-ui);
     }
@@ -56,15 +56,15 @@ page > top > top-about
 }
 
 .top-contact-label-required {
-    border: var(--border-ui);
     padding: 4px;
     text-indent: 0.2em;
+    border: var(--border-ui);
 }
 
 .top-contact-error {
     display: none;
-    color: var(--color-error-text);
     padding: 8px;
+    color: var(--color-error-text);
 }
 
 .top-contact-item.is-error .top-contact-error {
@@ -76,8 +76,8 @@ page > top > top-about
 }
 
 .top-contact-privacy-text {
-    margin-top: 16px;
     max-width: 800px;
+    margin-top: 16px;
 }
 .top-contact-privacy-text span {
     display: block;
@@ -90,8 +90,8 @@ page > top > top-about
 
     @media (any-hover: hover) {
         &:hover {
-            opacity: 0.7;
             text-decoration: none;
+            opacity: 0.7;
         }
     }
 }
@@ -105,19 +105,19 @@ page > top > top-about
 
 .top-contact-privacy-label {
     display: flex;
-    align-items: center;
     gap: 8px;
+    align-items: center;
     width: fit-content;
     margin-top: 32px;
     line-height: 1;
 }
 
 .top-contact-privacy-checkbox {
-    appearance: none;
     position: relative;
-    cursor: pointer;
     width: 18px;
     height: 18px;
+    appearance: none;
+    cursor: pointer;
     border: var(--border-ui);
     @include g.mq() {
         width: 20px;
@@ -126,12 +126,12 @@ page > top > top-about
 }
 
 .top-contact-privacy-checkbox:checked::after {
-    content: "";
     position: absolute;
     top: 3px;
     left: 2px;
     width: 12px;
     height: 6px;
+    content: "";
     border-bottom: 2px solid var(--color-line-section);
     border-left: 2px solid var(--color-line-section);
     transform: rotate(-45deg);
@@ -161,19 +161,19 @@ page > top > top-about
 }
 
 .top-contact-modal-inner {
-    width: 100%;
-    height: 100%;
     display: grid;
     place-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 .top-contact-modal-content {
+    position: relative;
     width: 90%;
     max-width: var(--width-content);
-    position: relative;
     padding: 40px;
-    background-color: var(--color-bg-contact-modal);
     color: var(--color-text-contact-modal);
+    background-color: var(--color-bg-contact-modal);
 }
 
 .top-contact-modal-title {
@@ -181,11 +181,11 @@ page > top > top-about
 }
 
 .top-contact-modal-body {
-    margin-top: 16px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     gap: 8px;
+    margin-top: 16px;
 }
 
 .top-contact-modal-button {
@@ -198,17 +198,17 @@ page > top > top-about
 
 .top-contact-modal-button::before,
 .top-contact-modal-button::after {
-    content: "";
-    display: block;
-    width: 16px;
-    height: 2px;
-    background-color: var(--color-text-contact-modal);
     position: absolute;
-    left: 0;
     top: 0;
     right: 0;
     bottom: 0;
+    left: 0;
+    display: block;
+    width: 16px;
+    height: 2px;
     margin: auto;
+    content: "";
+    background-color: var(--color-text-contact-modal);
     transition: scale 0.1s;
     @include g.mq() {
         width: 20px;
