@@ -6,15 +6,14 @@ utility > utility
 */
 .u-visually-hidden {
     position: absolute !important;
-    white-space: nowrap !important;
     width: 1px !important;
     height: 1px !important;
-    overflow: hidden !important;
-    border: 0 !important;
     padding: 0 !important;
-    clip: rect(0 0 0 0) !important;
-    clip-path: inset(50%) !important;
     margin: -1px !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+    clip-path: inset(50%) !important;
 }
 
 // 下余白
@@ -45,9 +44,9 @@ utility > utility
 // テキストホバーアニメーション
 .u-text-hover {
     background-image: linear-gradient(currentColor, currentColor);
+    background-repeat: no-repeat;
     background-position: 50% 100%;
     background-size: 0 0.08em;
-    background-repeat: no-repeat;
     transition: background-size 0.3s;
 
     @media (any-hover: hover) {
