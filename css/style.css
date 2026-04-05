@@ -1635,11 +1635,6 @@ page > top > top-about
 page > top > top-works
 ------------------------------
 */
-.top-works-inner {
-  width: 90%;
-  margin-inline: auto;
-}
-
 .top-works-list {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -1847,12 +1842,6 @@ page > top > top-vision
 page > top > top-skills
 ------------------------------
 */
-.top-skills-inner {
-  width: 90%;
-  max-width: var(--width-content-l);
-  margin-inline: auto;
-}
-
 .top-skills-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -1866,7 +1855,6 @@ page > top > top-skills
 }
 @media screen and (min-width: 1080px) {
   .top-skills-list {
-    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
   }
 }
@@ -1882,10 +1870,15 @@ page > top > top-skills
   }
 }
 @media screen and (min-width: 1080px) {
-  .top-skills-item:nth-child(4) {
+  .top-skills-item {
+    padding-bottom: 150px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .top-skills-item:last-child {
     grid-column: 1/-1;
     justify-self: center;
-    max-width: 900px;
+    max-width: 800px;
   }
 }
 
@@ -1925,6 +1918,11 @@ page > top > top-skills
 .top-skills-item-icon--coding {
   -webkit-mask-image: url("../img/decorations/top-skills-coding.svg");
   mask-image: url("../img/decorations/top-skills-coding.svg");
+}
+
+.top-skills-item-icon--wordpress {
+  -webkit-mask-image: url("../img/decorations/top-skills-wordpress.svg");
+  mask-image: url("../img/decorations/top-skills-wordpress.svg");
 }
 
 .top-skills-item-icon--animation {
