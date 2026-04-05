@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="dark" data-page="1">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>leaf design lab | Works | Seiya Imoto's Portfolio</title>
+        <meta name="description" content="過去に訪れた国々で撮影した写真をまとめたギャラリーサイト。情報設計からデザイン、コーディングまで一貫して制作しました。" />
+        <link rel="canonical" href="https://portfolio.itsseiya.com/works/leaf-design-lab.html" />
+        <meta name="format-detection" content="telephone=no" />
+
+        <!-- js実行可能確認 -->
+        <script>
+            document.documentElement.classList.add("is-js");
+        </script>
+
+        <!-- CSS読み込み前にdata-themeを確定（FOUC対策） -->
+        <script>
+            (function () {
+                try {
+                    var theme = localStorage.getItem("theme");
+                    if (theme === "light" || theme === "dark") {
+                        document.documentElement.setAttribute("data-theme", theme);
+                    }
+                } catch (e) {}
+            })();
+        </script>
+        <!-- favicon/webclipicon -->
+        <link rel="icon" href="../img/favicon/favicon.ico" />
+        <link rel="icon" href="../img/favicon/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="../img/favicon/webclip.png" />
+
+        <!-- ogp -->
+        <meta property="og:site_name" content="Seiya Imoto's Portfolio" />
+        <meta property="og:url" content="https://portfolio.itsseiya.com/works/leaf-design-lab.html" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="leaf design lab | Seiya Imoto's Portfolio" />
+        <meta property="og:description" content="過去に訪れた国々で撮影した写真をまとめたギャラリーサイト。情報設計からデザイン、コーディングまで一貫して制作しました。" />
+        <meta property="og:image" content="https://portfolio.itsseiya.com/img/ogp/ogp.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="ja_JP" />
+
+        <!-- twitter -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="leaf design lab | Seiya Imoto's Portfolio" />
+        <meta name="twitter:description" content="過去に訪れた国々で撮影した写真をまとめたギャラリーサイト。情報設計からデザイン、コーディングまで一貫して制作しました。" />
+        <meta name="twitter:image" content="https://portfolio.itsseiya.com/img/ogp/ogp.jpg" />
+
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Schibsted+Grotesk:wght@400;700&family=Zen+Kaku+Gothic+Antique:wght@400;700&display=swap" rel="stylesheet" />
+
+        <!-- css -->
+        <link rel="stylesheet" href="../css/vendor/splide-core.min.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+
+        <!-- js -->
+        <script src="../js/vendor/gsap/gsap.min.js" defer></script>
+        <script src="../js/vendor/gsap/ScrollToPlugin.min.js" defer></script>
+        <script src="../js/vendor/gsap/ScrollTrigger.min.js" defer></script>
+        <script src="../js/vendor/gsap/SplitText.min.js" defer></script>
+        <script src="../js/vendor/splide/splide.min.js" defer></script>
+        <script src="../js/vendor/splide/splide-extension-auto-scroll.min.js" defer></script>
+        <script src="../js/main.js" type="module"></script>
+    </head>
+
+    <body>
+        <div class="l-transition-root js-transition-root">
+            <!-- header -->
+            <header class="header">
+                <div class="header-logo-wrapper">
+                    <a href="../index.html" class="header-logo" aria-label="topページに戻る">
+                        <img src="../img/logo/logo-white.svg" width="25" height="100" alt="" class="js-theme-logo" />
+                    </a>
+                </div>
+                <nav class="header-nav" aria-label="グローバルナビゲーション">
+                    <ul class="header-nav-list">
+                        <li class="header-nav-item header-nav-item--pc">
+                            <a href="../index.html#about" class="header-nav-link u-text-hover">about</a>
+                        </li>
+                        <li class="header-nav-item header-nav-item--pc">
+                            <a href="index.html" class="header-nav-link u-text-hover">works</a>
+                        </li>
+                        <li class="header-nav-item header-nav-item--pc">
+                            <a href="../index.html#vision" class="header-nav-link u-text-hover">vision</a>
+                        </li>
+                        <li class="header-nav-item header-nav-item--pc">
+                            <a href="../index.html#skills" class="header-nav-link u-text-hover">skills</a>
+                        </li>
+                        <li class="header-nav-item header-nav-item--pc">
+                            <a href="../index.html#contact" class="header-nav-link u-text-hover">contact</a>
+                        </li>
+                        <li class="header-nav-item header-nav-item--pc">
+                            <button class="header-theme-button js-theme-button" aria-label="ライトモードに切り替え">
+                                <img src="../img/icons/system/light-mode.svg" width="60" height="60" alt="" class="js-theme-icon" />
+                            </button>
+                        </li>
+                        <li class="header-nav-item header-nav-item--sp c-hamburger-button">
+                            <button class="c-hamburger-open-button js-hamburger-open-button" aria-label="ハンバーガーメニューを開く">
+                                <span class="c-hamburger-open-button--stroke"></span>
+                                <span class="c-hamburger-open-button--stroke"></span>
+                                <span class="c-hamburger-open-button--text">MENU</span>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <!-- the end of header -->
+
+            <!-- hamburger menu -->
+            <dialog class="c-hamburger-menu js-hamburger-menu" aria-label="ハンバーガーメニュー">
+                <div class="c-hamburger-header">
+                    <button class="c-hamburger-close-button js-hamburger-close-button" aria-label="ハンバーガーメニューを閉じる">
+                        <span class="c-hamburger-close-button--stroke"></span>
+                        <span class="c-hamburger-close-button--stroke"></span>
+                        <span class="c-hamburger-close-button--text">CLOSE</span>
+                    </button>
+                </div>
+                <div class="c-hamburger-menu-inner">
+                    <ul class="c-hamburger-menu-list js-hamburger-menu-list">
+                        <li class="c-hamburger-menu-item js-hamburger-menu-item">
+                            <button class="js-theme-button" aria-label="ライトモードに切り替え">
+                                <img src="../img/icons/system/light-mode.svg" width="60" height="60" alt="" decoding="async" class="js-theme-icon" />
+                            </button>
+                        </li>
+                        <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
+                            <a href="../index.html" class="u-text-hover">home</a>
+                        </li>
+                        <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
+                            <a href="../index.html#about" class="u-text-hover">about</a>
+                        </li>
+                        <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
+                            <a href="index.html" class="u-text-hover">works</a>
+                        </li>
+                        <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
+                            <a href="../index.html#vision" class="u-text-hover">vision</a>
+                        </li>
+                        <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
+                            <a href="../index.html#skills" class="u-text-hover">skills</a>
+                        </li>
+                        <li class="c-hamburger-menu-item c-hamburger-menu-item--link js-hamburger-menu-item js-hamburger-menu-item--link">
+                            <a href="../index.html#contact" class="u-text-hover">contact</a>
+                        </li>
+                    </ul>
+
+                    <ul class="c-hamburger-menu-list c-hamburger-menu-list--sns js-hamburger-menu-list">
+                        <li class="c-hamburger-menu-item c-hamburger-menu-item--sns js-hamburger-menu-item">
+                            <a href="https://github.com/seiyaie" target="_blank" rel="noopener noreferrer" aria-label="githubを別タブで開く">
+                                <img src="../img/icons/sns/github-white.svg" width="60" height="60" alt="" decoding="async" class="js-theme-github" />
+                            </a>
+                        </li>
+                        <li class="c-hamburger-menu-item c-hamburger-menu-item--sns js-hamburger-menu-item">
+                            <a href="https://x.com/seiya_web" target="_blank" rel="noopener noreferrer" aria-label="xを別タブで開く">
+                                <img src="../img/icons/sns/x-white.svg" width="60" height="60" alt="" decoding="async" class="js-theme-x" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </dialog>
+            <!-- the end of hamburger menu -->
+
+            <!-- text slider -->
+            <div class="l-page">
+                <div class="c-text-slider">
+                    <div class="c-keyword-slider--splide js-keyword-carousel-works splide">
+                        <div class="splide__track c-keyword-slider--track">
+                            <ul class="splide__list c-text-slider-list">
+                                <li class="splide__slide c-text-slider-item">leaf design lab</li>
+                                <li class="splide__slide c-text-slider-item">leaf design lab</li>
+                                <li class="splide__slide c-text-slider-item">leaf design lab</li>
+                                <li class="splide__slide c-text-slider-item">leaf design lab</li>
+                                <li class="splide__slide c-text-slider-item">leaf design lab</li>
+                                <li class="splide__slide c-text-slider-item">leaf design lab</li>
+                                <li class="splide__slide c-text-slider-item">leaf design lab</li>
+                                <li class="splide__slide c-text-slider-item">leaf design lab</li>
+                                <li class="splide__slide c-text-slider-item">leaf design lab</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- the end of text slider -->
+
+            <!-- works -->
+            <main class="works-detail u-ptb">
+                <div class="l-container-sm">
+                    <!-- breadcrumb -->
+                    <nav class="c-breadcrumb" aria-label="パンくずリスト">
+                        <ol class="c-breadcrumb-list">
+                            <li class="c-breadcrumb-item"><a href="../index.html">home</a></li>
+                            <li class="c-breadcrumb-item"><a href="index.html">works</a></li>
+                            <li class="c-breadcrumb-item c-breadcrumb-item--current" aria-current="page">leaf design lab</li>
+                        </ol>
+                    </nav>
+                    <!-- the end of breadcrumb -->
+
+                    <div class="works-detail-title-wrapper">
+                        <h1 class="c-project-title js-split">leaf design lab</h1>
+                    </div>
+
+                    <!-- hero section -->
+                    <div class="works-detail-hero">
+                        <img src="../img/common/16-9/small/leaf-design-lab.jpg" srcset="../img/common/16-9/small/leaf-design-lab.jpg 308w, ../img/common/16-9/large/leaf-design-lab.jpg 1120w" sizes="(min-width: 768px) 1120px, 308px" width="2240" height="1260" alt="" decoding="async" />
+                    </div>
+                    <!-- the end of hero section -->
+
+                    <!-- works detail button -->
+                    <div class="works-detail-button works-detail-button--url">
+                        <a href="https://portfolio.itsseiya.com/leaf-design-lab/" class="c-button c-button--md" target="_blank" rel="noopener noreferrer" aria-label="leaf design labを別タブで開く">WEBサイトを見る</a>
+                    </div>
+
+                    <!-- 作品基本情報 -->
+                    <div class="works-detail-basic">
+                        <dl class="works-detail-info">
+                            <div class="works-detail-info-column">
+                                <dt class="works-detail-info-title">作品名</dt>
+                                <dd class="works-detail-info-text">leaf design lab</dd>
+                            </div>
+                            <div class="works-detail-info-column">
+                                <dt class="works-detail-info-title">制作月</dt>
+                                <dd class="works-detail-info-text">2026.04</dd>
+                            </div>
+                            <div class="works-detail-info-column">
+                                <dt class="works-detail-info-title">制作期間</dt>
+                                <dd class="works-detail-info-text">2週間</dd>
+                            </div>
+                        </dl>
+                    </div>
+
+                    <!-- 作品概要 -->
+                    <section class="works-detail-section">
+                        <h2 class="works-detail-section-title">概要</h2>
+                        <p class="works-detail-section-text">架空のWeb制作会社「Leaf Design Lab」のコーポレートサイトとして制作したWordPressテーマです。<br />デザインはGoogle AI Studioを活用し、コーディングおよびWordPress化はすべて自ら行いました。</p>
+
+                        <p class="works-detail-section-text">実務で求められるテーマ開発の流れを想定し、投稿管理・カスタム投稿・カスタムフィールド・お問い合わせ機能など、運用を前提とした構成で実装しています。</p>
+                    </section>
+
+                    <!-- 制作目的 -->
+                    <section class="works-detail-section">
+                        <h2 class="works-detail-section-title">制作目的</h2>
+                        <p class="works-detail-section-text">本作品は、WordPressテーマ開発の基礎から実践的な実装までを体系的に理解することを目的として制作しました。<br />静的コーディングだけでなく、CMSとしての運用を見据えた設計力を身につけることを重視しています。</p>
+
+                        <p class="works-detail-section-text">特に、管理画面からコンテンツを更新できる構造を意識し、クライアントワークを想定した設計を目指しました。</p>
+                    </section>
+
+                    <!-- 設計 -->
+                    <section class="works-detail-section">
+                        <h2 class="works-detail-section-title">設計</h2>
+
+                        <p class="works-detail-section-text">本テーマでは、更新頻度の高い「お知らせ」と、制作実績を想定した「制作物」を分けて管理できる構成としました。<br />投稿内容に応じて適切なデータ構造を設計することで、運用時の分かりやすさと拡張性を確保しています。</p>
+
+                        <p class="works-detail-section-text">各投稿で必要となる情報はACFを用いてカスタムフィールド化し、入力内容を構造化しました。<br />これにより、表示の一貫性を保ちながら柔軟なコンテンツ管理が可能となるよう設計しています。</p>
+
+                        <p class="works-detail-section-text">また、再利用性の高いパーツはtemplate-partsとして分割し、テーマ全体の保守性と可読性を高めています。</p>
+                    </section>
+
+                    <!-- 工夫した点 -->
+                    <section class="works-detail-section">
+                        <h2 class="works-detail-section-title">工夫した点</h2>
+                        <ul class="works-detail-points">
+                            <li class="works-detail-point">
+                                <h3 class="works-detail-point-title">カスタム投稿による情報整理</h3>
+                                <p class="works-detail-point-text">CPT UIを使用して「制作物」用のカスタム投稿タイプを作成し、通常の投稿（お知らせ）と役割を分離しました。コンテンツの種類ごとに管理方法を分けることで、運用時の視認性と拡張性を高めています。</p>
+                            </li>
+
+                            <li class="works-detail-point">
+                                <h3 class="works-detail-point-title">ACFによる入力項目の構造化</h3>
+                                <p class="works-detail-point-text">投稿ごとに必要な情報をACFでカスタムフィールド化することで、入力の自由度を保ちつつ、表示の一貫性を担保しました。実務を想定し、編集者が迷わず入力できる構成を意識しています。</p>
+                            </li>
+
+                            <li class="works-detail-point">
+                                <h3 class="works-detail-point-title">マルチステップフォームの導入</h3>
+                                <p class="works-detail-point-text">Contact Form 7をベースに、入力画面・確認画面・送信完了画面の3段階構成を実装しました。送信前に内容を確認できるフローとすることで、誤送信を防ぐ設計としています。</p>
+                            </li>
+
+                            <li class="works-detail-point">
+                                <h3 class="works-detail-point-title">template-partsによるコンポーネント化</h3>
+                                <p class="works-detail-point-text">繰り返し使用するパーツはtemplate-partsとして分割し、再利用性と保守性を向上させました。構造を整理することで、将来的な改修や機能追加にも対応しやすい設計としています。</p>
+                            </li>
+
+                            <li class="works-detail-point">
+                                <h3 class="works-detail-point-title">運用を前提としたテーマ設計</h3>
+                                <p class="works-detail-point-text">単なる表示用サイトではなく、実際に運用されることを想定し、管理画面からの更新性や拡張性を重視して設計しました。コンテンツの追加や変更が容易に行える構成を意識しています。</p>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <!-- 技術選定の理由 -->
+                    <section class="works-detail-section">
+                        <h2 class="works-detail-section-title">技術選定の理由</h2>
+                        <p class="works-detail-section-text">WordPressを採用することで、クライアント自身がコンテンツを更新できるCMSとしての利便性を実現しました。実務でも広く使われているため、テーマ開発の理解を深める目的とも合致しています。</p>
+
+                        <p class="works-detail-section-text">また、CPT UIやACFなどのプラグインを活用することで、開発効率を保ちながら柔軟なデータ設計を可能にしました。</p>
+                    </section>
+
+                    <!-- AI活用 -->
+                    <section class="works-detail-section">
+                        <h2 class="works-detail-section-title">AI活用</h2>
+
+                        <p class="works-detail-section-text">本制作ではGoogle AI Studioを活用し、サイトデザインのベースとなるアイデア生成を行いました。AIによって方向性を可視化した上で、自身の意図に合わせてブラッシュアップを重ねています。</p>
+
+                        <p class="works-detail-section-text">デザインにおいては、配色やレイアウトの初期案を参考にしつつ、そのまま使用するのではなく、情報設計や視認性を考慮しながら調整を行いました。最終的なアウトプットは自分の判断で再構成しています。</p>
+
+                        <p class="works-detail-section-text">また、WordPressの実装においてもAIを活用し、不明点の解消や実装方針の整理を行いました。コードをそのまま利用するのではなく、動作の仕組みを理解することを重視しながら制作を進めています。</p>
+
+                        <p class="works-detail-section-text">AIを「補助ツール」として活用しつつ、最終的な設計や判断は自ら行うことで、理解と再現性のある開発を意識しました。</p>
+                    </section>
+
+                    <!-- 学び -->
+                    <section class="works-detail-section">
+                        <h2 class="works-detail-section-title">学び</h2>
+                        <p class="works-detail-section-text">本制作を通して、静的サイトとCMSサイトでは設計の考え方が大きく異なることを実感しました。特に「誰が・どのように更新するか」を前提にした設計の重要性を学びました。</p>
+
+                        <p class="works-detail-section-text">また、カスタム投稿やカスタムフィールドを用いて情報を構造化することで、表示の自由度と管理のしやすさを両立できることを理解しました。単に見た目を作るだけでなく、データ設計から考える必要があると感じています。</p>
+
+                        <p class="works-detail-section-text">さらに、template-partsによる分割やコードの整理を通して、保守性の高いテーマ設計の重要性を学びました。今後はより実務を意識した拡張性のある構成を意識していきたいと考えています。</p>
+                    </section>
+
+                    <!-- 使用言語 / 使用ツール -->
+                    <section class="works-detail-section">
+                        <h2 class="works-detail-section-title">使用言語 / 使用ツール</h2>
+                        <ul class="works-detail-tech-list">
+                            <li class="works-detail-tech-item">WordPress</li>
+                            <li class="works-detail-tech-item">HTML</li>
+                            <li class="works-detail-tech-item">CSS</li>
+                            <li class="works-detail-tech-item">SCSS</li>
+                            <li class="works-detail-tech-item">JavaScript</li>
+                            <li class="works-detail-tech-item">GSAP</li>
+                            <li class="works-detail-tech-item">Cursor</li>
+                            <li class="works-detail-tech-item">Google AI Studio</li>
+                        </ul>
+                    </section>
+
+                    <!-- works detail button -->
+                    <div class="works-detail-button works-detail-button--back">
+                        <a href="index.html" class="c-button c-button--md">制作物一覧に戻る</a>
+                    </div>
+                </div>
+            </main>
+            <!-- the end of work detail -->
+
+            <!-- pagination -->
+            <div class="works-detail-pagination l-container u-pb">
+                <div class="c-pagination">
+                    <nav class="c-pagination-nav js-pagination-nav" aria-label="ページネーション">
+                        <!-- prev button -->
+                        <a href="" class="c-pagination-button c-pagination-button--prev js-pagination-button--prev">
+                            <span class="c-pagination-label">
+                                <span class="c-pagination-icon c-pagination-icon--prev"></span>
+                                <span class="c-pagination-text">prev</span>
+                            </span>
+                            <span class="c-pagination-meta c-pagination-meta--prev js-pagination-prev-title" aria-hidden="true"></span>
+                        </a>
+
+                        <!-- ページネーションリスト -->
+                        <ol class="c-pagination-list js-pagination-list" aria-busy="true"></ol>
+
+                        <!-- next button -->
+                        <a href="" class="c-pagination-button c-pagination-button--next js-pagination-button--next">
+                            <span class="c-pagination-label">
+                                <span class="c-pagination-text">next</span>
+                                <span class="c-pagination-icon c-pagination-icon--next"></span>
+                            </span>
+                            <span class="c-pagination-meta c-pagination-meta--next js-pagination-next-title" aria-hidden="true"></span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+            <!-- the end of pagination -->
+
+            <!-- text slider -->
+            <div class="l-divider l-divider--top">
+                <div class="c-text-slider">
+                    <div class="c-keyword-slider--splide js-keyword-carousel-works-bottom splide">
+                        <div class="splide__track c-keyword-slider--track">
+                            <ul class="splide__list c-text-slider-list">
+                                <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                                <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                                <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                                <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                                <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                                <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                                <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                                <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                                <li class="splide__slide c-text-slider-item">seiya imoto's portfolio</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- the end of text slider -->
+
+            <!-- footer -->
+            <footer class="footer">
+                <div class="footer-inner">
+                    <small class="footer-copyright"><span>©seiya</span><span>imoto's</span><span>portfolio</span></small>
+                    <ul class="footer-sns-list">
+                        <li class="footer-sns-item">
+                            <a href="https://github.com/seiyaie" target="_blank" rel="noopener noreferrer" aria-label="githubを別タブで開く">
+                                <img src="../img/icons/sns/github-white.svg" width="60" height="60" alt="" decoding="async" class="js-theme-github" />
+                            </a>
+                        </li>
+                        <li class="footer-sns-item">
+                            <a href="https://x.com/seiya_web" target="_blank" rel="noopener noreferrer" aria-label="xを別タブで開く">
+                                <img src="../img/icons/sns/x-white.svg" width="60" height="60" alt="" decoding="async" class="js-theme-x" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+            <!-- the end of footer -->
+        </div>
+    </body>
+</html>

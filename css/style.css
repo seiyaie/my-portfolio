@@ -110,7 +110,7 @@ global > font
 ------------------------------
 */
 :root {
-  --font-family-jp: "Zen Kaku Gothic Antique", sans-serif;
+  --font-family-ja: "Zen Kaku Gothic Antique", sans-serif;
   --font-family-en: "Schibsted Grotesk", sans-serif;
   --font-family-accent: "Michroma", sans-serif;
 }
@@ -345,7 +345,7 @@ html {
 }
 
 body {
-  font-family: var(--font-family-jp);
+  font-family: var(--font-family-ja);
   font-size: var(--font-size-body);
   line-height: 1.8;
   color: var(--color-text);
@@ -1644,7 +1644,7 @@ page > top > top-works
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 24px;
-  align-items: center;
+  align-items: stretch;
 }
 @media screen and (min-width: 768px) {
   .top-works-list {
@@ -1749,6 +1749,7 @@ page > top > top-works
   margin-inline: auto;
   margin-top: 32px;
   text-align: center;
+  align-self: center;
 }
 @media screen and (min-width: 768px) {
   .top-works-button {
@@ -2538,7 +2539,7 @@ page > works > works-detail
 }
 
 .works-detail-section {
-  max-width: 900px;
+  max-width: 800px;
   margin-inline: auto;
   margin-top: 24px;
 }

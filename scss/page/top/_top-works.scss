@@ -14,7 +14,7 @@ page > top > top-works
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 24px;
-    align-items: center;
+    align-items: stretch;
     @include g.mq() {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -117,6 +117,7 @@ page > top > top-works
     margin-inline: auto;
     margin-top: 32px;
     text-align: center;
+    align-self: center;
     @include g.mq() {
         margin-top: 0;
     }
