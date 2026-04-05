@@ -13,7 +13,9 @@ import { initSmoothScroll } from "./component/smooth-scroll.js";
 import { initFormValidation } from "./component/form-validation.js";
 import { initContactModal } from "./component/contact-modal.js";
 
-const currentPage = Number(document.documentElement.dataset.page || 1);
+const currentPath = window.location.pathname.split("/").pop();
+const currentIndex = WORKS_PAGES.findIndex((page) => page.href === currentPath);
+const currentPage = currentIndex !== -1 ? currentIndex + 1 : 1;
 
 initPageTransition();
 initThemeSwitch();
