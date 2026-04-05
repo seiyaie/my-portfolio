@@ -1,5 +1,7 @@
 # Webサイト：My Portfolio
 
+![My Portfolio サムネイル](img/docs/thumbnail-my-portfolio.jpg)
+
 ## 概要
 
 Webコーダーとしてのスキルと制作実績を整理し、第三者に分かりやすく伝えることを目的に制作したポートフォリオサイトです。  
