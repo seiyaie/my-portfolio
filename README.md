@@ -1,6 +1,6 @@
 # Webサイト：My Portfolio
 
-![My Portfolio サムネイル](img/docs/thumbnail-my-portfolio.jpg)
+![My Portfolio サムネイル](./img/docs/thumbnail-my-portfolio.jpg)
 
 ## 概要
 
