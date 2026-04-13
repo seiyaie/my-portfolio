@@ -1,5 +1,6 @@
 // component/contact-modal.js
 export const initContactModal = () => {
+    // 要素取得
     const privacyModal = document.querySelector(".js-contact-modal--privacy");
     const privacyButton = document.querySelector(".js-contact-privacy-button");
     const privacyCloseButton = document.querySelector(".js-contact-privacy-close-button");
@@ -7,11 +8,12 @@ export const initContactModal = () => {
 
     if (!privacyModal || !privacyButton || !privacyCloseButton || !form) return;
 
-    let isAnimating = false;
-
     const content = privacyModal.querySelector(".js-contact-modal-content");
     const overlay = privacyModal.querySelector(".js-contact-modal-overlay");
 
+    let isAnimating = false;
+
+    // アニメーション
     const tl = gsap.timeline({
         paused: true,
         defaults: { ease: "power3.out" },
