@@ -68,12 +68,13 @@ export const initHamburgerMenu = () => {
     openButton.addEventListener("click", openMenu);
     closeButton.addEventListener("click", closeMenu);
 
-    document.addEventListener("keydown", (e) => {
-        if (e.key !== "Escape" || !menu.open) return;
+    // escでメニュー閉じる
+    menu.addEventListener("cancel", (e) => {
         e.preventDefault();
         closeMenu();
     });
 
+    // 背景クリックでメニュー閉じる
     menu.addEventListener("click", (e) => {
         if (!e.target.closest(".js-hamburger-menu-item")) closeMenu();
     });

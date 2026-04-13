@@ -44,7 +44,7 @@ export const initContactModal = () => {
         tl.reverse();
     };
 
-    // open
+    // open button
     privacyButton.addEventListener("click", openPrivacy);
 
     // close button
@@ -57,7 +57,7 @@ export const initContactModal = () => {
         }
     });
 
-    // Esc（dialogのcancelを拾う方がより正確）
+    // Escで閉じる
     privacyModal.addEventListener("cancel", (e) => {
         e.preventDefault();
         closePrivacy();
