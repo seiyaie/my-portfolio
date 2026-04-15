@@ -86,10 +86,19 @@ export const initKvSlider = () => {
         const isMobile = window.matchMedia("(max-width: 767px)").matches;
         if (!isMobile) return;
 
-        item.closest(".js-kv-slider-item")?.scrollIntoView({
+        const target = item.closest(".js-kv-slider-item");
+        const container = target.parentElement;
+
+        const rect = target.getBoundingClientRect();
+        const containerRect = container.getBoundingClientRect();
+
+        const offset = 80;
+
+        const scrollLeft = container.scrollLeft + (rect.left - containerRect.left) - offset;
+
+        container.scrollTo({
+            left: scrollLeft,
             behavior: "smooth",
-            inline: "nearest",
-            block: "nearest",
         });
     };
 
