@@ -21,8 +21,19 @@ export const initHamburgerMenu = () => {
 
     tl.from(menu, { opacity: 0, duration: 0.3 }).from(".js-hamburger-menu-list", { opacity: 0, y: 24, duration: 0.3 });
 
+    const disableScroll = () => {
+        document.body.style.overflow = "hidden";
+        document.documentElement.style.overflow = "hidden";
+    };
+
+    const enableScroll = () => {
+        document.body.style.overflow = "";
+        document.documentElement.style.overflow = "";
+    };
+
     const openMenu = () => {
         if (isAnimating || menu.open) return;
+        disableScroll();
         menu.showModal();
         tl.play(0);
     };
@@ -33,6 +44,7 @@ export const initHamburgerMenu = () => {
         return new Promise((resolve) => {
             tl.eventCallback("onReverseComplete", () => {
                 menu.close();
+                enableScroll();
                 resolve();
                 tl.eventCallback("onReverseComplete", null);
             });

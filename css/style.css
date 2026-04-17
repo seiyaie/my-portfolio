@@ -533,6 +533,7 @@ component > hamburger-menu.scss
   height: 100%;
   overflow: auto;
   background-color: var(--color-bg);
+  overscroll-behavior: none;
 }
 .c-hamburger-menu::backdrop {
   display: none;
