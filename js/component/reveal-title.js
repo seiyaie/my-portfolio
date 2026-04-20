@@ -23,7 +23,6 @@ export const initTitleReveal = () => {
                 trigger: title,
                 start: "top bottom",
                 toggleActions: "play none none none",
-                markers: true,
             },
         });
     });
