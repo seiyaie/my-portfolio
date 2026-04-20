@@ -16,13 +16,14 @@ export const initTitleReveal = () => {
 
         gsap.from(split.chars, {
             y: yOffset,
-            duration: 1,
+            duration: 0.5,
             ease: "power4.inOut",
             stagger: 0.06,
             scrollTrigger: {
                 trigger: title,
-                start: "top 95%",
+                start: "top bottom",
                 toggleActions: "play none none none",
+                markers: true,
             },
         });
     });
